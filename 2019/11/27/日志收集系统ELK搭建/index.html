@@ -17,13 +17,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"geekvic.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="一、ELK简介&amp;nbsp; &amp;nbsp; 在传统项目中，如果在生产环境中，有多台不同的服务器集群，如果生产环境需要通过日志定位项目的Bug的话，需要在每台节点上使用传统的命令方式查询，这样效率非常低下。因此我们需要集中化的管理日志，ELK则应运而生。ELK&#x3D;ElasticSeach+Logstash+Kibana，日志收集原理如下所示。 1、每台服务器集群节点安装Logstash日志收集系统插件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日志收集系统ELK搭建">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E7%B3%BB%E7%BB%9FELK%E6%90%AD%E5%BB%BA&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;2019&#x2F;11&#x2F;27&#x2F;%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E7%B3%BB%E7%BB%9FELK%E6%90%AD%E5%BB%BA&#x2F;index.html">
 <meta property="og:site_name" content="Vic&#39;s Blog">
 <meta property="og:description" content="一、ELK简介&amp;nbsp; &amp;nbsp; 在传统项目中，如果在生产环境中，有多台不同的服务器集群，如果生产环境需要通过日志定位项目的Bug的话，需要在每台节点上使用传统的命令方式查询，这样效率非常低下。因此我们需要集中化的管理日志，ELK则应运而生。ELK&#x3D;ElasticSeach+Logstash+Kibana，日志收集原理如下所示。 1、每台服务器集群节点安装Logstash日志收集系统插件">
 <meta property="og:locale" content="zh_CN">
@@ -40,7 +40,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;15&#x2F;JMNZRE4ovp8XgDc.png">
 
-<link rel="canonical" href="http://yoursite.com/2019/11/27/%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E7%B3%BB%E7%BB%9FELK%E6%90%AD%E5%BB%BA/">
+<link rel="canonical" href="http://geekvic.top/2019/11/27/%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E7%B3%BB%E7%BB%9FELK%E6%90%AD%E5%BB%BA/">
 
 
 <script id="page-configurations">
@@ -206,7 +206,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E7%B3%BB%E7%BB%9FELK%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/2019/11/27/%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E7%B3%BB%E7%BB%9FELK%E6%90%AD%E5%BB%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -449,7 +449,7 @@ xpack.security.encryptionKey: "something_at_least_32_characters"</span></pre>
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/11/27/%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E7%B3%BB%E7%BB%9FELK%E6%90%AD%E5%BB%BA/" title="日志收集系统ELK搭建">http://yoursite.com/2019/11/27/日志收集系统ELK搭建/</a>
+    <a href="http://geekvic.top/2019/11/27/%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E7%B3%BB%E7%BB%9FELK%E6%90%AD%E5%BB%BA/" title="日志收集系统ELK搭建">http://geekvic.top/2019/11/27/日志收集系统ELK搭建/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -587,16 +587,6 @@ xpack.security.encryptionKey: "something_at_least_32_characters"</span></pre>
   </div>
 
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="http://geekvic.top/" title="http:&#x2F;&#x2F;geekvic.top" rel="noopener" target="_blank">Title</a>
-        </li>
-    </ul>
-  </div>
 
       </div>
 

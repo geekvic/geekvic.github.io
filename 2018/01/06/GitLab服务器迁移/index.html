@@ -17,13 +17,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"geekvic.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="一、背景由于GitLab内存消耗很大，已经影响到A服务器上的其他服务，同时考虑到代码管理服务应该单独部署在一台服务器上，因此决定从服务器A迁移到服务器B上。两台服务器均是CentOS 7，gitlab版本是gitlab-ce-9.5.6-ce.0.el7.x86_64.rpm 。注意：高版本的Gitlab无法恢复低版本备份的数据,需要注意在B服务器部署和A服务器一样版本的gitlab,部署好环境后">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GitLab服务器迁移">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2018&#x2F;01&#x2F;06&#x2F;GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;2018&#x2F;01&#x2F;06&#x2F;GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB&#x2F;index.html">
 <meta property="og:site_name" content="Vic&#39;s Blog">
 <meta property="og:description" content="一、背景由于GitLab内存消耗很大，已经影响到A服务器上的其他服务，同时考虑到代码管理服务应该单独部署在一台服务器上，因此决定从服务器A迁移到服务器B上。两台服务器均是CentOS 7，gitlab版本是gitlab-ce-9.5.6-ce.0.el7.x86_64.rpm 。注意：高版本的Gitlab无法恢复低版本备份的数据,需要注意在B服务器部署和A服务器一样版本的gitlab,部署好环境后">
 <meta property="og:locale" content="zh_CN">
@@ -33,7 +33,7 @@
 <meta property="article:tag" content="GitLab">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2018/01/06/GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/">
+<link rel="canonical" href="http://geekvic.top/2018/01/06/GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/">
 
 
 <script id="page-configurations">
@@ -199,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/06/GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/2018/01/06/GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -336,7 +336,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2018/01/06/GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/" title="GitLab服务器迁移">http://yoursite.com/2018/01/06/GitLab服务器迁移/</a>
+    <a href="http://geekvic.top/2018/01/06/GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/" title="GitLab服务器迁移">http://geekvic.top/2018/01/06/GitLab服务器迁移/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -472,16 +472,6 @@
   </div>
 
 
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="http://geekvic.top/" title="http:&#x2F;&#x2F;geekvic.top" rel="noopener" target="_blank">Title</a>
-        </li>
-    </ul>
-  </div>
 
       </div>
 
