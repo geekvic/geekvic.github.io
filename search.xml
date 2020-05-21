@@ -1344,23 +1344,10 @@ xpack.security.encryptionKey: "something_at_least_32_characters"</span></pre>
 <td>国内访问快</td>
 <td>阉割部分功能，提供有偿服务，比如自动部署、自定义域名等需要升级Gitee Pages Pro</td>
 </tr>
-<tr>
-<td><img src="https://i.loli.net/2020/05/20/dnYbImls645Fe12.png" alt="giteepages.png"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>如上图所示，Gitee是需要付费的，但是考虑到部署到Github上，在国内访问真的太慢，经常加载要十几秒，最终折中了选择，即两个平台同时部署，国外的用户可以访问Github，国内的用户访问Gitee，从而优化访问速度。</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>## 修改_config.yml</td>
-<td></td>
-<td></td>
-</tr>
 </tbody></table>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:[username]/[username].github.io.git,master</span><br><span class="line">    gitee: git@gitee.com:[username]/[username].git,master</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2020/05/20/dnYbImls645Fe12.png" alt="giteepages.png"></p>
+<p>如上图所示，Gitee是需要付费的，但是考虑到部署到Github上，在国内访问真的太慢，经常加载要十几秒，最终折中了选择，即两个平台同时部署，国外的用户可以访问Github，国内的用户访问Gitee，从而优化访问速度。</p>
+<h2 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:[username]/[username].github.io.git,master</span><br><span class="line">    gitee: git@gitee.com:[username]/[username].git,master</span><br></pre></td></tr></table></figure>
 <p>其中，这里的 username指的是你在这两个网站上的用户名，只有以这种命名形式的仓库，才能够来访问我们的博客。</p>
 <ul>
 <li>Github的仓库名要命名为：{username}.github.io</li>
