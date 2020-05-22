@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Apollo环境配置</title>
-    <url>/Apollo%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <url>/post/Apollo%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>&nbsp; &nbsp; Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。</p>
 <h2 id="二、配置环境路径"><a href="#二、配置环境路径" class="headerlink" title="二、配置环境路径"></a>二、配置环境路径</h2><table>
 <thead>
@@ -47,7 +47,7 @@
   </entry>
   <entry>
     <title>Docker中安装mysql</title>
-    <url>/Docker%E4%B8%AD%E5%AE%89%E8%A3%85mysql/</url>
+    <url>/post/Docker%E4%B8%AD%E5%AE%89%E8%A3%85mysql/</url>
     <content><![CDATA[<h4 id="1-docker-中下载-mysql"><a href="#1-docker-中下载-mysql" class="headerlink" title="1.docker 中下载 mysql"></a>1.docker 中下载 mysql</h4><div class="cnblogs_code">
 <pre>docker pull mysql</pre>
 </div>
@@ -82,7 +82,7 @@ FLUSH PRIVILEGES;</span></pre>
   </entry>
   <entry>
     <title>Docker初识</title>
-    <url>/Docker%E5%88%9D%E8%AF%86/</url>
+    <url>/post/Docker%E5%88%9D%E8%AF%86/</url>
     <content><![CDATA[<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>&nbsp; &nbsp; Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p>
 <p><img src="https://i.loli.net/2020/04/09/25qW8AEgmO6dczv.png" alt="docker.png"></p>
 <h2 id="二、Docker与虚拟机的比较"><a href="#二、Docker与虚拟机的比较" class="headerlink" title="二、Docker与虚拟机的比较"></a>二、Docker与虚拟机的比较</h2><p>&nbsp; &nbsp; Docker是在操作系统进程层面的隔离，而虚拟机是在物理资源层面的隔离，两者完全不同，另外，我们也可以通过下面的一个比较，了解两者的根本性差异。</p>
@@ -162,7 +162,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>Dubbo版本升级</title>
-    <url>/Dubbo%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7/</url>
+    <url>/post/Dubbo%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7/</url>
     <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>早期内部使用的是当当网fork的Dubbox，由于现在Dubbo又开始重新维护，而且阿里将其捐献给了Apache，并成为了Apache的顶级项目。因此dubbo版本升级到2.7.1势在必行。</p>
 <h2 id="二、版本升级"><a href="#二、版本升级" class="headerlink" title="二、版本升级"></a>二、版本升级</h2><p>从2.8.4升级到2.7.1</p>
 <p>具体可以参考：</p>
@@ -240,7 +240,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>FFmpeg的安装与使用</title>
-    <url>/FFmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <url>/post/FFmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。</p>
 <h3 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h3><h4 id="2-1-安装yasm"><a href="#2-1-安装yasm" class="headerlink" title="2.1 安装yasm"></a>2.1 安装yasm</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz</span></span><br><span class="line"><span class="comment"># tar -zxvf yasm-1.3.0.tar.gz</span></span><br><span class="line"><span class="comment"># cd yasm-1.3.0</span></span><br><span class="line"><span class="comment"># ./configure</span></span><br><span class="line"><span class="comment"># make &amp;amp;&amp;amp; make install</span></span><br></pre></td></tr></table></figure>
 
@@ -262,7 +262,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>GitLab服务器迁移</title>
-    <url>/GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/</url>
+    <url>/post/GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/</url>
     <content><![CDATA[<h3 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h3><p>由于GitLab内存消耗很大，已经影响到A服务器上的其他服务，同时考虑到代码管理服务应该单独部署在一台服务器上，因此决定从服务器A迁移到服务器B上。两台服务器均是CentOS 7，gitlab版本是gitlab-ce-9.5.6-ce.0.el7.x86_64.rpm 。注意：高版本的Gitlab无法恢复低版本备份的数据,需要注意在B服务器部署和A服务器一样版本的gitlab,部署好环境后开始备份和数据迁移。</p>
 <h3 id="二、备份"><a href="#二、备份" class="headerlink" title="二、备份"></a>二、备份</h3><p>备份A服务器上的gitlab数据，执行命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:create RAILS_ENV=production</span><br></pre></td></tr></table></figure>
@@ -287,7 +287,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>GitLab问题小结</title>
-    <url>/GitLab%E9%97%AE%E9%A2%98%E5%B0%8F%E7%BB%93/</url>
+    <url>/post/GitLab%E9%97%AE%E9%A2%98%E5%B0%8F%E7%BB%93/</url>
     <content><![CDATA[<h3 id="1-内存消耗太大"><a href="#1-内存消耗太大" class="headerlink" title="1.内存消耗太大"></a>1.内存消耗太大</h3><p>　　（1）公司使用gitlab后，发现服务器内存居高不下，使用top命令查看内存消耗，发现服务器上git将近消耗一半内存资源。而且很奇怪的是竟然开启了32个进程。后经查资料，原来这跟gitlab的默认机制有关。在配置文件/etc/gitlab/gitlab.rb里，unicorn[‘worker_processes’] = 2，默认是被注释掉的，这就解释了为什么会开启32个进程，因为cpu有32核，如果服务器只用于GitLab的话，官方建议是CPU核心数加一，可以提高服务器的响应速度。不过如果内存只有4G，或者服务器同时承载其他服务，就不要改了，以免内存不足。另外，这个参数最小值是2，设为1，服务器可能会卡死。</p>
 <p>　　（2）解决方案：根据服务器使用情况，给unicorn[‘worker_processes’]设置一个合适的值，可解决内存占用过大问题。</p>
 <h3 id="2-时间不一致"><a href="#2-时间不一致" class="headerlink" title="2.时间不一致"></a>2.时间不一致</h3><p>　　gitlab的web页面上activity里显示的时间相差8小时，很有可能是时区设置问题，设置时区为：gitlab_rails[‘time_zone’] = ‘Asia/Shanghai’，还有种可能是服务器本身的时间有问题，服务器服务时间修改注意事项：写入clock -w &nbsp;,强制将时间写入COMS！这样重启后不会失效。&nbsp;</p>
@@ -301,7 +301,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>Java项目main方法启动的两种方式</title>
-    <url>/Java%E9%A1%B9%E7%9B%AEmain%E6%96%B9%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
+    <url>/post/Java%E9%A1%B9%E7%9B%AEmain%E6%96%B9%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
     <content><![CDATA[<h4 id="1-打包时指定了主类，可以直接用java-jar-xxx-jar"><a href="#1-打包时指定了主类，可以直接用java-jar-xxx-jar" class="headerlink" title="1.打包时指定了主类，可以直接用java -jar xxx.jar"></a>1.打包时指定了主类，可以直接用java -jar xxx.jar</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--main方法打包jar包插件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-assembly-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appendAssemblyId</span>&gt;</span>false<span class="tag">&lt;/<span class="name">appendAssemblyId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">descriptorRefs</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">descriptorRef</span>&gt;</span>jar-with-dependencies<span class="tag">&lt;/<span class="name">descriptorRef</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">descriptorRefs</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">archive</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">manifest</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>com.TestApplication<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">archive</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>make-assembly<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">phase</span>&gt;</span>package<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>assembly<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="2-打包时没有指定主类，可以用java-cp-xxx-jar-主类名称（绝对路径）"><a href="#2-打包时没有指定主类，可以用java-cp-xxx-jar-主类名称（绝对路径）" class="headerlink" title="2.打包时没有指定主类，可以用java -cp xxx.jar 主类名称（绝对路径）"></a>2.打包时没有指定主类，可以用java -cp xxx.jar 主类名称（绝对路径）</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -cp xxx.jar com.TestApplication</span><br></pre></td></tr></table></figure>
@@ -315,7 +315,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>Linux环境GitLab安装与配置</title>
-    <url>/Linux%E7%8E%AF%E5%A2%83GitLab%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</url>
+    <url>/post/Linux%E7%8E%AF%E5%A2%83GitLab%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h2><p>　　近期公司源代码管理工具从svn转向git，因此要在服务器上部署gitlab，总共部署了两台服务器，一台是Ubuntu server 17.04，一台是Centos7。在部署的过程中遇到不少问题，发现Linux里通过命令直接去Gitlab官网上下载程序根本不能成功，不管是在Ubuntu还是Centos上。后来只能去Gitlab官网手动下载安装包，然后再去Linux里通过命令去执行才能安装。</p>
 <h2 id="2-软件下载"><a href="#2-软件下载" class="headerlink" title="2.软件下载"></a>2.软件下载</h2><h3 id="2-1-Gitlab官网"><a href="#2-1-Gitlab官网" class="headerlink" title="2.1 Gitlab官网"></a>2.1 Gitlab官网</h3><p>　　官网地址：<a href="https://about.gitlab.com/downloads/" target="_blank" rel="noopener">https://about.gitlab.com/downloads/</a></p>
 <h3 id="2-2-镜像站"><a href="#2-2-镜像站" class="headerlink" title="2.2 镜像站"></a>2.2 镜像站</h3><p>　　软件地址：<a href="https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/xenial/main/g/gitlab-ce/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/xenial/main/g/gitlab-ce/</a><br>但是有时候镜像站也会打不开，但是速度肯定要比官网快多了。</p>
@@ -383,7 +383,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>Linux的常用命令</title>
-    <url>/Linux%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <url>/post/Linux%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h3 id="1-常用指令"><a href="#1-常用指令" class="headerlink" title="1.常用指令"></a>1.常用指令</h3><p>（1）切换用户： su 用户名</p>
 <p>（2）默认切换到root用户： su</p>
 <p>（3）回到根目录：cd /</p>
@@ -482,7 +482,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>Nginx负载均衡初识</title>
-    <url>/Nginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%88%9D%E8%AF%86/</url>
+    <url>/post/Nginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%88%9D%E8%AF%86/</url>
     <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>　　nginx是一款自由的、开源的、高性能的HTTP服务器和反向代理服务器；同时也是一个IMAP、POP3、SMTP代理服务器；nginx可以作为一个HTTP服务器进行网站的发布处理，另外nginx可以作为反向代理进行负载均衡的实现。</p>
 <h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><ul>
 <li><p>下载nginx最新版本到linux服务器上，解压tar -zxvf nginx-1.13.8.tar.gz，进入解压目录 cd nginx-1.13.8，并进行手动安装。</p>
@@ -537,7 +537,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>Spring Boot 热部署devtools实现</title>
-    <url>/Spring%20Boot%20%E7%83%AD%E9%83%A8%E7%BD%B2devtools%E5%AE%9E%E7%8E%B0/</url>
+    <url>/post/Spring%20Boot%20%E7%83%AD%E9%83%A8%E7%BD%B2devtools%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<h3 id="1-devtools"><a href="#1-devtools" class="headerlink" title="1.devtools"></a>1.devtools</h3><p>spring为开发者提供了一个名为spring-boot-devtools的模块来使Spring Boot应用支持热部署，提高开发者的开发效率，无需手动重启Spring Boot应用。</p>
 <h3 id="2-项目搭建"><a href="#2-项目搭建" class="headerlink" title="2.项目搭建"></a>2.项目搭建</h3><p>本文是采用IDEA搭建的Spring Boot应用，通过spring-boot-devtools配置，可以支持修改java文件会自动重启程序，一些资源无需触发重启，例如thymeleaf模板文件就可以实时编辑。默认情况下，更改/META-INF/maven，/META-INF/resources ，/resources ，/static ，/public 或/templates下的资源不会触发重启，而是触发livereload。devtools模块包含一个嵌入的livereload服务器，可以在资源变化时用来触发浏览器刷新。浏览器需要在livereload.com下载安装扩展。 例如Chrome浏览器在应用商店安装livereload插件后，在要自动刷新的页面点击对应的图标，启动应用后更新页面内容或者css等都会触发页面自动刷新。</p>
 <h3 id="3-livereload"><a href="#3-livereload" class="headerlink" title="3.livereload"></a>3.livereload</h3><p>livereload 通过引入的脚本livereload.js在 livereload 服务和浏览器之间建立了一个 WebSocket 连接。每当监测到文件的变动，livereload 服务就会向浏览器发送一个信号，浏览器收到信号后就刷新页面，实现了实时刷新的效果。每次启动时，需要点击对应的图标，如下图所示。</p>
@@ -572,7 +572,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>Spring Boot项目搭建</title>
-    <url>/Spring%20Boot%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</url>
+    <url>/post/Spring%20Boot%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h3 id="一、Spring-Boot概述"><a href="#一、Spring-Boot概述" class="headerlink" title="一、Spring Boot概述"></a>一、Spring Boot概述</h3><p>Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。总所周知，Spring平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理，而Spring Boot的出现就是用来简化操作的。相比传统的Spring，项目搭建更简单、方便、快速。</p>
 <h3 id="二、项目搭建"><a href="#二、项目搭建" class="headerlink" title="二、项目搭建"></a>二、项目搭建</h3><p>本文采用IDEA搭建Spring Boot，Demo结构图如下：</p>
 <p><img src="https://i.loli.net/2020/04/10/WFXazeDlgLsuZjo.png" alt="spring boot-1.png"></p>
@@ -608,7 +608,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>Spring Data JPA在Spring Boot中的应用</title>
-    <url>/Spring%20Data%20JPA%E5%9C%A8Spring%20Boot%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</url>
+    <url>/post/Spring%20Data%20JPA%E5%9C%A8Spring%20Boot%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</url>
     <content><![CDATA[<h3 id="1-JPA"><a href="#1-JPA" class="headerlink" title="1.JPA"></a>1.JPA</h3><p>JPA(Java Persistence API)是Sun官方提出的Java持久化规范。它为Java开发人员提供了一种对象/关联映射工具来管理Java应用中的关系数据。他的出现主要是为了简化现有的持久化开发工作和整合ORM技术，结束现在Hibernate，TopLink，JDO等ORM框架各自为营的局面。值得注意的是，JPA是在充分吸收了现有Hibernate，TopLink，JDO等ORM框架的基础上发展而来的，具有易于使用，伸缩性强等优点。JPA是一套规范，不是一套产品，那么像Hibernate,TopLink,JDO他们是一套产品，如果说这些产品实现了这个JPA规范，那么我们就可以叫他们为JPA的实现产品。</p>
 <h3 id="2-项目搭建"><a href="#2-项目搭建" class="headerlink" title="2.项目搭建"></a>2.项目搭建</h3><p>本文采用IDEA搭建Spring Boot的JPA应用，Demo结构图如下：</p>
 <p><img src="https://i.loli.net/2020/04/10/OBcKNysdGulHvTL.png" alt="jpa-1.png"></p>
@@ -665,7 +665,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>zookeeper安装</title>
-    <url>/Zookeeper%E5%AE%89%E8%A3%85/</url>
+    <url>/post/Zookeeper%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h3 id="1-下载zk软件"><a href="#1-下载zk软件" class="headerlink" title="1.下载zk软件"></a>1.下载zk软件</h3><p><a href="http://www.apache.org/dyn/closer.cgi/zookeeper/" target="_blank" rel="noopener">http://www.apache.org/dyn/closer.cgi/zookeeper/</a></p>
 <h3 id="2-解压压缩包"><a href="#2-解压压缩包" class="headerlink" title="2.解压压缩包"></a>2.解压压缩包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar zxvf zookeeper-3.4.13.tar.gz</span></span><br></pre></td></tr></table></figure>
 <h3 id="3-创建zoo-cfg"><a href="#3-创建zoo-cfg" class="headerlink" title="3.创建zoo.cfg"></a>3.创建zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd zookeeper-3.4.13/conf</span></span><br><span class="line"><span class="comment"># cp zoo_sample.cfg zoo.cfg</span></span><br></pre></td></tr></table></figure>
@@ -703,7 +703,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>Hexo如何快速搭建个人博客</title>
-    <url>/hexo%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <url>/post/hexo%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h1 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <h1 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h1><ol>
 <li>Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
@@ -751,7 +751,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>idea使用Protobuf插件</title>
-    <url>/idea%E4%BD%BF%E7%94%A8Protobuf%E6%8F%92%E4%BB%B6/</url>
+    <url>/post/idea%E4%BD%BF%E7%94%A8Protobuf%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<h3 id="1-protobuf简介"><a href="#1-protobuf简介" class="headerlink" title="1.protobuf简介"></a>1.protobuf简介</h3><p>　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的10分之一，xml格式的20分之一，是二进制序列化的10分之一。
 　　</p>
 <h3 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2.安装插件"></a>2.安装插件</h3><p>在idea里安装插件Protobuf Support</p>
@@ -779,7 +779,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>ubuntu修改apt-get源</title>
-    <url>/ubuntu%E4%BF%AE%E6%94%B9apt-get%E6%BA%90/</url>
+    <url>/post/ubuntu%E4%BF%AE%E6%94%B9apt-get%E6%BA%90/</url>
     <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>　　服务器上安装了最新的Ubuntu Server 17.04，代号为zesty。使用apt-get命令安装软件时，有时候速度比较慢，有时候会失败。因此考虑用国内的镜像源更换下apt-get的默认源。</p>
 <h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><ul>
 <li><p>编辑源文件，vim /etc/apt/sources.list</p>
@@ -810,7 +810,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>ubuntu允许root远程登录配置</title>
-    <url>/ubuntu%E5%85%81%E8%AE%B8root%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%85%8D%E7%BD%AE/</url>
+    <url>/post/ubuntu%E5%85%81%E8%AE%B8root%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>近期在本地的虚拟机VMware上安装了Ubuntu Server 17.04，由于系统是无界面的，所有操作都需要通过Linux命令进行操作。后来不想直接在服务器上操作，想通过远程工具Xshell去访问Linux系统。却发现根本连接不上。后来查资料，原来需要在Ubuntu上安装SSH协议软件，因为Ubuntu默认是不安装SSH服务的。安装了SSH服务后发现其他用户可以通过Xshell远程访问了，root用户访问会报密码被拒绝的错误，上网查资料，发现Ubuntu默认是不开启root远程登录的，需要设置一下。</p>
 <h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><h5 id="2-1-检查是否开启SSH服务"><a href="#2-1-检查是否开启SSH服务" class="headerlink" title="2.1 检查是否开启SSH服务"></a>2.1 检查是否开启SSH服务</h5><p>命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -e|grep ssh</span><br></pre></td></tr></table></figure>
@@ -838,7 +838,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>ubuntu安装redis</title>
-    <url>/ubuntu%E5%AE%89%E8%A3%85redis/</url>
+    <url>/post/ubuntu%E5%AE%89%E8%A3%85redis/</url>
     <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>服务器：ubuntu server 17.04</p>
 <p>安装方式：apt-get</p>
 <h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><ul>
@@ -887,7 +887,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>内网穿透反向代理工具frp的使用</title>
-    <url>/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7frp%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <url>/post/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7frp%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp, http, https 协议。场景：近期在研究微信公众号开发，发现需要暴露公网地址，并且是80端口的服务，正好手边有朋友买了腾讯云服务器，因此想通过腾讯云服务器作为frp的服务端，本地机器作为客户端，让公网可以直接访问内网本地机器发布的服务，实现内网穿透。</p>
 <h3 id="2-作用"><a href="#2-作用" class="headerlink" title="2.作用"></a>2.作用</h3><ol>
 <li><p>利用处于内网或防火墙后的机器，对外网环境提供 http 或 https 服务。</p>
@@ -922,7 +922,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>基于GitLab与Git Extensions搭建版本控制工具</title>
-    <url>/%E5%9F%BA%E4%BA%8EGitLab%E4%B8%8EGit%20Extensions%E6%90%AD%E5%BB%BA%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/</url>
+    <url>/post/%E5%9F%BA%E4%BA%8EGitLab%E4%B8%8EGit%20Extensions%E6%90%AD%E5%BB%BA%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>　　大家知道GitHub是现在非常流行的代码托管工具，但是如果有些项目不想开源的话，则需要付费，因此萌生了自己搭建一个Git的版本控制工具，供内网使用。GitLab则是个好的选择，但是GitLab只支持Linux版本，因此则需在Windows服务器上搭建个Linux的虚拟机，我选择了Ubuntu。此时服务器端选型成功，客户端需要安装什么呢，我选择了Git Extensions，用它是因为他直接集成了Git以及KDiff3工具，更方便的是这个工具自带Putty，可以很方便地生成SSH公钥和私钥。</p>
 <h3 id="2-环境"><a href="#2-环境" class="headerlink" title="2.环境"></a>2.环境</h3><ol>
 <li><p>服务器端：Ubuntu(搭建在Win10上的虚拟机)、GitLab</p>
@@ -962,7 +962,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>基于JMS的ActiveMQ搭建与实现</title>
-    <url>/%E5%9F%BA%E4%BA%8EJMS%E7%9A%84ActiveMQ%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
+    <url>/post/%E5%9F%BA%E4%BA%8EJMS%E7%9A%84ActiveMQ%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%AE%9E%E7%8E%B0/</url>
     <content><![CDATA[<h3 id="1-JMS简介"><a href="#1-JMS简介" class="headerlink" title="1.JMS简介"></a>1.JMS简介</h3><p>Java消息服务（Java Message Service）即JMS，是一个Java平台中关于面向消息中间件的API，用于两个程序之间，或分布式系统中发送消息，进行异步通信。<br>JMS包括队列与主题两种模式，一种是点对点的Queue，还有一个是发布订阅的Topic方式。区别在于：</p>
 <ol>
 <li>对于Queue模式，一个发布者发布消息，下面的接收者按队列顺序接收，比如发布了10个消息，两个接收者A,B那就是A,B总共会收到10条消息，不重复。</li>
@@ -1014,7 +1014,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>基于Prometheus+Grafana+AlertManager的监控系统</title>
-    <url>/%E5%9F%BA%E4%BA%8EPrometheus+Grafana+AlertManager%E7%9A%84%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F/</url>
+    <url>/post/%E5%9F%BA%E4%BA%8EPrometheus+Grafana+AlertManager%E7%9A%84%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h2 id="一、Prometheus"><a href="#一、Prometheus" class="headerlink" title="一、Prometheus"></a>一、Prometheus</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><p>Prometheus是一套开源的监控&amp;报警&amp;时间序列数据库的组合，基于应用的metrics来进行监控的开源工具 。</p>
 <p><img src="https://i.loli.net/2020/04/14/mtwk9IKuJXQDAb4.png" alt="prometheus.png"></p>
 <h3 id="1-2-下载-amp-安装"><a href="#1-2-下载-amp-安装" class="headerlink" title="1.2 下载&amp;安装"></a>1.2 下载&amp;安装</h3><ul>
@@ -1070,7 +1070,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>如何将Spring Boot项目打包部署到外部Tomcat</title>
-    <url>/%E5%A6%82%E4%BD%95%E5%B0%86Spring%20Boot%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E5%88%B0%E5%A4%96%E9%83%A8Tomcat/</url>
+    <url>/post/%E5%A6%82%E4%BD%95%E5%B0%86Spring%20Boot%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E5%88%B0%E5%A4%96%E9%83%A8Tomcat/</url>
     <content><![CDATA[<h3 id="一、项目打包"><a href="#一、项目打包" class="headerlink" title="一、项目打包"></a>一、项目打包</h3><p>项目开发结束后，需要打包部署到外部服务器的Tomcat上，主要有几种方式。</p>
 <h4 id="1-1-生成jar包"><a href="#1-1-生成jar包" class="headerlink" title="1.1 生成jar包"></a>1.1 生成jar包</h4><ul>
 <li><h5 id="cd-项目跟目录（和pom-xml同级）"><a href="#cd-项目跟目录（和pom-xml同级）" class="headerlink" title="cd 项目跟目录（和pom.xml同级）"></a>cd 项目跟目录（和pom.xml同级）</h5></li>
@@ -1117,7 +1117,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>如何用Docker部署Spring Boot项目</title>
-    <url>/%E5%A6%82%E4%BD%95%E7%94%A8Docker%E9%83%A8%E7%BD%B2Spring%20Boot%E9%A1%B9%E7%9B%AE/</url>
+    <url>/post/%E5%A6%82%E4%BD%95%E7%94%A8Docker%E9%83%A8%E7%BD%B2Spring%20Boot%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<h4 id="1-idea中安装docker插件；"><a href="#1-idea中安装docker插件；" class="headerlink" title="1.idea中安装docker插件；"></a>1.idea中安装docker插件；</h4><h4 id="2-新建DockerFile，内容如下。"><a href="#2-新建DockerFile，内容如下。" class="headerlink" title="2.新建DockerFile，内容如下。"></a>2.新建DockerFile，内容如下。</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"># 基础镜像使用java</span><br><span class="line">FROM java:8</span><br><span class="line"># 作者</span><br><span class="line">MAINTAINER vic <span class="tag">&lt;<span class="name">test@163.com</span>&gt;</span></span><br><span class="line"># VOLUME 指定了临时文件目录为/tmp。</span><br><span class="line"># 其效果是在主机 /var/lib/docker 目录下创建了一个临时文件，并链接到容器的/tmp</span><br><span class="line">VOLUME /tmp</span><br><span class="line"># 将jar包添加到容器中并更名为app.jar</span><br><span class="line">ADD es-1.0.0-SNAPSHOT.jar app.jar</span><br><span class="line"># 运行jar包</span><br><span class="line">RUN bash -c 'touch /app.jar'</span><br><span class="line">ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]</span><br></pre></td></tr></table></figure>
 
 <h4 id="3-将es-1-0-0-SNAPSHOT-jar以及DockerFile放到一个目录中，执行命令，生成docker镜像。"><a href="#3-将es-1-0-0-SNAPSHOT-jar以及DockerFile放到一个目录中，执行命令，生成docker镜像。" class="headerlink" title="3.将es-1.0.0-SNAPSHOT.jar以及DockerFile放到一个目录中，执行命令，生成docker镜像。"></a>3.将es-1.0.0-SNAPSHOT.jar以及DockerFile放到一个目录中，执行命令，生成docker镜像。</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker build -t es:1.0.0 -f DockerFile .</span><br></pre></td></tr></table></figure>
@@ -1139,7 +1139,7 @@ symctl enable d</span></pre>
   </entry>
   <entry>
     <title>日志收集系统ELK搭建</title>
-    <url>/%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E7%B3%BB%E7%BB%9FELK%E6%90%AD%E5%BB%BA/</url>
+    <url>/post/%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86%E7%B3%BB%E7%BB%9FELK%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h2 id="一、ELK简介"><a href="#一、ELK简介" class="headerlink" title="一、ELK简介"></a>一、ELK简介</h2><p>&nbsp; &nbsp; 在传统项目中，如果在生产环境中，有多台不同的服务器集群，如果生产环境需要通过日志定位项目的Bug的话，需要在每台节点上使用传统的命令方式查询，这样效率非常低下。因此我们需要集中化的管理日志，ELK则应运而生。ELK=ElasticSeach+Logstash+Kibana，日志收集原理如下所示。</p>
 <p>1、每台服务器集群节点安装Logstash日志收集系统插件</p>
 <p>2、每台服务器节点将日志输入到Logstash中</p>
@@ -1272,7 +1272,7 @@ xpack.security.encryptionKey: "something_at_least_32_characters"</span></pre>
   </entry>
   <entry>
     <title>认识浏览器缓存</title>
-    <url>/%E8%AE%A4%E8%AF%86%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/</url>
+    <url>/post/%E8%AE%A4%E8%AF%86%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/</url>
     <content><![CDATA[<p>浏览器缓存，也就是客户端缓存,既是网页性能优化里面静态资源相关优化的一大利器，也是无数web开发人员在工作过程不可避免的一大问题。浏览器缓存分为：强缓存和协商缓存</p>
 <h4 id="一、原理"><a href="#一、原理" class="headerlink" title="一、原理"></a>一、原理</h4><ol>
 <li><p>浏览器加载资源时，先根据这个资源的http header中的Cache-Control判断是否命中强缓存，如果命中，浏览器直接从缓存中读取资源，根本不会向服务器发送请求；</p>
@@ -1324,7 +1324,7 @@ xpack.security.encryptionKey: "something_at_least_32_characters"</span></pre>
   </entry>
   <entry>
     <title>Hexo进阶设置</title>
-    <url>/Hexo%E8%BF%9B%E9%98%B6%E8%AE%BE%E7%BD%AE/</url>
+    <url>/post/Hexo%E8%BF%9B%E9%98%B6%E8%AE%BE%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="部署平台选型"><a href="#部署平台选型" class="headerlink" title="部署平台选型"></a>部署平台选型</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GitHub和Gitee（码云）是国内外比较流行的代码托管平台，现都推出GitHub/Gitee Pages可以存放静态网页代码，因此可以用来搭建自己的博客。</p>
 <h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><table>
 <thead>
