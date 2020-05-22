@@ -1,4 +1,4 @@
-User-agent: *
+iUser-agent: *
 Allow: /
 Allow: /archives/
 Allow: /categories/
@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://www.geekvic.top/sitemap.xml
-Sitemap: http://www.geekvic.top/baidusitemap.xml
+Sitemap: http://geekvic.top/sitemap.xml
+Sitemap: http://geekvic.top/baidusitemap.xml
