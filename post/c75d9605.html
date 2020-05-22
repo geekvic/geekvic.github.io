@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"geekvic.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="一、概述FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频&#x2F;视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。 二、安装2.1 安装yasm12345# wget http:&#x2F;&#x2F;www.tortall">
+  <meta name="description" content="1.背景　　nginx是一款自由的、开源的、高性能的HTTP服务器和反向代理服务器；同时也是一个IMAP、POP3、SMTP代理服务器；nginx可以作为一个HTTP服务器进行网站的发布处理，另外nginx可以作为反向代理进行负载均衡的实现。 2.安装 下载nginx最新版本到linux服务器上，解压tar -zxvf nginx-1.13.8.tar.gz，进入解压目录 cd nginx-1.1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FFmpeg的安装与使用">
-<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;9fe0423b">
+<meta property="og:title" content="Nginx负载均衡初识">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;c75d9605.html">
 <meta property="og:site_name" content="Vic&#39;s Blog">
-<meta property="og:description" content="一、概述FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频&#x2F;视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。 二、安装2.1 安装yasm12345# wget http:&#x2F;&#x2F;www.tortall">
+<meta property="og:description" content="1.背景　　nginx是一款自由的、开源的、高性能的HTTP服务器和反向代理服务器；同时也是一个IMAP、POP3、SMTP代理服务器；nginx可以作为一个HTTP服务器进行网站的发布处理，另外nginx可以作为反向代理进行负载均衡的实现。 2.安装 下载nginx最新版本到linux服务器上，解压tar -zxvf nginx-1.13.8.tar.gz，进入解压目录 cd nginx-1.1">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-04-23T12:05:00.000Z">
-<meta property="article:modified_time" content="2020-05-22T06:12:48.238Z">
+<meta property="article:published_time" content="2018-02-22T09:33:00.000Z">
+<meta property="article:modified_time" content="2020-05-22T06:12:48.241Z">
 <meta property="article:author" content="vic">
-<meta property="article:tag" content="FFmpeg">
+<meta property="article:tag" content="Nginx">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://geekvic.top/post/9fe0423b">
+<link rel="canonical" href="http://geekvic.top/post/c75d9605.html">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>FFmpeg的安装与使用 | Vic's Blog</title>
+  <title>Nginx负载均衡初识 | Vic's Blog</title>
   
 
 
@@ -199,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/9fe0423b">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/c75d9605.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -212,7 +212,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          FFmpeg的安装与使用
+          Nginx负载均衡初识
         </h1>
 
         <div class="post-meta">
@@ -222,7 +222,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-04-23 20:05:00" itemprop="dateCreated datePublished" datetime="2019-04-23T20:05:00+08:00">2019-04-23</time>
+              <time title="创建时间：2018-02-22 17:33:00" itemprop="dateCreated datePublished" datetime="2018-02-22T17:33:00+08:00">2018-02-22</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -237,7 +237,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+                  <a href="/categories/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a>
                 </span>
             </span>
 
@@ -257,8 +257,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/post/9fe0423b#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/post/9fe0423b" itemprop="commentCount"></span>
+    <a title="valine" href="/post/c75d9605.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/c75d9605.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -268,7 +268,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>582</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -287,17 +287,50 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。</p>
-<h3 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h3><h4 id="2-1-安装yasm"><a href="#2-1-安装yasm" class="headerlink" title="2.1 安装yasm"></a>2.1 安装yasm</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz</span></span><br><span class="line"><span class="comment"># tar -zxvf yasm-1.3.0.tar.gz</span></span><br><span class="line"><span class="comment"># cd yasm-1.3.0</span></span><br><span class="line"><span class="comment"># ./configure</span></span><br><span class="line"><span class="comment"># make &amp;amp;&amp;amp; make install</span></span><br></pre></td></tr></table></figure>
+        <h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>　　nginx是一款自由的、开源的、高性能的HTTP服务器和反向代理服务器；同时也是一个IMAP、POP3、SMTP代理服务器；nginx可以作为一个HTTP服务器进行网站的发布处理，另外nginx可以作为反向代理进行负载均衡的实现。</p>
+<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><ul>
+<li><p>下载nginx最新版本到linux服务器上，解压tar -zxvf nginx-1.13.8.tar.gz，进入解压目录 cd nginx-1.13.8，并进行手动安装。</p>
+</li>
+<li><p>配置：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/nginx</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>编辑nginx：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动nginx：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/<span class="built_in">local</span>/nginx/sbin/nginx -c /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
 
 
-<h4 id="2-2-安装FFmpeg"><a href="#2-2-安装FFmpeg" class="headerlink" title="2.2 安装FFmpeg"></a>2.2 安装FFmpeg</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#yum -y install bzip2</span></span><br><span class="line"><span class="comment">#tar jxvf ffmpeg-4.0.2.tar.bz2</span></span><br><span class="line"><span class="comment">#cd ffmpeg-4.0.2</span></span><br><span class="line"><span class="comment"># ./configure</span></span><br><span class="line"><span class="comment"># make</span></span><br><span class="line"><span class="comment"># make install</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-修改配置"><a href="#3-修改配置" class="headerlink" title="3.修改配置"></a>3.修改配置</h3><p>　　在/usr/local/nginx/conf#目录下执行vim nginx.conf，进行nginx的配置，采用轮询的方式，端口号：8066，如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#gzip  on;</span><br><span class="line">    upstream test&#123;</span><br><span class="line">            server 192.168.1.15:8087 weight=10;</span><br><span class="line">            server 192.168.1.15:8088 weight=10;</span><br><span class="line">    &#125;    </span><br><span class="line">        </span><br><span class="line">    server &#123;</span><br><span class="line">        listen       8066;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line">    </span><br><span class="line">        #access_log  logs/host.access.log  main;</span><br><span class="line">    </span><br><span class="line">        location / &#123;</span><br><span class="line">            proxy_pass http://test;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">            proxy_redirect off;</span><br><span class="line">            proxy_set_header Host $http_host;</span><br><span class="line">            proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="4-启动nginx"><a href="#4-启动nginx" class="headerlink" title="4.启动nginx"></a>4.启动nginx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./sbin/nginx</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-3-查看ffmpeg是否安装成功"><a href="#2-3-查看ffmpeg是否安装成功" class="headerlink" title="2.3 查看ffmpeg是否安装成功"></a>2.3 查看ffmpeg是否安装成功</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ffmpeg</span></span><br></pre></td></tr></table></figure>
-<p>输入ffmpeg打印了相关信息，表示安装成功</p>
-<h3 id="三、转换"><a href="#三、转换" class="headerlink" title="三、转换"></a>三、转换</h3><p>将MP3转换为16000的采样率、单通道的wav格式，命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i G:\test.mp3 -acodec pcm_s16le -ac 1 -ar 16000 -f wav <span class="string">"G:\test.wav"</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-停止nginx"><a href="#5-停止nginx" class="headerlink" title="5.停止nginx"></a>5.停止nginx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./sbin/nginx -s stop</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-访问服务"><a href="#6-访问服务" class="headerlink" title="6.访问服务"></a>6.访问服务</h3><p>通过<a href="http://localhost:8066" target="_blank" rel="noopener">http://localhost:8066</a>负载均衡访问192.168.1.15上的两个服务。</p>
+<h3 id="7-负载均衡"><a href="#7-负载均衡" class="headerlink" title="7.负载均衡"></a>7.负载均衡</h3><p>　　nginx支持的负载均衡调度算法方式如下：</p>
+<ul>
+<li><p>weight轮询（默认）：接收到的请求按照顺序逐一分配到不同的后端服务器，即使在使用过程中，某一台后端服务器宕机，nginx会自动将该服务器剔除出队列，请求受理情况不会受到任何影响。 这种方式下，可以给不同的后端服务器设置一个权重值（weight），用于调整不同的服务器上请求的分配率；权重数据越大，被分配到请求的几率越大；该权重值，主要是针对实际工作环境中不同的后端服务器硬件配置进行调整的。</p>
+</li>
+<li><p>ip_hash：每个请求按照发起客户端的ip的hash结果进行匹配，这样的算法下一个固定ip地址的客户端总会访问到同一个后端服务器，这也在一定程度上解决了集群部署环境下session共享的问题。</p>
+</li>
+<li><p>fair：智能调整调度算法，动态的根据后端服务器的请求处理到响应的时间进行均衡分配，响应时间短处理效率高的服务器分配到请求的概率高，响应时间长处理效率低的服务器分配到的请求少；结合了前两者的优点的一种调度算法。但是需要注意的是nginx默认不支持fair算法，如果要使用这种调度算法，请安装upstream_fair模块</p>
+</li>
+<li><p>url_hash：按照访问的url的hash结果分配请求，每个请求的url会指向后端固定的某个服务器，可以在nginx作为静态服务器的情况下提高缓存效率。同样要注意nginx默认不支持这种调度算法，要使用的话需要安装nginx的hash软件包。</p>
+</li>
+</ul>
 
     </div>
 
@@ -333,7 +366,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://geekvic.top/post/9fe0423b" title="FFmpeg的安装与使用">http://geekvic.top/post/9fe0423b</a>
+    <a href="http://geekvic.top/post/c75d9605.html" title="Nginx负载均衡初识">http://geekvic.top/post/c75d9605.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -344,7 +377,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/FFmpeg/" rel="tag"># FFmpeg</a>
+              <a href="/tags/Nginx/" rel="tag"># Nginx</a>
           </div>
 
         
@@ -353,12 +386,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/post/1d29e395" rel="prev" title="Dubbo版本升级">
-      <i class="fa fa-chevron-left"></i> Dubbo版本升级
+    <a href="/post/c47a15e1.html" rel="prev" title="GitLab问题小结">
+      <i class="fa fa-chevron-left"></i> GitLab问题小结
     </a></div>
       <div class="post-nav-item">
-    <a href="/post/92932283" rel="next" title="Apollo环境配置">
-      Apollo环境配置 <i class="fa fa-chevron-right"></i>
+    <a href="/post/310667e0.html" rel="next" title="内网穿透反向代理工具frp的使用">
+      内网穿透反向代理工具frp的使用 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -419,7 +452,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、概述"><span class="nav-number">1.</span> <span class="nav-text">一、概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、安装"><span class="nav-number">2.</span> <span class="nav-text">二、安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-安装yasm"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 安装yasm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-安装FFmpeg"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 安装FFmpeg</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-查看ffmpeg是否安装成功"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 查看ffmpeg是否安装成功</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、转换"><span class="nav-number">3.</span> <span class="nav-text">三、转换</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-背景"><span class="nav-number">1.</span> <span class="nav-text">1.背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装"><span class="nav-number">2.</span> <span class="nav-text">2.安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-修改配置"><span class="nav-number">3.</span> <span class="nav-text">3.修改配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-启动nginx"><span class="nav-number">4.</span> <span class="nav-text">4.启动nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-停止nginx"><span class="nav-number">5.</span> <span class="nav-text">5.停止nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-访问服务"><span class="nav-number">6.</span> <span class="nav-text">6.访问服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-负载均衡"><span class="nav-number">7.</span> <span class="nav-text">7.负载均衡</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo进阶设置</title>
-    <link href="http://geekvic.top/post/a62b0c3d"/>
-    <id>http://geekvic.top/post/a62b0c3d</id>
+    <link href="http://geekvic.top/post/a62b0c3d.html"/>
+    <id>http://geekvic.top/post/a62b0c3d.html</id>
     <published>2020-05-20T08:57:00.000Z</published>
     <updated>2020-05-22T06:12:48.239Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>Hexo如何快速搭建个人博客</title>
-    <link href="http://geekvic.top/post/e48abe66"/>
-    <id>http://geekvic.top/post/e48abe66</id>
+    <link href="http://geekvic.top/post/e48abe66.html"/>
+    <id>http://geekvic.top/post/e48abe66.html</id>
     <published>2020-05-19T08:00:00.000Z</published>
     <updated>2020-05-22T06:12:48.247Z</updated>
     
@@ -99,8 +99,8 @@
   
   <entry>
     <title>如何用Docker部署Spring Boot项目</title>
-    <link href="http://geekvic.top/post/904ba16"/>
-    <id>http://geekvic.top/post/904ba16</id>
+    <link href="http://geekvic.top/post/904ba16.html"/>
+    <id>http://geekvic.top/post/904ba16.html</id>
     <published>2019-12-15T12:36:00.000Z</published>
     <updated>2020-05-22T06:12:48.251Z</updated>
     
@@ -126,8 +126,8 @@
   
   <entry>
     <title>基于Prometheus+Grafana+AlertManager的监控系统</title>
-    <link href="http://geekvic.top/post/ced60fca"/>
-    <id>http://geekvic.top/post/ced60fca</id>
+    <link href="http://geekvic.top/post/ced60fca.html"/>
+    <id>http://geekvic.top/post/ced60fca.html</id>
     <published>2019-12-10T08:42:00.000Z</published>
     <updated>2020-05-22T06:12:48.250Z</updated>
     
@@ -163,8 +163,8 @@
   
   <entry>
     <title>日志收集系统ELK搭建</title>
-    <link href="http://geekvic.top/post/41ab3baa"/>
-    <id>http://geekvic.top/post/41ab3baa</id>
+    <link href="http://geekvic.top/post/41ab3baa.html"/>
+    <id>http://geekvic.top/post/41ab3baa.html</id>
     <published>2019-11-27T06:46:00.000Z</published>
     <updated>2020-05-22T06:12:48.251Z</updated>
     
@@ -195,8 +195,8 @@
   
   <entry>
     <title>Apollo环境配置</title>
-    <link href="http://geekvic.top/post/92932283"/>
-    <id>http://geekvic.top/post/92932283</id>
+    <link href="http://geekvic.top/post/92932283.html"/>
+    <id>http://geekvic.top/post/92932283.html</id>
     <published>2019-08-27T09:00:00.000Z</published>
     <updated>2020-05-22T06:12:48.236Z</updated>
     
@@ -238,8 +238,8 @@
   
   <entry>
     <title>FFmpeg的安装与使用</title>
-    <link href="http://geekvic.top/post/9fe0423b"/>
-    <id>http://geekvic.top/post/9fe0423b</id>
+    <link href="http://geekvic.top/post/9fe0423b.html"/>
+    <id>http://geekvic.top/post/9fe0423b.html</id>
     <published>2019-04-23T12:05:00.000Z</published>
     <updated>2020-05-22T06:12:48.238Z</updated>
     
@@ -265,8 +265,8 @@
   
   <entry>
     <title>Dubbo版本升级</title>
-    <link href="http://geekvic.top/post/1d29e395"/>
-    <id>http://geekvic.top/post/1d29e395</id>
+    <link href="http://geekvic.top/post/1d29e395.html"/>
+    <id>http://geekvic.top/post/1d29e395.html</id>
     <published>2019-04-10T12:00:00.000Z</published>
     <updated>2020-05-22T06:12:48.237Z</updated>
     
@@ -292,8 +292,8 @@
   
   <entry>
     <title>Docker中安装mysql</title>
-    <link href="http://geekvic.top/post/6774ee31"/>
-    <id>http://geekvic.top/post/6774ee31</id>
+    <link href="http://geekvic.top/post/6774ee31.html"/>
+    <id>http://geekvic.top/post/6774ee31.html</id>
     <published>2018-12-15T12:37:00.000Z</published>
     <updated>2020-05-22T06:12:48.237Z</updated>
     
@@ -331,8 +331,8 @@
   
   <entry>
     <title>Docker初识</title>
-    <link href="http://geekvic.top/post/8e06a8f9"/>
-    <id>http://geekvic.top/post/8e06a8f9</id>
+    <link href="http://geekvic.top/post/8e06a8f9.html"/>
+    <id>http://geekvic.top/post/8e06a8f9.html</id>
     <published>2018-12-13T13:54:00.000Z</published>
     <updated>2020-05-22T06:12:48.237Z</updated>
     
@@ -386,8 +386,8 @@
   
   <entry>
     <title>Java项目main方法启动的两种方式</title>
-    <link href="http://geekvic.top/post/60af2b16"/>
-    <id>http://geekvic.top/post/60af2b16</id>
+    <link href="http://geekvic.top/post/60af2b16.html"/>
+    <id>http://geekvic.top/post/60af2b16.html</id>
     <published>2018-11-26T08:36:00.000Z</published>
     <updated>2020-05-22T06:12:48.240Z</updated>
     
@@ -412,8 +412,8 @@
   
   <entry>
     <title>zookeeper安装</title>
-    <link href="http://geekvic.top/post/bf5e4a43"/>
-    <id>http://geekvic.top/post/bf5e4a43</id>
+    <link href="http://geekvic.top/post/bf5e4a43.html"/>
+    <id>http://geekvic.top/post/bf5e4a43.html</id>
     <published>2018-11-20T13:00:00.000Z</published>
     <updated>2020-05-22T06:12:48.246Z</updated>
     
@@ -439,8 +439,8 @@
   
   <entry>
     <title>内网穿透反向代理工具frp的使用</title>
-    <link href="http://geekvic.top/post/310667e0"/>
-    <id>http://geekvic.top/post/310667e0</id>
+    <link href="http://geekvic.top/post/310667e0.html"/>
+    <id>http://geekvic.top/post/310667e0.html</id>
     <published>2018-03-10T13:03:00.000Z</published>
     <updated>2020-05-22T06:12:48.249Z</updated>
     
@@ -472,8 +472,8 @@
   
   <entry>
     <title>Nginx负载均衡初识</title>
-    <link href="http://geekvic.top/post/c75d9605"/>
-    <id>http://geekvic.top/post/c75d9605</id>
+    <link href="http://geekvic.top/post/c75d9605.html"/>
+    <id>http://geekvic.top/post/c75d9605.html</id>
     <published>2018-02-22T09:33:00.000Z</published>
     <updated>2020-05-22T06:12:48.241Z</updated>
     
@@ -507,8 +507,8 @@
   
   <entry>
     <title>GitLab问题小结</title>
-    <link href="http://geekvic.top/post/c47a15e1"/>
-    <id>http://geekvic.top/post/c47a15e1</id>
+    <link href="http://geekvic.top/post/c47a15e1.html"/>
+    <id>http://geekvic.top/post/c47a15e1.html</id>
     <published>2018-01-06T11:00:00.000Z</published>
     <updated>2020-05-22T06:12:48.239Z</updated>
     
@@ -533,8 +533,8 @@
   
   <entry>
     <title>GitLab服务器迁移</title>
-    <link href="http://geekvic.top/post/6b0e3bbc"/>
-    <id>http://geekvic.top/post/6b0e3bbc</id>
+    <link href="http://geekvic.top/post/6b0e3bbc.html"/>
+    <id>http://geekvic.top/post/6b0e3bbc.html</id>
     <published>2018-01-06T01:58:00.000Z</published>
     <updated>2020-05-22T06:12:48.238Z</updated>
     
@@ -560,8 +560,8 @@
   
   <entry>
     <title>idea使用Protobuf插件</title>
-    <link href="http://geekvic.top/post/35fe24ef"/>
-    <id>http://geekvic.top/post/35fe24ef</id>
+    <link href="http://geekvic.top/post/35fe24ef.html"/>
+    <id>http://geekvic.top/post/35fe24ef.html</id>
     <published>2017-11-06T09:06:00.000Z</published>
     <updated>2020-05-22T06:12:48.247Z</updated>
     
@@ -588,8 +588,8 @@
   
   <entry>
     <title>Linux环境GitLab安装与配置</title>
-    <link href="http://geekvic.top/post/4fe954de"/>
-    <id>http://geekvic.top/post/4fe954de</id>
+    <link href="http://geekvic.top/post/4fe954de.html"/>
+    <id>http://geekvic.top/post/4fe954de.html</id>
     <published>2017-10-30T09:22:00.000Z</published>
     <updated>2020-05-22T06:12:48.240Z</updated>
     
@@ -613,8 +613,8 @@
   
   <entry>
     <title>ubuntu安装redis</title>
-    <link href="http://geekvic.top/post/ad24f30b"/>
-    <id>http://geekvic.top/post/ad24f30b</id>
+    <link href="http://geekvic.top/post/ad24f30b.html"/>
+    <id>http://geekvic.top/post/ad24f30b.html</id>
     <published>2017-10-30T08:36:00.000Z</published>
     <updated>2020-05-22T06:12:48.248Z</updated>
     
@@ -648,8 +648,8 @@
   
   <entry>
     <title>ubuntu修改apt-get源</title>
-    <link href="http://geekvic.top/post/ca00f598"/>
-    <id>http://geekvic.top/post/ca00f598</id>
+    <link href="http://geekvic.top/post/ca00f598.html"/>
+    <id>http://geekvic.top/post/ca00f598.html</id>
     <published>2017-10-30T08:11:00.000Z</published>
     <updated>2020-05-22T06:12:48.248Z</updated>
     
