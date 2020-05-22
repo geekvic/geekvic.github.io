@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Apollo环境配置</title>
+    <url>/post/Apollo%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>&nbsp; &nbsp; Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。</p>
+<h2 id="二、配置环境路径"><a href="#二、配置环境路径" class="headerlink" title="二、配置环境路径"></a>二、配置环境路径</h2><table>
+<thead>
+<tr>
+<th>操作系统</th>
+<th>server.properties</th>
+<th>hosts</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>windows</td>
+<td>C:\opt\settings\server.properties</td>
+<td>C:\Windows\System32\drivers\etc\hosts</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>/opt/settings/server.properties</td>
+<td>/etc/hosts</td>
+</tr>
+</tbody></table>
+<h2 id="三、具体配置"><a href="#三、具体配置" class="headerlink" title="三、具体配置"></a>三、具体配置</h2><h4 id="3-1-nbsp-server-properties"><a href="#3-1-nbsp-server-properties" class="headerlink" title="3.1&nbsp;server.properties"></a>3.1&nbsp;server.properties</h4><p>env=DEV</p>
+<p>目前，env持以下几个值（大小写不敏感）：</p>
+<p>&nbsp; ● DEV</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Development environment</p>
+<p>&nbsp; ● FAT</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Feature Acceptance Test environment</p>
+<p>&nbsp; ● UAT</p>
+<p>&nbsp; &nbsp; &nbsp; ○ User Acceptance Test environment</p>
+<p>&nbsp; ● PRO</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Production environment</p>
+<h4 id="3-2-hosts"><a href="#3-2-hosts" class="headerlink" title="3.2 hosts"></a>3.2 hosts</h4><p>192.168.1.153 dev.config.ynt.ai</p>
+<p>192.168.1.163 fat.config.ynt.ai</p>
+<p>192.168.1.173 uat.config.ynt.ai</p>
+<p>192.168.1.172 pro.config.ynt.ai</p>
+]]></content>
+      <categories>
+        <category>配置管理</category>
+      </categories>
+      <tags>
+        <tag>Apollo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker中安装mysql</title>
     <url>/post/Docker%E4%B8%AD%E5%AE%89%E8%A3%85mysql/</url>
     <content><![CDATA[<h4 id="1-docker-中下载-mysql"><a href="#1-docker-中下载-mysql" class="headerlink" title="1.docker 中下载 mysql"></a>1.docker 中下载 mysql</h4><div class="cnblogs_code">
@@ -194,48 +239,50 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>Apollo环境配置</title>
-    <url>/post/Apollo%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>&nbsp; &nbsp; Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。</p>
-<h2 id="二、配置环境路径"><a href="#二、配置环境路径" class="headerlink" title="二、配置环境路径"></a>二、配置环境路径</h2><table>
-<thead>
-<tr>
-<th>操作系统</th>
-<th>server.properties</th>
-<th>hosts</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>windows</td>
-<td>C:\opt\settings\server.properties</td>
-<td>C:\Windows\System32\drivers\etc\hosts</td>
-</tr>
-<tr>
-<td>linux</td>
-<td>/opt/settings/server.properties</td>
-<td>/etc/hosts</td>
-</tr>
-</tbody></table>
-<h2 id="三、具体配置"><a href="#三、具体配置" class="headerlink" title="三、具体配置"></a>三、具体配置</h2><h4 id="3-1-nbsp-server-properties"><a href="#3-1-nbsp-server-properties" class="headerlink" title="3.1&nbsp;server.properties"></a>3.1&nbsp;server.properties</h4><p>env=DEV</p>
-<p>目前，env持以下几个值（大小写不敏感）：</p>
-<p>&nbsp; ● DEV</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Development environment</p>
-<p>&nbsp; ● FAT</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Feature Acceptance Test environment</p>
-<p>&nbsp; ● UAT</p>
-<p>&nbsp; &nbsp; &nbsp; ○ User Acceptance Test environment</p>
-<p>&nbsp; ● PRO</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Production environment</p>
-<h4 id="3-2-hosts"><a href="#3-2-hosts" class="headerlink" title="3.2 hosts"></a>3.2 hosts</h4><p>192.168.1.153 dev.config.ynt.ai</p>
-<p>192.168.1.163 fat.config.ynt.ai</p>
-<p>192.168.1.173 uat.config.ynt.ai</p>
-<p>192.168.1.172 pro.config.ynt.ai</p>
+    <title>FFmpeg的安装与使用</title>
+    <url>/post/FFmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。</p>
+<h3 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h3><h4 id="2-1-安装yasm"><a href="#2-1-安装yasm" class="headerlink" title="2.1 安装yasm"></a>2.1 安装yasm</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz</span></span><br><span class="line"><span class="comment"># tar -zxvf yasm-1.3.0.tar.gz</span></span><br><span class="line"><span class="comment"># cd yasm-1.3.0</span></span><br><span class="line"><span class="comment"># ./configure</span></span><br><span class="line"><span class="comment"># make &amp;amp;&amp;amp; make install</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="2-2-安装FFmpeg"><a href="#2-2-安装FFmpeg" class="headerlink" title="2.2 安装FFmpeg"></a>2.2 安装FFmpeg</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#yum -y install bzip2</span></span><br><span class="line"><span class="comment">#tar jxvf ffmpeg-4.0.2.tar.bz2</span></span><br><span class="line"><span class="comment">#cd ffmpeg-4.0.2</span></span><br><span class="line"><span class="comment"># ./configure</span></span><br><span class="line"><span class="comment"># make</span></span><br><span class="line"><span class="comment"># make install</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="2-3-查看ffmpeg是否安装成功"><a href="#2-3-查看ffmpeg是否安装成功" class="headerlink" title="2.3 查看ffmpeg是否安装成功"></a>2.3 查看ffmpeg是否安装成功</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ffmpeg</span></span><br></pre></td></tr></table></figure>
+<p>输入ffmpeg打印了相关信息，表示安装成功</p>
+<h3 id="三、转换"><a href="#三、转换" class="headerlink" title="三、转换"></a>三、转换</h3><p>将MP3转换为16000的采样率、单通道的wav格式，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i G:\test.mp3 -acodec pcm_s16le -ac 1 -ar 16000 -f wav <span class="string">"G:\test.wav"</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>配置管理</category>
+        <category>工具</category>
       </categories>
       <tags>
-        <tag>Apollo</tag>
+        <tag>FFmpeg</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitLab服务器迁移</title>
+    <url>/post/GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/</url>
+    <content><![CDATA[<h3 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h3><p>由于GitLab内存消耗很大，已经影响到A服务器上的其他服务，同时考虑到代码管理服务应该单独部署在一台服务器上，因此决定从服务器A迁移到服务器B上。两台服务器均是CentOS 7，gitlab版本是gitlab-ce-9.5.6-ce.0.el7.x86_64.rpm 。注意：高版本的Gitlab无法恢复低版本备份的数据,需要注意在B服务器部署和A服务器一样版本的gitlab,部署好环境后开始备份和数据迁移。</p>
+<h3 id="二、备份"><a href="#二、备份" class="headerlink" title="二、备份"></a>二、备份</h3><p>备份A服务器上的gitlab数据，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:create RAILS_ENV=production</span><br></pre></td></tr></table></figure>
+<p>PS: 备份后的文件一般是位于/var/opt/gitlab/backups下。</p>
+<h3 id="三、拷贝"><a href="#三、拷贝" class="headerlink" title="三、拷贝"></a>三、拷贝</h3><p>从A服务上拷贝gitlab数据到B服务器上，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp root@A_ip:/var/opt/gitlab/backups/1515132280_2018_01_05_9.5.6_gitlab_backup.tar /var/opt/gitlab/backups</span><br></pre></td></tr></table></figure>
+
+<p>其中A_ip是A服务器IP地址。</p>
+<h3 id="四、还原"><a href="#四、还原" class="headerlink" title="四、还原"></a>四、还原</h3><p>在B服务器的/var/opt/gitlab/backups的目录下还原gitlab数据，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:restore RAILS_ENV=production BACKUP=1515132280_2018_01_05_9.5.6</span><br></pre></td></tr></table></figure>
+<p>PS：BACKUP的参数必须与原服务器备份后的文件名一致。</p>
+<h3 id="五、问题"><a href="#五、问题" class="headerlink" title="五、问题"></a>五、问题</h3><p>还原过程中报错，报错：无法 open:<br>权限不够，估计是拷贝过来的还原文件权限不够，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 644 1515132280_2018_01_05_9.5.6_gitlab_backup.tar</span><br></pre></td></tr></table></figure>
+<p>再次执行还原命令即可成功。</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>GitLab</tag>
       </tags>
   </entry>
   <entry>
@@ -360,53 +407,6 @@ symctl enable d</span></pre>
       <tags>
         <tag>Hexo</tag>
         <tag>Next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FFmpeg的安装与使用</title>
-    <url>/post/FFmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。</p>
-<h3 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h3><h4 id="2-1-安装yasm"><a href="#2-1-安装yasm" class="headerlink" title="2.1 安装yasm"></a>2.1 安装yasm</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz</span></span><br><span class="line"><span class="comment"># tar -zxvf yasm-1.3.0.tar.gz</span></span><br><span class="line"><span class="comment"># cd yasm-1.3.0</span></span><br><span class="line"><span class="comment"># ./configure</span></span><br><span class="line"><span class="comment"># make &amp;amp;&amp;amp; make install</span></span><br></pre></td></tr></table></figure>
-
-
-<h4 id="2-2-安装FFmpeg"><a href="#2-2-安装FFmpeg" class="headerlink" title="2.2 安装FFmpeg"></a>2.2 安装FFmpeg</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#yum -y install bzip2</span></span><br><span class="line"><span class="comment">#tar jxvf ffmpeg-4.0.2.tar.bz2</span></span><br><span class="line"><span class="comment">#cd ffmpeg-4.0.2</span></span><br><span class="line"><span class="comment"># ./configure</span></span><br><span class="line"><span class="comment"># make</span></span><br><span class="line"><span class="comment"># make install</span></span><br></pre></td></tr></table></figure>
-
-
-<h4 id="2-3-查看ffmpeg是否安装成功"><a href="#2-3-查看ffmpeg是否安装成功" class="headerlink" title="2.3 查看ffmpeg是否安装成功"></a>2.3 查看ffmpeg是否安装成功</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ffmpeg</span></span><br></pre></td></tr></table></figure>
-<p>输入ffmpeg打印了相关信息，表示安装成功</p>
-<h3 id="三、转换"><a href="#三、转换" class="headerlink" title="三、转换"></a>三、转换</h3><p>将MP3转换为16000的采样率、单通道的wav格式，命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffmpeg -i G:\test.mp3 -acodec pcm_s16le -ac 1 -ar 16000 -f wav <span class="string">"G:\test.wav"</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>FFmpeg</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitLab服务器迁移</title>
-    <url>/post/GitLab%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/</url>
-    <content><![CDATA[<h3 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h3><p>由于GitLab内存消耗很大，已经影响到A服务器上的其他服务，同时考虑到代码管理服务应该单独部署在一台服务器上，因此决定从服务器A迁移到服务器B上。两台服务器均是CentOS 7，gitlab版本是gitlab-ce-9.5.6-ce.0.el7.x86_64.rpm 。注意：高版本的Gitlab无法恢复低版本备份的数据,需要注意在B服务器部署和A服务器一样版本的gitlab,部署好环境后开始备份和数据迁移。</p>
-<h3 id="二、备份"><a href="#二、备份" class="headerlink" title="二、备份"></a>二、备份</h3><p>备份A服务器上的gitlab数据，执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:create RAILS_ENV=production</span><br></pre></td></tr></table></figure>
-<p>PS: 备份后的文件一般是位于/var/opt/gitlab/backups下。</p>
-<h3 id="三、拷贝"><a href="#三、拷贝" class="headerlink" title="三、拷贝"></a>三、拷贝</h3><p>从A服务上拷贝gitlab数据到B服务器上，执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp root@A_ip:/var/opt/gitlab/backups/1515132280_2018_01_05_9.5.6_gitlab_backup.tar /var/opt/gitlab/backups</span><br></pre></td></tr></table></figure>
-
-<p>其中A_ip是A服务器IP地址。</p>
-<h3 id="四、还原"><a href="#四、还原" class="headerlink" title="四、还原"></a>四、还原</h3><p>在B服务器的/var/opt/gitlab/backups的目录下还原gitlab数据，执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:restore RAILS_ENV=production BACKUP=1515132280_2018_01_05_9.5.6</span><br></pre></td></tr></table></figure>
-<p>PS：BACKUP的参数必须与原服务器备份后的文件名一致。</p>
-<h3 id="五、问题"><a href="#五、问题" class="headerlink" title="五、问题"></a>五、问题</h3><p>还原过程中报错，报错：无法 open:<br>权限不够，估计是拷贝过来的还原文件权限不够，执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 644 1515132280_2018_01_05_9.5.6_gitlab_backup.tar</span><br></pre></td></tr></table></figure>
-<p>再次执行还原命令即可成功。</p>
-]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>GitLab</tag>
       </tags>
   </entry>
   <entry>
@@ -646,41 +646,38 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>zookeeper安装</title>
-    <url>/post/Zookeeper%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h3 id="1-下载zk软件"><a href="#1-下载zk软件" class="headerlink" title="1.下载zk软件"></a>1.下载zk软件</h3><p><a href="http://www.apache.org/dyn/closer.cgi/zookeeper/" target="_blank" rel="noopener">http://www.apache.org/dyn/closer.cgi/zookeeper/</a></p>
-<h3 id="2-解压压缩包"><a href="#2-解压压缩包" class="headerlink" title="2.解压压缩包"></a>2.解压压缩包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar zxvf zookeeper-3.4.13.tar.gz</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-创建zoo-cfg"><a href="#3-创建zoo-cfg" class="headerlink" title="3.创建zoo.cfg"></a>3.创建zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd zookeeper-3.4.13/conf</span></span><br><span class="line"><span class="comment"># cp zoo_sample.cfg zoo.cfg</span></span><br></pre></td></tr></table></figure>
+    <title>Spring Boot 热部署devtools实现</title>
+    <url>/post/Spring%20Boot%20%E7%83%AD%E9%83%A8%E7%BD%B2devtools%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h3 id="1-devtools"><a href="#1-devtools" class="headerlink" title="1.devtools"></a>1.devtools</h3><p>spring为开发者提供了一个名为spring-boot-devtools的模块来使Spring Boot应用支持热部署，提高开发者的开发效率，无需手动重启Spring Boot应用。</p>
+<h3 id="2-项目搭建"><a href="#2-项目搭建" class="headerlink" title="2.项目搭建"></a>2.项目搭建</h3><p>本文是采用IDEA搭建的Spring Boot应用，通过spring-boot-devtools配置，可以支持修改java文件会自动重启程序，一些资源无需触发重启，例如thymeleaf模板文件就可以实时编辑。默认情况下，更改/META-INF/maven，/META-INF/resources ，/resources ，/static ，/public 或/templates下的资源不会触发重启，而是触发livereload。devtools模块包含一个嵌入的livereload服务器，可以在资源变化时用来触发浏览器刷新。浏览器需要在livereload.com下载安装扩展。 例如Chrome浏览器在应用商店安装livereload插件后，在要自动刷新的页面点击对应的图标，启动应用后更新页面内容或者css等都会触发页面自动刷新。</p>
+<h3 id="3-livereload"><a href="#3-livereload" class="headerlink" title="3.livereload"></a>3.livereload</h3><p>livereload 通过引入的脚本livereload.js在 livereload 服务和浏览器之间建立了一个 WebSocket 连接。每当监测到文件的变动，livereload 服务就会向浏览器发送一个信号，浏览器收到信号后就刷新页面，实现了实时刷新的效果。每次启动时，需要点击对应的图标，如下图所示。</p>
+<p><img src="https://i.loli.net/2020/04/10/ywQmVeGx4dhFzoU.png" alt="clipboard.png"></p>
+<h3 id="4-项目代码配置"><a href="#4-项目代码配置" class="headerlink" title="4.项目代码配置"></a>4.项目代码配置</h3><h5 id="4-1-pom-xml配置文件"><a href="#4-1-pom-xml配置文件" class="headerlink" title="4.1 pom.xml配置文件"></a>4.1 pom.xml配置文件</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">fork</span>&gt;</span>true<span class="tag">&lt;/<span class="name">fork</span>&gt;</span> <span class="comment">&lt;!-- 如果没有该配置，devtools不会生效 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="4-获取zk的路径"><a href="#4-获取zk的路径" class="headerlink" title="4.获取zk的路径"></a>4.获取zk的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pwd</span></span><br></pre></td></tr></table></figure>
-<p>/home/software/zookeeper-3.4.13</p>
-<h3 id="5-修改zoo-cfg"><a href="#5-修改zoo-cfg" class="headerlink" title="5.修改zoo.cfg"></a>5.修改zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vim zoo.cfg</span></span><br></pre></td></tr></table></figure>
 
-<p>设置dataDir=/home/software/zookeeper-3.4.13/data</p>
-<h3 id="6-zk启动、关闭、查看状态"><a href="#6-zk启动、关闭、查看状态" class="headerlink" title="6.zk启动、关闭、查看状态"></a>6.zk启动、关闭、查看状态</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd bin</span></span><br></pre></td></tr></table></figure>
+<h5 id="4-2-yml配置"><a href="#4-2-yml配置" class="headerlink" title="4.2 yml配置"></a>4.2 yml配置</h5><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">devtools:</span></span><br><span class="line">  <span class="attr">livereload:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持livereload</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">35729</span></span><br><span class="line">  <span class="attr">restart:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持热部署</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>启动</li>
+
+<h3 id="5-IDEA配置"><a href="#5-IDEA配置" class="headerlink" title="5.IDEA配置"></a>5.IDEA配置</h3><ul>
+<li>File-Settings-Compiler-Build project automatically</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh start</span></span><br></pre></td></tr></table></figure>
-
+<p><img src="https://i.loli.net/2020/04/10/L59OnwXfxWorsKQ.png" alt="buildproject.png"></p>
 <ul>
-<li>关闭</li>
+<li>ctrl + shift + alt + /,选择Registry,勾上 Compiler autoMake allow when app running</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh stop</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>查看状态</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh status</span></span><br></pre></td></tr></table></figure>
-
-
+<h3 id="6-安装livereload插件"><a href="#6-安装livereload插件" class="headerlink" title="6.安装livereload插件"></a>6.安装livereload插件</h3><p>下载livereload插件，将其安装到chrome扩展程序中，并选中允许访问文件网址。</p>
+<p><img src="https://i.loli.net/2020/04/10/qOpQgXFmbhrUDtM.png" alt="clipboard2.png"></p>
+<h3 id="7-测试"><a href="#7-测试" class="headerlink" title="7.测试"></a>7.测试</h3><ol>
+<li>修改类 应用会重启</li>
+<li>修改配置文件 应用会重启</li>
+<li>修改静态文件（html、css等），应用不会重启，但是会调用livereload，浏览器会自动刷新，显示最新的修改内容。</li>
+</ol>
 ]]></content>
       <categories>
-        <category>zookeeper</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
-        <tag>zookeeper</tag>
+        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -777,38 +774,89 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot 热部署devtools实现</title>
-    <url>/post/Spring%20Boot%20%E7%83%AD%E9%83%A8%E7%BD%B2devtools%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<h3 id="1-devtools"><a href="#1-devtools" class="headerlink" title="1.devtools"></a>1.devtools</h3><p>spring为开发者提供了一个名为spring-boot-devtools的模块来使Spring Boot应用支持热部署，提高开发者的开发效率，无需手动重启Spring Boot应用。</p>
-<h3 id="2-项目搭建"><a href="#2-项目搭建" class="headerlink" title="2.项目搭建"></a>2.项目搭建</h3><p>本文是采用IDEA搭建的Spring Boot应用，通过spring-boot-devtools配置，可以支持修改java文件会自动重启程序，一些资源无需触发重启，例如thymeleaf模板文件就可以实时编辑。默认情况下，更改/META-INF/maven，/META-INF/resources ，/resources ，/static ，/public 或/templates下的资源不会触发重启，而是触发livereload。devtools模块包含一个嵌入的livereload服务器，可以在资源变化时用来触发浏览器刷新。浏览器需要在livereload.com下载安装扩展。 例如Chrome浏览器在应用商店安装livereload插件后，在要自动刷新的页面点击对应的图标，启动应用后更新页面内容或者css等都会触发页面自动刷新。</p>
-<h3 id="3-livereload"><a href="#3-livereload" class="headerlink" title="3.livereload"></a>3.livereload</h3><p>livereload 通过引入的脚本livereload.js在 livereload 服务和浏览器之间建立了一个 WebSocket 连接。每当监测到文件的变动，livereload 服务就会向浏览器发送一个信号，浏览器收到信号后就刷新页面，实现了实时刷新的效果。每次启动时，需要点击对应的图标，如下图所示。</p>
-<p><img src="https://i.loli.net/2020/04/10/ywQmVeGx4dhFzoU.png" alt="clipboard.png"></p>
-<h3 id="4-项目代码配置"><a href="#4-项目代码配置" class="headerlink" title="4.项目代码配置"></a>4.项目代码配置</h3><h5 id="4-1-pom-xml配置文件"><a href="#4-1-pom-xml配置文件" class="headerlink" title="4.1 pom.xml配置文件"></a>4.1 pom.xml配置文件</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">fork</span>&gt;</span>true<span class="tag">&lt;/<span class="name">fork</span>&gt;</span> <span class="comment">&lt;!-- 如果没有该配置，devtools不会生效 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>zookeeper安装</title>
+    <url>/post/Zookeeper%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h3 id="1-下载zk软件"><a href="#1-下载zk软件" class="headerlink" title="1.下载zk软件"></a>1.下载zk软件</h3><p><a href="http://www.apache.org/dyn/closer.cgi/zookeeper/" target="_blank" rel="noopener">http://www.apache.org/dyn/closer.cgi/zookeeper/</a></p>
+<h3 id="2-解压压缩包"><a href="#2-解压压缩包" class="headerlink" title="2.解压压缩包"></a>2.解压压缩包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar zxvf zookeeper-3.4.13.tar.gz</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-创建zoo-cfg"><a href="#3-创建zoo-cfg" class="headerlink" title="3.创建zoo.cfg"></a>3.创建zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd zookeeper-3.4.13/conf</span></span><br><span class="line"><span class="comment"># cp zoo_sample.cfg zoo.cfg</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="4-获取zk的路径"><a href="#4-获取zk的路径" class="headerlink" title="4.获取zk的路径"></a>4.获取zk的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pwd</span></span><br></pre></td></tr></table></figure>
+<p>/home/software/zookeeper-3.4.13</p>
+<h3 id="5-修改zoo-cfg"><a href="#5-修改zoo-cfg" class="headerlink" title="5.修改zoo.cfg"></a>5.修改zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vim zoo.cfg</span></span><br></pre></td></tr></table></figure>
 
-<h5 id="4-2-yml配置"><a href="#4-2-yml配置" class="headerlink" title="4.2 yml配置"></a>4.2 yml配置</h5><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">devtools:</span></span><br><span class="line">  <span class="attr">livereload:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持livereload</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">35729</span></span><br><span class="line">  <span class="attr">restart:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持热部署</span></span><br></pre></td></tr></table></figure>
+<p>设置dataDir=/home/software/zookeeper-3.4.13/data</p>
+<h3 id="6-zk启动、关闭、查看状态"><a href="#6-zk启动、关闭、查看状态" class="headerlink" title="6.zk启动、关闭、查看状态"></a>6.zk启动、关闭、查看状态</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd bin</span></span><br></pre></td></tr></table></figure>
 
-
-<h3 id="5-IDEA配置"><a href="#5-IDEA配置" class="headerlink" title="5.IDEA配置"></a>5.IDEA配置</h3><ul>
-<li>File-Settings-Compiler-Build project automatically</li>
-</ul>
-<p><img src="https://i.loli.net/2020/04/10/L59OnwXfxWorsKQ.png" alt="buildproject.png"></p>
 <ul>
-<li>ctrl + shift + alt + /,选择Registry,勾上 Compiler autoMake allow when app running</li>
+<li>启动</li>
 </ul>
-<h3 id="6-安装livereload插件"><a href="#6-安装livereload插件" class="headerlink" title="6.安装livereload插件"></a>6.安装livereload插件</h3><p>下载livereload插件，将其安装到chrome扩展程序中，并选中允许访问文件网址。</p>
-<p><img src="https://i.loli.net/2020/04/10/qOpQgXFmbhrUDtM.png" alt="clipboard2.png"></p>
-<h3 id="7-测试"><a href="#7-测试" class="headerlink" title="7.测试"></a>7.测试</h3><ol>
-<li>修改类 应用会重启</li>
-<li>修改配置文件 应用会重启</li>
-<li>修改静态文件（html、css等），应用不会重启，但是会调用livereload，浏览器会自动刷新，显示最新的修改内容。</li>
-</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh start</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>关闭</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh stop</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看状态</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh status</span></span><br></pre></td></tr></table></figure>
+
+
 ]]></content>
       <categories>
-        <category>Spring Boot</category>
+        <category>zookeeper</category>
       </categories>
       <tags>
-        <tag>Spring Boot</tag>
+        <tag>zookeeper</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo如何快速搭建个人博客</title>
+    <url>/post/hexo%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h1 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h1><ol>
+<li>Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
+<li>Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。</li>
+<li>只需一条指令即可部署到 GitHub Pages,Gitee Pages, Heroku 或其他平台。</li>
+<li>强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成</li>
+</ol>
+<h1 id="如何安装？"><a href="#如何安装？" class="headerlink" title="如何安装？"></a>如何安装？</h1><p>安装Hexo前需要先安装Node.js和Git，支持windows、Mac、Linux安装，本文主要介绍在如何在Linux上安装</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install git-core</span><br></pre></td></tr></table></figure>
+<h3 id="查看是否安装完毕，若显示版本信息，表示安装成功"><a href="#查看是否安装完毕，若显示版本信息，表示安装成功" class="headerlink" title="查看是否安装完毕，若显示版本信息，表示安装成功"></a>查看是否安装完毕，若显示版本信息，表示安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<h3 id="配置用户名、邮箱"><a href="#配置用户名、邮箱" class="headerlink" title="配置用户名、邮箱"></a>配置用户名、邮箱</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.email <span class="string">"zhangviv@163.com"</span></span><br><span class="line">git config --global user.name <span class="string">"vic"</span></span><br></pre></td></tr></table></figure>
+<h3 id="ssh设置"><a href="#ssh设置" class="headerlink" title="ssh设置"></a>ssh设置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"zhangviv@163.com"</span></span><br><span class="line"><span class="built_in">cd</span> /root/.ssh</span><br></pre></td></tr></table></figure>
+<h3 id="查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里"><a href="#查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里" class="headerlink" title="查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里"></a>查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">id_rsa  id_rsa.pub  known_hosts</span><br></pre></td></tr></table></figure>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><h3 id="官网下载最新版本"><a href="#官网下载最新版本" class="headerlink" title="官网下载最新版本"></a>官网下载最新版本</h3><p><img src="https://i.loli.net/2020/05/19/OpEvdQ1fVX9nbwm.png" alt="nodejs.png"></p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xvf  node-v12.16.3-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+<h3 id="进入bin，查看是否安装成功"><a href="#进入bin，查看是否安装成功" class="headerlink" title="进入bin，查看是否安装成功"></a>进入bin，查看是否安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./node -v</span><br></pre></td></tr></table></figure>
+<h3 id="node、npm创建软链接，执行命令"><a href="#node、npm创建软链接，执行命令" class="headerlink" title="node、npm创建软链接，执行命令"></a>node、npm创建软链接，执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/node /usr/<span class="built_in">local</span>/bin/node  </span><br><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br></pre></td></tr></table></figure>
+<h3 id="进入-usr-local-bin下查看文件是否生成"><a href="#进入-usr-local-bin下查看文件是否生成" class="headerlink" title="进入/usr/local/bin下查看文件是否生成"></a>进入/usr/local/bin下查看文件是否生成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node  npm</span><br></pre></td></tr></table></figure>
+
+<h3 id="再次查看软连接是否成功，如何显示版本，则node-js安装成功"><a href="#再次查看软连接是否成功，如何显示版本，则node-js安装成功" class="headerlink" title="再次查看软连接是否成功，如何显示版本，则node.js安装成功"></a>再次查看软连接是否成功，如何显示版本，则node.js安装成功</h3><p><img src="https://i.loli.net/2020/05/19/r92TAabc8S6ERJt.png" alt="node-v.png"></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h3 id="所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。"><a href="#所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。" class="headerlink" title="所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。"></a>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h3 id="hexo创建软连接"><a href="#hexo创建软连接" class="headerlink" title="hexo创建软连接"></a>hexo创建软连接</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/hexo /usr/<span class="built_in">local</span>/bin/hexo</span><br></pre></td></tr></table></figure>
+<h3 id="创建博客文件夹，下载资源"><a href="#创建博客文件夹，下载资源" class="headerlink" title="创建博客文件夹，下载资源"></a>创建博客文件夹，下载资源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line"><span class="built_in">cd</span> blog    </span><br><span class="line">hexo init //会自动把资源文件下载好</span><br></pre></td></tr></table></figure>
+<h3 id="启动测试，输入localhost-4000，即可访问本地的博客测试地址"><a href="#启动测试，输入localhost-4000，即可访问本地的博客测试地址" class="headerlink" title="启动测试，输入localhost:4000，即可访问本地的博客测试地址"></a>启动测试，输入localhost:4000，即可访问本地的博客测试地址</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><h2 id="清除缓存命令"><a href="#清除缓存命令" class="headerlink" title="清除缓存命令"></a>清除缓存命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令</p>
+<h2 id="启动测试"><a href="#启动测试" class="headerlink" title="启动测试"></a>启动测试</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
+<h2 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>全写命令是：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>全写命令是：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Git</tag>
+        <tag>node.js</tag>
       </tags>
   </entry>
   <entry>
@@ -899,51 +947,52 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>Hexo如何快速搭建个人博客</title>
-    <url>/post/hexo%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h1 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h1><ol>
-<li>Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
-<li>Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。</li>
-<li>只需一条指令即可部署到 GitHub Pages,Gitee Pages, Heroku 或其他平台。</li>
-<li>强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成</li>
-</ol>
-<h1 id="如何安装？"><a href="#如何安装？" class="headerlink" title="如何安装？"></a>如何安装？</h1><p>安装Hexo前需要先安装Node.js和Git，支持windows、Mac、Linux安装，本文主要介绍在如何在Linux上安装</p>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install git-core</span><br></pre></td></tr></table></figure>
-<h3 id="查看是否安装完毕，若显示版本信息，表示安装成功"><a href="#查看是否安装完毕，若显示版本信息，表示安装成功" class="headerlink" title="查看是否安装完毕，若显示版本信息，表示安装成功"></a>查看是否安装完毕，若显示版本信息，表示安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
-<h3 id="配置用户名、邮箱"><a href="#配置用户名、邮箱" class="headerlink" title="配置用户名、邮箱"></a>配置用户名、邮箱</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.email <span class="string">"zhangviv@163.com"</span></span><br><span class="line">git config --global user.name <span class="string">"vic"</span></span><br></pre></td></tr></table></figure>
-<h3 id="ssh设置"><a href="#ssh设置" class="headerlink" title="ssh设置"></a>ssh设置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"zhangviv@163.com"</span></span><br><span class="line"><span class="built_in">cd</span> /root/.ssh</span><br></pre></td></tr></table></figure>
-<h3 id="查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里"><a href="#查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里" class="headerlink" title="查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里"></a>查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">id_rsa  id_rsa.pub  known_hosts</span><br></pre></td></tr></table></figure>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><h3 id="官网下载最新版本"><a href="#官网下载最新版本" class="headerlink" title="官网下载最新版本"></a>官网下载最新版本</h3><p><img src="https://i.loli.net/2020/05/19/OpEvdQ1fVX9nbwm.png" alt="nodejs.png"></p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xvf  node-v12.16.3-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
-<h3 id="进入bin，查看是否安装成功"><a href="#进入bin，查看是否安装成功" class="headerlink" title="进入bin，查看是否安装成功"></a>进入bin，查看是否安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./node -v</span><br></pre></td></tr></table></figure>
-<h3 id="node、npm创建软链接，执行命令"><a href="#node、npm创建软链接，执行命令" class="headerlink" title="node、npm创建软链接，执行命令"></a>node、npm创建软链接，执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/node /usr/<span class="built_in">local</span>/bin/node  </span><br><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br></pre></td></tr></table></figure>
-<h3 id="进入-usr-local-bin下查看文件是否生成"><a href="#进入-usr-local-bin下查看文件是否生成" class="headerlink" title="进入/usr/local/bin下查看文件是否生成"></a>进入/usr/local/bin下查看文件是否生成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node  npm</span><br></pre></td></tr></table></figure>
+    <title>ubuntu安装redis</title>
+    <url>/post/ubuntu%E5%AE%89%E8%A3%85redis/</url>
+    <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>服务器：ubuntu server 17.04</p>
+<p>安装方式：apt-get</p>
+<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><ul>
+<li>执行命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get update</span><br></pre></td></tr></table></figure>
 
-<h3 id="再次查看软连接是否成功，如何显示版本，则node-js安装成功"><a href="#再次查看软连接是否成功，如何显示版本，则node-js安装成功" class="headerlink" title="再次查看软连接是否成功，如何显示版本，则node.js安装成功"></a>再次查看软连接是否成功，如何显示版本，则node.js安装成功</h3><p><img src="https://i.loli.net/2020/05/19/r92TAabc8S6ERJt.png" alt="node-v.png"></p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h3 id="所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。"><a href="#所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。" class="headerlink" title="所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。"></a>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h3 id="hexo创建软连接"><a href="#hexo创建软连接" class="headerlink" title="hexo创建软连接"></a>hexo创建软连接</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/hexo /usr/<span class="built_in">local</span>/bin/hexo</span><br></pre></td></tr></table></figure>
-<h3 id="创建博客文件夹，下载资源"><a href="#创建博客文件夹，下载资源" class="headerlink" title="创建博客文件夹，下载资源"></a>创建博客文件夹，下载资源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line"><span class="built_in">cd</span> blog    </span><br><span class="line">hexo init //会自动把资源文件下载好</span><br></pre></td></tr></table></figure>
-<h3 id="启动测试，输入localhost-4000，即可访问本地的博客测试地址"><a href="#启动测试，输入localhost-4000，即可访问本地的博客测试地址" class="headerlink" title="启动测试，输入localhost:4000，即可访问本地的博客测试地址"></a>启动测试，输入localhost:4000，即可访问本地的博客测试地址</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><h2 id="清除缓存命令"><a href="#清除缓存命令" class="headerlink" title="清除缓存命令"></a>清除缓存命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 
-<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令</p>
-<h2 id="启动测试"><a href="#启动测试" class="headerlink" title="启动测试"></a>启动测试</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
-<h2 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>全写命令是：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<h2 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>全写命令是：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
+<ul>
+<li>执行命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install redis-server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启用redis：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>查看redis是否启用：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-cli</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>redis 127.0.0.1:6379&gt;ping，返回PONG，说明redis已经安装成功。</p>
+</li>
+<li><p>redis默认是只允许本地访问，如果要让其远程访问，还需要修改配置。执行$ vim /etc/redis/redis.conf，注释bind 127.0.0.1，除此之外，还需要关闭保护模式，protected-mode默认是yes，需要将protected-mode设置为 no</p>
+</li>
+<li><p>再重启下redis：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3-远程访问"><a href="#3-远程访问" class="headerlink" title="3.远程访问"></a>3.远程访问</h3><p>本机环境：win10，安装redis客户端RedisDesktopManager，通过设置ip地址，redis端口号等，可以远程连接ubuntu上安装的redis，如下图所示。</p>
+<p><img src="https://i.loli.net/2020/04/10/fH9FkYbKd6Av7LQ.png" alt="redis.png"></p>
+]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Git</tag>
-        <tag>node.js</tag>
+        <tag>ubuntu</tag>
+        <tag>redis</tag>
       </tags>
   </entry>
   <entry>
@@ -1019,55 +1068,6 @@ symctl enable d</span></pre>
       </categories>
       <tags>
         <tag>Gitlab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ubuntu安装redis</title>
-    <url>/post/ubuntu%E5%AE%89%E8%A3%85redis/</url>
-    <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>服务器：ubuntu server 17.04</p>
-<p>安装方式：apt-get</p>
-<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><ul>
-<li>执行命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get update</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li>执行命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install redis-server</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启用redis：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li>查看redis是否启用：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-cli</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>redis 127.0.0.1:6379&gt;ping，返回PONG，说明redis已经安装成功。</p>
-</li>
-<li><p>redis默认是只允许本地访问，如果要让其远程访问，还需要修改配置。执行$ vim /etc/redis/redis.conf，注释bind 127.0.0.1，除此之外，还需要关闭保护模式，protected-mode默认是yes，需要将protected-mode设置为 no</p>
-</li>
-<li><p>再重启下redis：</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="3-远程访问"><a href="#3-远程访问" class="headerlink" title="3.远程访问"></a>3.远程访问</h3><p>本机环境：win10，安装redis客户端RedisDesktopManager，通过设置ip地址，redis端口号等，可以远程连接ubuntu上安装的redis，如下图所示。</p>
-<p><img src="https://i.loli.net/2020/04/10/fH9FkYbKd6Av7LQ.png" alt="redis.png"></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>ubuntu</tag>
-        <tag>redis</tag>
       </tags>
   </entry>
   <entry>
