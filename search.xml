@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Apollo环境配置</title>
-    <url>/post/Apollo%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>&nbsp; &nbsp; Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。</p>
-<h2 id="二、配置环境路径"><a href="#二、配置环境路径" class="headerlink" title="二、配置环境路径"></a>二、配置环境路径</h2><table>
-<thead>
-<tr>
-<th>操作系统</th>
-<th>server.properties</th>
-<th>hosts</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>windows</td>
-<td>C:\opt\settings\server.properties</td>
-<td>C:\Windows\System32\drivers\etc\hosts</td>
-</tr>
-<tr>
-<td>linux</td>
-<td>/opt/settings/server.properties</td>
-<td>/etc/hosts</td>
-</tr>
-</tbody></table>
-<h2 id="三、具体配置"><a href="#三、具体配置" class="headerlink" title="三、具体配置"></a>三、具体配置</h2><h4 id="3-1-nbsp-server-properties"><a href="#3-1-nbsp-server-properties" class="headerlink" title="3.1&nbsp;server.properties"></a>3.1&nbsp;server.properties</h4><p>env=DEV</p>
-<p>目前，env持以下几个值（大小写不敏感）：</p>
-<p>&nbsp; ● DEV</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Development environment</p>
-<p>&nbsp; ● FAT</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Feature Acceptance Test environment</p>
-<p>&nbsp; ● UAT</p>
-<p>&nbsp; &nbsp; &nbsp; ○ User Acceptance Test environment</p>
-<p>&nbsp; ● PRO</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Production environment</p>
-<h4 id="3-2-hosts"><a href="#3-2-hosts" class="headerlink" title="3.2 hosts"></a>3.2 hosts</h4><p>192.168.1.153 dev.config.ynt.ai</p>
-<p>192.168.1.163 fat.config.ynt.ai</p>
-<p>192.168.1.173 uat.config.ynt.ai</p>
-<p>192.168.1.172 pro.config.ynt.ai</p>
-]]></content>
-      <categories>
-        <category>配置管理</category>
-      </categories>
-      <tags>
-        <tag>Apollo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker中安装mysql</title>
     <url>/post/Docker%E4%B8%AD%E5%AE%89%E8%A3%85mysql/</url>
     <content><![CDATA[<h4 id="1-docker-中下载-mysql"><a href="#1-docker-中下载-mysql" class="headerlink" title="1.docker 中下载 mysql"></a>1.docker 中下载 mysql</h4><div class="cnblogs_code">
@@ -239,6 +194,175 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
+    <title>Apollo环境配置</title>
+    <url>/post/Apollo%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>&nbsp; &nbsp; Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。</p>
+<h2 id="二、配置环境路径"><a href="#二、配置环境路径" class="headerlink" title="二、配置环境路径"></a>二、配置环境路径</h2><table>
+<thead>
+<tr>
+<th>操作系统</th>
+<th>server.properties</th>
+<th>hosts</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>windows</td>
+<td>C:\opt\settings\server.properties</td>
+<td>C:\Windows\System32\drivers\etc\hosts</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>/opt/settings/server.properties</td>
+<td>/etc/hosts</td>
+</tr>
+</tbody></table>
+<h2 id="三、具体配置"><a href="#三、具体配置" class="headerlink" title="三、具体配置"></a>三、具体配置</h2><h4 id="3-1-nbsp-server-properties"><a href="#3-1-nbsp-server-properties" class="headerlink" title="3.1&nbsp;server.properties"></a>3.1&nbsp;server.properties</h4><p>env=DEV</p>
+<p>目前，env持以下几个值（大小写不敏感）：</p>
+<p>&nbsp; ● DEV</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Development environment</p>
+<p>&nbsp; ● FAT</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Feature Acceptance Test environment</p>
+<p>&nbsp; ● UAT</p>
+<p>&nbsp; &nbsp; &nbsp; ○ User Acceptance Test environment</p>
+<p>&nbsp; ● PRO</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Production environment</p>
+<h4 id="3-2-hosts"><a href="#3-2-hosts" class="headerlink" title="3.2 hosts"></a>3.2 hosts</h4><p>192.168.1.153 dev.config.ynt.ai</p>
+<p>192.168.1.163 fat.config.ynt.ai</p>
+<p>192.168.1.173 uat.config.ynt.ai</p>
+<p>192.168.1.172 pro.config.ynt.ai</p>
+]]></content>
+      <categories>
+        <category>配置管理</category>
+      </categories>
+      <tags>
+        <tag>Apollo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitLab问题小结</title>
+    <url>/post/GitLab%E9%97%AE%E9%A2%98%E5%B0%8F%E7%BB%93/</url>
+    <content><![CDATA[<h3 id="1-内存消耗太大"><a href="#1-内存消耗太大" class="headerlink" title="1.内存消耗太大"></a>1.内存消耗太大</h3><p>　　（1）公司使用gitlab后，发现服务器内存居高不下，使用top命令查看内存消耗，发现服务器上git将近消耗一半内存资源。而且很奇怪的是竟然开启了32个进程。后经查资料，原来这跟gitlab的默认机制有关。在配置文件/etc/gitlab/gitlab.rb里，unicorn[‘worker_processes’] = 2，默认是被注释掉的，这就解释了为什么会开启32个进程，因为cpu有32核，如果服务器只用于GitLab的话，官方建议是CPU核心数加一，可以提高服务器的响应速度。不过如果内存只有4G，或者服务器同时承载其他服务，就不要改了，以免内存不足。另外，这个参数最小值是2，设为1，服务器可能会卡死。</p>
+<p>　　（2）解决方案：根据服务器使用情况，给unicorn[‘worker_processes’]设置一个合适的值，可解决内存占用过大问题。</p>
+<h3 id="2-时间不一致"><a href="#2-时间不一致" class="headerlink" title="2.时间不一致"></a>2.时间不一致</h3><p>　　gitlab的web页面上activity里显示的时间相差8小时，很有可能是时区设置问题，设置时区为：gitlab_rails[‘time_zone’] = ‘Asia/Shanghai’，还有种可能是服务器本身的时间有问题，服务器服务时间修改注意事项：写入clock -w &nbsp;,强制将时间写入COMS！这样重启后不会失效。&nbsp;</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>GitLab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo进阶设置</title>
+    <url>/post/Hexo%E8%BF%9B%E9%98%B6%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="部署平台选型"><a href="#部署平台选型" class="headerlink" title="部署平台选型"></a>部署平台选型</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GitHub和Gitee（码云）是国内外比较流行的代码托管平台，现都推出GitHub/Gitee Pages可以存放静态网页代码，因此可以用来搭建自己的博客。</p>
+<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><table>
+<thead>
+<tr>
+<th>平台</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Github</td>
+<td>全球最流行的平台，且免费</td>
+<td>国内由于有墙，访问太慢</td>
+</tr>
+<tr>
+<td>Gitee</td>
+<td>国内访问快</td>
+<td>阉割部分功能，提供有偿服务，比如自动部署、自定义域名等需要升级Gitee Pages Pro</td>
+</tr>
+</tbody></table>
+<p><img src="https://i.loli.net/2020/05/20/dnYbImls645Fe12.png" alt="giteepages.png"></p>
+<p>如上图所示，Gitee是需要付费的，但是考虑到部署到Github上，在国内访问真的太慢，经常加载要十几秒，最终折中了选择，即两个平台同时部署，国外的用户可以访问Github，国内的用户访问Gitee，从而优化访问速度。</p>
+<h2 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:[username]/[username].github.io.git,master</span><br><span class="line">    gitee: git@gitee.com:[username]/[username].git,master</span><br></pre></td></tr></table></figure>
+<p>其中，这里的 username指的是你在这两个网站上的用户名，只有以这种命名形式的仓库，才能够来访问我们的博客。</p>
+<ul>
+<li>Github的仓库名要命名为：{username}.github.io</li>
+<li>Gitee的仓库名要命名为：{username}</li>
+</ul>
+<p>比如说，我的Github和Gitee的username是geekvic，那么在部署博客成功后，我就可以通过下边的url来访问我的Hexo博客：</p>
+<ul>
+<li><a href="http://geekvic.github.io/" target="_blank" rel="noopener">http://geekvic.github.io/</a></li>
+<li><a href="http://geekvic.gitee.io/" target="_blank" rel="noopener">http://geekvic.gitee.io/</a></li>
+</ul>
+<h1 id="主题选择"><a href="#主题选择" class="headerlink" title="主题选择"></a>主题选择</h1><p>Hexo主题地址：<a href="https://hexo.io/themes/，" target="_blank" rel="noopener">https://hexo.io/themes/，</a> 我们可以去挑选自己喜欢的主题，每个主题在github上面都开源了源码，下面主要以我选择的theme-next主题进行介绍。</p>
+<p>找到Hexo文件的目录,如下图所示。</p>
+<p><img src="https://i.loli.net/2020/05/21/x5HqWGlftYC3Imb.png" alt="hexo.png"></p>
+<p>进入theme文件夹，执行命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git</span><br></pre></td></tr></table></figure>
+<p>下载完成后，则会在themes文件夹下出现一个新的名为hexo-theme-next的文件夹，这就是我们刚下载的主题，返回hexo站点的配置文件_config.yml，修改配置：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">theme: hexo-theme-next</span><br></pre></td></tr></table></figure>
+<p>再执行下命令，就可以看到更改后的主题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean //清除一下缓存</span><br><span class="line">hexo g  //生成静态页面</span><br><span class="line">hexo s //开启本地服务器</span><br></pre></td></tr></table></figure>
+
+<h1 id="Hexo基础设置"><a href="#Hexo基础设置" class="headerlink" title="Hexo基础设置"></a>Hexo基础设置</h1><h2 id="配置网站基础信息"><a href="#配置网站基础信息" class="headerlink" title="配置网站基础信息"></a>配置网站基础信息</h2><p>修改站点配置文件_config.yml中，修改：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line">title:          <span class="comment"># 网站标题</span></span><br><span class="line">subtitle:       <span class="comment"># 网站副标题</span></span><br><span class="line">description:    <span class="comment"># 描述，介绍网站的</span></span><br><span class="line">keywords:       <span class="comment"># 网站的关键字</span></span><br><span class="line">author:         <span class="comment"># 博主姓名</span></span><br><span class="line">language: zh-CN <span class="comment"># 语言：zh-CN 是简体中文</span></span><br><span class="line">timezone:       <span class="comment"># 时区</span></span><br></pre></td></tr></table></figure>
+<h1 id="Next主题进阶设置"><a href="#Next主题进阶设置" class="headerlink" title="Next主题进阶设置"></a>Next主题进阶设置</h1><h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p> 默认的主题配置文件_config.yml中，菜单只开启了首页和归档，我们根据需要，可以添加 about、tag、categories 等菜单</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  about: /about/ || fa fa-user</span><br><span class="line">  tags: /tags/ || fa fa-tags</span><br><span class="line">  categories: /categories/ || fa fa-th</span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br></pre></td></tr></table></figure>
+<h3 id="增加about页面"><a href="#增加about页面" class="headerlink" title="增加about页面"></a>增加about页面</h3><p>进入Hexo目录，执行hexo new page “about”，会发现在source目录下多了个about目录，在里面的index.md写入内容</p>
+<h3 id="增加tag页面"><a href="#增加tag页面" class="headerlink" title="增加tag页面"></a>增加tag页面</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">"tags"</span></span><br><span class="line">vim <span class="built_in">source</span>/tags/index.md</span><br><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2020-05-20 17:06:19</span><br><span class="line"><span class="built_in">type</span>: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="增加categories页面"><a href="#增加categories页面" class="headerlink" title="增加categories页面"></a>增加categories页面</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">"categories"</span></span><br><span class="line">vim <span class="built_in">source</span>/tags/index.md</span><br><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">date: 2020-05-20 17:06:19</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="配置-hexo-中-next-主题样式选择"><a href="#配置-hexo-中-next-主题样式选择" class="headerlink" title="配置 hexo 中 next 主题样式选择"></a>配置 hexo 中 next 主题样式选择</h2><p>Next 一共提供了 4 种首页样式，按照自己喜好选择一个，我使用的是Gemini</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+<h2 id="配置footer信息"><a href="#配置footer信息" class="headerlink" title="配置footer信息"></a>配置footer信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">footer:</span><br><span class="line">  since: 2020   <span class="comment"># 建站开始时间</span></span><br><span class="line">  icon:</span><br><span class="line">    name: heart      <span class="comment"># 设置 建站初始时间和至今时间中间的图标，默认是一个'小人像'，更改user为heart可以变成一个心</span></span><br><span class="line">    animated: <span class="literal">true</span></span><br><span class="line">    color: <span class="string">"#ff0000"</span>  <span class="comment"># 更改图标的颜色为红色  </span></span><br><span class="line">  <span class="comment">#显示版权作者</span></span><br><span class="line">  copyright: vic</span><br><span class="line">  powered:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span>        <span class="comment"># 开启hexo驱动显示</span></span><br><span class="line">    version: <span class="literal">true</span>       <span class="comment"># 开启hexo版本号</span></span><br><span class="line">  theme:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span>       <span class="comment"># 开启主题驱动</span></span><br><span class="line">    version: <span class="literal">true</span>       <span class="comment"># 开启主题版本号</span></span><br><span class="line">  beian:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span>                <span class="comment"># 开启备案号显示</span></span><br><span class="line">    icp: 苏ICP备...              <span class="comment"># 备案号</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置头像信息"><a href="#配置头像信息" class="headerlink" title="配置头像信息"></a>配置头像信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line">avatar:</span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  url: /images/jin.png  </span><br><span class="line">  <span class="comment"># If true, the avatar will be dispalyed in circle.</span></span><br><span class="line">  rounded: <span class="literal">false</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  rotated: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置社交信息和友链"><a href="#配置社交信息和友链" class="headerlink" title="配置社交信息和友链"></a>配置社交信息和友链</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">social: </span><br><span class="line">  GitHub: https://github.com/yourname || github</span><br><span class="line">  E-Mail: mailto:yourname@gmail.com || envelope</span><br><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span>         <span class="comment"># 显示社交图标</span></span><br><span class="line">  <span class="comment"># 仅显示图标 </span></span><br><span class="line">  icons_only: <span class="literal">true</span>  <span class="comment"># 只显示图标，不显示文字</span></span><br><span class="line">  transition: <span class="literal">true</span>   <span class="comment"># 动画效果</span></span><br></pre></td></tr></table></figure>
+<h2 id="首页文章属性"><a href="#首页文章属性" class="headerlink" title="首页文章属性"></a>首页文章属性</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">post_meta:</span><br><span class="line">  item_text: <span class="literal">true</span>    <span class="comment">#  可以一行显示，文章的所有属性</span></span><br><span class="line">  created_at: <span class="literal">true</span>    <span class="comment"># 显示创建时间</span></span><br><span class="line">  updated_at:</span><br><span class="line">    enabled: <span class="literal">true</span>     <span class="comment"># 显示修改的时间</span></span><br><span class="line">    another_day: <span class="literal">true</span>  <span class="comment"># 设true时，如果创建时间和修改时间一样则显示一个时间</span></span><br><span class="line">  categories: <span class="literal">true</span>    <span class="comment"># 显示分类信息</span></span><br></pre></td></tr></table></figure>
+<h2 id="开启文章目录"><a href="#开启文章目录" class="headerlink" title="开启文章目录"></a>开启文章目录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">toc: <span class="comment">#侧栏中的目录</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment">#是否自动生成目录</span></span><br><span class="line">  number: <span class="literal">true</span> <span class="comment">#目录是否自动产生编号</span></span><br><span class="line">  wrap: <span class="literal">false</span>  <span class="comment">#标题过长是否换行</span></span><br><span class="line">  expand_all: <span class="literal">false</span></span><br><span class="line">  max_depth: 6 <span class="comment">#最大标题深度</span></span><br></pre></td></tr></table></figure>
+<h2 id="Follow-me-on-GitHub"><a href="#Follow-me-on-GitHub" class="headerlink" title="Follow me on GitHub"></a>Follow me on GitHub</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">github_banner:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  permalink: https://github.com/yourname</span><br><span class="line">  title: Follow me on GitHub</span><br></pre></td></tr></table></figure>
+<h2 id="字数统计、阅读时长"><a href="#字数统计、阅读时长" class="headerlink" title="字数统计、阅读时长"></a>字数统计、阅读时长</h2><blockquote>
+<p>首先安装插件：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>主题配置文件修改如下：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: <span class="literal">true</span> <span class="comment"># 统计信息不换行显示</span></span><br><span class="line">  item_text_post: <span class="literal">true</span> <span class="comment"># 文章统计信息中是否显示“本文字数/阅读时长”等描述文字</span></span><br><span class="line">  item_text_total: <span class="literal">false</span> <span class="comment"># 底部footer站点统计信息中是否显示“本文字数/阅读时长”等描述文字</span></span><br><span class="line">  awl: 4 <span class="comment"># 平均字符长度</span></span><br><span class="line">  wpm: 275 <span class="comment"># 阅读速度, 一分钟阅读的字数</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>站点配置文件 新增如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 新增文章字数统计</span><br><span class="line">symbols_count_time:</span><br><span class="line">  #文章内是否显示</span><br><span class="line">  symbols: true # 文章字数</span><br><span class="line">  time: true # 阅读时长</span><br><span class="line">  # 网页底部是否显示</span><br><span class="line">  total_symbols: false # 所有文章总字数</span><br><span class="line">  total_time: false # 所有文章阅读中时长</span><br></pre></td></tr></table></figure>
+<h2 id="显示当前浏览进度"><a href="#显示当前浏览进度" class="headerlink" title="显示当前浏览进度"></a>显示当前浏览进度</h2><blockquote>
+<p>右下角显示文章当前浏览进度，提供意见置顶功能，编辑主题配置文件，配置如下：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">back2top:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment">#是否提供一键置顶 </span></span><br><span class="line">  sidebar: <span class="literal">false</span></span><br><span class="line">  scrollpercent: <span class="literal">true</span> <span class="comment"># 是否显示当前阅读进度</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="阅读进度"><a href="#阅读进度" class="headerlink" title="阅读进度"></a>阅读进度</h2><blockquote>
+<p>Next主题支持页面滚动阅读进度指示器。 编辑主题配置文件，配置如下:</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reading_progress:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  position: top</span><br><span class="line">  color: <span class="string">"#37c6c0"</span></span><br><span class="line">  height: 3px</span><br></pre></td></tr></table></figure>
+<h2 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="headerlink" title="设置代码高亮主题"></a>设置代码高亮主题</h2><blockquote>
+<p>Next 默认使用的是 白色的 normal 主题，可选的值有 normal，night， night blue， night bright， night eighties</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  highlight_theme: normal</span><br><span class="line">  copy_button:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment"># 显示复制按钮</span></span><br><span class="line">    show_result: <span class="literal">true</span> </span><br><span class="line">    style: mac  <span class="comment">#按钮样式: default | flat | mac</span></span><br></pre></td></tr></table></figure>
+<h2 id="本地搜索插件"><a href="#本地搜索插件" class="headerlink" title="本地搜索插件"></a>本地搜索插件</h2><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<h3 id="修改站点配置文件，添加如下内容："><a href="#修改站点配置文件，添加如下内容：" class="headerlink" title="修改站点配置文件，添加如下内容："></a>修改站点配置文件，添加如下内容：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
+<ul>
+<li>path：索引文件的路径，相对于站点根目录</li>
+<li>field：搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面</li>
+<li>limit：限制搜索的条目数</li>
+</ul>
+<h3 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/theme-next/hexo-generator-searchdb</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1 <span class="comment">#每篇文章中显示的搜索数量</span></span><br><span class="line">  unescape: <span class="literal">false</span></span><br><span class="line">  preload: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据分析与统计"><a href="#数据分析与统计" class="headerlink" title="数据分析与统计"></a>数据分析与统计</h2><blockquote>
+<p>Next内置了leancloud、firebase、busuanzi三种访客统计插件，前两种需要到官网注册获取网站颁发的appKey，相对麻烦。而不蒜子配置只需要将false改为true即可:</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 总访客数</span></span><br><span class="line">  total_visitors: <span class="literal">true</span></span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  <span class="comment"># 总浏览量</span></span><br><span class="line">  total_views: <span class="literal">true</span></span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  <span class="comment"># 文章浏览量</span></span><br><span class="line">  post_views: <span class="literal">true</span></span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>FFmpeg的安装与使用</title>
     <url>/post/FFmpeg%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。</p>
@@ -277,20 +401,6 @@ symctl enable d</span></pre>
 <h3 id="五、问题"><a href="#五、问题" class="headerlink" title="五、问题"></a>五、问题</h3><p>还原过程中报错，报错：无法 open:<br>权限不够，估计是拷贝过来的还原文件权限不够，执行命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 644 1515132280_2018_01_05_9.5.6_gitlab_backup.tar</span><br></pre></td></tr></table></figure>
 <p>再次执行还原命令即可成功。</p>
-]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>GitLab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitLab问题小结</title>
-    <url>/post/GitLab%E9%97%AE%E9%A2%98%E5%B0%8F%E7%BB%93/</url>
-    <content><![CDATA[<h3 id="1-内存消耗太大"><a href="#1-内存消耗太大" class="headerlink" title="1.内存消耗太大"></a>1.内存消耗太大</h3><p>　　（1）公司使用gitlab后，发现服务器内存居高不下，使用top命令查看内存消耗，发现服务器上git将近消耗一半内存资源。而且很奇怪的是竟然开启了32个进程。后经查资料，原来这跟gitlab的默认机制有关。在配置文件/etc/gitlab/gitlab.rb里，unicorn[‘worker_processes’] = 2，默认是被注释掉的，这就解释了为什么会开启32个进程，因为cpu有32核，如果服务器只用于GitLab的话，官方建议是CPU核心数加一，可以提高服务器的响应速度。不过如果内存只有4G，或者服务器同时承载其他服务，就不要改了，以免内存不足。另外，这个参数最小值是2，设为1，服务器可能会卡死。</p>
-<p>　　（2）解决方案：根据服务器使用情况，给unicorn[‘worker_processes’]设置一个合适的值，可解决内存占用过大问题。</p>
-<h3 id="2-时间不一致"><a href="#2-时间不一致" class="headerlink" title="2.时间不一致"></a>2.时间不一致</h3><p>　　gitlab的web页面上activity里显示的时间相差8小时，很有可能是时区设置问题，设置时区为：gitlab_rails[‘time_zone’] = ‘Asia/Shanghai’，还有种可能是服务器本身的时间有问题，服务器服务时间修改注意事项：写入clock -w &nbsp;,强制将时间写入COMS！这样重启后不会失效。&nbsp;</p>
 ]]></content>
       <categories>
         <category>Git</category>
@@ -536,38 +646,41 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot 热部署devtools实现</title>
-    <url>/post/Spring%20Boot%20%E7%83%AD%E9%83%A8%E7%BD%B2devtools%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<h3 id="1-devtools"><a href="#1-devtools" class="headerlink" title="1.devtools"></a>1.devtools</h3><p>spring为开发者提供了一个名为spring-boot-devtools的模块来使Spring Boot应用支持热部署，提高开发者的开发效率，无需手动重启Spring Boot应用。</p>
-<h3 id="2-项目搭建"><a href="#2-项目搭建" class="headerlink" title="2.项目搭建"></a>2.项目搭建</h3><p>本文是采用IDEA搭建的Spring Boot应用，通过spring-boot-devtools配置，可以支持修改java文件会自动重启程序，一些资源无需触发重启，例如thymeleaf模板文件就可以实时编辑。默认情况下，更改/META-INF/maven，/META-INF/resources ，/resources ，/static ，/public 或/templates下的资源不会触发重启，而是触发livereload。devtools模块包含一个嵌入的livereload服务器，可以在资源变化时用来触发浏览器刷新。浏览器需要在livereload.com下载安装扩展。 例如Chrome浏览器在应用商店安装livereload插件后，在要自动刷新的页面点击对应的图标，启动应用后更新页面内容或者css等都会触发页面自动刷新。</p>
-<h3 id="3-livereload"><a href="#3-livereload" class="headerlink" title="3.livereload"></a>3.livereload</h3><p>livereload 通过引入的脚本livereload.js在 livereload 服务和浏览器之间建立了一个 WebSocket 连接。每当监测到文件的变动，livereload 服务就会向浏览器发送一个信号，浏览器收到信号后就刷新页面，实现了实时刷新的效果。每次启动时，需要点击对应的图标，如下图所示。</p>
-<p><img src="https://i.loli.net/2020/04/10/ywQmVeGx4dhFzoU.png" alt="clipboard.png"></p>
-<h3 id="4-项目代码配置"><a href="#4-项目代码配置" class="headerlink" title="4.项目代码配置"></a>4.项目代码配置</h3><h5 id="4-1-pom-xml配置文件"><a href="#4-1-pom-xml配置文件" class="headerlink" title="4.1 pom.xml配置文件"></a>4.1 pom.xml配置文件</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">fork</span>&gt;</span>true<span class="tag">&lt;/<span class="name">fork</span>&gt;</span> <span class="comment">&lt;!-- 如果没有该配置，devtools不会生效 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>zookeeper安装</title>
+    <url>/post/Zookeeper%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h3 id="1-下载zk软件"><a href="#1-下载zk软件" class="headerlink" title="1.下载zk软件"></a>1.下载zk软件</h3><p><a href="http://www.apache.org/dyn/closer.cgi/zookeeper/" target="_blank" rel="noopener">http://www.apache.org/dyn/closer.cgi/zookeeper/</a></p>
+<h3 id="2-解压压缩包"><a href="#2-解压压缩包" class="headerlink" title="2.解压压缩包"></a>2.解压压缩包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar zxvf zookeeper-3.4.13.tar.gz</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-创建zoo-cfg"><a href="#3-创建zoo-cfg" class="headerlink" title="3.创建zoo.cfg"></a>3.创建zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd zookeeper-3.4.13/conf</span></span><br><span class="line"><span class="comment"># cp zoo_sample.cfg zoo.cfg</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="4-获取zk的路径"><a href="#4-获取zk的路径" class="headerlink" title="4.获取zk的路径"></a>4.获取zk的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pwd</span></span><br></pre></td></tr></table></figure>
+<p>/home/software/zookeeper-3.4.13</p>
+<h3 id="5-修改zoo-cfg"><a href="#5-修改zoo-cfg" class="headerlink" title="5.修改zoo.cfg"></a>5.修改zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vim zoo.cfg</span></span><br></pre></td></tr></table></figure>
 
-<h5 id="4-2-yml配置"><a href="#4-2-yml配置" class="headerlink" title="4.2 yml配置"></a>4.2 yml配置</h5><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">devtools:</span></span><br><span class="line">  <span class="attr">livereload:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持livereload</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">35729</span></span><br><span class="line">  <span class="attr">restart:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持热部署</span></span><br></pre></td></tr></table></figure>
+<p>设置dataDir=/home/software/zookeeper-3.4.13/data</p>
+<h3 id="6-zk启动、关闭、查看状态"><a href="#6-zk启动、关闭、查看状态" class="headerlink" title="6.zk启动、关闭、查看状态"></a>6.zk启动、关闭、查看状态</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd bin</span></span><br></pre></td></tr></table></figure>
 
-
-<h3 id="5-IDEA配置"><a href="#5-IDEA配置" class="headerlink" title="5.IDEA配置"></a>5.IDEA配置</h3><ul>
-<li>File-Settings-Compiler-Build project automatically</li>
-</ul>
-<p><img src="https://i.loli.net/2020/04/10/L59OnwXfxWorsKQ.png" alt="buildproject.png"></p>
 <ul>
-<li>ctrl + shift + alt + /,选择Registry,勾上 Compiler autoMake allow when app running</li>
+<li>启动</li>
 </ul>
-<h3 id="6-安装livereload插件"><a href="#6-安装livereload插件" class="headerlink" title="6.安装livereload插件"></a>6.安装livereload插件</h3><p>下载livereload插件，将其安装到chrome扩展程序中，并选中允许访问文件网址。</p>
-<p><img src="https://i.loli.net/2020/04/10/qOpQgXFmbhrUDtM.png" alt="clipboard2.png"></p>
-<h3 id="7-测试"><a href="#7-测试" class="headerlink" title="7.测试"></a>7.测试</h3><ol>
-<li>修改类 应用会重启</li>
-<li>修改配置文件 应用会重启</li>
-<li>修改静态文件（html、css等），应用不会重启，但是会调用livereload，浏览器会自动刷新，显示最新的修改内容。</li>
-</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh start</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>关闭</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh stop</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看状态</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh status</span></span><br></pre></td></tr></table></figure>
+
+
 ]]></content>
       <categories>
-        <category>Spring Boot</category>
+        <category>zookeeper</category>
       </categories>
       <tags>
-        <tag>Spring Boot</tag>
+        <tag>zookeeper</tag>
       </tags>
   </entry>
   <entry>
@@ -664,89 +777,38 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>zookeeper安装</title>
-    <url>/post/Zookeeper%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h3 id="1-下载zk软件"><a href="#1-下载zk软件" class="headerlink" title="1.下载zk软件"></a>1.下载zk软件</h3><p><a href="http://www.apache.org/dyn/closer.cgi/zookeeper/" target="_blank" rel="noopener">http://www.apache.org/dyn/closer.cgi/zookeeper/</a></p>
-<h3 id="2-解压压缩包"><a href="#2-解压压缩包" class="headerlink" title="2.解压压缩包"></a>2.解压压缩包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar zxvf zookeeper-3.4.13.tar.gz</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-创建zoo-cfg"><a href="#3-创建zoo-cfg" class="headerlink" title="3.创建zoo.cfg"></a>3.创建zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd zookeeper-3.4.13/conf</span></span><br><span class="line"><span class="comment"># cp zoo_sample.cfg zoo.cfg</span></span><br></pre></td></tr></table></figure>
+    <title>Spring Boot 热部署devtools实现</title>
+    <url>/post/Spring%20Boot%20%E7%83%AD%E9%83%A8%E7%BD%B2devtools%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h3 id="1-devtools"><a href="#1-devtools" class="headerlink" title="1.devtools"></a>1.devtools</h3><p>spring为开发者提供了一个名为spring-boot-devtools的模块来使Spring Boot应用支持热部署，提高开发者的开发效率，无需手动重启Spring Boot应用。</p>
+<h3 id="2-项目搭建"><a href="#2-项目搭建" class="headerlink" title="2.项目搭建"></a>2.项目搭建</h3><p>本文是采用IDEA搭建的Spring Boot应用，通过spring-boot-devtools配置，可以支持修改java文件会自动重启程序，一些资源无需触发重启，例如thymeleaf模板文件就可以实时编辑。默认情况下，更改/META-INF/maven，/META-INF/resources ，/resources ，/static ，/public 或/templates下的资源不会触发重启，而是触发livereload。devtools模块包含一个嵌入的livereload服务器，可以在资源变化时用来触发浏览器刷新。浏览器需要在livereload.com下载安装扩展。 例如Chrome浏览器在应用商店安装livereload插件后，在要自动刷新的页面点击对应的图标，启动应用后更新页面内容或者css等都会触发页面自动刷新。</p>
+<h3 id="3-livereload"><a href="#3-livereload" class="headerlink" title="3.livereload"></a>3.livereload</h3><p>livereload 通过引入的脚本livereload.js在 livereload 服务和浏览器之间建立了一个 WebSocket 连接。每当监测到文件的变动，livereload 服务就会向浏览器发送一个信号，浏览器收到信号后就刷新页面，实现了实时刷新的效果。每次启动时，需要点击对应的图标，如下图所示。</p>
+<p><img src="https://i.loli.net/2020/04/10/ywQmVeGx4dhFzoU.png" alt="clipboard.png"></p>
+<h3 id="4-项目代码配置"><a href="#4-项目代码配置" class="headerlink" title="4.项目代码配置"></a>4.项目代码配置</h3><h5 id="4-1-pom-xml配置文件"><a href="#4-1-pom-xml配置文件" class="headerlink" title="4.1 pom.xml配置文件"></a>4.1 pom.xml配置文件</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">fork</span>&gt;</span>true<span class="tag">&lt;/<span class="name">fork</span>&gt;</span> <span class="comment">&lt;!-- 如果没有该配置，devtools不会生效 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="4-获取zk的路径"><a href="#4-获取zk的路径" class="headerlink" title="4.获取zk的路径"></a>4.获取zk的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pwd</span></span><br></pre></td></tr></table></figure>
-<p>/home/software/zookeeper-3.4.13</p>
-<h3 id="5-修改zoo-cfg"><a href="#5-修改zoo-cfg" class="headerlink" title="5.修改zoo.cfg"></a>5.修改zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vim zoo.cfg</span></span><br></pre></td></tr></table></figure>
 
-<p>设置dataDir=/home/software/zookeeper-3.4.13/data</p>
-<h3 id="6-zk启动、关闭、查看状态"><a href="#6-zk启动、关闭、查看状态" class="headerlink" title="6.zk启动、关闭、查看状态"></a>6.zk启动、关闭、查看状态</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd bin</span></span><br></pre></td></tr></table></figure>
+<h5 id="4-2-yml配置"><a href="#4-2-yml配置" class="headerlink" title="4.2 yml配置"></a>4.2 yml配置</h5><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">devtools:</span></span><br><span class="line">  <span class="attr">livereload:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持livereload</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">35729</span></span><br><span class="line">  <span class="attr">restart:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持热部署</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>启动</li>
+
+<h3 id="5-IDEA配置"><a href="#5-IDEA配置" class="headerlink" title="5.IDEA配置"></a>5.IDEA配置</h3><ul>
+<li>File-Settings-Compiler-Build project automatically</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh start</span></span><br></pre></td></tr></table></figure>
-
+<p><img src="https://i.loli.net/2020/04/10/L59OnwXfxWorsKQ.png" alt="buildproject.png"></p>
 <ul>
-<li>关闭</li>
+<li>ctrl + shift + alt + /,选择Registry,勾上 Compiler autoMake allow when app running</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh stop</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>查看状态</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh status</span></span><br></pre></td></tr></table></figure>
-
-
+<h3 id="6-安装livereload插件"><a href="#6-安装livereload插件" class="headerlink" title="6.安装livereload插件"></a>6.安装livereload插件</h3><p>下载livereload插件，将其安装到chrome扩展程序中，并选中允许访问文件网址。</p>
+<p><img src="https://i.loli.net/2020/04/10/qOpQgXFmbhrUDtM.png" alt="clipboard2.png"></p>
+<h3 id="7-测试"><a href="#7-测试" class="headerlink" title="7.测试"></a>7.测试</h3><ol>
+<li>修改类 应用会重启</li>
+<li>修改配置文件 应用会重启</li>
+<li>修改静态文件（html、css等），应用不会重启，但是会调用livereload，浏览器会自动刷新，显示最新的修改内容。</li>
+</ol>
 ]]></content>
       <categories>
-        <category>zookeeper</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
-        <tag>zookeeper</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo如何快速搭建个人博客</title>
-    <url>/post/hexo%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h1 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h1><ol>
-<li>Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
-<li>Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。</li>
-<li>只需一条指令即可部署到 GitHub Pages,Gitee Pages, Heroku 或其他平台。</li>
-<li>强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成</li>
-</ol>
-<h1 id="如何安装？"><a href="#如何安装？" class="headerlink" title="如何安装？"></a>如何安装？</h1><p>安装Hexo前需要先安装Node.js和Git，支持windows、Mac、Linux安装，本文主要介绍在如何在Linux上安装</p>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install git-core</span><br></pre></td></tr></table></figure>
-<h3 id="查看是否安装完毕，若显示版本信息，表示安装成功"><a href="#查看是否安装完毕，若显示版本信息，表示安装成功" class="headerlink" title="查看是否安装完毕，若显示版本信息，表示安装成功"></a>查看是否安装完毕，若显示版本信息，表示安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
-<h3 id="配置用户名、邮箱"><a href="#配置用户名、邮箱" class="headerlink" title="配置用户名、邮箱"></a>配置用户名、邮箱</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.email <span class="string">"zhangviv@163.com"</span></span><br><span class="line">git config --global user.name <span class="string">"vic"</span></span><br></pre></td></tr></table></figure>
-<h3 id="ssh设置"><a href="#ssh设置" class="headerlink" title="ssh设置"></a>ssh设置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"zhangviv@163.com"</span></span><br><span class="line"><span class="built_in">cd</span> /root/.ssh</span><br></pre></td></tr></table></figure>
-<h3 id="查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里"><a href="#查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里" class="headerlink" title="查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里"></a>查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">id_rsa  id_rsa.pub  known_hosts</span><br></pre></td></tr></table></figure>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><h3 id="官网下载最新版本"><a href="#官网下载最新版本" class="headerlink" title="官网下载最新版本"></a>官网下载最新版本</h3><p><img src="https://i.loli.net/2020/05/19/OpEvdQ1fVX9nbwm.png" alt="nodejs.png"></p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xvf  node-v12.16.3-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
-<h3 id="进入bin，查看是否安装成功"><a href="#进入bin，查看是否安装成功" class="headerlink" title="进入bin，查看是否安装成功"></a>进入bin，查看是否安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./node -v</span><br></pre></td></tr></table></figure>
-<h3 id="node、npm创建软链接，执行命令"><a href="#node、npm创建软链接，执行命令" class="headerlink" title="node、npm创建软链接，执行命令"></a>node、npm创建软链接，执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/node /usr/<span class="built_in">local</span>/bin/node  </span><br><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br></pre></td></tr></table></figure>
-<h3 id="进入-usr-local-bin下查看文件是否生成"><a href="#进入-usr-local-bin下查看文件是否生成" class="headerlink" title="进入/usr/local/bin下查看文件是否生成"></a>进入/usr/local/bin下查看文件是否生成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node  npm</span><br></pre></td></tr></table></figure>
-
-<h3 id="再次查看软连接是否成功，如何显示版本，则node-js安装成功"><a href="#再次查看软连接是否成功，如何显示版本，则node-js安装成功" class="headerlink" title="再次查看软连接是否成功，如何显示版本，则node.js安装成功"></a>再次查看软连接是否成功，如何显示版本，则node.js安装成功</h3><p><img src="https://i.loli.net/2020/05/19/r92TAabc8S6ERJt.png" alt="node-v.png"></p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h3 id="所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。"><a href="#所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。" class="headerlink" title="所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。"></a>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h3 id="hexo创建软连接"><a href="#hexo创建软连接" class="headerlink" title="hexo创建软连接"></a>hexo创建软连接</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/hexo /usr/<span class="built_in">local</span>/bin/hexo</span><br></pre></td></tr></table></figure>
-<h3 id="创建博客文件夹，下载资源"><a href="#创建博客文件夹，下载资源" class="headerlink" title="创建博客文件夹，下载资源"></a>创建博客文件夹，下载资源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line"><span class="built_in">cd</span> blog    </span><br><span class="line">hexo init //会自动把资源文件下载好</span><br></pre></td></tr></table></figure>
-<h3 id="启动测试，输入localhost-4000，即可访问本地的博客测试地址"><a href="#启动测试，输入localhost-4000，即可访问本地的博客测试地址" class="headerlink" title="启动测试，输入localhost:4000，即可访问本地的博客测试地址"></a>启动测试，输入localhost:4000，即可访问本地的博客测试地址</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><h2 id="清除缓存命令"><a href="#清除缓存命令" class="headerlink" title="清除缓存命令"></a>清除缓存命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令</p>
-<h2 id="启动测试"><a href="#启动测试" class="headerlink" title="启动测试"></a>启动测试</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
-<h2 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>全写命令是：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<h2 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>全写命令是：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Git</tag>
-        <tag>node.js</tag>
+        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -837,52 +899,51 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>ubuntu安装redis</title>
-    <url>/post/ubuntu%E5%AE%89%E8%A3%85redis/</url>
-    <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>服务器：ubuntu server 17.04</p>
-<p>安装方式：apt-get</p>
-<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><ul>
-<li>执行命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get update</span><br></pre></td></tr></table></figure>
+    <title>Hexo如何快速搭建个人博客</title>
+    <url>/post/hexo%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h1 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h1><ol>
+<li>Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
+<li>Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。</li>
+<li>只需一条指令即可部署到 GitHub Pages,Gitee Pages, Heroku 或其他平台。</li>
+<li>强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成</li>
+</ol>
+<h1 id="如何安装？"><a href="#如何安装？" class="headerlink" title="如何安装？"></a>如何安装？</h1><p>安装Hexo前需要先安装Node.js和Git，支持windows、Mac、Linux安装，本文主要介绍在如何在Linux上安装</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install git-core</span><br></pre></td></tr></table></figure>
+<h3 id="查看是否安装完毕，若显示版本信息，表示安装成功"><a href="#查看是否安装完毕，若显示版本信息，表示安装成功" class="headerlink" title="查看是否安装完毕，若显示版本信息，表示安装成功"></a>查看是否安装完毕，若显示版本信息，表示安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<h3 id="配置用户名、邮箱"><a href="#配置用户名、邮箱" class="headerlink" title="配置用户名、邮箱"></a>配置用户名、邮箱</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.email <span class="string">"zhangviv@163.com"</span></span><br><span class="line">git config --global user.name <span class="string">"vic"</span></span><br></pre></td></tr></table></figure>
+<h3 id="ssh设置"><a href="#ssh设置" class="headerlink" title="ssh设置"></a>ssh设置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"zhangviv@163.com"</span></span><br><span class="line"><span class="built_in">cd</span> /root/.ssh</span><br></pre></td></tr></table></figure>
+<h3 id="查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里"><a href="#查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里" class="headerlink" title="查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里"></a>查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">id_rsa  id_rsa.pub  known_hosts</span><br></pre></td></tr></table></figure>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><h3 id="官网下载最新版本"><a href="#官网下载最新版本" class="headerlink" title="官网下载最新版本"></a>官网下载最新版本</h3><p><img src="https://i.loli.net/2020/05/19/OpEvdQ1fVX9nbwm.png" alt="nodejs.png"></p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xvf  node-v12.16.3-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+<h3 id="进入bin，查看是否安装成功"><a href="#进入bin，查看是否安装成功" class="headerlink" title="进入bin，查看是否安装成功"></a>进入bin，查看是否安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./node -v</span><br></pre></td></tr></table></figure>
+<h3 id="node、npm创建软链接，执行命令"><a href="#node、npm创建软链接，执行命令" class="headerlink" title="node、npm创建软链接，执行命令"></a>node、npm创建软链接，执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/node /usr/<span class="built_in">local</span>/bin/node  </span><br><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br></pre></td></tr></table></figure>
+<h3 id="进入-usr-local-bin下查看文件是否生成"><a href="#进入-usr-local-bin下查看文件是否生成" class="headerlink" title="进入/usr/local/bin下查看文件是否生成"></a>进入/usr/local/bin下查看文件是否生成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node  npm</span><br></pre></td></tr></table></figure>
 
+<h3 id="再次查看软连接是否成功，如何显示版本，则node-js安装成功"><a href="#再次查看软连接是否成功，如何显示版本，则node-js安装成功" class="headerlink" title="再次查看软连接是否成功，如何显示版本，则node.js安装成功"></a>再次查看软连接是否成功，如何显示版本，则node.js安装成功</h3><p><img src="https://i.loli.net/2020/05/19/r92TAabc8S6ERJt.png" alt="node-v.png"></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h3 id="所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。"><a href="#所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。" class="headerlink" title="所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。"></a>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h3 id="hexo创建软连接"><a href="#hexo创建软连接" class="headerlink" title="hexo创建软连接"></a>hexo创建软连接</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/hexo /usr/<span class="built_in">local</span>/bin/hexo</span><br></pre></td></tr></table></figure>
+<h3 id="创建博客文件夹，下载资源"><a href="#创建博客文件夹，下载资源" class="headerlink" title="创建博客文件夹，下载资源"></a>创建博客文件夹，下载资源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line"><span class="built_in">cd</span> blog    </span><br><span class="line">hexo init //会自动把资源文件下载好</span><br></pre></td></tr></table></figure>
+<h3 id="启动测试，输入localhost-4000，即可访问本地的博客测试地址"><a href="#启动测试，输入localhost-4000，即可访问本地的博客测试地址" class="headerlink" title="启动测试，输入localhost:4000，即可访问本地的博客测试地址"></a>启动测试，输入localhost:4000，即可访问本地的博客测试地址</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><h2 id="清除缓存命令"><a href="#清除缓存命令" class="headerlink" title="清除缓存命令"></a>清除缓存命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>执行命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install redis-server</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启用redis：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li>查看redis是否启用：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-cli</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>redis 127.0.0.1:6379&gt;ping，返回PONG，说明redis已经安装成功。</p>
-</li>
-<li><p>redis默认是只允许本地访问，如果要让其远程访问，还需要修改配置。执行$ vim /etc/redis/redis.conf，注释bind 127.0.0.1，除此之外，还需要关闭保护模式，protected-mode默认是yes，需要将protected-mode设置为 no</p>
-</li>
-<li><p>再重启下redis：</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="3-远程访问"><a href="#3-远程访问" class="headerlink" title="3.远程访问"></a>3.远程访问</h3><p>本机环境：win10，安装redis客户端RedisDesktopManager，通过设置ip地址，redis端口号等，可以远程连接ubuntu上安装的redis，如下图所示。</p>
-<p><img src="https://i.loli.net/2020/04/10/fH9FkYbKd6Av7LQ.png" alt="redis.png"></p>
-]]></content>
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令</p>
+<h2 id="启动测试"><a href="#启动测试" class="headerlink" title="启动测试"></a>启动测试</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
+<h2 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>全写命令是：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>全写命令是：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Linux</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>ubuntu</tag>
-        <tag>redis</tag>
+        <tag>Hexo</tag>
+        <tag>Git</tag>
+        <tag>node.js</tag>
       </tags>
   </entry>
   <entry>
@@ -958,6 +1019,55 @@ symctl enable d</span></pre>
       </categories>
       <tags>
         <tag>Gitlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ubuntu安装redis</title>
+    <url>/post/ubuntu%E5%AE%89%E8%A3%85redis/</url>
+    <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>服务器：ubuntu server 17.04</p>
+<p>安装方式：apt-get</p>
+<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><ul>
+<li>执行命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get update</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>执行命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install redis-server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启用redis：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>查看redis是否启用：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-cli</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>redis 127.0.0.1:6379&gt;ping，返回PONG，说明redis已经安装成功。</p>
+</li>
+<li><p>redis默认是只允许本地访问，如果要让其远程访问，还需要修改配置。执行$ vim /etc/redis/redis.conf，注释bind 127.0.0.1，除此之外，还需要关闭保护模式，protected-mode默认是yes，需要将protected-mode设置为 no</p>
+</li>
+<li><p>再重启下redis：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3-远程访问"><a href="#3-远程访问" class="headerlink" title="3.远程访问"></a>3.远程访问</h3><p>本机环境：win10，安装redis客户端RedisDesktopManager，通过设置ip地址，redis端口号等，可以远程连接ubuntu上安装的redis，如下图所示。</p>
+<p><img src="https://i.loli.net/2020/04/10/fH9FkYbKd6Av7LQ.png" alt="redis.png"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>redis</tag>
       </tags>
   </entry>
   <entry>
@@ -1320,116 +1430,6 @@ xpack.security.encryptionKey: "something_at_least_32_characters"</span></pre>
       </categories>
       <tags>
         <tag>缓存</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo进阶设置</title>
-    <url>/post/Hexo%E8%BF%9B%E9%98%B6%E8%AE%BE%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="部署平台选型"><a href="#部署平台选型" class="headerlink" title="部署平台选型"></a>部署平台选型</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GitHub和Gitee（码云）是国内外比较流行的代码托管平台，现都推出GitHub/Gitee Pages可以存放静态网页代码，因此可以用来搭建自己的博客。</p>
-<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><table>
-<thead>
-<tr>
-<th>平台</th>
-<th>优点</th>
-<th>缺点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Github</td>
-<td>全球最流行的平台，且免费</td>
-<td>国内由于有墙，访问太慢</td>
-</tr>
-<tr>
-<td>Gitee</td>
-<td>国内访问快</td>
-<td>阉割部分功能，提供有偿服务，比如自动部署、自定义域名等需要升级Gitee Pages Pro</td>
-</tr>
-</tbody></table>
-<p><img src="https://i.loli.net/2020/05/20/dnYbImls645Fe12.png" alt="giteepages.png"></p>
-<p>如上图所示，Gitee是需要付费的，但是考虑到部署到Github上，在国内访问真的太慢，经常加载要十几秒，最终折中了选择，即两个平台同时部署，国外的用户可以访问Github，国内的用户访问Gitee，从而优化访问速度。</p>
-<h2 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:[username]/[username].github.io.git,master</span><br><span class="line">    gitee: git@gitee.com:[username]/[username].git,master</span><br></pre></td></tr></table></figure>
-<p>其中，这里的 username指的是你在这两个网站上的用户名，只有以这种命名形式的仓库，才能够来访问我们的博客。</p>
-<ul>
-<li>Github的仓库名要命名为：{username}.github.io</li>
-<li>Gitee的仓库名要命名为：{username}</li>
-</ul>
-<p>比如说，我的Github和Gitee的username是geekvic，那么在部署博客成功后，我就可以通过下边的url来访问我的Hexo博客：</p>
-<ul>
-<li><a href="http://geekvic.github.io/" target="_blank" rel="noopener">http://geekvic.github.io/</a></li>
-<li><a href="http://geekvic.gitee.io/" target="_blank" rel="noopener">http://geekvic.gitee.io/</a></li>
-</ul>
-<h1 id="主题选择"><a href="#主题选择" class="headerlink" title="主题选择"></a>主题选择</h1><p>Hexo主题地址：<a href="https://hexo.io/themes/，" target="_blank" rel="noopener">https://hexo.io/themes/，</a> 我们可以去挑选自己喜欢的主题，每个主题在github上面都开源了源码，下面主要以我选择的theme-next主题进行介绍。</p>
-<p>找到Hexo文件的目录,如下图所示。</p>
-<p><img src="https://i.loli.net/2020/05/21/x5HqWGlftYC3Imb.png" alt="hexo.png"></p>
-<p>进入theme文件夹，执行命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git</span><br></pre></td></tr></table></figure>
-<p>下载完成后，则会在themes文件夹下出现一个新的名为hexo-theme-next的文件夹，这就是我们刚下载的主题，返回hexo站点的配置文件_config.yml，修改配置：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">theme: hexo-theme-next</span><br></pre></td></tr></table></figure>
-<p>再执行下命令，就可以看到更改后的主题</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean //清除一下缓存</span><br><span class="line">hexo g  //生成静态页面</span><br><span class="line">hexo s //开启本地服务器</span><br></pre></td></tr></table></figure>
-
-<h1 id="Hexo基础设置"><a href="#Hexo基础设置" class="headerlink" title="Hexo基础设置"></a>Hexo基础设置</h1><h2 id="配置网站基础信息"><a href="#配置网站基础信息" class="headerlink" title="配置网站基础信息"></a>配置网站基础信息</h2><p>修改站点配置文件_config.yml中，修改：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line">title:          <span class="comment"># 网站标题</span></span><br><span class="line">subtitle:       <span class="comment"># 网站副标题</span></span><br><span class="line">description:    <span class="comment"># 描述，介绍网站的</span></span><br><span class="line">keywords:       <span class="comment"># 网站的关键字</span></span><br><span class="line">author:         <span class="comment"># 博主姓名</span></span><br><span class="line">language: zh-CN <span class="comment"># 语言：zh-CN 是简体中文</span></span><br><span class="line">timezone:       <span class="comment"># 时区</span></span><br></pre></td></tr></table></figure>
-<h1 id="Next主题进阶设置"><a href="#Next主题进阶设置" class="headerlink" title="Next主题进阶设置"></a>Next主题进阶设置</h1><h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p> 默认的主题配置文件_config.yml中，菜单只开启了首页和归档，我们根据需要，可以添加 about、tag、categories 等菜单</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  about: /about/ || fa fa-user</span><br><span class="line">  tags: /tags/ || fa fa-tags</span><br><span class="line">  categories: /categories/ || fa fa-th</span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br></pre></td></tr></table></figure>
-<h3 id="增加about页面"><a href="#增加about页面" class="headerlink" title="增加about页面"></a>增加about页面</h3><p>进入Hexo目录，执行hexo new page “about”，会发现在source目录下多了个about目录，在里面的index.md写入内容</p>
-<h3 id="增加tag页面"><a href="#增加tag页面" class="headerlink" title="增加tag页面"></a>增加tag页面</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">"tags"</span></span><br><span class="line">vim <span class="built_in">source</span>/tags/index.md</span><br><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2020-05-20 17:06:19</span><br><span class="line"><span class="built_in">type</span>: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h3 id="增加categories页面"><a href="#增加categories页面" class="headerlink" title="增加categories页面"></a>增加categories页面</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">"categories"</span></span><br><span class="line">vim <span class="built_in">source</span>/tags/index.md</span><br><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">date: 2020-05-20 17:06:19</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h2 id="配置-hexo-中-next-主题样式选择"><a href="#配置-hexo-中-next-主题样式选择" class="headerlink" title="配置 hexo 中 next 主题样式选择"></a>配置 hexo 中 next 主题样式选择</h2><p>Next 一共提供了 4 种首页样式，按照自己喜好选择一个，我使用的是Gemini</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
-<h2 id="配置footer信息"><a href="#配置footer信息" class="headerlink" title="配置footer信息"></a>配置footer信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">footer:</span><br><span class="line">  since: 2020   <span class="comment"># 建站开始时间</span></span><br><span class="line">  icon:</span><br><span class="line">    name: heart      <span class="comment"># 设置 建站初始时间和至今时间中间的图标，默认是一个'小人像'，更改user为heart可以变成一个心</span></span><br><span class="line">    animated: <span class="literal">true</span></span><br><span class="line">    color: <span class="string">"#ff0000"</span>  <span class="comment"># 更改图标的颜色为红色  </span></span><br><span class="line">  <span class="comment">#显示版权作者</span></span><br><span class="line">  copyright: vic</span><br><span class="line">  powered:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span>        <span class="comment"># 开启hexo驱动显示</span></span><br><span class="line">    version: <span class="literal">true</span>       <span class="comment"># 开启hexo版本号</span></span><br><span class="line">  theme:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span>       <span class="comment"># 开启主题驱动</span></span><br><span class="line">    version: <span class="literal">true</span>       <span class="comment"># 开启主题版本号</span></span><br><span class="line">  beian:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span>                <span class="comment"># 开启备案号显示</span></span><br><span class="line">    icp: 苏ICP备...              <span class="comment"># 备案号</span></span><br></pre></td></tr></table></figure>
-<h2 id="配置头像信息"><a href="#配置头像信息" class="headerlink" title="配置头像信息"></a>配置头像信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line">avatar:</span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  url: /images/jin.png  </span><br><span class="line">  <span class="comment"># If true, the avatar will be dispalyed in circle.</span></span><br><span class="line">  rounded: <span class="literal">false</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  rotated: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h2 id="配置社交信息和友链"><a href="#配置社交信息和友链" class="headerlink" title="配置社交信息和友链"></a>配置社交信息和友链</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">social: </span><br><span class="line">  GitHub: https://github.com/yourname || github</span><br><span class="line">  E-Mail: mailto:yourname@gmail.com || envelope</span><br><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span>         <span class="comment"># 显示社交图标</span></span><br><span class="line">  <span class="comment"># 仅显示图标 </span></span><br><span class="line">  icons_only: <span class="literal">true</span>  <span class="comment"># 只显示图标，不显示文字</span></span><br><span class="line">  transition: <span class="literal">true</span>   <span class="comment"># 动画效果</span></span><br></pre></td></tr></table></figure>
-<h2 id="首页文章属性"><a href="#首页文章属性" class="headerlink" title="首页文章属性"></a>首页文章属性</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">post_meta:</span><br><span class="line">  item_text: <span class="literal">true</span>    <span class="comment">#  可以一行显示，文章的所有属性</span></span><br><span class="line">  created_at: <span class="literal">true</span>    <span class="comment"># 显示创建时间</span></span><br><span class="line">  updated_at:</span><br><span class="line">    enabled: <span class="literal">true</span>     <span class="comment"># 显示修改的时间</span></span><br><span class="line">    another_day: <span class="literal">true</span>  <span class="comment"># 设true时，如果创建时间和修改时间一样则显示一个时间</span></span><br><span class="line">  categories: <span class="literal">true</span>    <span class="comment"># 显示分类信息</span></span><br></pre></td></tr></table></figure>
-<h2 id="开启文章目录"><a href="#开启文章目录" class="headerlink" title="开启文章目录"></a>开启文章目录</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">toc: <span class="comment">#侧栏中的目录</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment">#是否自动生成目录</span></span><br><span class="line">  number: <span class="literal">true</span> <span class="comment">#目录是否自动产生编号</span></span><br><span class="line">  wrap: <span class="literal">false</span>  <span class="comment">#标题过长是否换行</span></span><br><span class="line">  expand_all: <span class="literal">false</span></span><br><span class="line">  max_depth: 6 <span class="comment">#最大标题深度</span></span><br></pre></td></tr></table></figure>
-<h2 id="Follow-me-on-GitHub"><a href="#Follow-me-on-GitHub" class="headerlink" title="Follow me on GitHub"></a>Follow me on GitHub</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">github_banner:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  permalink: https://github.com/yourname</span><br><span class="line">  title: Follow me on GitHub</span><br></pre></td></tr></table></figure>
-<h2 id="字数统计、阅读时长"><a href="#字数统计、阅读时长" class="headerlink" title="字数统计、阅读时长"></a>字数统计、阅读时长</h2><blockquote>
-<p>首先安装插件：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>主题配置文件修改如下：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: <span class="literal">true</span> <span class="comment"># 统计信息不换行显示</span></span><br><span class="line">  item_text_post: <span class="literal">true</span> <span class="comment"># 文章统计信息中是否显示“本文字数/阅读时长”等描述文字</span></span><br><span class="line">  item_text_total: <span class="literal">false</span> <span class="comment"># 底部footer站点统计信息中是否显示“本文字数/阅读时长”等描述文字</span></span><br><span class="line">  awl: 4 <span class="comment"># 平均字符长度</span></span><br><span class="line">  wpm: 275 <span class="comment"># 阅读速度, 一分钟阅读的字数</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>站点配置文件 新增如下：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 新增文章字数统计</span><br><span class="line">symbols_count_time:</span><br><span class="line">  #文章内是否显示</span><br><span class="line">  symbols: true # 文章字数</span><br><span class="line">  time: true # 阅读时长</span><br><span class="line">  # 网页底部是否显示</span><br><span class="line">  total_symbols: false # 所有文章总字数</span><br><span class="line">  total_time: false # 所有文章阅读中时长</span><br></pre></td></tr></table></figure>
-<h2 id="显示当前浏览进度"><a href="#显示当前浏览进度" class="headerlink" title="显示当前浏览进度"></a>显示当前浏览进度</h2><blockquote>
-<p>右下角显示文章当前浏览进度，提供意见置顶功能，编辑主题配置文件，配置如下：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">back2top:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment">#是否提供一键置顶 </span></span><br><span class="line">  sidebar: <span class="literal">false</span></span><br><span class="line">  scrollpercent: <span class="literal">true</span> <span class="comment"># 是否显示当前阅读进度</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="阅读进度"><a href="#阅读进度" class="headerlink" title="阅读进度"></a>阅读进度</h2><blockquote>
-<p>Next主题支持页面滚动阅读进度指示器。 编辑主题配置文件，配置如下:</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">reading_progress:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  position: top</span><br><span class="line">  color: <span class="string">"#37c6c0"</span></span><br><span class="line">  height: 3px</span><br></pre></td></tr></table></figure>
-<h2 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="headerlink" title="设置代码高亮主题"></a>设置代码高亮主题</h2><blockquote>
-<p>Next 默认使用的是 白色的 normal 主题，可选的值有 normal，night， night blue， night bright， night eighties</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  highlight_theme: normal</span><br><span class="line">  copy_button:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment"># 显示复制按钮</span></span><br><span class="line">    show_result: <span class="literal">true</span> </span><br><span class="line">    style: mac  <span class="comment">#按钮样式: default | flat | mac</span></span><br></pre></td></tr></table></figure>
-<h2 id="本地搜索插件"><a href="#本地搜索插件" class="headerlink" title="本地搜索插件"></a>本地搜索插件</h2><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<h3 id="修改站点配置文件，添加如下内容："><a href="#修改站点配置文件，添加如下内容：" class="headerlink" title="修改站点配置文件，添加如下内容："></a>修改站点配置文件，添加如下内容：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 本地搜索</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
-<ul>
-<li>path：索引文件的路径，相对于站点根目录</li>
-<li>field：搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面</li>
-<li>limit：限制搜索的条目数</li>
-</ul>
-<h3 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Local Search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/theme-next/hexo-generator-searchdb</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1 <span class="comment">#每篇文章中显示的搜索数量</span></span><br><span class="line">  unescape: <span class="literal">false</span></span><br><span class="line">  preload: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<h2 id="数据分析与统计"><a href="#数据分析与统计" class="headerlink" title="数据分析与统计"></a>数据分析与统计</h2><blockquote>
-<p>Next内置了leancloud、firebase、busuanzi三种访客统计插件，前两种需要到官网注册获取网站颁发的appKey，相对麻烦。而不蒜子配置只需要将false改为true即可:</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 总访客数</span></span><br><span class="line">  total_visitors: <span class="literal">true</span></span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  <span class="comment"># 总浏览量</span></span><br><span class="line">  total_views: <span class="literal">true</span></span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  <span class="comment"># 文章浏览量</span></span><br><span class="line">  post_views: <span class="literal">true</span></span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
       </tags>
   </entry>
 </search>
