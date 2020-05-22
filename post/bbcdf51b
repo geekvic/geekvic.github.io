@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"geekvic.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1.打包时指定了主类，可以直接用java -jar xxx.jar123456789101112131415161718192021222324&lt;!--main方法打包jar包插件--&gt;&lt;plugin&gt;    &lt;artifactId&gt;maven-assembly-plugin&lt;&#x2F;artifactId&gt;    &lt;configuration&gt;">
+  <meta name="description" content="1.背景近期在本地的虚拟机VMware上安装了Ubuntu Server 17.04，由于系统是无界面的，所有操作都需要通过Linux命令进行操作。后来不想直接在服务器上操作，想通过远程工具Xshell去访问Linux系统。却发现根本连接不上。后来查资料，原来需要在Ubuntu上安装SSH协议软件，因为Ubuntu默认是不安装SSH服务的。安装了SSH服务后发现其他用户可以通过Xshell远程访问">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java项目main方法启动的两种方式">
-<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;60af2b16.html">
+<meta property="og:title" content="ubuntu允许root远程登录配置">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;bbcdf51b">
 <meta property="og:site_name" content="Vic&#39;s Blog">
-<meta property="og:description" content="1.打包时指定了主类，可以直接用java -jar xxx.jar123456789101112131415161718192021222324&lt;!--main方法打包jar包插件--&gt;&lt;plugin&gt;    &lt;artifactId&gt;maven-assembly-plugin&lt;&#x2F;artifactId&gt;    &lt;configuration&gt;">
+<meta property="og:description" content="1.背景近期在本地的虚拟机VMware上安装了Ubuntu Server 17.04，由于系统是无界面的，所有操作都需要通过Linux命令进行操作。后来不想直接在服务器上操作，想通过远程工具Xshell去访问Linux系统。却发现根本连接不上。后来查资料，原来需要在Ubuntu上安装SSH协议软件，因为Ubuntu默认是不安装SSH服务的。安装了SSH服务后发现其他用户可以通过Xshell远程访问">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-11-26T08:36:00.000Z">
-<meta property="article:modified_time" content="2020-05-19T07:07:31.078Z">
+<meta property="article:published_time" content="2017-10-19T13:02:00.000Z">
+<meta property="article:modified_time" content="2020-05-22T06:12:48.248Z">
 <meta property="article:author" content="vic">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="ubuntu">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://geekvic.top/post/60af2b16.html">
+<link rel="canonical" href="http://geekvic.top/post/bbcdf51b">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>Java项目main方法启动的两种方式 | Vic's Blog</title>
+  <title>ubuntu允许root远程登录配置 | Vic's Blog</title>
   
 
 
@@ -199,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/60af2b16.html">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/bbcdf51b">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -212,7 +212,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Java项目main方法启动的两种方式
+          ubuntu允许root远程登录配置
         </h1>
 
         <div class="post-meta">
@@ -222,14 +222,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2018-11-26 16:36:00" itemprop="dateCreated datePublished" datetime="2018-11-26T16:36:00+08:00">2018-11-26</time>
+              <time title="创建时间：2017-10-19 21:02:00" itemprop="dateCreated datePublished" datetime="2017-10-19T21:02:00+08:00">2017-10-19</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-19 15:07:31" itemprop="dateModified" datetime="2020-05-19T15:07:31+08:00">2020-05-19</time>
+                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -237,7 +237,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">Java基础</span></a>
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
                 </span>
             </span>
 
@@ -257,8 +257,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/post/60af2b16.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/post/60af2b16.html" itemprop="commentCount"></span>
+    <a title="valine" href="/post/bbcdf51b#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/bbcdf51b" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -268,7 +268,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>781</span>
+              <span>549</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -287,9 +287,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="1-打包时指定了主类，可以直接用java-jar-xxx-jar"><a href="#1-打包时指定了主类，可以直接用java-jar-xxx-jar" class="headerlink" title="1.打包时指定了主类，可以直接用java -jar xxx.jar"></a>1.打包时指定了主类，可以直接用java -jar xxx.jar</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--main方法打包jar包插件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-assembly-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appendAssemblyId</span>&gt;</span>false<span class="tag">&lt;/<span class="name">appendAssemblyId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">descriptorRefs</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">descriptorRef</span>&gt;</span>jar-with-dependencies<span class="tag">&lt;/<span class="name">descriptorRef</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">descriptorRefs</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">archive</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">manifest</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>com.TestApplication<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">archive</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>make-assembly<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">phase</span>&gt;</span>package<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>assembly<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>近期在本地的虚拟机VMware上安装了Ubuntu Server 17.04，由于系统是无界面的，所有操作都需要通过Linux命令进行操作。后来不想直接在服务器上操作，想通过远程工具Xshell去访问Linux系统。却发现根本连接不上。后来查资料，原来需要在Ubuntu上安装SSH协议软件，因为Ubuntu默认是不安装SSH服务的。安装了SSH服务后发现其他用户可以通过Xshell远程访问了，root用户访问会报密码被拒绝的错误，上网查资料，发现Ubuntu默认是不开启root远程登录的，需要设置一下。</p>
+<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><h5 id="2-1-检查是否开启SSH服务"><a href="#2-1-检查是否开启SSH服务" class="headerlink" title="2.1 检查是否开启SSH服务"></a>2.1 检查是否开启SSH服务</h5><p>命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -e|grep ssh</span><br></pre></td></tr></table></figure>
+<p>查看SSH服务是否开启，或者通过命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd status</span><br></pre></td></tr></table></figure>
+<p>可以查看某个服务的状态。</p>
+<h5 id="2-2-安装SSH服务"><a href="#2-2-安装SSH服务" class="headerlink" title="2.2 安装SSH服务"></a>2.2 安装SSH服务</h5><p>通过apt-get 安装，命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install ssh;</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-打包时没有指定主类，可以用java-cp-xxx-jar-主类名称（绝对路径）"><a href="#2-打包时没有指定主类，可以用java-cp-xxx-jar-主类名称（绝对路径）" class="headerlink" title="2.打包时没有指定主类，可以用java -cp xxx.jar 主类名称（绝对路径）"></a>2.打包时没有指定主类，可以用java -cp xxx.jar 主类名称（绝对路径）</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp xxx.jar com.TestApplication</span><br></pre></td></tr></table></figure>
+<h5 id="2-3-启动SSH服务"><a href="#2-3-启动SSH服务" class="headerlink" title="2.3 启动SSH服务"></a>2.3 启动SSH服务</h5><p>命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/ssh start</span><br></pre></td></tr></table></figure>
+<h5 id="2-4-修改SSH配置文件"><a href="#2-4-修改SSH配置文件" class="headerlink" title="2.4 修改SSH配置文件"></a>2.4 修改SSH配置文件</h5><p>命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<p>找到PermitRootLogin without-password 修改为PermitRootLogin yes</p>
+<h5 id="2-5-重启SSH服务"><a href="#2-5-重启SSH服务" class="headerlink" title="2.5 重启SSH服务"></a>2.5 重启SSH服务</h5><p>命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -325,7 +339,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://geekvic.top/post/60af2b16.html" title="Java项目main方法启动的两种方式">http://geekvic.top/post/60af2b16.html</a>
+    <a href="http://geekvic.top/post/bbcdf51b" title="ubuntu允许root远程登录配置">http://geekvic.top/post/bbcdf51b</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -336,7 +350,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
           </div>
 
         
@@ -345,12 +359,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/post/bf5e4a43.html" rel="prev" title="zookeeper安装">
-      <i class="fa fa-chevron-left"></i> zookeeper安装
+    <a href="/post/5945bf9f" rel="prev" title="Spring Boot 热部署devtools实现">
+      <i class="fa fa-chevron-left"></i> Spring Boot 热部署devtools实现
     </a></div>
       <div class="post-nav-item">
-    <a href="/post/8e06a8f9.html" rel="next" title="Docker初识">
-      Docker初识 <i class="fa fa-chevron-right"></i>
+    <a href="/post/4ad0b8cc" rel="next" title="Linux的常用命令">
+      Linux的常用命令 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -411,7 +425,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-打包时指定了主类，可以直接用java-jar-xxx-jar"><span class="nav-number">1.</span> <span class="nav-text">1.打包时指定了主类，可以直接用java -jar xxx.jar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-打包时没有指定主类，可以用java-cp-xxx-jar-主类名称（绝对路径）"><span class="nav-number">2.</span> <span class="nav-text">2.打包时没有指定主类，可以用java -cp xxx.jar 主类名称（绝对路径）</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-背景"><span class="nav-number">1.</span> <span class="nav-text">1.背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-实现"><span class="nav-number">2.</span> <span class="nav-text">2.实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-检查是否开启SSH服务"><span class="nav-number">2.0.1.</span> <span class="nav-text">2.1 检查是否开启SSH服务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-安装SSH服务"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.2 安装SSH服务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-启动SSH服务"><span class="nav-number">2.0.3.</span> <span class="nav-text">2.3 启动SSH服务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-4-修改SSH配置文件"><span class="nav-number">2.0.4.</span> <span class="nav-text">2.4 修改SSH配置文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-5-重启SSH服务"><span class="nav-number">2.0.5.</span> <span class="nav-text">2.5 重启SSH服务</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

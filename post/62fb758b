@@ -20,22 +20,20 @@
     var CONFIG = {"hostname":"geekvic.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1.protobuf简介　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的">
+  <meta name="description" content="浏览器缓存，也就是客户端缓存,既是网页性能优化里面静态资源相关优化的一大利器，也是无数web开发人员在工作过程不可避免的一大问题。浏览器缓存分为：强缓存和协商缓存 一、原理 浏览器加载资源时，先根据这个资源的http header中的Cache-Control判断是否命中强缓存，如果命中，浏览器直接从缓存中读取资源，根本不会向服务器发送请求；  当强缓存没有命中的时候，浏览器则会发送一个请求到服务">
 <meta property="og:type" content="article">
-<meta property="og:title" content="idea使用Protobuf插件">
-<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;35fe24ef.html">
+<meta property="og:title" content="认识浏览器缓存">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;62fb758b">
 <meta property="og:site_name" content="Vic&#39;s Blog">
-<meta property="og:description" content="1.protobuf简介　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的">
+<meta property="og:description" content="浏览器缓存，也就是客户端缓存,既是网页性能优化里面静态资源相关优化的一大利器，也是无数web开发人员在工作过程不可避免的一大问题。浏览器缓存分为：强缓存和协商缓存 一、原理 浏览器加载资源时，先根据这个资源的http header中的Cache-Control判断是否命中强缓存，如果命中，浏览器直接从缓存中读取资源，根本不会向服务器发送请求；  当强缓存没有命中的时候，浏览器则会发送一个请求到服务">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;10&#x2F;zpLDClJUFg2X7t3.png">
-<meta property="article:published_time" content="2017-11-06T09:06:00.000Z">
-<meta property="article:modified_time" content="2020-05-19T07:07:30.960Z">
+<meta property="article:published_time" content="2017-04-02T05:36:00.000Z">
+<meta property="article:modified_time" content="2020-05-22T06:12:48.252Z">
 <meta property="article:author" content="vic">
-<meta property="article:tag" content="Protobuf">
+<meta property="article:tag" content="缓存">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;10&#x2F;zpLDClJUFg2X7t3.png">
 
-<link rel="canonical" href="http://geekvic.top/post/35fe24ef.html">
+<link rel="canonical" href="http://geekvic.top/post/62fb758b">
 
 
 <script id="page-configurations">
@@ -48,7 +46,7 @@
   };
 </script>
 
-  <title>idea使用Protobuf插件 | Vic's Blog</title>
+  <title>认识浏览器缓存 | Vic's Blog</title>
   
 
 
@@ -201,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/35fe24ef.html">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/62fb758b">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -214,7 +212,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          idea使用Protobuf插件
+          认识浏览器缓存
         </h1>
 
         <div class="post-meta">
@@ -224,14 +222,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2017-11-06 17:06:00" itemprop="dateCreated datePublished" datetime="2017-11-06T17:06:00+08:00">2017-11-06</time>
+              <time title="创建时间：2017-04-02 13:36:00" itemprop="dateCreated datePublished" datetime="2017-04-02T13:36:00+08:00">2017-04-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-19 15:07:30" itemprop="dateModified" datetime="2020-05-19T15:07:30+08:00">2020-05-19</time>
+                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -239,7 +237,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" itemprop="url" rel="index"><span itemprop="name">通信协议</span></a>
+                  <a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a>
                 </span>
             </span>
 
@@ -259,8 +257,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/post/35fe24ef.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/post/35fe24ef.html" itemprop="commentCount"></span>
+    <a title="valine" href="/post/62fb758b#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/62fb758b" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -270,14 +268,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.6k</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -289,23 +287,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-protobuf简介"><a href="#1-protobuf简介" class="headerlink" title="1.protobuf简介"></a>1.protobuf简介</h3><p>　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的10分之一，xml格式的20分之一，是二进制序列化的10分之一。
-　　</p>
-<h3 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2.安装插件"></a>2.安装插件</h3><p>在idea里安装插件Protobuf Support</p>
-<h3 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-netty<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-protobuf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-stub<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.protobuf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>protobuf-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;protobuf.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">extensions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">extension</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>kr.motd.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>os-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.0.Final<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">extension</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">extensions</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--protobuf插件--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.xolstice.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>protobuf-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.5.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">protocArtifact</span>&gt;</span></span><br><span class="line">         com.google.protobuf:protoc:$&#123;protobuf.version&#125;:exe:$&#123;os.detected.classifier&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">protocArtifact</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pluginId</span>&gt;</span>grpc-java<span class="tag">&lt;/<span class="name">pluginId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pluginArtifact</span>&gt;</span></span><br><span class="line">         io.grpc:protoc-gen-grpc-java:$&#123;grpc.version&#125;:exe:$&#123;os.detected.classifier&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">pluginArtifact</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile-custom<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-创建proto文件"><a href="#4-创建proto文件" class="headerlink" title="4.创建proto文件"></a>4.创建proto文件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">syntax = "proto3";</span><br><span class="line">option java_package = "com.ynt.ai.activemq.protobuf";</span><br><span class="line">option java_outer_classname = "PersonModel";</span><br><span class="line"></span><br><span class="line">message Person &#123;</span><br><span class="line">    int32 id = 1;</span><br><span class="line">    string name = 2;</span><br><span class="line">    string email = 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="5-生成java对象文件"><a href="#5-生成java对象文件" class="headerlink" title="5.生成java对象文件"></a>5.生成java对象文件</h3><p>　　通过Protobuf插件的compile命令，如下图所示，自动生成对象文件。</p>
-<p><img src="https://i.loli.net/2020/04/10/zpLDClJUFg2X7t3.png" alt="QQ截图20171106165834.png"></p>
-<h3 id="6-测试"><a href="#6-测试" class="headerlink" title="6.测试"></a>6.测试</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PersonMsg.Person person = PersonMsg.Person.newBuilder().setId(<span class="number">2</span>).setName(<span class="string">"test"</span>)</span><br><span class="line">                .setEmail(<span class="string">"test@163.com"</span>).build();</span><br><span class="line"> <span class="keyword">byte</span>[] results = person.toByteArray();</span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">byte</span> b : results) &#123;</span><br><span class="line">   log.info(String.valueOf(b));</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+        <p>浏览器缓存，也就是客户端缓存,既是网页性能优化里面静态资源相关优化的一大利器，也是无数web开发人员在工作过程不可避免的一大问题。浏览器缓存分为：强缓存和协商缓存</p>
+<h4 id="一、原理"><a href="#一、原理" class="headerlink" title="一、原理"></a>一、原理</h4><ol>
+<li><p>浏览器加载资源时，先根据这个资源的http header中的Cache-Control判断是否命中强缓存，如果命中，浏览器直接从缓存中读取资源，根本不会向服务器发送请求；</p>
+</li>
+<li><p>当强缓存没有命中的时候，浏览器则会发送一个请求到服务器，通过资源的http header中的 Last-Modified 和If-Modified-Since来判断资源是否命中协商缓存，如果命中，服务器将会将这个请求返回，但不会返回这个资源的数据，而是告诉客服端可以从缓存中加载这个资源；</p>
+</li>
+<li><p>如果资源也没有命中协商缓存的话，浏览器直接从服务器端加载资源数据</p>
+</li>
+</ol>
+<h4 id="二、共同点与区别"><a href="#二、共同点与区别" class="headerlink" title="二、共同点与区别"></a>二、共同点与区别</h4><ol>
+<li>共同点：如果命中，都从客户端缓存中加载这个资源，而不从服务器端加载；
+　　</li>
+<li>区别： 强缓存不发请求到服务器，协商缓存发请求到服务器；</li>
+</ol>
+<h4 id="三、强缓存原理"><a href="#三、强缓存原理" class="headerlink" title="三、强缓存原理"></a>三、强缓存原理</h4><p>命中强缓存，chrome里的network里面 status是200，且size会显示为from disk/memory cache,Cache Control :max-age:315360000 单位秒，也就是10年</p>
+<ol>
+<li><p>浏览器第一次跟服务器请求一个资源，服务器在返回这个资源的同时，在respone的header加上Cache-Control的header</p>
+</li>
+<li><p>浏览器接收到这个资源后，会把这个资源连同所有的resoponse Header缓存下来</p>
+</li>
+<li><p>浏览器再次请求这个资源时，会从缓存中寻找，找到后，根据它第一次请求时间和Cache Control设定的有效期，计算一个过期时间。再拿这个过期时间跟当前请求时间比较，如果当前请求时间在过期时间之前，就能命中缓存。否则，就不行。</p>
+</li>
+</ol>
+<h4 id="四、协商缓存原理"><a href="#四、协商缓存原理" class="headerlink" title="四、协商缓存原理"></a>四、协商缓存原理</h4><ol>
+<li><p>如果协商缓存命中，请求响应返回的http状态为304并且会显示一个Not Modified的字符串。协商缓存是利用的是【Last-Modified，If-Modified-Since】</p>
+</li>
+<li><p>浏览器第一次跟服务器请求一个资源，服务器在返回这个资源的同时，在respone的header加上Last-Modified的header，这个header表示这个资源在服务器上的最后修改时间<br>；<br>浏览器再次跟服务器请求这个资源时，在request的header上加上If-Modified-Since的header，这个header的值就是上一次请求时返回的Last-Modified的值；</p>
+</li>
+<li><p>服务器再次收到资源请求时，根据浏览器传过来If-Modified-Since和资源在服务器上的Last-Modified是否有变化，如果没有变化则返回304 Not Modified，但是不会返回资源内容；如果有变化，就正常返回资源内容。</p>
+</li>
+</ol>
+<h4 id="五、清除客户端缓存的方法"><a href="#五、清除客户端缓存的方法" class="headerlink" title="五、清除客户端缓存的方法"></a>五、清除客户端缓存的方法</h4><ol>
+<li><p>当ctrl+f5强制刷新网页时，直接从服务器加载，跳过强缓存和协商缓存；</p>
+</li>
+<li><p>当f5刷新网页时，跳过强缓存，但是会检查协商缓存；</p>
+</li>
+<li><p>如果用的是chrome，可以f12在network那里把缓存给禁掉 Disable cache</p>
+</li>
+<li><p>给资源加上一个动态的参数，css/index.css?v=2017032901</p>
+</li>
+</ol>
 
     </div>
 
@@ -341,7 +363,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://geekvic.top/post/35fe24ef.html" title="idea使用Protobuf插件">http://geekvic.top/post/35fe24ef.html</a>
+    <a href="http://geekvic.top/post/62fb758b" title="认识浏览器缓存">http://geekvic.top/post/62fb758b</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -352,7 +374,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Protobuf/" rel="tag"># Protobuf</a>
+              <a href="/tags/%E7%BC%93%E5%AD%98/" rel="tag"># 缓存</a>
           </div>
 
         
@@ -360,13 +382,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/post/4fe954de.html" rel="prev" title="Linux环境GitLab安装与配置">
-      <i class="fa fa-chevron-left"></i> Linux环境GitLab安装与配置
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/post/6b0e3bbc.html" rel="next" title="GitLab服务器迁移">
-      GitLab服务器迁移 <i class="fa fa-chevron-right"></i>
+    <a href="/post/a02754ce" rel="next" title="基于GitLab与Git Extensions搭建版本控制工具">
+      基于GitLab与Git Extensions搭建版本控制工具 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -427,7 +446,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-protobuf简介"><span class="nav-number">1.</span> <span class="nav-text">1.protobuf简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装插件"><span class="nav-number">2.</span> <span class="nav-text">2.安装插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置"><span class="nav-number">3.</span> <span class="nav-text">3.配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-创建proto文件"><span class="nav-number">4.</span> <span class="nav-text">4.创建proto文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-生成java对象文件"><span class="nav-number">5.</span> <span class="nav-text">5.生成java对象文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-测试"><span class="nav-number">6.</span> <span class="nav-text">6.测试</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、原理"><span class="nav-number">1.</span> <span class="nav-text">一、原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、共同点与区别"><span class="nav-number">2.</span> <span class="nav-text">二、共同点与区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、强缓存原理"><span class="nav-number">3.</span> <span class="nav-text">三、强缓存原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、协商缓存原理"><span class="nav-number">4.</span> <span class="nav-text">四、协商缓存原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、清除客户端缓存的方法"><span class="nav-number">5.</span> <span class="nav-text">五、清除客户端缓存的方法</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

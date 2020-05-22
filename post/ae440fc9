@@ -23,7 +23,7 @@
   <meta name="description" content="1.JMS简介Java消息服务（Java Message Service）即JMS，是一个Java平台中关于面向消息中间件的API，用于两个程序之间，或分布式系统中发送消息，进行异步通信。JMS包括队列与主题两种模式，一种是点对点的Queue，还有一个是发布订阅的Topic方式。区别在于：  对于Queue模式，一个发布者发布消息，下面的接收者按队列顺序接收，比如发布了10个消息，两个接收者A,B">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于JMS的ActiveMQ搭建与实现">
-<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;ae440fc9.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;ae440fc9">
 <meta property="og:site_name" content="Vic&#39;s Blog">
 <meta property="og:description" content="1.JMS简介Java消息服务（Java Message Service）即JMS，是一个Java平台中关于面向消息中间件的API，用于两个程序之间，或分布式系统中发送消息，进行异步通信。JMS包括队列与主题两种模式，一种是点对点的Queue，还有一个是发布订阅的Topic方式。区别在于：  对于Queue模式，一个发布者发布消息，下面的接收者按队列顺序接收，比如发布了10个消息，两个接收者A,B">
 <meta property="og:locale" content="zh_CN">
@@ -33,14 +33,14 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;14&#x2F;lPaLSxZimoVBQG5.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;14&#x2F;3vjgIstaw9ncWdf.png">
 <meta property="article:published_time" content="2017-08-28T02:21:00.000Z">
-<meta property="article:modified_time" content="2020-05-19T07:07:31.883Z">
+<meta property="article:modified_time" content="2020-05-22T06:12:48.250Z">
 <meta property="article:author" content="vic">
 <meta property="article:tag" content="ActiveMQ">
 <meta property="article:tag" content="JMS">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;14&#x2F;VZ1hq4mFz2n6S5g.png">
 
-<link rel="canonical" href="http://geekvic.top/post/ae440fc9.html">
+<link rel="canonical" href="http://geekvic.top/post/ae440fc9">
 
 
 <script id="page-configurations">
@@ -206,7 +206,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/ae440fc9.html">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/ae440fc9">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -236,7 +236,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-19 15:07:31" itemprop="dateModified" datetime="2020-05-19T15:07:31+08:00">2020-05-19</time>
+                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -264,8 +264,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/post/ae440fc9.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/post/ae440fc9.html" itemprop="commentCount"></span>
+    <a title="valine" href="/post/ae440fc9#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/ae440fc9" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -369,7 +369,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://geekvic.top/post/ae440fc9.html" title="基于JMS的ActiveMQ搭建与实现">http://geekvic.top/post/ae440fc9.html</a>
+    <a href="http://geekvic.top/post/ae440fc9" title="基于JMS的ActiveMQ搭建与实现">http://geekvic.top/post/ae440fc9</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -390,11 +390,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/post/f3cd1273.html" rel="prev" title="Spring Data JPA在Spring Boot中的应用">
+    <a href="/post/f3cd1273" rel="prev" title="Spring Data JPA在Spring Boot中的应用">
       <i class="fa fa-chevron-left"></i> Spring Data JPA在Spring Boot中的应用
     </a></div>
       <div class="post-nav-item">
-    <a href="/post/5945bf9f.html" rel="next" title="Spring Boot 热部署devtools实现">
+    <a href="/post/5945bf9f" rel="next" title="Spring Boot 热部署devtools实现">
       Spring Boot 热部署devtools实现 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>

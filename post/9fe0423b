@@ -20,23 +20,20 @@
     var CONFIG = {"hostname":"geekvic.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1.背景服务器：ubuntu server 17.04 安装方式：apt-get 2.实现 执行命令：  1$ apt-get update    执行命令：">
+  <meta name="description" content="一、概述FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频&#x2F;视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。 二、安装2.1 安装yasm12345# wget http:&#x2F;&#x2F;www.tortall">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu安装redis">
-<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;ad24f30b.html">
+<meta property="og:title" content="FFmpeg的安装与使用">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;9fe0423b">
 <meta property="og:site_name" content="Vic&#39;s Blog">
-<meta property="og:description" content="1.背景服务器：ubuntu server 17.04 安装方式：apt-get 2.实现 执行命令：  1$ apt-get update    执行命令：">
+<meta property="og:description" content="一、概述FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频&#x2F;视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。 二、安装2.1 安装yasm12345# wget http:&#x2F;&#x2F;www.tortall">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;10&#x2F;fH9FkYbKd6Av7LQ.png">
-<meta property="article:published_time" content="2017-10-30T08:36:00.000Z">
-<meta property="article:modified_time" content="2020-05-19T07:07:31.592Z">
+<meta property="article:published_time" content="2019-04-23T12:05:00.000Z">
+<meta property="article:modified_time" content="2020-05-22T06:12:48.238Z">
 <meta property="article:author" content="vic">
-<meta property="article:tag" content="ubuntu">
-<meta property="article:tag" content="redis">
+<meta property="article:tag" content="FFmpeg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;10&#x2F;fH9FkYbKd6Av7LQ.png">
 
-<link rel="canonical" href="http://geekvic.top/post/ad24f30b.html">
+<link rel="canonical" href="http://geekvic.top/post/9fe0423b">
 
 
 <script id="page-configurations">
@@ -49,7 +46,7 @@
   };
 </script>
 
-  <title>ubuntu安装redis | Vic's Blog</title>
+  <title>FFmpeg的安装与使用 | Vic's Blog</title>
   
 
 
@@ -202,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/ad24f30b.html">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/9fe0423b">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -215,7 +212,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ubuntu安装redis
+          FFmpeg的安装与使用
         </h1>
 
         <div class="post-meta">
@@ -225,14 +222,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2017-10-30 16:36:00" itemprop="dateCreated datePublished" datetime="2017-10-30T16:36:00+08:00">2017-10-30</time>
+              <time title="创建时间：2019-04-23 20:05:00" itemprop="dateCreated datePublished" datetime="2019-04-23T20:05:00+08:00">2019-04-23</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-19 15:07:31" itemprop="dateModified" datetime="2020-05-19T15:07:31+08:00">2020-05-19</time>
+                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -240,7 +237,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
                 </span>
             </span>
 
@@ -260,8 +257,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/post/ad24f30b.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/post/ad24f30b.html" itemprop="commentCount"></span>
+    <a title="valine" href="/post/9fe0423b#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/9fe0423b" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -271,7 +268,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>442</span>
+              <span>582</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -290,43 +287,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>服务器：ubuntu server 17.04</p>
-<p>安装方式：apt-get</p>
-<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><ul>
-<li>执行命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get update</span><br></pre></td></tr></table></figure>
+        <h3 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h3><p>FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。采用LGPL或GPL许可证。它提供了录制、转换以及流化音视频的完整解决方案。它包含了非常先进的音频/视频编解码库libavcodec，为了保证高可移植性和编解码质量，libavcodec里很多code都是从头开发的。</p>
+<h3 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h3><h4 id="2-1-安装yasm"><a href="#2-1-安装yasm" class="headerlink" title="2.1 安装yasm"></a>2.1 安装yasm</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz</span></span><br><span class="line"><span class="comment"># tar -zxvf yasm-1.3.0.tar.gz</span></span><br><span class="line"><span class="comment"># cd yasm-1.3.0</span></span><br><span class="line"><span class="comment"># ./configure</span></span><br><span class="line"><span class="comment"># make &amp;amp;&amp;amp; make install</span></span><br></pre></td></tr></table></figure>
 
 
-<ul>
-<li>执行命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install redis-server</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启用redis：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-安装FFmpeg"><a href="#2-2-安装FFmpeg" class="headerlink" title="2.2 安装FFmpeg"></a>2.2 安装FFmpeg</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#yum -y install bzip2</span></span><br><span class="line"><span class="comment">#tar jxvf ffmpeg-4.0.2.tar.bz2</span></span><br><span class="line"><span class="comment">#cd ffmpeg-4.0.2</span></span><br><span class="line"><span class="comment"># ./configure</span></span><br><span class="line"><span class="comment"># make</span></span><br><span class="line"><span class="comment"># make install</span></span><br></pre></td></tr></table></figure>
 
 
-<ul>
-<li>查看redis是否启用：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ redis-cli</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>redis 127.0.0.1:6379&gt;ping，返回PONG，说明redis已经安装成功。</p>
-</li>
-<li><p>redis默认是只允许本地访问，如果要让其远程访问，还需要修改配置。执行$ vim /etc/redis/redis.conf，注释bind 127.0.0.1，除此之外，还需要关闭保护模式，protected-mode默认是yes，需要将protected-mode设置为 no</p>
-</li>
-<li><p>再重启下redis：</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="3-远程访问"><a href="#3-远程访问" class="headerlink" title="3.远程访问"></a>3.远程访问</h3><p>本机环境：win10，安装redis客户端RedisDesktopManager，通过设置ip地址，redis端口号等，可以远程连接ubuntu上安装的redis，如下图所示。</p>
-<p><img src="https://i.loli.net/2020/04/10/fH9FkYbKd6Av7LQ.png" alt="redis.png"></p>
+<h4 id="2-3-查看ffmpeg是否安装成功"><a href="#2-3-查看ffmpeg是否安装成功" class="headerlink" title="2.3 查看ffmpeg是否安装成功"></a>2.3 查看ffmpeg是否安装成功</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ffmpeg</span></span><br></pre></td></tr></table></figure>
+<p>输入ffmpeg打印了相关信息，表示安装成功</p>
+<h3 id="三、转换"><a href="#三、转换" class="headerlink" title="三、转换"></a>三、转换</h3><p>将MP3转换为16000的采样率、单通道的wav格式，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i G:\test.mp3 -acodec pcm_s16le -ac 1 -ar 16000 -f wav <span class="string">"G:\test.wav"</span></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -362,7 +333,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://geekvic.top/post/ad24f30b.html" title="ubuntu安装redis">http://geekvic.top/post/ad24f30b.html</a>
+    <a href="http://geekvic.top/post/9fe0423b" title="FFmpeg的安装与使用">http://geekvic.top/post/9fe0423b</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -373,8 +344,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
-              <a href="/tags/redis/" rel="tag"># redis</a>
+              <a href="/tags/FFmpeg/" rel="tag"># FFmpeg</a>
           </div>
 
         
@@ -383,12 +353,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/post/ca00f598.html" rel="prev" title="ubuntu修改apt-get源">
-      <i class="fa fa-chevron-left"></i> ubuntu修改apt-get源
+    <a href="/post/1d29e395" rel="prev" title="Dubbo版本升级">
+      <i class="fa fa-chevron-left"></i> Dubbo版本升级
     </a></div>
       <div class="post-nav-item">
-    <a href="/post/4fe954de.html" rel="next" title="Linux环境GitLab安装与配置">
-      Linux环境GitLab安装与配置 <i class="fa fa-chevron-right"></i>
+    <a href="/post/92932283" rel="next" title="Apollo环境配置">
+      Apollo环境配置 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -449,7 +419,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-背景"><span class="nav-number">1.</span> <span class="nav-text">1.背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-实现"><span class="nav-number">2.</span> <span class="nav-text">2.实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-远程访问"><span class="nav-number">3.</span> <span class="nav-text">3.远程访问</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、概述"><span class="nav-number">1.</span> <span class="nav-text">一、概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、安装"><span class="nav-number">2.</span> <span class="nav-text">二、安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-安装yasm"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 安装yasm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-安装FFmpeg"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 安装FFmpeg</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-查看ffmpeg是否安装成功"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 查看ffmpeg是否安装成功</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、转换"><span class="nav-number">3.</span> <span class="nav-text">三、转换</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
