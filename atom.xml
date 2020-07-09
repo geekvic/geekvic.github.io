@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekvic.top/"/>
-  <updated>2020-05-22T06:12:48.239Z</updated>
+  <updated>2020-07-09T02:43:53.000Z</updated>
   <id>http://geekvic.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux下安装新版本Redis遇到的坑</title>
+    <link href="http://geekvic.top/post/755670ae.html"/>
+    <id>http://geekvic.top/post/755670ae.html</id>
+    <published>2020-07-09T02:00:00.000Z</published>
+    <updated>2020-07-09T02:43:53.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;什么是Redis？&quot;&gt;&lt;a href=&quot;#什么是Redis？&quot; class=&quot;headerlink&quot; title=&quot;什么是Redis？&quot;&gt;&lt;/a&gt;什么是Redis？&lt;/h1&gt;&lt;p&gt;Remote Dictionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。&lt;/p&gt;
+&lt;p&gt;Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。&lt;/p&gt;
+&lt;p&gt;与传统数据库不同的是 Redis 的数据是存在内存中的，所以存写速度非常快，因此 Redis 被广泛应用于缓存方向。&lt;/p&gt;
+&lt;h1 id=&quot;数据类型有哪些？&quot;&gt;&lt;a href=&quot;#数据类型有哪些？&quot; class=&quot;headerlink&quot; title=&quot;数据类型有哪些？&quot;&gt;&lt;/a&gt;数据类型有哪些？&lt;/h1&gt;&lt;p&gt;它通常被称为数据结构服务器，因为值（value）可以是 字符串(String), 哈希(Hash), 列表(list), 集合(sets) 和 有序集合(sorted sets)等类型。&lt;/p&gt;
+&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="Redis" scheme="http://geekvic.top/categories/Redis/"/>
+    
+    
+      <category term="Redis" scheme="http://geekvic.top/tags/Redis/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo进阶设置</title>
@@ -611,44 +636,6 @@
       <category term="ubuntu" scheme="http://geekvic.top/tags/ubuntu/"/>
     
       <category term="redis" scheme="http://geekvic.top/tags/redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu修改apt-get源</title>
-    <link href="http://geekvic.top/post/ca00f598.html"/>
-    <id>http://geekvic.top/post/ca00f598.html</id>
-    <published>2017-10-30T08:11:00.000Z</published>
-    <updated>2020-05-22T06:12:48.248Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;1-背景&quot;&gt;&lt;a href=&quot;#1-背景&quot; class=&quot;headerlink&quot; title=&quot;1.背景&quot;&gt;&lt;/a&gt;1.背景&lt;/h3&gt;&lt;p&gt;　　服务器上安装了最新的Ubuntu Server 17.04，代号为zesty。使用apt-get命令安装软件时，有时候速度比较慢，有时候会失败。因此考虑用国内的镜像源更换下apt-get的默认源。&lt;/p&gt;
-&lt;h3 id=&quot;2-实现&quot;&gt;&lt;a href=&quot;#2-实现&quot; class=&quot;headerlink&quot; title=&quot;2.实现&quot;&gt;&lt;/a&gt;2.实现&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;编辑源文件，vim /etc/apt/sources.list&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;使用网易apt-get源，将原来的源地址，替换为如下，由于服务器的版本是17.04，因此源地址的代号部分都是zesty，如果是其他版本，可以替换为对应的版本，具体版本代号可以网上查找。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;deb http://mirrors.163.com/ubuntu/ zesty main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb http://mirrors.163.com/ubuntu/ zesty-security main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb http://mirrors.163.com/ubuntu/ zesty-updates main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb http://mirrors.163.com/ubuntu/ zesty-proposed main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb http://mirrors.163.com/ubuntu/ zesty-backports main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb-src http://mirrors.163.com/ubuntu/ zesty main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb-src http://mirrors.163.com/ubuntu/ zesty-security main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb-src http://mirrors.163.com/ubuntu/ zesty-updates main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb-src http://mirrors.163.com/ubuntu/ zesty-proposed main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb-src http://mirrors.163.com/ubuntu/ zesty-backports main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;执行apt-get update，apt-get upgrade，会发现会报错，apt-get: Could not resolve ‘mirrors.163.com&amp;rsquo;的错误，这种原因其实是因为还缺少一个步骤，就是将添加的网址和IP进行映射，修改/etc/目录下的host文件。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;通过ip.chinaz.com进行查询网址&amp;ldquo;mirrors.163.com&amp;rdquo;，对应的ip地址如下所示，然后将其添加到hosts文件里。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;123.58.190.228     mirrors.163.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;123.58.190.236     mirrors.163.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://geekvic.top/categories/Linux/"/>
-    
-    
-      <category term="apt-get" scheme="http://geekvic.top/tags/apt-get/"/>
-    
-      <category term="ubuntu" scheme="http://geekvic.top/tags/ubuntu/"/>
     
   </entry>
   

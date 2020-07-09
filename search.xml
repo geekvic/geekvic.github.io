@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Apollo环境配置</title>
-    <url>/post/92932283.html</url>
-    <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>&nbsp; &nbsp; Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。</p>
-<h2 id="二、配置环境路径"><a href="#二、配置环境路径" class="headerlink" title="二、配置环境路径"></a>二、配置环境路径</h2><table>
-<thead>
-<tr>
-<th>操作系统</th>
-<th>server.properties</th>
-<th>hosts</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>windows</td>
-<td>C:\opt\settings\server.properties</td>
-<td>C:\Windows\System32\drivers\etc\hosts</td>
-</tr>
-<tr>
-<td>linux</td>
-<td>/opt/settings/server.properties</td>
-<td>/etc/hosts</td>
-</tr>
-</tbody></table>
-<h2 id="三、具体配置"><a href="#三、具体配置" class="headerlink" title="三、具体配置"></a>三、具体配置</h2><h4 id="3-1-nbsp-server-properties"><a href="#3-1-nbsp-server-properties" class="headerlink" title="3.1&nbsp;server.properties"></a>3.1&nbsp;server.properties</h4><p>env=DEV</p>
-<p>目前，env持以下几个值（大小写不敏感）：</p>
-<p>&nbsp; ● DEV</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Development environment</p>
-<p>&nbsp; ● FAT</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Feature Acceptance Test environment</p>
-<p>&nbsp; ● UAT</p>
-<p>&nbsp; &nbsp; &nbsp; ○ User Acceptance Test environment</p>
-<p>&nbsp; ● PRO</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Production environment</p>
-<h4 id="3-2-hosts"><a href="#3-2-hosts" class="headerlink" title="3.2 hosts"></a>3.2 hosts</h4><p>192.168.1.153 dev.config.ynt.ai</p>
-<p>192.168.1.163 fat.config.ynt.ai</p>
-<p>192.168.1.173 uat.config.ynt.ai</p>
-<p>192.168.1.172 pro.config.ynt.ai</p>
-]]></content>
-      <categories>
-        <category>配置管理</category>
-      </categories>
-      <tags>
-        <tag>Apollo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker中安装mysql</title>
     <url>/post/6774ee31.html</url>
     <content><![CDATA[<h4 id="1-docker-中下载-mysql"><a href="#1-docker-中下载-mysql" class="headerlink" title="1.docker 中下载 mysql"></a>1.docker 中下载 mysql</h4><div class="cnblogs_code">
@@ -158,6 +113,51 @@ symctl enable d</span></pre>
       </categories>
       <tags>
         <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Apollo环境配置</title>
+    <url>/post/92932283.html</url>
+    <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>&nbsp; &nbsp; Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。</p>
+<h2 id="二、配置环境路径"><a href="#二、配置环境路径" class="headerlink" title="二、配置环境路径"></a>二、配置环境路径</h2><table>
+<thead>
+<tr>
+<th>操作系统</th>
+<th>server.properties</th>
+<th>hosts</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>windows</td>
+<td>C:\opt\settings\server.properties</td>
+<td>C:\Windows\System32\drivers\etc\hosts</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>/opt/settings/server.properties</td>
+<td>/etc/hosts</td>
+</tr>
+</tbody></table>
+<h2 id="三、具体配置"><a href="#三、具体配置" class="headerlink" title="三、具体配置"></a>三、具体配置</h2><h4 id="3-1-nbsp-server-properties"><a href="#3-1-nbsp-server-properties" class="headerlink" title="3.1&nbsp;server.properties"></a>3.1&nbsp;server.properties</h4><p>env=DEV</p>
+<p>目前，env持以下几个值（大小写不敏感）：</p>
+<p>&nbsp; ● DEV</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Development environment</p>
+<p>&nbsp; ● FAT</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Feature Acceptance Test environment</p>
+<p>&nbsp; ● UAT</p>
+<p>&nbsp; &nbsp; &nbsp; ○ User Acceptance Test environment</p>
+<p>&nbsp; ● PRO</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Production environment</p>
+<h4 id="3-2-hosts"><a href="#3-2-hosts" class="headerlink" title="3.2 hosts"></a>3.2 hosts</h4><p>192.168.1.153 dev.config.ynt.ai</p>
+<p>192.168.1.163 fat.config.ynt.ai</p>
+<p>192.168.1.173 uat.config.ynt.ai</p>
+<p>192.168.1.172 pro.config.ynt.ai</p>
+]]></content>
+      <categories>
+        <category>配置管理</category>
+      </categories>
+      <tags>
+        <tag>Apollo</tag>
       </tags>
   </entry>
   <entry>
@@ -646,77 +646,6 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot 热部署devtools实现</title>
-    <url>/post/5945bf9f.html</url>
-    <content><![CDATA[<h3 id="1-devtools"><a href="#1-devtools" class="headerlink" title="1.devtools"></a>1.devtools</h3><p>spring为开发者提供了一个名为spring-boot-devtools的模块来使Spring Boot应用支持热部署，提高开发者的开发效率，无需手动重启Spring Boot应用。</p>
-<h3 id="2-项目搭建"><a href="#2-项目搭建" class="headerlink" title="2.项目搭建"></a>2.项目搭建</h3><p>本文是采用IDEA搭建的Spring Boot应用，通过spring-boot-devtools配置，可以支持修改java文件会自动重启程序，一些资源无需触发重启，例如thymeleaf模板文件就可以实时编辑。默认情况下，更改/META-INF/maven，/META-INF/resources ，/resources ，/static ，/public 或/templates下的资源不会触发重启，而是触发livereload。devtools模块包含一个嵌入的livereload服务器，可以在资源变化时用来触发浏览器刷新。浏览器需要在livereload.com下载安装扩展。 例如Chrome浏览器在应用商店安装livereload插件后，在要自动刷新的页面点击对应的图标，启动应用后更新页面内容或者css等都会触发页面自动刷新。</p>
-<h3 id="3-livereload"><a href="#3-livereload" class="headerlink" title="3.livereload"></a>3.livereload</h3><p>livereload 通过引入的脚本livereload.js在 livereload 服务和浏览器之间建立了一个 WebSocket 连接。每当监测到文件的变动，livereload 服务就会向浏览器发送一个信号，浏览器收到信号后就刷新页面，实现了实时刷新的效果。每次启动时，需要点击对应的图标，如下图所示。</p>
-<p><img src="https://i.loli.net/2020/04/10/ywQmVeGx4dhFzoU.png" alt="clipboard.png"></p>
-<h3 id="4-项目代码配置"><a href="#4-项目代码配置" class="headerlink" title="4.项目代码配置"></a>4.项目代码配置</h3><h5 id="4-1-pom-xml配置文件"><a href="#4-1-pom-xml配置文件" class="headerlink" title="4.1 pom.xml配置文件"></a>4.1 pom.xml配置文件</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">fork</span>&gt;</span>true<span class="tag">&lt;/<span class="name">fork</span>&gt;</span> <span class="comment">&lt;!-- 如果没有该配置，devtools不会生效 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<h5 id="4-2-yml配置"><a href="#4-2-yml配置" class="headerlink" title="4.2 yml配置"></a>4.2 yml配置</h5><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">devtools:</span></span><br><span class="line">  <span class="attr">livereload:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持livereload</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">35729</span></span><br><span class="line">  <span class="attr">restart:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持热部署</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="5-IDEA配置"><a href="#5-IDEA配置" class="headerlink" title="5.IDEA配置"></a>5.IDEA配置</h3><ul>
-<li>File-Settings-Compiler-Build project automatically</li>
-</ul>
-<p><img src="https://i.loli.net/2020/04/10/L59OnwXfxWorsKQ.png" alt="buildproject.png"></p>
-<ul>
-<li>ctrl + shift + alt + /,选择Registry,勾上 Compiler autoMake allow when app running</li>
-</ul>
-<h3 id="6-安装livereload插件"><a href="#6-安装livereload插件" class="headerlink" title="6.安装livereload插件"></a>6.安装livereload插件</h3><p>下载livereload插件，将其安装到chrome扩展程序中，并选中允许访问文件网址。</p>
-<p><img src="https://i.loli.net/2020/04/10/qOpQgXFmbhrUDtM.png" alt="clipboard2.png"></p>
-<h3 id="7-测试"><a href="#7-测试" class="headerlink" title="7.测试"></a>7.测试</h3><ol>
-<li>修改类 应用会重启</li>
-<li>修改配置文件 应用会重启</li>
-<li>修改静态文件（html、css等），应用不会重启，但是会调用livereload，浏览器会自动刷新，显示最新的修改内容。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Spring Boot</category>
-      </categories>
-      <tags>
-        <tag>Spring Boot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring Boot项目搭建</title>
-    <url>/post/b9022a16.html</url>
-    <content><![CDATA[<h3 id="一、Spring-Boot概述"><a href="#一、Spring-Boot概述" class="headerlink" title="一、Spring Boot概述"></a>一、Spring Boot概述</h3><p>Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。总所周知，Spring平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理，而Spring Boot的出现就是用来简化操作的。相比传统的Spring，项目搭建更简单、方便、快速。</p>
-<h3 id="二、项目搭建"><a href="#二、项目搭建" class="headerlink" title="二、项目搭建"></a>二、项目搭建</h3><p>本文采用IDEA搭建Spring Boot，Demo结构图如下：</p>
-<p><img src="https://i.loli.net/2020/04/10/WFXazeDlgLsuZjo.png" alt="spring boot-1.png"></p>
-<p>通过IDEA生成Spring Boot项目很方便，具体步骤不再赘述，可以参考网上其他资料，如上图，主要生成：</p>
-<ul>
-<li>src/main/java  程序开发以及主程序入口</li>
-<li>src/main/resources 配置文件</li>
-<li>src/test/java  测试程序</li>
-</ul>
-<p>默认pom.xml生成jar包依赖项如下所示：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.snail<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>bootdemo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>bootdemo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Demo project for Spring Boot<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-configuration-processor<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="三、测试用例"><a href="#三、测试用例" class="headerlink" title="三、测试用例"></a>三、测试用例</h3><p>Demo并没有配置数据库，只是简单地测试一下Http 请求，并结合现实中的场景，我们的配置文件往往在线下环境、生产环境的配置是不一样的，可以通过配置来获取对应的文件，如下所示。</p>
-<h4 id="3-1-实体类"><a href="#3-1-实体类" class="headerlink" title="3.1 实体类"></a>3.1 实体类</h4><p>其中ConfigurationProperties注解的目的是用来映射配置文件的，会在配置文件yml文件里新建配置项application.yml、application-product.yml（生产环境）、application-test.yml（测试环境），通过前缀CustomerInfo可以获取配置文件里对应的映射。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 客户基本信息</span></span><br><span class="line"><span class="comment"> * Create by snailTech</span></span><br><span class="line"><span class="comment"> * 2017-07-24 16:31</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties</span>(prefix = <span class="string">"CustomerInfo"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomerInfo</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 姓名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 手机号码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String mobile;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 年龄</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getMobile</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mobile;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMobile</span><span class="params">(String mobile)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.mobile = mobile;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-2-application-yml"><a href="#3-2-application-yml" class="headerlink" title="3.2 application.yml"></a>3.2 application.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">product</span></span><br></pre></td></tr></table></figure>
-<p>通过这个配置active为product可以得知读取的是application-product.yml文件，其中port是Web容器（默认是Tomcat）的端口号，以及context-path是虚拟路径。</p>
-<h4 id="3-3-application-product-yml"><a href="#3-3-application-product-yml" class="headerlink" title="3.3 application-product.yml"></a>3.3 application-product.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/bootdemo</span></span><br><span class="line"><span class="attr">testUrl:</span> <span class="string">http://www.baidu.com</span></span><br><span class="line"><span class="attr">CustomerInfo:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">snail</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="number">18818718711</span><span class="string">（生产环境）</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-4-application-test-yml"><a href="#3-4-application-test-yml" class="headerlink" title="3.4 application-test.yml"></a>3.4 application-test.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/bootdemo</span></span><br><span class="line"><span class="attr">testUrl:</span> <span class="string">http://www.baidu.com</span></span><br><span class="line"><span class="attr">CustomerInfo:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">snail</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="number">18818718711</span><span class="string">（测试环境）</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-5-配置Controller层"><a href="#3-5-配置Controller层" class="headerlink" title="3.5 配置Controller层"></a>3.5 配置Controller层</h4><p>@RestController相当于@ResponseBody+@Controller，都是以json格式返回，@Value(“${testUrl}”)是用来获取配置文件里的testUrl配置项的，@RequestParam用来接收请求参数，其余的写法与SpringMvc的写法并没什么区别</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.snail;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.*;</span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Create by snailTech</span></span><br><span class="line"><span class="comment"> * 2017-07-24 16:10</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/test"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestController</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;testUrl&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> String testUrl;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> CustomerInfo customerInfo;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//@RequestMapping(value="/hello" ,method = RequestMethod.GET)</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(value = <span class="string">"/hello"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">(@RequestParam(<span class="string">"id"</span>)</span> Integer xx)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> customerInfo.getMobile()+xx;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-6-编译"><a href="#3-6-编译" class="headerlink" title="3.6 编译"></a>3.6 编译</h4><p>编译非常简单，内置Tomcat，无需像SSM项目里还需要手动配置Tomcat，只要运行程序就可以了。</p>
-<h4 id="3-7-运行"><a href="#3-7-运行" class="headerlink" title="3.7 运行"></a>3.7 运行</h4><p><img src="https://i.loli.net/2020/04/10/mJUCqlLAzoXhjbx.png" alt="springboot-2.png"></p>
-]]></content>
-      <categories>
-        <category>Spring Boot</category>
-      </categories>
-      <tags>
-        <tag>Spring Boot</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring Data JPA在Spring Boot中的应用</title>
     <url>/post/f3cd1273.html</url>
     <content><![CDATA[<h3 id="1-JPA"><a href="#1-JPA" class="headerlink" title="1.JPA"></a>1.JPA</h3><p>JPA(Java Persistence API)是Sun官方提出的Java持久化规范。它为Java开发人员提供了一种对象/关联映射工具来管理Java应用中的关系数据。他的出现主要是为了简化现有的持久化开发工作和整合ORM技术，结束现在Hibernate，TopLink，JDO等ORM框架各自为营的局面。值得注意的是，JPA是在充分吸收了现有Hibernate，TopLink，JDO等ORM框架的基础上发展而来的，具有易于使用，伸缩性强等优点。JPA是一套规范，不是一套产品，那么像Hibernate,TopLink,JDO他们是一套产品，如果说这些产品实现了这个JPA规范，那么我们就可以叫他们为JPA的实现产品。</p>
@@ -812,51 +741,105 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>Hexo如何快速搭建个人博客</title>
-    <url>/post/e48abe66.html</url>
-    <content><![CDATA[<h1 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h1 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h1><ol>
-<li>Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
-<li>Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。</li>
-<li>只需一条指令即可部署到 GitHub Pages,Gitee Pages, Heroku 或其他平台。</li>
-<li>强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成</li>
+    <title>Spring Boot 热部署devtools实现</title>
+    <url>/post/5945bf9f.html</url>
+    <content><![CDATA[<h3 id="1-devtools"><a href="#1-devtools" class="headerlink" title="1.devtools"></a>1.devtools</h3><p>spring为开发者提供了一个名为spring-boot-devtools的模块来使Spring Boot应用支持热部署，提高开发者的开发效率，无需手动重启Spring Boot应用。</p>
+<h3 id="2-项目搭建"><a href="#2-项目搭建" class="headerlink" title="2.项目搭建"></a>2.项目搭建</h3><p>本文是采用IDEA搭建的Spring Boot应用，通过spring-boot-devtools配置，可以支持修改java文件会自动重启程序，一些资源无需触发重启，例如thymeleaf模板文件就可以实时编辑。默认情况下，更改/META-INF/maven，/META-INF/resources ，/resources ，/static ，/public 或/templates下的资源不会触发重启，而是触发livereload。devtools模块包含一个嵌入的livereload服务器，可以在资源变化时用来触发浏览器刷新。浏览器需要在livereload.com下载安装扩展。 例如Chrome浏览器在应用商店安装livereload插件后，在要自动刷新的页面点击对应的图标，启动应用后更新页面内容或者css等都会触发页面自动刷新。</p>
+<h3 id="3-livereload"><a href="#3-livereload" class="headerlink" title="3.livereload"></a>3.livereload</h3><p>livereload 通过引入的脚本livereload.js在 livereload 服务和浏览器之间建立了一个 WebSocket 连接。每当监测到文件的变动，livereload 服务就会向浏览器发送一个信号，浏览器收到信号后就刷新页面，实现了实时刷新的效果。每次启动时，需要点击对应的图标，如下图所示。</p>
+<p><img src="https://i.loli.net/2020/04/10/ywQmVeGx4dhFzoU.png" alt="clipboard.png"></p>
+<h3 id="4-项目代码配置"><a href="#4-项目代码配置" class="headerlink" title="4.项目代码配置"></a>4.项目代码配置</h3><h5 id="4-1-pom-xml配置文件"><a href="#4-1-pom-xml配置文件" class="headerlink" title="4.1 pom.xml配置文件"></a>4.1 pom.xml配置文件</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">fork</span>&gt;</span>true<span class="tag">&lt;/<span class="name">fork</span>&gt;</span> <span class="comment">&lt;!-- 如果没有该配置，devtools不会生效 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h5 id="4-2-yml配置"><a href="#4-2-yml配置" class="headerlink" title="4.2 yml配置"></a>4.2 yml配置</h5><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">devtools:</span></span><br><span class="line">  <span class="attr">livereload:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持livereload</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">35729</span></span><br><span class="line">  <span class="attr">restart:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment">#是否支持热部署</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="5-IDEA配置"><a href="#5-IDEA配置" class="headerlink" title="5.IDEA配置"></a>5.IDEA配置</h3><ul>
+<li>File-Settings-Compiler-Build project automatically</li>
+</ul>
+<p><img src="https://i.loli.net/2020/04/10/L59OnwXfxWorsKQ.png" alt="buildproject.png"></p>
+<ul>
+<li>ctrl + shift + alt + /,选择Registry,勾上 Compiler autoMake allow when app running</li>
+</ul>
+<h3 id="6-安装livereload插件"><a href="#6-安装livereload插件" class="headerlink" title="6.安装livereload插件"></a>6.安装livereload插件</h3><p>下载livereload插件，将其安装到chrome扩展程序中，并选中允许访问文件网址。</p>
+<p><img src="https://i.loli.net/2020/04/10/qOpQgXFmbhrUDtM.png" alt="clipboard2.png"></p>
+<h3 id="7-测试"><a href="#7-测试" class="headerlink" title="7.测试"></a>7.测试</h3><ol>
+<li>修改类 应用会重启</li>
+<li>修改配置文件 应用会重启</li>
+<li>修改静态文件（html、css等），应用不会重启，但是会调用livereload，浏览器会自动刷新，显示最新的修改内容。</li>
 </ol>
-<h1 id="如何安装？"><a href="#如何安装？" class="headerlink" title="如何安装？"></a>如何安装？</h1><p>安装Hexo前需要先安装Node.js和Git，支持windows、Mac、Linux安装，本文主要介绍在如何在Linux上安装</p>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install git-core</span><br></pre></td></tr></table></figure>
-<h3 id="查看是否安装完毕，若显示版本信息，表示安装成功"><a href="#查看是否安装完毕，若显示版本信息，表示安装成功" class="headerlink" title="查看是否安装完毕，若显示版本信息，表示安装成功"></a>查看是否安装完毕，若显示版本信息，表示安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
-<h3 id="配置用户名、邮箱"><a href="#配置用户名、邮箱" class="headerlink" title="配置用户名、邮箱"></a>配置用户名、邮箱</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.email <span class="string">"zhangviv@163.com"</span></span><br><span class="line">git config --global user.name <span class="string">"vic"</span></span><br></pre></td></tr></table></figure>
-<h3 id="ssh设置"><a href="#ssh设置" class="headerlink" title="ssh设置"></a>ssh设置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"zhangviv@163.com"</span></span><br><span class="line"><span class="built_in">cd</span> /root/.ssh</span><br></pre></td></tr></table></figure>
-<h3 id="查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里"><a href="#查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里" class="headerlink" title="查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里"></a>查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">id_rsa  id_rsa.pub  known_hosts</span><br></pre></td></tr></table></figure>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><h3 id="官网下载最新版本"><a href="#官网下载最新版本" class="headerlink" title="官网下载最新版本"></a>官网下载最新版本</h3><p><img src="https://i.loli.net/2020/05/19/OpEvdQ1fVX9nbwm.png" alt="nodejs.png"></p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xvf  node-v12.16.3-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
-<h3 id="进入bin，查看是否安装成功"><a href="#进入bin，查看是否安装成功" class="headerlink" title="进入bin，查看是否安装成功"></a>进入bin，查看是否安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./node -v</span><br></pre></td></tr></table></figure>
-<h3 id="node、npm创建软链接，执行命令"><a href="#node、npm创建软链接，执行命令" class="headerlink" title="node、npm创建软链接，执行命令"></a>node、npm创建软链接，执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/node /usr/<span class="built_in">local</span>/bin/node  </span><br><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br></pre></td></tr></table></figure>
-<h3 id="进入-usr-local-bin下查看文件是否生成"><a href="#进入-usr-local-bin下查看文件是否生成" class="headerlink" title="进入/usr/local/bin下查看文件是否生成"></a>进入/usr/local/bin下查看文件是否生成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node  npm</span><br></pre></td></tr></table></figure>
-
-<h3 id="再次查看软连接是否成功，如何显示版本，则node-js安装成功"><a href="#再次查看软连接是否成功，如何显示版本，则node-js安装成功" class="headerlink" title="再次查看软连接是否成功，如何显示版本，则node.js安装成功"></a>再次查看软连接是否成功，如何显示版本，则node.js安装成功</h3><p><img src="https://i.loli.net/2020/05/19/r92TAabc8S6ERJt.png" alt="node-v.png"></p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h3 id="所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。"><a href="#所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。" class="headerlink" title="所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。"></a>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h3 id="hexo创建软连接"><a href="#hexo创建软连接" class="headerlink" title="hexo创建软连接"></a>hexo创建软连接</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/hexo /usr/<span class="built_in">local</span>/bin/hexo</span><br></pre></td></tr></table></figure>
-<h3 id="创建博客文件夹，下载资源"><a href="#创建博客文件夹，下载资源" class="headerlink" title="创建博客文件夹，下载资源"></a>创建博客文件夹，下载资源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line"><span class="built_in">cd</span> blog    </span><br><span class="line">hexo init //会自动把资源文件下载好</span><br></pre></td></tr></table></figure>
-<h3 id="启动测试，输入localhost-4000，即可访问本地的博客测试地址"><a href="#启动测试，输入localhost-4000，即可访问本地的博客测试地址" class="headerlink" title="启动测试，输入localhost:4000，即可访问本地的博客测试地址"></a>启动测试，输入localhost:4000，即可访问本地的博客测试地址</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><h2 id="清除缓存命令"><a href="#清除缓存命令" class="headerlink" title="清除缓存命令"></a>清除缓存命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令</p>
-<h2 id="启动测试"><a href="#启动测试" class="headerlink" title="启动测试"></a>启动测试</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
-<h2 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>全写命令是：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<h2 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>全写命令是：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
+]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Git</tag>
-        <tag>node.js</tag>
+        <tag>Spring Boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux下安装新版本Redis遇到的坑</title>
+    <url>/post/755670ae.html</url>
+    <content><![CDATA[<h1 id="什么是Redis？"><a href="#什么是Redis？" class="headerlink" title="什么是Redis？"></a>什么是Redis？</h1><p>Remote Dictionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
+<p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。</p>
+<p>与传统数据库不同的是 Redis 的数据是存在内存中的，所以存写速度非常快，因此 Redis 被广泛应用于缓存方向。</p>
+<h1 id="数据类型有哪些？"><a href="#数据类型有哪些？" class="headerlink" title="数据类型有哪些？"></a>数据类型有哪些？</h1><p>它通常被称为数据结构服务器，因为值（value）可以是 字符串(String), 哈希(Hash), 列表(list), 集合(sets) 和 有序集合(sorted sets)等类型。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://redis.io/" target="_blank" rel="noopener">官网</a>下载最新版本，并解压到/usr/local，并将文件夹重命名为redis</p>
+<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><p>执行make命令时遇到的报错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make[1]: *** [server.o] 错误 1</span><br><span class="line">make[1]: 离开目录“/usr/<span class="built_in">local</span>/redis/src”</span><br><span class="line">make: *** [all] 错误 2</span><br></pre></td></tr></table></figure>
+<p>解决方法，升级gcc版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc -v     </span><br><span class="line">yum -y install centos-release-scl</span><br><span class="line">yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils</span><br><span class="line">scl <span class="built_in">enable</span> devtoolset-9 bash</span><br></pre></td></tr></table></figure>
+<p>再次make，安装成功后，Hint: It’s a good idea to run ‘make test’</p>
+<p>查看安装目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
+<ul>
+<li>redis-benchmark <strong>性能测试工具</strong></li>
+<li>redis-check-aof <strong>检查aof日志工具</strong></li>
+<li>redis-check-rdb <strong>检查rdb日志工具</strong></li>
+<li>redis-cli       <strong>redis客户端</strong></li>
+<li>redis-server    <strong>redis服务端</strong></li>
+<li>redis-sentinel  <strong>redis哨兵服务</strong></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring Boot项目搭建</title>
+    <url>/post/b9022a16.html</url>
+    <content><![CDATA[<h3 id="一、Spring-Boot概述"><a href="#一、Spring-Boot概述" class="headerlink" title="一、Spring Boot概述"></a>一、Spring Boot概述</h3><p>Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。总所周知，Spring平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理，而Spring Boot的出现就是用来简化操作的。相比传统的Spring，项目搭建更简单、方便、快速。</p>
+<h3 id="二、项目搭建"><a href="#二、项目搭建" class="headerlink" title="二、项目搭建"></a>二、项目搭建</h3><p>本文采用IDEA搭建Spring Boot，Demo结构图如下：</p>
+<p><img src="https://i.loli.net/2020/04/10/WFXazeDlgLsuZjo.png" alt="spring boot-1.png"></p>
+<p>通过IDEA生成Spring Boot项目很方便，具体步骤不再赘述，可以参考网上其他资料，如上图，主要生成：</p>
+<ul>
+<li>src/main/java  程序开发以及主程序入口</li>
+<li>src/main/resources 配置文件</li>
+<li>src/test/java  测试程序</li>
+</ul>
+<p>默认pom.xml生成jar包依赖项如下所示：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.snail<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>bootdemo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>bootdemo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Demo project for Spring Boot<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-configuration-processor<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="三、测试用例"><a href="#三、测试用例" class="headerlink" title="三、测试用例"></a>三、测试用例</h3><p>Demo并没有配置数据库，只是简单地测试一下Http 请求，并结合现实中的场景，我们的配置文件往往在线下环境、生产环境的配置是不一样的，可以通过配置来获取对应的文件，如下所示。</p>
+<h4 id="3-1-实体类"><a href="#3-1-实体类" class="headerlink" title="3.1 实体类"></a>3.1 实体类</h4><p>其中ConfigurationProperties注解的目的是用来映射配置文件的，会在配置文件yml文件里新建配置项application.yml、application-product.yml（生产环境）、application-test.yml（测试环境），通过前缀CustomerInfo可以获取配置文件里对应的映射。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 客户基本信息</span></span><br><span class="line"><span class="comment"> * Create by snailTech</span></span><br><span class="line"><span class="comment"> * 2017-07-24 16:31</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties</span>(prefix = <span class="string">"CustomerInfo"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomerInfo</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 姓名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 手机号码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String mobile;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 年龄</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getMobile</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mobile;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMobile</span><span class="params">(String mobile)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.mobile = mobile;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-2-application-yml"><a href="#3-2-application-yml" class="headerlink" title="3.2 application.yml"></a>3.2 application.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">product</span></span><br></pre></td></tr></table></figure>
+<p>通过这个配置active为product可以得知读取的是application-product.yml文件，其中port是Web容器（默认是Tomcat）的端口号，以及context-path是虚拟路径。</p>
+<h4 id="3-3-application-product-yml"><a href="#3-3-application-product-yml" class="headerlink" title="3.3 application-product.yml"></a>3.3 application-product.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/bootdemo</span></span><br><span class="line"><span class="attr">testUrl:</span> <span class="string">http://www.baidu.com</span></span><br><span class="line"><span class="attr">CustomerInfo:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">snail</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="number">18818718711</span><span class="string">（生产环境）</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-4-application-test-yml"><a href="#3-4-application-test-yml" class="headerlink" title="3.4 application-test.yml"></a>3.4 application-test.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/bootdemo</span></span><br><span class="line"><span class="attr">testUrl:</span> <span class="string">http://www.baidu.com</span></span><br><span class="line"><span class="attr">CustomerInfo:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">snail</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="number">18818718711</span><span class="string">（测试环境）</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-5-配置Controller层"><a href="#3-5-配置Controller层" class="headerlink" title="3.5 配置Controller层"></a>3.5 配置Controller层</h4><p>@RestController相当于@ResponseBody+@Controller，都是以json格式返回，@Value(“${testUrl}”)是用来获取配置文件里的testUrl配置项的，@RequestParam用来接收请求参数，其余的写法与SpringMvc的写法并没什么区别</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.snail;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.*;</span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Create by snailTech</span></span><br><span class="line"><span class="comment"> * 2017-07-24 16:10</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/test"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestController</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;testUrl&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> String testUrl;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> CustomerInfo customerInfo;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//@RequestMapping(value="/hello" ,method = RequestMethod.GET)</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(value = <span class="string">"/hello"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">(@RequestParam(<span class="string">"id"</span>)</span> Integer xx)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> customerInfo.getMobile()+xx;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-6-编译"><a href="#3-6-编译" class="headerlink" title="3.6 编译"></a>3.6 编译</h4><p>编译非常简单，内置Tomcat，无需像SSM项目里还需要手动配置Tomcat，只要运行程序就可以了。</p>
+<h4 id="3-7-运行"><a href="#3-7-运行" class="headerlink" title="3.7 运行"></a>3.7 运行</h4><p><img src="https://i.loli.net/2020/04/10/mJUCqlLAzoXhjbx.png" alt="springboot-2.png"></p>
+]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -947,52 +930,51 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>ubuntu安装redis</title>
-    <url>/post/ad24f30b.html</url>
-    <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>服务器：ubuntu server 17.04</p>
-<p>安装方式：apt-get</p>
-<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><ul>
-<li>执行命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get update</span><br></pre></td></tr></table></figure>
+    <title>Hexo如何快速搭建个人博客</title>
+    <url>/post/e48abe66.html</url>
+    <content><![CDATA[<h1 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h1 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h1><ol>
+<li>Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
+<li>Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。</li>
+<li>只需一条指令即可部署到 GitHub Pages,Gitee Pages, Heroku 或其他平台。</li>
+<li>强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成</li>
+</ol>
+<h1 id="如何安装？"><a href="#如何安装？" class="headerlink" title="如何安装？"></a>如何安装？</h1><p>安装Hexo前需要先安装Node.js和Git，支持windows、Mac、Linux安装，本文主要介绍在如何在Linux上安装</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum install git-core</span><br></pre></td></tr></table></figure>
+<h3 id="查看是否安装完毕，若显示版本信息，表示安装成功"><a href="#查看是否安装完毕，若显示版本信息，表示安装成功" class="headerlink" title="查看是否安装完毕，若显示版本信息，表示安装成功"></a>查看是否安装完毕，若显示版本信息，表示安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<h3 id="配置用户名、邮箱"><a href="#配置用户名、邮箱" class="headerlink" title="配置用户名、邮箱"></a>配置用户名、邮箱</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.email <span class="string">"zhangviv@163.com"</span></span><br><span class="line">git config --global user.name <span class="string">"vic"</span></span><br></pre></td></tr></table></figure>
+<h3 id="ssh设置"><a href="#ssh设置" class="headerlink" title="ssh设置"></a>ssh设置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"zhangviv@163.com"</span></span><br><span class="line"><span class="built_in">cd</span> /root/.ssh</span><br></pre></td></tr></table></figure>
+<h3 id="查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里"><a href="#查看用户目录下是否有文件，并将id-rsa-pub内容加到github、gitee等工具的公钥配置里" class="headerlink" title="查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里"></a>查看用户目录下是否有文件，并将id_rsa.pub内容加到github、gitee等工具的公钥配置里</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">id_rsa  id_rsa.pub  known_hosts</span><br></pre></td></tr></table></figure>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><h3 id="官网下载最新版本"><a href="#官网下载最新版本" class="headerlink" title="官网下载最新版本"></a>官网下载最新版本</h3><p><img src="https://i.loli.net/2020/05/19/OpEvdQ1fVX9nbwm.png" alt="nodejs.png"></p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xvf  node-v12.16.3-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+<h3 id="进入bin，查看是否安装成功"><a href="#进入bin，查看是否安装成功" class="headerlink" title="进入bin，查看是否安装成功"></a>进入bin，查看是否安装成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./node -v</span><br></pre></td></tr></table></figure>
+<h3 id="node、npm创建软链接，执行命令"><a href="#node、npm创建软链接，执行命令" class="headerlink" title="node、npm创建软链接，执行命令"></a>node、npm创建软链接，执行命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/node /usr/<span class="built_in">local</span>/bin/node  </span><br><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br></pre></td></tr></table></figure>
+<h3 id="进入-usr-local-bin下查看文件是否生成"><a href="#进入-usr-local-bin下查看文件是否生成" class="headerlink" title="进入/usr/local/bin下查看文件是否生成"></a>进入/usr/local/bin下查看文件是否生成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node  npm</span><br></pre></td></tr></table></figure>
 
+<h3 id="再次查看软连接是否成功，如何显示版本，则node-js安装成功"><a href="#再次查看软连接是否成功，如何显示版本，则node-js安装成功" class="headerlink" title="再次查看软连接是否成功，如何显示版本，则node.js安装成功"></a>再次查看软连接是否成功，如何显示版本，则node.js安装成功</h3><p><img src="https://i.loli.net/2020/05/19/r92TAabc8S6ERJt.png" alt="node-v.png"></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h3 id="所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。"><a href="#所有必备的应用程序安装完成后，即可使用-npm-安装-Hexo。" class="headerlink" title="所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。"></a>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h3 id="hexo创建软连接"><a href="#hexo创建软连接" class="headerlink" title="hexo创建软连接"></a>hexo创建软连接</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /home/software/node-v12.16.3-linux-x64/bin/hexo /usr/<span class="built_in">local</span>/bin/hexo</span><br></pre></td></tr></table></figure>
+<h3 id="创建博客文件夹，下载资源"><a href="#创建博客文件夹，下载资源" class="headerlink" title="创建博客文件夹，下载资源"></a>创建博客文件夹，下载资源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line"><span class="built_in">cd</span> blog    </span><br><span class="line">hexo init //会自动把资源文件下载好</span><br></pre></td></tr></table></figure>
+<h3 id="启动测试，输入localhost-4000，即可访问本地的博客测试地址"><a href="#启动测试，输入localhost-4000，即可访问本地的博客测试地址" class="headerlink" title="启动测试，输入localhost:4000，即可访问本地的博客测试地址"></a>启动测试，输入localhost:4000，即可访问本地的博客测试地址</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><h2 id="清除缓存命令"><a href="#清除缓存命令" class="headerlink" title="清除缓存命令"></a>清除缓存命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>执行命令：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install redis-server</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启用redis：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li>查看redis是否启用：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-cli</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>redis 127.0.0.1:6379&gt;ping，返回PONG，说明redis已经安装成功。</p>
-</li>
-<li><p>redis默认是只允许本地访问，如果要让其远程访问，还需要修改配置。执行$ vim /etc/redis/redis.conf，注释bind 127.0.0.1，除此之外，还需要关闭保护模式，protected-mode默认是yes，需要将protected-mode设置为 no</p>
-</li>
-<li><p>再重启下redis：</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="3-远程访问"><a href="#3-远程访问" class="headerlink" title="3.远程访问"></a>3.远程访问</h3><p>本机环境：win10，安装redis客户端RedisDesktopManager，通过设置ip地址，redis端口号等，可以远程连接ubuntu上安装的redis，如下图所示。</p>
-<p><img src="https://i.loli.net/2020/04/10/fH9FkYbKd6Av7LQ.png" alt="redis.png"></p>
-]]></content>
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令</p>
+<h2 id="启动测试"><a href="#启动测试" class="headerlink" title="启动测试"></a>启动测试</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
+<h2 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>全写命令是：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>全写命令是：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Linux</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>ubuntu</tag>
-        <tag>redis</tag>
+        <tag>Hexo</tag>
+        <tag>Git</tag>
+        <tag>node.js</tag>
       </tags>
   </entry>
   <entry>
@@ -1071,6 +1053,55 @@ symctl enable d</span></pre>
       </tags>
   </entry>
   <entry>
+    <title>ubuntu安装redis</title>
+    <url>/post/ad24f30b.html</url>
+    <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>服务器：ubuntu server 17.04</p>
+<p>安装方式：apt-get</p>
+<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><ul>
+<li>执行命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get update</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>执行命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install redis-server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启用redis：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>查看redis是否启用：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-cli</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>redis 127.0.0.1:6379&gt;ping，返回PONG，说明redis已经安装成功。</p>
+</li>
+<li><p>redis默认是只允许本地访问，如果要让其远程访问，还需要修改配置。执行$ vim /etc/redis/redis.conf，注释bind 127.0.0.1，除此之外，还需要关闭保护模式，protected-mode默认是yes，需要将protected-mode设置为 no</p>
+</li>
+<li><p>再重启下redis：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ redis-server</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3-远程访问"><a href="#3-远程访问" class="headerlink" title="3.远程访问"></a>3.远程访问</h3><p>本机环境：win10，安装redis客户端RedisDesktopManager，通过设置ip地址，redis端口号等，可以远程连接ubuntu上安装的redis，如下图所示。</p>
+<p><img src="https://i.loli.net/2020/04/10/fH9FkYbKd6Av7LQ.png" alt="redis.png"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于JMS的ActiveMQ搭建与实现</title>
     <url>/post/ae440fc9.html</url>
     <content><![CDATA[<h3 id="1-JMS简介"><a href="#1-JMS简介" class="headerlink" title="1.JMS简介"></a>1.JMS简介</h3><p>Java消息服务（Java Message Service）即JMS，是一个Java平台中关于面向消息中间件的API，用于两个程序之间，或分布式系统中发送消息，进行异步通信。<br>JMS包括队列与主题两种模式，一种是点对点的Queue，还有一个是发布订阅的Topic方式。区别在于：</p>
@@ -1120,6 +1151,53 @@ symctl enable d</span></pre>
       <tags>
         <tag>ActiveMQ</tag>
         <tag>JMS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何将Spring Boot项目打包部署到外部Tomcat</title>
+    <url>/post/f2b1a42.html</url>
+    <content><![CDATA[<h3 id="一、项目打包"><a href="#一、项目打包" class="headerlink" title="一、项目打包"></a>一、项目打包</h3><p>项目开发结束后，需要打包部署到外部服务器的Tomcat上，主要有几种方式。</p>
+<h4 id="1-1-生成jar包"><a href="#1-1-生成jar包" class="headerlink" title="1.1 生成jar包"></a>1.1 生成jar包</h4><ul>
+<li><h5 id="cd-项目跟目录（和pom-xml同级）"><a href="#cd-项目跟目录（和pom-xml同级）" class="headerlink" title="cd 项目跟目录（和pom.xml同级）"></a>cd 项目跟目录（和pom.xml同级）</h5></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean package</span><br></pre></td></tr></table></figure>
+
+<p>排除测试代码后进行打包</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean package  -Dmaven.test.skip=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>打包完成后jar包会生成到target目录下，命名一般是 项目名+版本号.jar</p>
+<ul>
+<li><h5 id="启动jar包命令"><a href="#启动jar包命令" class="headerlink" title="启动jar包命令"></a>启动jar包命令</h5></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -jar  target/spring-boot-scheduler-1.0.0.jar</span><br></pre></td></tr></table></figure>
+<p>这种方式，只要控制台关闭，服务就不能访问了。下面我们使用在后台运行的方式来启动:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nohup java -jar target/spring-boot-scheduler-1.0.0.jar &amp;</span><br></pre></td></tr></table></figure>
+<p>也可以在启动的时候选择读取不同的配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -jar app.jar --spring.profiles.active=product</span><br></pre></td></tr></table></figure>
+
+<p>也可以通过IDEA的Maven工具生成，点击Lifecycle-install，生成jar</p>
+<h4 id="1-2-生成war包"><a href="#1-2-生成war包" class="headerlink" title="1.2 生成war包"></a>1.2 生成war包</h4><h5 id="修改打包类型为war"><a href="#修改打包类型为war" class="headerlink" title="- 修改打包类型为war"></a>- 修改打包类型为war</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>war<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h5 id="添加spring-boot-starter-tomcat依赖，scope设置为provided"><a href="#添加spring-boot-starter-tomcat依赖，scope设置为provided" class="headerlink" title="- 添加spring-boot-starter-tomcat依赖，scope设置为provided"></a>- 添加spring-boot-starter-tomcat依赖，scope设置为provided</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-tomcat<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h5 id="注册启动类"><a href="#注册启动类" class="headerlink" title="- 注册启动类"></a>- 注册启动类</h5><p>创建ServletInitializer.java，继承SpringBootServletInitializer ，覆盖configure()，把启动类Application注册进去。外部web应用服务器构建Web Application Context的时候，会把启动类添加进去。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServletInitializer</span>  <span class="keyword">extends</span> <span class="title">SpringBootServletInitializer</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> SpringApplicationBuilder <span class="title">configure</span><span class="params">(SpringApplicationBuilder application)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> application.sources(BootdemoApplication<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="同样也是两种方式执行："><a href="#同样也是两种方式执行：" class="headerlink" title="- 同样也是两种方式执行："></a>- 同样也是两种方式执行：</h5><ol>
+<li><p>mvn clean package -Dmaven.test.skip=true</p>
+</li>
+<li><p>通过IDEA的Maven工具生成，点击Lifecycle-package，生成war</p>
+</li>
+</ol>
+<h3 id="二、项目部署"><a href="#二、项目部署" class="headerlink" title="二、项目部署"></a>二、项目部署</h3><p>　 无论是用哪种方式生成，最终都是为了进行部署，war可以直接拷到tomcat的webapps目录下，启动Tomcat即可。</p>
+]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -1176,53 +1254,6 @@ symctl enable d</span></pre>
         <tag>prometheus</tag>
         <tag>grafana</tag>
         <tag>alertmanager</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何将Spring Boot项目打包部署到外部Tomcat</title>
-    <url>/post/f2b1a42.html</url>
-    <content><![CDATA[<h3 id="一、项目打包"><a href="#一、项目打包" class="headerlink" title="一、项目打包"></a>一、项目打包</h3><p>项目开发结束后，需要打包部署到外部服务器的Tomcat上，主要有几种方式。</p>
-<h4 id="1-1-生成jar包"><a href="#1-1-生成jar包" class="headerlink" title="1.1 生成jar包"></a>1.1 生成jar包</h4><ul>
-<li><h5 id="cd-项目跟目录（和pom-xml同级）"><a href="#cd-项目跟目录（和pom-xml同级）" class="headerlink" title="cd 项目跟目录（和pom.xml同级）"></a>cd 项目跟目录（和pom.xml同级）</h5></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean package</span><br></pre></td></tr></table></figure>
-
-<p>排除测试代码后进行打包</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean package  -Dmaven.test.skip=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>打包完成后jar包会生成到target目录下，命名一般是 项目名+版本号.jar</p>
-<ul>
-<li><h5 id="启动jar包命令"><a href="#启动jar包命令" class="headerlink" title="启动jar包命令"></a>启动jar包命令</h5></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -jar  target/spring-boot-scheduler-1.0.0.jar</span><br></pre></td></tr></table></figure>
-<p>这种方式，只要控制台关闭，服务就不能访问了。下面我们使用在后台运行的方式来启动:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nohup java -jar target/spring-boot-scheduler-1.0.0.jar &amp;</span><br></pre></td></tr></table></figure>
-<p>也可以在启动的时候选择读取不同的配置文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -jar app.jar --spring.profiles.active=product</span><br></pre></td></tr></table></figure>
-
-<p>也可以通过IDEA的Maven工具生成，点击Lifecycle-install，生成jar</p>
-<h4 id="1-2-生成war包"><a href="#1-2-生成war包" class="headerlink" title="1.2 生成war包"></a>1.2 生成war包</h4><h5 id="修改打包类型为war"><a href="#修改打包类型为war" class="headerlink" title="- 修改打包类型为war"></a>- 修改打包类型为war</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>war<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<h5 id="添加spring-boot-starter-tomcat依赖，scope设置为provided"><a href="#添加spring-boot-starter-tomcat依赖，scope设置为provided" class="headerlink" title="- 添加spring-boot-starter-tomcat依赖，scope设置为provided"></a>- 添加spring-boot-starter-tomcat依赖，scope设置为provided</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-tomcat<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<h5 id="注册启动类"><a href="#注册启动类" class="headerlink" title="- 注册启动类"></a>- 注册启动类</h5><p>创建ServletInitializer.java，继承SpringBootServletInitializer ，覆盖configure()，把启动类Application注册进去。外部web应用服务器构建Web Application Context的时候，会把启动类添加进去。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServletInitializer</span>  <span class="keyword">extends</span> <span class="title">SpringBootServletInitializer</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> SpringApplicationBuilder <span class="title">configure</span><span class="params">(SpringApplicationBuilder application)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> application.sources(BootdemoApplication<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="同样也是两种方式执行："><a href="#同样也是两种方式执行：" class="headerlink" title="- 同样也是两种方式执行："></a>- 同样也是两种方式执行：</h5><ol>
-<li><p>mvn clean package -Dmaven.test.skip=true</p>
-</li>
-<li><p>通过IDEA的Maven工具生成，点击Lifecycle-package，生成war</p>
-</li>
-</ol>
-<h3 id="二、项目部署"><a href="#二、项目部署" class="headerlink" title="二、项目部署"></a>二、项目部署</h3><p>　 无论是用哪种方式生成，最终都是为了进行部署，war可以直接拷到tomcat的webapps目录下，启动Tomcat即可。</p>
-]]></content>
-      <categories>
-        <category>Spring Boot</category>
-      </categories>
-      <tags>
-        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>

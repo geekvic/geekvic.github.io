@@ -198,6 +198,130 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/ca00f598.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/jin.png">
+      <meta itemprop="name" content="vic">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vic's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/post/ca00f598.html" class="post-title-link" itemprop="url">ubuntu修改apt-get源</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-10-30 16:11:00" itemprop="dateCreated datePublished" datetime="2017-10-30T16:11:00+08:00">2017-10-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/post/ca00f598.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/ca00f598.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>　　服务器上安装了最新的Ubuntu Server 17.04，代号为zesty。使用apt-get命令安装软件时，有时候速度比较慢，有时候会失败。因此考虑用国内的镜像源更换下apt-get的默认源。</p>
+<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2.实现"></a>2.实现</h3><ul>
+<li><p>编辑源文件，vim /etc/apt/sources.list</p>
+</li>
+<li><p>使用网易apt-get源，将原来的源地址，替换为如下，由于服务器的版本是17.04，因此源地址的代号部分都是zesty，如果是其他版本，可以替换为对应的版本，具体版本代号可以网上查找。</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.163.com/ubuntu/ zesty main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ zesty-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ zesty-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ zesty-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ zesty-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ zesty main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ zesty-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ zesty-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ zesty-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ zesty-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>执行apt-get update，apt-get upgrade，会发现会报错，apt-get: Could not resolve ‘mirrors.163.com&rsquo;的错误，这种原因其实是因为还缺少一个步骤，就是将添加的网址和IP进行映射，修改/etc/目录下的host文件。</p>
+</li>
+<li><p>通过ip.chinaz.com进行查询网址&ldquo;mirrors.163.com&rdquo;，对应的ip地址如下所示，然后将其添加到hosts文件里。</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">123.58.190.228     mirrors.163.com</span><br><span class="line">123.58.190.236     mirrors.163.com</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/ca00f598.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/4ad0b8cc.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1318,20 +1442,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1387,12 +1511,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">52k</span>
+    <span title="站点总字数">53k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">47 分钟</span>
+    <span title="站点阅读时长">48 分钟</span>
 </div>
 
         
