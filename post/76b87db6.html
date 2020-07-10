@@ -20,22 +20,20 @@
     var CONFIG = {"hostname":"geekvic.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1.protobuf简介　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的">
+  <meta name="description" content="启动Redis，打开客户端12.&#x2F;redis-server &#x2F;etc&#x2F;redis.conf .&#x2F;redis-cli   通用命令   命令 解释    get key 查询key   set key value 设置key   keys * *通配多个字符   keys key 获取名字为key的key   keys ?ey 通配单个字符   keys k[eio]y 通配括号内的某一个字符">
 <meta property="og:type" content="article">
-<meta property="og:title" content="idea使用Protobuf插件">
-<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;35fe24ef.html">
+<meta property="og:title" content="Redis基本命令">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;76b87db6.html">
 <meta property="og:site_name" content="Vic&#39;s Blog">
-<meta property="og:description" content="1.protobuf简介　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的">
+<meta property="og:description" content="启动Redis，打开客户端12.&#x2F;redis-server &#x2F;etc&#x2F;redis.conf .&#x2F;redis-cli   通用命令   命令 解释    get key 查询key   set key value 设置key   keys * *通配多个字符   keys key 获取名字为key的key   keys ?ey 通配单个字符   keys k[eio]y 通配括号内的某一个字符">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;10&#x2F;zpLDClJUFg2X7t3.png">
-<meta property="article:published_time" content="2017-11-06T09:06:00.000Z">
-<meta property="article:modified_time" content="2020-05-22T06:12:48.247Z">
+<meta property="article:published_time" content="2020-07-10T03:30:00.000Z">
+<meta property="article:modified_time" content="2020-07-10T07:06:58.000Z">
 <meta property="article:author" content="vic">
-<meta property="article:tag" content="Protobuf">
+<meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;10&#x2F;zpLDClJUFg2X7t3.png">
 
-<link rel="canonical" href="http://geekvic.top/post/35fe24ef.html">
+<link rel="canonical" href="http://geekvic.top/post/76b87db6.html">
 
 
 <script id="page-configurations">
@@ -48,7 +46,7 @@
   };
 </script>
 
-  <title>idea使用Protobuf插件 | Vic's Blog</title>
+  <title>Redis基本命令 | Vic's Blog</title>
   
 
 
@@ -201,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/35fe24ef.html">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/76b87db6.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -214,7 +212,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          idea使用Protobuf插件
+          Redis基本命令
         </h1>
 
         <div class="post-meta">
@@ -223,23 +221,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2017-11-06 17:06:00" itemprop="dateCreated datePublished" datetime="2017-11-06T17:06:00+08:00">2017-11-06</time>
+              <time title="创建时间：2020-07-10 11:30:00 / 修改时间：15:06:58" itemprop="dateCreated datePublished" datetime="2020-07-10T11:30:00+08:00">2020-07-10</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" itemprop="url" rel="index"><span itemprop="name">通信协议</span></a>
+                  <a href="/categories/Redis/" itemprop="url" rel="index"><span itemprop="name">Redis</span></a>
                 </span>
             </span>
 
@@ -259,8 +251,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/post/35fe24ef.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/post/35fe24ef.html" itemprop="commentCount"></span>
+    <a title="valine" href="/post/76b87db6.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/76b87db6.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -270,14 +262,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.6k</span>
+              <span>1.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -289,23 +281,349 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-protobuf简介"><a href="#1-protobuf简介" class="headerlink" title="1.protobuf简介"></a>1.protobuf简介</h3><p>　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的10分之一，xml格式的20分之一，是二进制序列化的10分之一。
-　　</p>
-<h3 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2.安装插件"></a>2.安装插件</h3><p>在idea里安装插件Protobuf Support</p>
-<h3 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-netty<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-protobuf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-stub<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.protobuf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>protobuf-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;protobuf.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">extensions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">extension</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>kr.motd.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>os-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.0.Final<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">extension</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">extensions</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--protobuf插件--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.xolstice.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>protobuf-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.5.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">protocArtifact</span>&gt;</span></span><br><span class="line">         com.google.protobuf:protoc:$&#123;protobuf.version&#125;:exe:$&#123;os.detected.classifier&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">protocArtifact</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pluginId</span>&gt;</span>grpc-java<span class="tag">&lt;/<span class="name">pluginId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pluginArtifact</span>&gt;</span></span><br><span class="line">         io.grpc:protoc-gen-grpc-java:$&#123;grpc.version&#125;:exe:$&#123;os.detected.classifier&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">pluginArtifact</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile-custom<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="启动Redis，打开客户端"><a href="#启动Redis，打开客户端" class="headerlink" title="启动Redis，打开客户端"></a>启动Redis，打开客户端</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./redis-server /etc/redis.conf </span><br><span class="line">./redis-cli</span><br></pre></td></tr></table></figure>
 
 
-
-<h3 id="4-创建proto文件"><a href="#4-创建proto文件" class="headerlink" title="4.创建proto文件"></a>4.创建proto文件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">syntax = "proto3";</span><br><span class="line">option java_package = "com.ynt.ai.activemq.protobuf";</span><br><span class="line">option java_outer_classname = "PersonModel";</span><br><span class="line"></span><br><span class="line">message Person &#123;</span><br><span class="line">    int32 id = 1;</span><br><span class="line">    string name = 2;</span><br><span class="line">    string email = 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="5-生成java对象文件"><a href="#5-生成java对象文件" class="headerlink" title="5.生成java对象文件"></a>5.生成java对象文件</h3><p>　　通过Protobuf插件的compile命令，如下图所示，自动生成对象文件。</p>
-<p><img src="https://i.loli.net/2020/04/10/zpLDClJUFg2X7t3.png" alt="QQ截图20171106165834.png"></p>
-<h3 id="6-测试"><a href="#6-测试" class="headerlink" title="6.测试"></a>6.测试</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PersonMsg.Person person = PersonMsg.Person.newBuilder().setId(<span class="number">2</span>).setName(<span class="string">"test"</span>)</span><br><span class="line">                .setEmail(<span class="string">"test@163.com"</span>).build();</span><br><span class="line"> <span class="keyword">byte</span>[] results = person.toByteArray();</span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">byte</span> b : results) &#123;</span><br><span class="line">   log.info(String.valueOf(b));</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="通用命令"><a href="#通用命令" class="headerlink" title="通用命令"></a>通用命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>get key</td>
+<td>查询key</td>
+</tr>
+<tr>
+<td>set key value</td>
+<td>设置key</td>
+</tr>
+<tr>
+<td>keys *</td>
+<td>*通配多个字符</td>
+</tr>
+<tr>
+<td>keys key</td>
+<td>获取名字为key的key</td>
+</tr>
+<tr>
+<td>keys ?ey</td>
+<td>通配单个字符</td>
+</tr>
+<tr>
+<td>keys k[eio]y</td>
+<td>通配括号内的某一个字符</td>
+</tr>
+<tr>
+<td>randomkey</td>
+<td>随机返回key</td>
+</tr>
+<tr>
+<td>type key</td>
+<td>返回存储类型</td>
+</tr>
+<tr>
+<td>exists key</td>
+<td>判断key是否存在</td>
+</tr>
+<tr>
+<td>del key</td>
+<td>删除key</td>
+</tr>
+<tr>
+<td>rename key newkey</td>
+<td>修改key名称</td>
+</tr>
+<tr>
+<td>renamenx key newkey</td>
+<td>如果存在修改失败，如果不存在则修改成功</td>
+</tr>
+<tr>
+<td>select n</td>
+<td>切换到redis数据库，默认16个，从0开始编号</td>
+</tr>
+<tr>
+<td>expire key 时间（s）</td>
+<td>设置有效期</td>
+</tr>
+<tr>
+<td>ttl key</td>
+<td>查询有效期（-1是永久有效   -2不存在的key）</td>
+</tr>
+<tr>
+<td>persist key</td>
+<td>设置永久有效</td>
+</tr>
+</tbody></table>
+<h1 id="字符串命令"><a href="#字符串命令" class="headerlink" title="字符串命令"></a>字符串命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>set key value ex 秒数 或 px 毫秒数</td>
+<td>过期时间</td>
+</tr>
+<tr>
+<td>mset key1 value1 key2 value2 key3 value3</td>
+<td>一次设置多个值</td>
+</tr>
+<tr>
+<td>mget key1 key2 key3</td>
+<td>一次获取多个值</td>
+</tr>
+<tr>
+<td>getset key newvalue</td>
+<td>返回上一个值，同时修改当前为新值</td>
+</tr>
+<tr>
+<td>incr key</td>
+<td>增加</td>
+</tr>
+<tr>
+<td>decr key</td>
+<td>减少</td>
+</tr>
+<tr>
+<td>incrby key num</td>
+<td>增加某个num</td>
+</tr>
+<tr>
+<td>decrby key num</td>
+<td>减少某个num</td>
+</tr>
+</tbody></table>
+<h1 id="列表命令"><a href="#列表命令" class="headerlink" title="列表命令"></a>列表命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lpush key value</td>
+<td>左侧插入</td>
+</tr>
+<tr>
+<td>rpush key value</td>
+<td>右侧插入</td>
+</tr>
+<tr>
+<td>lrange key start stop</td>
+<td>取出值（范围）</td>
+</tr>
+<tr>
+<td>lpop</td>
+<td>从左侧弹出</td>
+</tr>
+<tr>
+<td>rpop</td>
+<td>从右侧弹出</td>
+</tr>
+<tr>
+<td>lrem key count value</td>
+<td>删除指定count的value</td>
+</tr>
+<tr>
+<td>ltrim key start stop</td>
+<td>截取链表中某一段</td>
+</tr>
+<tr>
+<td>lindex key index</td>
+<td>返回链表某个索引对应的值</td>
+</tr>
+<tr>
+<td>linsert key before或after pivot element</td>
+<td>在某个值的前或者后插入某个值</td>
+</tr>
+</tbody></table>
+<h1 id="集合命令"><a href="#集合命令" class="headerlink" title="集合命令"></a>集合命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sadd key value1 value2</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>smembers key</td>
+<td>查看集合的元素</td>
+</tr>
+<tr>
+<td>srem key value</td>
+<td>删除集合</td>
+</tr>
+<tr>
+<td>spop key</td>
+<td>随机弹出一个元素并删除</td>
+</tr>
+<tr>
+<td>sismember gender value</td>
+<td>判断value是否在集合中</td>
+</tr>
+<tr>
+<td>scard key</td>
+<td>计算集合大小</td>
+</tr>
+<tr>
+<td>sunion key1 key2</td>
+<td>求并集</td>
+</tr>
+<tr>
+<td>sinter key1 key2</td>
+<td>求交集</td>
+</tr>
+<tr>
+<td>sdiff key1 key2</td>
+<td>求差集</td>
+</tr>
+</tbody></table>
+<h1 id="有序集合命令"><a href="#有序集合命令" class="headerlink" title="有序集合命令"></a>有序集合命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>zadd key score1 value1 score2 value2</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>zrange key start stop</td>
+<td>取元素</td>
+</tr>
+<tr>
+<td>zrangebyscore key min max</td>
+<td>通过分数取元素</td>
+</tr>
+<tr>
+<td>zrank key member</td>
+<td>查看排名</td>
+</tr>
+</tbody></table>
+<h1 id="Hash命令"><a href="#Hash命令" class="headerlink" title="Hash命令"></a>Hash命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hset key field1 value1 field2 value2</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>hgetall key</td>
+<td>查询</td>
+</tr>
+<tr>
+<td>hget key field</td>
+<td>查询某个域</td>
+</tr>
+<tr>
+<td>hdel key field</td>
+<td>删除</td>
+</tr>
+</tbody></table>
+<h1 id="运维命令"><a href="#运维命令" class="headerlink" title="运维命令"></a>运维命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>time</td>
+<td>查看时间戳与微秒数</td>
+</tr>
+<tr>
+<td>dbsize</td>
+<td>查看当前库中的key数量</td>
+</tr>
+<tr>
+<td>bgrewriteaof</td>
+<td>aof重写</td>
+</tr>
+<tr>
+<td>bgsave</td>
+<td>保存rdb快照</td>
+</tr>
+<tr>
+<td>flushall</td>
+<td>清空所有库</td>
+</tr>
+<tr>
+<td>flushdb</td>
+<td>清空当前库</td>
+</tr>
+<tr>
+<td>info</td>
+<td>redis的基本信息</td>
+</tr>
+<tr>
+<td>config get/set</td>
+<td>获取/设置配置信息</td>
+</tr>
+<tr>
+<td>slowlog get</td>
+<td>慢日志查询</td>
+</tr>
+<tr>
+<td>shutdown</td>
+<td>停止所有客户端，关闭redis服务器</td>
+</tr>
+</tbody></table>
+<h1 id="Redis事务"><a href="#Redis事务" class="headerlink" title="Redis事务"></a>Redis事务</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>multi</td>
+<td>开启事务，放到队列里</td>
+</tr>
+<tr>
+<td>exec</td>
+<td>执行事务</td>
+</tr>
+<tr>
+<td>discard</td>
+<td>取消事务</td>
+</tr>
+<tr>
+<td>watch</td>
+<td>监控、加锁</td>
+</tr>
+</tbody></table>
+<h1 id="Redis频道发布与消息订阅"><a href="#Redis频道发布与消息订阅" class="headerlink" title="Redis频道发布与消息订阅"></a>Redis频道发布与消息订阅</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>publish</td>
+<td>发布</td>
+</tr>
+<tr>
+<td>subscribe</td>
+<td>订阅</td>
+</tr>
+<tr>
+<td>psubscribe</td>
+<td>订阅支持通配符</td>
+</tr>
+</tbody></table>
 
     </div>
 
@@ -341,7 +659,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://geekvic.top/post/35fe24ef.html" title="idea使用Protobuf插件">http://geekvic.top/post/35fe24ef.html</a>
+    <a href="http://geekvic.top/post/76b87db6.html" title="Redis基本命令">http://geekvic.top/post/76b87db6.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -352,7 +670,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Protobuf/" rel="tag"># Protobuf</a>
+              <a href="/tags/Redis/" rel="tag"># Redis</a>
           </div>
 
         
@@ -361,12 +679,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/post/4fe954de.html" rel="prev" title="Linux环境GitLab安装与配置">
-      <i class="fa fa-chevron-left"></i> Linux环境GitLab安装与配置
+    <a href="/post/755670ae.html" rel="prev" title="Linux下安装新版本Redis遇到的坑">
+      <i class="fa fa-chevron-left"></i> Linux下安装新版本Redis遇到的坑
     </a></div>
       <div class="post-nav-item">
-    <a href="/post/6b0e3bbc.html" rel="next" title="GitLab服务器迁移">
-      GitLab服务器迁移 <i class="fa fa-chevron-right"></i>
+    <a href="/post/758625c3.html" rel="next" title="Redis持久化怎么玩">
+      Redis持久化怎么玩 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -427,7 +745,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-protobuf简介"><span class="nav-number">1.</span> <span class="nav-text">1.protobuf简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装插件"><span class="nav-number">2.</span> <span class="nav-text">2.安装插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置"><span class="nav-number">3.</span> <span class="nav-text">3.配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-创建proto文件"><span class="nav-number">4.</span> <span class="nav-text">4.创建proto文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-生成java对象文件"><span class="nav-number">5.</span> <span class="nav-text">5.生成java对象文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-测试"><span class="nav-number">6.</span> <span class="nav-text">6.测试</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#启动Redis，打开客户端"><span class="nav-number">1.</span> <span class="nav-text">启动Redis，打开客户端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通用命令"><span class="nav-number">2.</span> <span class="nav-text">通用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串命令"><span class="nav-number">3.</span> <span class="nav-text">字符串命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表命令"><span class="nav-number">4.</span> <span class="nav-text">列表命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合命令"><span class="nav-number">5.</span> <span class="nav-text">集合命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有序集合命令"><span class="nav-number">6.</span> <span class="nav-text">有序集合命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hash命令"><span class="nav-number">7.</span> <span class="nav-text">Hash命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运维命令"><span class="nav-number">8.</span> <span class="nav-text">运维命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis事务"><span class="nav-number">9.</span> <span class="nav-text">Redis事务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis频道发布与消息订阅"><span class="nav-number">10.</span> <span class="nav-text">Redis频道发布与消息订阅</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekvic.top/"/>
-  <updated>2020-07-09T02:43:53.000Z</updated>
+  <updated>2020-07-10T07:07:23.000Z</updated>
   <id>http://geekvic.top/</id>
   
   <author>
@@ -17,11 +17,176 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Redis持久化怎么玩</title>
+    <link href="http://geekvic.top/post/758625c3.html"/>
+    <id>http://geekvic.top/post/758625c3.html</id>
+    <published>2020-07-10T06:00:00.000Z</published>
+    <updated>2020-07-10T07:07:23.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;什么是持久化？&quot;&gt;&lt;a href=&quot;#什么是持久化？&quot; class=&quot;headerlink&quot; title=&quot;什么是持久化？&quot;&gt;&lt;/a&gt;什么是持久化？&lt;/h1&gt;&lt;p&gt;将数据保存到可永久保存的存储设备中，持久化的主要应用是将内存中的对象存储到数据库中，或者存储到磁盘文件中、XML数据文件中等。&lt;/p&gt;
+&lt;p&gt;也可以这样理解持久化：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;应用层：如果关闭( Close )你的应用，然后重新启动则先前的数据依然存在。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统层：如果关闭( Shut Down )你的系统(电脑)，然后重新启动则先前的数据依然存在。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;为何要持久化？&quot;&gt;&lt;a href=&quot;#为何要持久化？&quot; class=&quot;headerlink&quot; title=&quot;为何要持久化？&quot;&gt;&lt;/a&gt;为何要持久化？&lt;/h1&gt;&lt;p&gt;Redis的数据是缓存在内存中的，当你重启系统或者关闭系统后，缓存在内存中的数据会丢掉，因此为了让数据能够长期保存，就要将Redis里的数据做持久化存储。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Redis" scheme="http://geekvic.top/categories/Redis/"/>
+    
+    
+      <category term="持久化" scheme="http://geekvic.top/tags/%E6%8C%81%E4%B9%85%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis基本命令</title>
+    <link href="http://geekvic.top/post/76b87db6.html"/>
+    <id>http://geekvic.top/post/76b87db6.html</id>
+    <published>2020-07-10T03:30:00.000Z</published>
+    <updated>2020-07-10T07:06:58.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;启动Redis，打开客户端&quot;&gt;&lt;a href=&quot;#启动Redis，打开客户端&quot; class=&quot;headerlink&quot; title=&quot;启动Redis，打开客户端&quot;&gt;&lt;/a&gt;启动Redis，打开客户端&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;./redis-server /etc/redis.conf &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./redis-cli&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+&lt;h1 id=&quot;通用命令&quot;&gt;&lt;a href=&quot;#通用命令&quot; class=&quot;headerlink&quot; title=&quot;通用命令&quot;&gt;&lt;/a&gt;通用命令&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;解释&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;get key&lt;/td&gt;
+&lt;td&gt;查询key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set key value&lt;/td&gt;
+&lt;td&gt;设置key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;keys *&lt;/td&gt;
+&lt;td&gt;*通配多个字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;keys key&lt;/td&gt;
+&lt;td&gt;获取名字为key的key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;keys ?ey&lt;/td&gt;
+&lt;td&gt;通配单个字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;keys k[eio]y&lt;/td&gt;
+&lt;td&gt;通配括号内的某一个字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;randomkey&lt;/td&gt;
+&lt;td&gt;随机返回key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;type key&lt;/td&gt;
+&lt;td&gt;返回存储类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;exists key&lt;/td&gt;
+&lt;td&gt;判断key是否存在&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;del key&lt;/td&gt;
+&lt;td&gt;删除key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rename key newkey&lt;/td&gt;
+&lt;td&gt;修改key名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;renamenx key newkey&lt;/td&gt;
+&lt;td&gt;如果存在修改失败，如果不存在则修改成功&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;select n&lt;/td&gt;
+&lt;td&gt;切换到redis数据库，默认16个，从0开始编号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;expire key 时间（s）&lt;/td&gt;
+&lt;td&gt;设置有效期&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ttl key&lt;/td&gt;
+&lt;td&gt;查询有效期（-1是永久有效   -2不存在的key）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;persist key&lt;/td&gt;
+&lt;td&gt;设置永久有效&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h1 id=&quot;字符串命令&quot;&gt;&lt;a href=&quot;#字符串命令&quot; class=&quot;headerlink&quot; title=&quot;字符串命令&quot;&gt;&lt;/a&gt;字符串命令&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;解释&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;set key value ex 秒数 或 px 毫秒数&lt;/td&gt;
+&lt;td&gt;过期时间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mset key1 value1 key2 value2 key3 value3&lt;/td&gt;
+&lt;td&gt;一次设置多个值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mget key1 key2 key3&lt;/td&gt;
+&lt;td&gt;一次获取多个值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;getset key newvalue&lt;/td&gt;
+&lt;td&gt;返回上一个值，同时修改当前为新值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;incr key&lt;/td&gt;
+&lt;td&gt;增加&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;decr key&lt;/td&gt;
+&lt;td&gt;减少&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;incrby key num&lt;/td&gt;
+&lt;td&gt;增加某个num&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;decrby key num&lt;/td&gt;
+&lt;td&gt;减少某个num&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h1 id=&quot;列表命令&quot;&gt;&lt;a href=&quot;#列表命令&quot; class=&quot;headerlink&quot; title=&quot;列表命令&quot;&gt;&lt;/a&gt;列表命令&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="Redis" scheme="http://geekvic.top/categories/Redis/"/>
+    
+    
+      <category term="Redis" scheme="http://geekvic.top/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux下安装新版本Redis遇到的坑</title>
     <link href="http://geekvic.top/post/755670ae.html"/>
     <id>http://geekvic.top/post/755670ae.html</id>
     <published>2020-07-09T02:00:00.000Z</published>
-    <updated>2020-07-09T02:43:53.000Z</updated>
+    <updated>2020-07-09T02:50:44.170Z</updated>
     
     <summary type="html">
     
@@ -580,62 +745,6 @@
     
     
       <category term="Protobuf" scheme="http://geekvic.top/tags/Protobuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux环境GitLab安装与配置</title>
-    <link href="http://geekvic.top/post/4fe954de.html"/>
-    <id>http://geekvic.top/post/4fe954de.html</id>
-    <published>2017-10-30T09:22:00.000Z</published>
-    <updated>2020-05-22T06:12:48.240Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1-背景&quot;&gt;&lt;a href=&quot;#1-背景&quot; class=&quot;headerlink&quot; title=&quot;1.背景&quot;&gt;&lt;/a&gt;1.背景&lt;/h2&gt;&lt;p&gt;　　近期公司源代码管理工具从svn转向git，因此要在服务器上部署gitlab，总共部署了两台服务器，一台是Ubuntu server 17.04，一台是Centos7。在部署的过程中遇到不少问题，发现Linux里通过命令直接去Gitlab官网上下载程序根本不能成功，不管是在Ubuntu还是Centos上。后来只能去Gitlab官网手动下载安装包，然后再去Linux里通过命令去执行才能安装。&lt;/p&gt;
-&lt;h2 id=&quot;2-软件下载&quot;&gt;&lt;a href=&quot;#2-软件下载&quot; class=&quot;headerlink&quot; title=&quot;2.软件下载&quot;&gt;&lt;/a&gt;2.软件下载&lt;/h2&gt;&lt;h3 id=&quot;2-1-Gitlab官网&quot;&gt;&lt;a href=&quot;#2-1-Gitlab官网&quot; class=&quot;headerlink&quot; title=&quot;2.1 Gitlab官网&quot;&gt;&lt;/a&gt;2.1 Gitlab官网&lt;/h3&gt;&lt;p&gt;　　官网地址：&lt;a href=&quot;https://about.gitlab.com/downloads/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://about.gitlab.com/downloads/&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;2-2-镜像站&quot;&gt;&lt;a href=&quot;#2-2-镜像站&quot; class=&quot;headerlink&quot; title=&quot;2.2 镜像站&quot;&gt;&lt;/a&gt;2.2 镜像站&lt;/h3&gt;&lt;p&gt;　　软件地址：&lt;a href=&quot;https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/xenial/main/g/gitlab-ce/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/ubuntu/pool/xenial/main/g/gitlab-ce/&lt;/a&gt;&lt;br&gt;但是有时候镜像站也会打不开，但是速度肯定要比官网快多了。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="http://geekvic.top/categories/Git/"/>
-    
-    
-      <category term="GitLab" scheme="http://geekvic.top/tags/GitLab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu安装redis</title>
-    <link href="http://geekvic.top/post/ad24f30b.html"/>
-    <id>http://geekvic.top/post/ad24f30b.html</id>
-    <published>2017-10-30T08:36:00.000Z</published>
-    <updated>2020-05-22T06:12:48.248Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;1-背景&quot;&gt;&lt;a href=&quot;#1-背景&quot; class=&quot;headerlink&quot; title=&quot;1.背景&quot;&gt;&lt;/a&gt;1.背景&lt;/h3&gt;&lt;p&gt;服务器：ubuntu server 17.04&lt;/p&gt;
-&lt;p&gt;安装方式：apt-get&lt;/p&gt;
-&lt;h3 id=&quot;2-实现&quot;&gt;&lt;a href=&quot;#2-实现&quot; class=&quot;headerlink&quot; title=&quot;2.实现&quot;&gt;&lt;/a&gt;2.实现&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;执行命令：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ apt-get update&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;执行命令：&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://geekvic.top/categories/Linux/"/>
-    
-    
-      <category term="ubuntu" scheme="http://geekvic.top/tags/ubuntu/"/>
-    
-      <category term="redis" scheme="http://geekvic.top/tags/redis/"/>
     
   </entry>
   

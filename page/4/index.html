@@ -22,7 +22,7 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="Vic&#39;s Blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;tags&#x2F;Protobuf&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;page&#x2F;4&#x2F;index.html">
 <meta property="og:site_name" content="Vic&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="vic">
@@ -33,20 +33,20 @@
 <meta property="article:tag" content="Dubbo">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://geekvic.top/tags/Protobuf/">
+<link rel="canonical" href="http://geekvic.top/page/4/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : false,
+    isHome : true,
     isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: Protobuf | Vic's Blog</title>
+  <title>Vic's Blog</title>
   
 
 
@@ -192,52 +192,262 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/a02754ce.html">
 
-  
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">Protobuf
-          <small>标签</small>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/jin.png">
+      <meta itemprop="name" content="vic">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vic's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/post/a02754ce.html" class="post-title-link" itemprop="url">基于GitLab与Git Extensions搭建版本控制工具</a>
         </h2>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-05-07 11:47:00" itemprop="dateCreated datePublished" datetime="2017-05-07T11:47:00+08:00">2017-05-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/post/a02754ce.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/a02754ce.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2017</span>
+          <h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>　　大家知道GitHub是现在非常流行的代码托管工具，但是如果有些项目不想开源的话，则需要付费，因此萌生了自己搭建一个Git的版本控制工具，供内网使用。GitLab则是个好的选择，但是GitLab只支持Linux版本，因此则需在Windows服务器上搭建个Linux的虚拟机，我选择了Ubuntu。此时服务器端选型成功，客户端需要安装什么呢，我选择了Git Extensions，用它是因为他直接集成了Git以及KDiff3工具，更方便的是这个工具自带Putty，可以很方便地生成SSH公钥和私钥。</p>
+<h3 id="2-环境"><a href="#2-环境" class="headerlink" title="2.环境"></a>2.环境</h3><ol>
+<li><p>服务器端：Ubuntu(搭建在Win10上的虚拟机)、GitLab</p>
+</li>
+<li><p>客户端：Win10 Git Extensions(包括Git、KDiff3)</p>
+</li>
+</ol>
+<h3 id="3-实现思路"><a href="#3-实现思路" class="headerlink" title="3.实现思路"></a>3.实现思路</h3><ul>
+<li><p>安装Ubuntu，版本号：Ubuntu 16.04，具体安装步骤就不赘述，可以参考<a href="http://blog.csdn.net/u013142781/article/details/50529030，Ubuntu安装完发现了一个问题，屏幕太小，而且无法放大，可以通过安装Vmware" target="_blank" rel="noopener">http://blog.csdn.net/u013142781/article/details/50529030，Ubuntu安装完发现了一个问题，屏幕太小，而且无法放大，可以通过安装Vmware</a> Tool解决，具体可以参考<a href="http://jingyan.baidu.com/article/fc07f98977b60f12ffe5199b.html，这里需要用到Ubuntu的终端工具（类似Windows的cmd），需要采用命令行的方式去执行，刚开始有些不太习惯。（注：打开终端的快捷键:ctrl+alt+T，切换管理员的命令：sudo" target="_blank" rel="noopener">http://jingyan.baidu.com/article/fc07f98977b60f12ffe5199b.html，这里需要用到Ubuntu的终端工具（类似Windows的cmd），需要采用命令行的方式去执行，刚开始有些不太习惯。（注：打开终端的快捷键:ctrl+alt+T，切换管理员的命令：sudo</a> su）</p>
+</li>
+<li><p>Ubuntu虚拟机与Win10宿主机的网络连接方式，有两种方式，一个是桥接模式，另一个是NAT模式。桥接模式是直接连接物理网络的，也就是桥接模式下Ubuntu虚拟机跟Win10是在同一个网段的局域网里的。好比我的Win10 IP:192.168.0.104，桥接模式下的Ubuntu的Ip是192.168.0.103;而NAT模式则是共享主机的Ip,自动生成一个IP地址，此地址跟宿主机不在一个网段里，比如我这边IP地址是：192.168.182.129。当前的业务需求是在局域网里能访问，选择了桥接模式。Ubuntu如下图所示。</p>
+</li>
+<li><p>安装GitLab，安装过程还算顺利，建议安装Gitlab安装包，我安装的是gitlab-ce_9.1.1-ce.0_amd64，具体步骤不再赘述，详细可参考<a href="http://blog.csdn.net/u011241606/article/details/51471367。建议把external_url设成当前IP地址。" target="_blank" rel="noopener">http://blog.csdn.net/u011241606/article/details/51471367。建议把external_url设成当前IP地址。</a></p>
+</li>
+<li><p>客户端访问GitLab URL地址，如下图所示。默认账号是root</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2020/04/14/QePCkaIslZOF9H6.png" alt="gitlab1.png"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/a02754ce.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2017-11-06T17:06:00+08:00"
-              content="2017-11-06">
-          11-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/35fe24ef.html" itemprop="url">
-            <span itemprop="name">idea使用Protobuf插件</span>
-          </a>
-      </div>
-
-    </header>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
   </article>
+  
+  
+  
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/62fb758b.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/jin.png">
+      <meta itemprop="name" content="vic">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vic's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/post/62fb758b.html" class="post-title-link" itemprop="url">认识浏览器缓存</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-04-02 13:36:00" itemprop="dateCreated datePublished" datetime="2017-04-02T13:36:00+08:00">2017-04-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/post/62fb758b.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/62fb758b.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>浏览器缓存，也就是客户端缓存,既是网页性能优化里面静态资源相关优化的一大利器，也是无数web开发人员在工作过程不可避免的一大问题。浏览器缓存分为：强缓存和协商缓存</p>
+<h4 id="一、原理"><a href="#一、原理" class="headerlink" title="一、原理"></a>一、原理</h4><ol>
+<li><p>浏览器加载资源时，先根据这个资源的http header中的Cache-Control判断是否命中强缓存，如果命中，浏览器直接从缓存中读取资源，根本不会向服务器发送请求；</p>
+</li>
+<li><p>当强缓存没有命中的时候，浏览器则会发送一个请求到服务器，通过资源的http header中的 Last-Modified 和If-Modified-Since来判断资源是否命中协商缓存，如果命中，服务器将会将这个请求返回，但不会返回这个资源的数据，而是告诉客服端可以从缓存中加载这个资源；</p>
+</li>
+<li><p>如果资源也没有命中协商缓存的话，浏览器直接从服务器端加载资源数据</p>
+</li>
+</ol>
+<h4 id="二、共同点与区别"><a href="#二、共同点与区别" class="headerlink" title="二、共同点与区别"></a>二、共同点与区别</h4><ol>
+<li>共同点：如果命中，都从客户端缓存中加载这个资源，而不从服务器端加载；
+　　</li>
+<li>区别： 强缓存不发请求到服务器，协商缓存发请求到服务器；</li>
+</ol>
+<h4 id="三、强缓存原理"><a href="#三、强缓存原理" class="headerlink" title="三、强缓存原理"></a>三、强缓存原理</h4><p>命中强缓存，chrome里的network里面 status是200，且size会显示为from disk/memory cache,Cache Control :max-age:315360000 单位秒，也就是10年</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/62fb758b.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
     </div>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
   
   
 
+
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
 
 
 

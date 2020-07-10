@@ -20,22 +20,22 @@
     var CONFIG = {"hostname":"geekvic.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1.protobuf简介　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的">
+  <meta name="description" content="什么是持久化？将数据保存到可永久保存的存储设备中，持久化的主要应用是将内存中的对象存储到数据库中，或者存储到磁盘文件中、XML数据文件中等。 也可以这样理解持久化：  应用层：如果关闭( Close )你的应用，然后重新启动则先前的数据依然存在。   系统层：如果关闭( Shut Down )你的系统(电脑)，然后重新启动则先前的数据依然存在。  为何要持久化？Redis的数据是缓存在内存中的，当">
 <meta property="og:type" content="article">
-<meta property="og:title" content="idea使用Protobuf插件">
-<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;35fe24ef.html">
+<meta property="og:title" content="Redis持久化怎么玩">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;758625c3.html">
 <meta property="og:site_name" content="Vic&#39;s Blog">
-<meta property="og:description" content="1.protobuf简介　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的">
+<meta property="og:description" content="什么是持久化？将数据保存到可永久保存的存储设备中，持久化的主要应用是将内存中的对象存储到数据库中，或者存储到磁盘文件中、XML数据文件中等。 也可以这样理解持久化：  应用层：如果关闭( Close )你的应用，然后重新启动则先前的数据依然存在。   系统层：如果关闭( Shut Down )你的系统(电脑)，然后重新启动则先前的数据依然存在。  为何要持久化？Redis的数据是缓存在内存中的，当">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;10&#x2F;zpLDClJUFg2X7t3.png">
-<meta property="article:published_time" content="2017-11-06T09:06:00.000Z">
-<meta property="article:modified_time" content="2020-05-22T06:12:48.247Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;07&#x2F;10&#x2F;AUWRbOFjPDsGakl.png">
+<meta property="article:published_time" content="2020-07-10T06:00:00.000Z">
+<meta property="article:modified_time" content="2020-07-10T07:07:23.000Z">
 <meta property="article:author" content="vic">
-<meta property="article:tag" content="Protobuf">
+<meta property="article:tag" content="持久化">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;04&#x2F;10&#x2F;zpLDClJUFg2X7t3.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;07&#x2F;10&#x2F;AUWRbOFjPDsGakl.png">
 
-<link rel="canonical" href="http://geekvic.top/post/35fe24ef.html">
+<link rel="canonical" href="http://geekvic.top/post/758625c3.html">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>idea使用Protobuf插件 | Vic's Blog</title>
+  <title>Redis持久化怎么玩 | Vic's Blog</title>
   
 
 
@@ -201,7 +201,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/35fe24ef.html">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/758625c3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -214,7 +214,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          idea使用Protobuf插件
+          Redis持久化怎么玩
         </h1>
 
         <div class="post-meta">
@@ -223,23 +223,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2017-11-06 17:06:00" itemprop="dateCreated datePublished" datetime="2017-11-06T17:06:00+08:00">2017-11-06</time>
+              <time title="创建时间：2020-07-10 14:00:00 / 修改时间：15:07:23" itemprop="dateCreated datePublished" datetime="2020-07-10T14:00:00+08:00">2020-07-10</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/" itemprop="url" rel="index"><span itemprop="name">通信协议</span></a>
+                  <a href="/categories/Redis/" itemprop="url" rel="index"><span itemprop="name">Redis</span></a>
                 </span>
             </span>
 
@@ -259,8 +253,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/post/35fe24ef.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/post/35fe24ef.html" itemprop="commentCount"></span>
+    <a title="valine" href="/post/758625c3.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/758625c3.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -270,7 +264,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.6k</span>
+              <span>2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -289,23 +283,67 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1-protobuf简介"><a href="#1-protobuf简介" class="headerlink" title="1.protobuf简介"></a>1.protobuf简介</h3><p>　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的10分之一，xml格式的20分之一，是二进制序列化的10分之一。
-　　</p>
-<h3 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2.安装插件"></a>2.安装插件</h3><p>在idea里安装插件Protobuf Support</p>
-<h3 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-netty<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-protobuf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-stub<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.protobuf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>protobuf-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;protobuf.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">extensions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">extension</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>kr.motd.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>os-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.0.Final<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">extension</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">extensions</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--protobuf插件--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.xolstice.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>protobuf-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.5.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">protocArtifact</span>&gt;</span></span><br><span class="line">         com.google.protobuf:protoc:$&#123;protobuf.version&#125;:exe:$&#123;os.detected.classifier&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">protocArtifact</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pluginId</span>&gt;</span>grpc-java<span class="tag">&lt;/<span class="name">pluginId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pluginArtifact</span>&gt;</span></span><br><span class="line">         io.grpc:protoc-gen-grpc-java:$&#123;grpc.version&#125;:exe:$&#123;os.detected.classifier&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">pluginArtifact</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile-custom<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-创建proto文件"><a href="#4-创建proto文件" class="headerlink" title="4.创建proto文件"></a>4.创建proto文件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">syntax = "proto3";</span><br><span class="line">option java_package = "com.ynt.ai.activemq.protobuf";</span><br><span class="line">option java_outer_classname = "PersonModel";</span><br><span class="line"></span><br><span class="line">message Person &#123;</span><br><span class="line">    int32 id = 1;</span><br><span class="line">    string name = 2;</span><br><span class="line">    string email = 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="5-生成java对象文件"><a href="#5-生成java对象文件" class="headerlink" title="5.生成java对象文件"></a>5.生成java对象文件</h3><p>　　通过Protobuf插件的compile命令，如下图所示，自动生成对象文件。</p>
-<p><img src="https://i.loli.net/2020/04/10/zpLDClJUFg2X7t3.png" alt="QQ截图20171106165834.png"></p>
-<h3 id="6-测试"><a href="#6-测试" class="headerlink" title="6.测试"></a>6.测试</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PersonMsg.Person person = PersonMsg.Person.newBuilder().setId(<span class="number">2</span>).setName(<span class="string">"test"</span>)</span><br><span class="line">                .setEmail(<span class="string">"test@163.com"</span>).build();</span><br><span class="line"> <span class="keyword">byte</span>[] results = person.toByteArray();</span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">byte</span> b : results) &#123;</span><br><span class="line">   log.info(String.valueOf(b));</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="什么是持久化？"><a href="#什么是持久化？" class="headerlink" title="什么是持久化？"></a>什么是持久化？</h1><p>将数据保存到可永久保存的存储设备中，持久化的主要应用是将内存中的对象存储到数据库中，或者存储到磁盘文件中、XML数据文件中等。</p>
+<p>也可以这样理解持久化：</p>
+<blockquote>
+<p>应用层：如果关闭( Close )你的应用，然后重新启动则先前的数据依然存在。</p>
+</blockquote>
+<blockquote>
+<p>系统层：如果关闭( Shut Down )你的系统(电脑)，然后重新启动则先前的数据依然存在。</p>
+</blockquote>
+<h1 id="为何要持久化？"><a href="#为何要持久化？" class="headerlink" title="为何要持久化？"></a>为何要持久化？</h1><p>Redis的数据是缓存在内存中的，当你重启系统或者关闭系统后，缓存在内存中的数据会丢掉，因此为了让数据能够长期保存，就要将Redis里的数据做持久化存储。</p>
+<h1 id="持久化有哪几种？"><a href="#持久化有哪几种？" class="headerlink" title="持久化有哪几种？"></a>持久化有哪几种？</h1><p>Redis为持久化提供了两种方式：</p>
+<blockquote>
+<p>RDB<br>每隔N分钟或N次操作，从内存dump数据形成rdb文件，压缩，放在备份目录，主要是以快照的方式进行保存。</p>
+</blockquote>
+<blockquote>
+<p>AOF<br>记录每次对redis的命令操作，有点类似记录操作日志，当服务器重启的时候会重新执行这些命令来恢复原始数据。</p>
+</blockquote>
+<h1 id="持久化配置"><a href="#持久化配置" class="headerlink" title="持久化配置"></a>持久化配置</h1><h2 id="RDB持久化配置"><a href="#RDB持久化配置" class="headerlink" title="RDB持久化配置"></a>RDB持久化配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#时间策略</span></span><br><span class="line">save 900 1 <span class="comment">#900秒至少有一个变化，则dump</span></span><br><span class="line">save 300 10 <span class="comment">#300秒至少有10个变化，则dump</span></span><br><span class="line">save 60 10000 <span class="comment">#60秒至少有10000个变化，则dump</span></span><br><span class="line"></span><br><span class="line">stop-writes-on-bgsave-error yes <span class="comment">#如果持久化出错，主程序是否停止写入</span></span><br><span class="line"></span><br><span class="line">rdbcompression yes <span class="comment">#是否支持压缩</span></span><br><span class="line"></span><br><span class="line">rdbchecksum yes <span class="comment">#存储和加载rdb文件时是否校验</span></span><br><span class="line"></span><br><span class="line">dbfilename dump.rdb <span class="comment">#设置rdb文件名</span></span><br><span class="line"></span><br><span class="line">dir /usr/<span class="built_in">local</span>/data <span class="comment">#rdb文件保存路径</span></span><br></pre></td></tr></table></figure>
+<p>如果想禁用RDB配置，在save的最后一行写上：save “”</p>
+<h2 id="AOF持久化配置"><a href="#AOF持久化配置" class="headerlink" title="AOF持久化配置"></a>AOF持久化配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">appendonly yes <span class="comment">#是否开启aof，默认no</span></span><br><span class="line"></span><br><span class="line">appendfilename <span class="string">"appendonly.aof"</span> <span class="comment">#文件名称</span></span><br><span class="line"></span><br><span class="line">appendfsync everysec <span class="comment">#同步方式</span></span><br><span class="line"></span><br><span class="line">no-appendfsync-on-rewrite no <span class="comment">#aof重写期间是否不同步</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#重写触发配置</span></span><br><span class="line">auto-aof-rewrite-percentage 100 <span class="comment">#aof文件大小比起上次重写时的大小增长率100%时重写</span></span><br><span class="line">auto-aof-rewrite-min-size 64mb <span class="comment">#aof文件至少64M时重写</span></span><br><span class="line"></span><br><span class="line">aof-load-truncated yes <span class="comment">#加载aof时如果有出错的处理</span></span><br><span class="line"></span><br><span class="line">aof-use-rdb-preamble yes <span class="comment">#文件重写策略</span></span><br></pre></td></tr></table></figure>
+<p>appendfsync有三种模式：</p>
+<blockquote>
+<p>always：每一个命令都同步到aof，安全，速度慢。</p>
+</blockquote>
+<blockquote>
+<p>no： 由操作系统判断缓冲区大小，统一写入到aof，同步频率低，速度快。</p>
+</blockquote>
+<blockquote>
+<p>everysec：折中方案，每秒写一次，最多丢一秒。</p>
+</blockquote>
+<p>aof-load-truncated yes 如果配置启用，在加载时如果发现aof尾部不正确时，会向客户端写入一个log，但是会继续执行，如果设置为no，发现错误就会停止，必须修复后才能重新加载。</p>
+<h1 id="持久化工作原理"><a href="#持久化工作原理" class="headerlink" title="持久化工作原理"></a>持久化工作原理</h1><h2 id="RDB工作原理"><a href="#RDB工作原理" class="headerlink" title="RDB工作原理"></a>RDB工作原理</h2><p>RDB持久化触发分为两种：自己手动触发与Redis定时触发。</p>
+<h3 id="手动触发"><a href="#手动触发" class="headerlink" title="手动触发"></a>手动触发</h3><ul>
+<li>save：会阻塞当前redis服务器，直到持久化完成，线上应该禁止使用。</li>
+<li>bgsave：该触发方式会fork一个子进程，由于进程负责持久化过程，因此阻塞只会发生在fork子进程的时候</li>
+</ul>
+<h3 id="自动触发"><a href="#自动触发" class="headerlink" title="自动触发"></a>自动触发</h3><ul>
+<li>根据 save m n配置规则自动触发</li>
+<li>从节点全量复制时，主节点发送rdb文件给从节点完成复制操作，主节点会触发bgsave</li>
+<li>执行 debug reload时；</li>
+<li>执行shutdown时，如果没有开启aof，也会触发</li>
+</ul>
+<h2 id="AOF工作原理"><a href="#AOF工作原理" class="headerlink" title="AOF工作原理"></a>AOF工作原理</h2><p>主要分为两步：</p>
+<ol>
+<li>命令的实时写入，如果是appendfsync everysec配置，会有1s损耗</li>
+<li>对aof文件重写</li>
+</ol>
+<p>aof重写是为了减少aof文件的大小，可以手动或者自动触发。</p>
+<ul>
+<li>手动触发：bgrewriteof</li>
+<li>自动触发：根据配置规则触发，当然自动触发的整体时间还跟Redis的定时任务频率有关系</li>
+</ul>
+<h1 id="持久化恢复数据"><a href="#持久化恢复数据" class="headerlink" title="持久化恢复数据"></a>持久化恢复数据</h1><p>如果一台服务器上既有RDB文件，又有AOF文件，加载哪个呢？</p>
+<p>如果想要恢复数据，只要重启Redis即可。启动时会检查AOF文件是否存在，如果不存在就尝试加载RDB。优先加载AOF的原因是AOF保存的数据更完整，我们知道AOF基本上最多丢失1s的数据。如下图所示。</p>
+<p><img src="https://i.loli.net/2020/07/10/AUWRbOFjPDsGakl.png" alt="redis数据恢复.png"></p>
+<h1 id="性能优化建议"><a href="#性能优化建议" class="headerlink" title="性能优化建议"></a>性能优化建议</h1><ol>
+<li>如果Redis数据并不是很重要或者可以通过其他方式重写生成数据，可以关闭持久化，如果丢失数据可以通过其他途径补回</li>
+<li>自定义策略定期检查Redis情况，然后可以手动触发备份、重写数据</li>
+<li>单机如果部署多个实例，要防止多个实例同时运行持久化、重写操作，防止出现内存、CPU、IO资源竞争，让持久化变成串行</li>
+<li>可以配置主从复制，利用一台从服务器进行备份处理，其他机器正常响应客户端的命令</li>
+<li>RDB持久化与AOF持久化可以同时存在，配合使用。</li>
+</ol>
 
     </div>
 
@@ -341,7 +379,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://geekvic.top/post/35fe24ef.html" title="idea使用Protobuf插件">http://geekvic.top/post/35fe24ef.html</a>
+    <a href="http://geekvic.top/post/758625c3.html" title="Redis持久化怎么玩">http://geekvic.top/post/758625c3.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -352,7 +390,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Protobuf/" rel="tag"># Protobuf</a>
+              <a href="/tags/%E6%8C%81%E4%B9%85%E5%8C%96/" rel="tag"># 持久化</a>
           </div>
 
         
@@ -361,13 +399,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/post/4fe954de.html" rel="prev" title="Linux环境GitLab安装与配置">
-      <i class="fa fa-chevron-left"></i> Linux环境GitLab安装与配置
+    <a href="/post/76b87db6.html" rel="prev" title="Redis基本命令">
+      <i class="fa fa-chevron-left"></i> Redis基本命令
     </a></div>
-      <div class="post-nav-item">
-    <a href="/post/6b0e3bbc.html" rel="next" title="GitLab服务器迁移">
-      GitLab服务器迁移 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -427,7 +462,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-protobuf简介"><span class="nav-number">1.</span> <span class="nav-text">1.protobuf简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装插件"><span class="nav-number">2.</span> <span class="nav-text">2.安装插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置"><span class="nav-number">3.</span> <span class="nav-text">3.配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-创建proto文件"><span class="nav-number">4.</span> <span class="nav-text">4.创建proto文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-生成java对象文件"><span class="nav-number">5.</span> <span class="nav-text">5.生成java对象文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-测试"><span class="nav-number">6.</span> <span class="nav-text">6.测试</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是持久化？"><span class="nav-number">1.</span> <span class="nav-text">什么是持久化？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为何要持久化？"><span class="nav-number">2.</span> <span class="nav-text">为何要持久化？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#持久化有哪几种？"><span class="nav-number">3.</span> <span class="nav-text">持久化有哪几种？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#持久化配置"><span class="nav-number">4.</span> <span class="nav-text">持久化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RDB持久化配置"><span class="nav-number">4.1.</span> <span class="nav-text">RDB持久化配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOF持久化配置"><span class="nav-number">4.2.</span> <span class="nav-text">AOF持久化配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#持久化工作原理"><span class="nav-number">5.</span> <span class="nav-text">持久化工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RDB工作原理"><span class="nav-number">5.1.</span> <span class="nav-text">RDB工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手动触发"><span class="nav-number">5.1.1.</span> <span class="nav-text">手动触发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动触发"><span class="nav-number">5.1.2.</span> <span class="nav-text">自动触发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOF工作原理"><span class="nav-number">5.2.</span> <span class="nav-text">AOF工作原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#持久化恢复数据"><span class="nav-number">6.</span> <span class="nav-text">持久化恢复数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能优化建议"><span class="nav-number">7.</span> <span class="nav-text">性能优化建议</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

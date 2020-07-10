@@ -1463,4 +1463,430 @@ xpack.security.encryptionKey: "something_at_least_32_characters"</span></pre>
         <tag>缓存</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Redis基本命令</title>
+    <url>/post/76b87db6.html</url>
+    <content><![CDATA[<h1 id="启动Redis，打开客户端"><a href="#启动Redis，打开客户端" class="headerlink" title="启动Redis，打开客户端"></a>启动Redis，打开客户端</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./redis-server /etc/redis.conf </span><br><span class="line">./redis-cli</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="通用命令"><a href="#通用命令" class="headerlink" title="通用命令"></a>通用命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>get key</td>
+<td>查询key</td>
+</tr>
+<tr>
+<td>set key value</td>
+<td>设置key</td>
+</tr>
+<tr>
+<td>keys *</td>
+<td>*通配多个字符</td>
+</tr>
+<tr>
+<td>keys key</td>
+<td>获取名字为key的key</td>
+</tr>
+<tr>
+<td>keys ?ey</td>
+<td>通配单个字符</td>
+</tr>
+<tr>
+<td>keys k[eio]y</td>
+<td>通配括号内的某一个字符</td>
+</tr>
+<tr>
+<td>randomkey</td>
+<td>随机返回key</td>
+</tr>
+<tr>
+<td>type key</td>
+<td>返回存储类型</td>
+</tr>
+<tr>
+<td>exists key</td>
+<td>判断key是否存在</td>
+</tr>
+<tr>
+<td>del key</td>
+<td>删除key</td>
+</tr>
+<tr>
+<td>rename key newkey</td>
+<td>修改key名称</td>
+</tr>
+<tr>
+<td>renamenx key newkey</td>
+<td>如果存在修改失败，如果不存在则修改成功</td>
+</tr>
+<tr>
+<td>select n</td>
+<td>切换到redis数据库，默认16个，从0开始编号</td>
+</tr>
+<tr>
+<td>expire key 时间（s）</td>
+<td>设置有效期</td>
+</tr>
+<tr>
+<td>ttl key</td>
+<td>查询有效期（-1是永久有效   -2不存在的key）</td>
+</tr>
+<tr>
+<td>persist key</td>
+<td>设置永久有效</td>
+</tr>
+</tbody></table>
+<h1 id="字符串命令"><a href="#字符串命令" class="headerlink" title="字符串命令"></a>字符串命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>set key value ex 秒数 或 px 毫秒数</td>
+<td>过期时间</td>
+</tr>
+<tr>
+<td>mset key1 value1 key2 value2 key3 value3</td>
+<td>一次设置多个值</td>
+</tr>
+<tr>
+<td>mget key1 key2 key3</td>
+<td>一次获取多个值</td>
+</tr>
+<tr>
+<td>getset key newvalue</td>
+<td>返回上一个值，同时修改当前为新值</td>
+</tr>
+<tr>
+<td>incr key</td>
+<td>增加</td>
+</tr>
+<tr>
+<td>decr key</td>
+<td>减少</td>
+</tr>
+<tr>
+<td>incrby key num</td>
+<td>增加某个num</td>
+</tr>
+<tr>
+<td>decrby key num</td>
+<td>减少某个num</td>
+</tr>
+</tbody></table>
+<h1 id="列表命令"><a href="#列表命令" class="headerlink" title="列表命令"></a>列表命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>lpush key value</td>
+<td>左侧插入</td>
+</tr>
+<tr>
+<td>rpush key value</td>
+<td>右侧插入</td>
+</tr>
+<tr>
+<td>lrange key start stop</td>
+<td>取出值（范围）</td>
+</tr>
+<tr>
+<td>lpop</td>
+<td>从左侧弹出</td>
+</tr>
+<tr>
+<td>rpop</td>
+<td>从右侧弹出</td>
+</tr>
+<tr>
+<td>lrem key count value</td>
+<td>删除指定count的value</td>
+</tr>
+<tr>
+<td>ltrim key start stop</td>
+<td>截取链表中某一段</td>
+</tr>
+<tr>
+<td>lindex key index</td>
+<td>返回链表某个索引对应的值</td>
+</tr>
+<tr>
+<td>linsert key before或after pivot element</td>
+<td>在某个值的前或者后插入某个值</td>
+</tr>
+</tbody></table>
+<h1 id="集合命令"><a href="#集合命令" class="headerlink" title="集合命令"></a>集合命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sadd key value1 value2</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>smembers key</td>
+<td>查看集合的元素</td>
+</tr>
+<tr>
+<td>srem key value</td>
+<td>删除集合</td>
+</tr>
+<tr>
+<td>spop key</td>
+<td>随机弹出一个元素并删除</td>
+</tr>
+<tr>
+<td>sismember gender value</td>
+<td>判断value是否在集合中</td>
+</tr>
+<tr>
+<td>scard key</td>
+<td>计算集合大小</td>
+</tr>
+<tr>
+<td>sunion key1 key2</td>
+<td>求并集</td>
+</tr>
+<tr>
+<td>sinter key1 key2</td>
+<td>求交集</td>
+</tr>
+<tr>
+<td>sdiff key1 key2</td>
+<td>求差集</td>
+</tr>
+</tbody></table>
+<h1 id="有序集合命令"><a href="#有序集合命令" class="headerlink" title="有序集合命令"></a>有序集合命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>zadd key score1 value1 score2 value2</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>zrange key start stop</td>
+<td>取元素</td>
+</tr>
+<tr>
+<td>zrangebyscore key min max</td>
+<td>通过分数取元素</td>
+</tr>
+<tr>
+<td>zrank key member</td>
+<td>查看排名</td>
+</tr>
+</tbody></table>
+<h1 id="Hash命令"><a href="#Hash命令" class="headerlink" title="Hash命令"></a>Hash命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hset key field1 value1 field2 value2</td>
+<td>新增</td>
+</tr>
+<tr>
+<td>hgetall key</td>
+<td>查询</td>
+</tr>
+<tr>
+<td>hget key field</td>
+<td>查询某个域</td>
+</tr>
+<tr>
+<td>hdel key field</td>
+<td>删除</td>
+</tr>
+</tbody></table>
+<h1 id="运维命令"><a href="#运维命令" class="headerlink" title="运维命令"></a>运维命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>time</td>
+<td>查看时间戳与微秒数</td>
+</tr>
+<tr>
+<td>dbsize</td>
+<td>查看当前库中的key数量</td>
+</tr>
+<tr>
+<td>bgrewriteaof</td>
+<td>aof重写</td>
+</tr>
+<tr>
+<td>bgsave</td>
+<td>保存rdb快照</td>
+</tr>
+<tr>
+<td>flushall</td>
+<td>清空所有库</td>
+</tr>
+<tr>
+<td>flushdb</td>
+<td>清空当前库</td>
+</tr>
+<tr>
+<td>info</td>
+<td>redis的基本信息</td>
+</tr>
+<tr>
+<td>config get/set</td>
+<td>获取/设置配置信息</td>
+</tr>
+<tr>
+<td>slowlog get</td>
+<td>慢日志查询</td>
+</tr>
+<tr>
+<td>shutdown</td>
+<td>停止所有客户端，关闭redis服务器</td>
+</tr>
+</tbody></table>
+<h1 id="Redis事务"><a href="#Redis事务" class="headerlink" title="Redis事务"></a>Redis事务</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>multi</td>
+<td>开启事务，放到队列里</td>
+</tr>
+<tr>
+<td>exec</td>
+<td>执行事务</td>
+</tr>
+<tr>
+<td>discard</td>
+<td>取消事务</td>
+</tr>
+<tr>
+<td>watch</td>
+<td>监控、加锁</td>
+</tr>
+</tbody></table>
+<h1 id="Redis频道发布与消息订阅"><a href="#Redis频道发布与消息订阅" class="headerlink" title="Redis频道发布与消息订阅"></a>Redis频道发布与消息订阅</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>publish</td>
+<td>发布</td>
+</tr>
+<tr>
+<td>subscribe</td>
+<td>订阅</td>
+</tr>
+<tr>
+<td>psubscribe</td>
+<td>订阅支持通配符</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis持久化怎么玩</title>
+    <url>/post/758625c3.html</url>
+    <content><![CDATA[<h1 id="什么是持久化？"><a href="#什么是持久化？" class="headerlink" title="什么是持久化？"></a>什么是持久化？</h1><p>将数据保存到可永久保存的存储设备中，持久化的主要应用是将内存中的对象存储到数据库中，或者存储到磁盘文件中、XML数据文件中等。</p>
+<p>也可以这样理解持久化：</p>
+<blockquote>
+<p>应用层：如果关闭( Close )你的应用，然后重新启动则先前的数据依然存在。</p>
+</blockquote>
+<blockquote>
+<p>系统层：如果关闭( Shut Down )你的系统(电脑)，然后重新启动则先前的数据依然存在。</p>
+</blockquote>
+<h1 id="为何要持久化？"><a href="#为何要持久化？" class="headerlink" title="为何要持久化？"></a>为何要持久化？</h1><p>Redis的数据是缓存在内存中的，当你重启系统或者关闭系统后，缓存在内存中的数据会丢掉，因此为了让数据能够长期保存，就要将Redis里的数据做持久化存储。</p>
+<h1 id="持久化有哪几种？"><a href="#持久化有哪几种？" class="headerlink" title="持久化有哪几种？"></a>持久化有哪几种？</h1><p>Redis为持久化提供了两种方式：</p>
+<blockquote>
+<p>RDB<br>每隔N分钟或N次操作，从内存dump数据形成rdb文件，压缩，放在备份目录，主要是以快照的方式进行保存。</p>
+</blockquote>
+<blockquote>
+<p>AOF<br>记录每次对redis的命令操作，有点类似记录操作日志，当服务器重启的时候会重新执行这些命令来恢复原始数据。</p>
+</blockquote>
+<h1 id="持久化配置"><a href="#持久化配置" class="headerlink" title="持久化配置"></a>持久化配置</h1><h2 id="RDB持久化配置"><a href="#RDB持久化配置" class="headerlink" title="RDB持久化配置"></a>RDB持久化配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#时间策略</span></span><br><span class="line">save 900 1 <span class="comment">#900秒至少有一个变化，则dump</span></span><br><span class="line">save 300 10 <span class="comment">#300秒至少有10个变化，则dump</span></span><br><span class="line">save 60 10000 <span class="comment">#60秒至少有10000个变化，则dump</span></span><br><span class="line"></span><br><span class="line">stop-writes-on-bgsave-error yes <span class="comment">#如果持久化出错，主程序是否停止写入</span></span><br><span class="line"></span><br><span class="line">rdbcompression yes <span class="comment">#是否支持压缩</span></span><br><span class="line"></span><br><span class="line">rdbchecksum yes <span class="comment">#存储和加载rdb文件时是否校验</span></span><br><span class="line"></span><br><span class="line">dbfilename dump.rdb <span class="comment">#设置rdb文件名</span></span><br><span class="line"></span><br><span class="line">dir /usr/<span class="built_in">local</span>/data <span class="comment">#rdb文件保存路径</span></span><br></pre></td></tr></table></figure>
+<p>如果想禁用RDB配置，在save的最后一行写上：save “”</p>
+<h2 id="AOF持久化配置"><a href="#AOF持久化配置" class="headerlink" title="AOF持久化配置"></a>AOF持久化配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">appendonly yes <span class="comment">#是否开启aof，默认no</span></span><br><span class="line"></span><br><span class="line">appendfilename <span class="string">"appendonly.aof"</span> <span class="comment">#文件名称</span></span><br><span class="line"></span><br><span class="line">appendfsync everysec <span class="comment">#同步方式</span></span><br><span class="line"></span><br><span class="line">no-appendfsync-on-rewrite no <span class="comment">#aof重写期间是否不同步</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#重写触发配置</span></span><br><span class="line">auto-aof-rewrite-percentage 100 <span class="comment">#aof文件大小比起上次重写时的大小增长率100%时重写</span></span><br><span class="line">auto-aof-rewrite-min-size 64mb <span class="comment">#aof文件至少64M时重写</span></span><br><span class="line"></span><br><span class="line">aof-load-truncated yes <span class="comment">#加载aof时如果有出错的处理</span></span><br><span class="line"></span><br><span class="line">aof-use-rdb-preamble yes <span class="comment">#文件重写策略</span></span><br></pre></td></tr></table></figure>
+<p>appendfsync有三种模式：</p>
+<blockquote>
+<p>always：每一个命令都同步到aof，安全，速度慢。</p>
+</blockquote>
+<blockquote>
+<p>no： 由操作系统判断缓冲区大小，统一写入到aof，同步频率低，速度快。</p>
+</blockquote>
+<blockquote>
+<p>everysec：折中方案，每秒写一次，最多丢一秒。</p>
+</blockquote>
+<p>aof-load-truncated yes 如果配置启用，在加载时如果发现aof尾部不正确时，会向客户端写入一个log，但是会继续执行，如果设置为no，发现错误就会停止，必须修复后才能重新加载。</p>
+<h1 id="持久化工作原理"><a href="#持久化工作原理" class="headerlink" title="持久化工作原理"></a>持久化工作原理</h1><h2 id="RDB工作原理"><a href="#RDB工作原理" class="headerlink" title="RDB工作原理"></a>RDB工作原理</h2><p>RDB持久化触发分为两种：自己手动触发与Redis定时触发。</p>
+<h3 id="手动触发"><a href="#手动触发" class="headerlink" title="手动触发"></a>手动触发</h3><ul>
+<li>save：会阻塞当前redis服务器，直到持久化完成，线上应该禁止使用。</li>
+<li>bgsave：该触发方式会fork一个子进程，由于进程负责持久化过程，因此阻塞只会发生在fork子进程的时候</li>
+</ul>
+<h3 id="自动触发"><a href="#自动触发" class="headerlink" title="自动触发"></a>自动触发</h3><ul>
+<li>根据 save m n配置规则自动触发</li>
+<li>从节点全量复制时，主节点发送rdb文件给从节点完成复制操作，主节点会触发bgsave</li>
+<li>执行 debug reload时；</li>
+<li>执行shutdown时，如果没有开启aof，也会触发</li>
+</ul>
+<h2 id="AOF工作原理"><a href="#AOF工作原理" class="headerlink" title="AOF工作原理"></a>AOF工作原理</h2><p>主要分为两步：</p>
+<ol>
+<li>命令的实时写入，如果是appendfsync everysec配置，会有1s损耗</li>
+<li>对aof文件重写</li>
+</ol>
+<p>aof重写是为了减少aof文件的大小，可以手动或者自动触发。</p>
+<ul>
+<li>手动触发：bgrewriteof</li>
+<li>自动触发：根据配置规则触发，当然自动触发的整体时间还跟Redis的定时任务频率有关系</li>
+</ul>
+<h1 id="持久化恢复数据"><a href="#持久化恢复数据" class="headerlink" title="持久化恢复数据"></a>持久化恢复数据</h1><p>如果一台服务器上既有RDB文件，又有AOF文件，加载哪个呢？</p>
+<p>如果想要恢复数据，只要重启Redis即可。启动时会检查AOF文件是否存在，如果不存在就尝试加载RDB。优先加载AOF的原因是AOF保存的数据更完整，我们知道AOF基本上最多丢失1s的数据。如下图所示。</p>
+<p><img src="https://i.loli.net/2020/07/10/AUWRbOFjPDsGakl.png" alt="redis数据恢复.png"></p>
+<h1 id="性能优化建议"><a href="#性能优化建议" class="headerlink" title="性能优化建议"></a>性能优化建议</h1><ol>
+<li>如果Redis数据并不是很重要或者可以通过其他方式重写生成数据，可以关闭持久化，如果丢失数据可以通过其他途径补回</li>
+<li>自定义策略定期检查Redis情况，然后可以手动触发备份、重写数据</li>
+<li>单机如果部署多个实例，要防止多个实例同时运行持久化、重写操作，防止出现内存、CPU、IO资源竞争，让持久化变成串行</li>
+<li>可以配置主从复制，利用一台从服务器进行备份处理，其他机器正常响应客户端的命令</li>
+<li>RDB持久化与AOF持久化可以同时存在，配合使用。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>持久化</tag>
+      </tags>
+  </entry>
 </search>
