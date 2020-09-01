@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"geekvic.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Redis实现高可用，支持三种集群模式：主从模式、哨兵模式以及cluster模式。 主从模式定义 在Redis集群中，让若干个Redis服务器去复制另一个Redis服务器，我们定义被复制的服务器为主服务器（master），而对主服务器进行复制的服务器则被称为从服务器（replica），这种模式叫做主从复制模式。  作用 为数据提供多个副本，支持高可用。 实现读写分离（主节点负责写，从节点负责读，主">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何让Redis支持高可用">
+<meta property="og:url" content="http:&#x2F;&#x2F;geekvic.top&#x2F;post&#x2F;d254c291.html">
+<meta property="og:site_name" content="Vic&#39;s Blog">
+<meta property="og:description" content="Redis实现高可用，支持三种集群模式：主从模式、哨兵模式以及cluster模式。 主从模式定义 在Redis集群中，让若干个Redis服务器去复制另一个Redis服务器，我们定义被复制的服务器为主服务器（master），而对主服务器进行复制的服务器则被称为从服务器（replica），这种模式叫做主从复制模式。  作用 为数据提供多个副本，支持高可用。 实现读写分离（主节点负责写，从节点负责读，主">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;07&#x2F;24&#x2F;n46YSXpFOLgeG91.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;08&#x2F;18&#x2F;MxntH5dy17lVG2S.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;09&#x2F;01&#x2F;3pm7G1RM4zDf9j2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;09&#x2F;01&#x2F;SJ74Ri3nAINXqUQ.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;09&#x2F;01&#x2F;238SzwLXyKJ7E5A.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;09&#x2F;01&#x2F;n16wUAc5huNOXEo.png">
+<meta property="article:published_time" content="2020-09-01T02:18:00.000Z">
+<meta property="article:modified_time" content="2020-09-01T09:36:36.000Z">
+<meta property="article:author" content="vic">
+<meta property="article:tag" content="Redis">
+<meta property="article:tag" content="高可用">
+<meta property="article:tag" content="cluster">
+<meta property="article:tag" content="主从复制">
+<meta property="article:tag" content="哨兵">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;07&#x2F;24&#x2F;n46YSXpFOLgeG91.png">
+
+<link rel="canonical" href="http://geekvic.top/post/d254c291.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>如何让Redis支持高可用 | Vic's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Vic's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Vic's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">code changes the world</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/geekvic" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/d254c291.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/jin.png">
+      <meta itemprop="name" content="vic">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vic's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何让Redis支持高可用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-09-01 10:18:00 / 修改时间：17:36:36" itemprop="dateCreated datePublished" datetime="2020-09-01T10:18:00+08:00">2020-09-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Redis/" itemprop="url" rel="index"><span itemprop="name">Redis</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/post/d254c291.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/d254c291.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>9.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>9 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Redis实现高可用，支持三种集群模式：主从模式、哨兵模式以及cluster模式。</p>
+<h1 id="主从模式"><a href="#主从模式" class="headerlink" title="主从模式"></a>主从模式</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote>
+<p>在Redis集群中，让若干个Redis服务器去复制另一个Redis服务器，我们定义被复制的服务器为主服务器（master），而对主服务器进行复制的服务器则被称为从服务器（replica），这种模式叫做主从复制模式。</p>
+</blockquote>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><ul>
+<li>为数据提供多个副本，支持高可用。</li>
+<li>实现读写分离（主节点负责写，从节点负责读，主节点定期将数据同步到从节点，保证数据的一致性）。</li>
+<li>任务分离，如从服务器负责备份工作和计算工作。</li>
+</ul>
+<h2 id="主从复制的特点"><a href="#主从复制的特点" class="headerlink" title="主从复制的特点"></a>主从复制的特点</h2><ul>
+<li>主节点可以进行读写操作，当主节点数据变化后会自动将数据同步给从节点；</li>
+<li>从节点一般都是只读的；</li>
+<li>一个master可以拥有多个replica，但是一个replica只能有一个master；</li>
+<li>其中一个replica挂了不影响其他replica的读和master的读和写，重新启动后会将数据从master同步过来；</li>
+<li>master挂了后不影响replica节点的读，但不再提供写服务，master重启后redis将重新对外提供写服务；</li>
+<li>master挂了后，不会在replica节点中重新选一个master；</li>
+</ul>
+<h2 id="工作机制"><a href="#工作机制" class="headerlink" title="工作机制"></a>工作机制</h2><blockquote>
+<p>当replica启动后，主动向master发送SYNC命令。master接收到SYNC命令后在后台保存快照（RDB持久化）和缓存保存快照这段时间的命令，然后将保存的快照文件和缓存的命令发送给replica。replica接收到快照文件和命令后加载快照文件和缓存的执行命令。</p>
+<p>复制初始化后，master每次接收到的写命令都会同步发送给slave，保证主从数据一致性。</p>
+</blockquote>
+<h2 id="主从复制搭建"><a href="#主从复制搭建" class="headerlink" title="主从复制搭建"></a>主从复制搭建</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>实现一主两从，同一台服务器上，master端口6379；两个replica，一个端口6380，另一个端口6381，如下图所示。<br><img src="https://i.loli.net/2020/07/24/n46YSXpFOLgeG91.png" alt="redis主从复制.png"></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>复制redis.conf文件，生成redis6380.conf以及redis6381.conf文件</p>
+<h4 id="master配置"><a href="#master配置" class="headerlink" title="master配置"></a>master配置</h4><p>可以关闭rdb快照功能，将备份工作交给replica节点，aof功能可以开着，也可以关闭；</p>
+<h4 id="replica配置"><a href="#replica配置" class="headerlink" title="replica配置"></a>replica配置</h4><ul>
+<li>replicaof <masterip> <masterport>：配置master服务的ip和端口，这样就建立起主从关系了。</li>
+<li>masterauth <master-password>：如果master需要密码认证，这里需要配置master的密码，否则连接不上；</li>
+<li>replica-read-only：默认为yes，配置从服务默认为只读模式。</li>
+</ul>
+<p>其中6380从服务的具体配置如下，6381的配置也是类似。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">port 6380</span><br><span class="line"></span><br><span class="line">pidfile /var/run/redis_6380.pid</span><br><span class="line"></span><br><span class="line">save 900 1</span><br><span class="line">save 300 10</span><br><span class="line">save 60 10000</span><br><span class="line"></span><br><span class="line">dbfilename dump6380.rdb</span><br><span class="line"></span><br><span class="line">replicaof localhost 6379</span><br><span class="line"></span><br><span class="line">replica-read-only yes</span><br><span class="line">    </span><br><span class="line">appendonly yes</span><br><span class="line"></span><br><span class="line">appendfilename <span class="string">"appendonly6380.aof"</span></span><br></pre></td></tr></table></figure>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>执行命令，通过redis客户端分别连接到主从redis服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./redis-cli -p 6379</span><br><span class="line">./redis-cli -p 6380</span><br><span class="line">./redis-cli -p 6381</span><br></pre></td></tr></table></figure>
+
+<p>主服务中查看replica信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">info replication</span><br></pre></td></tr></table></figure>
+<p>显示信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Replication</span></span><br><span class="line">role:master</span><br><span class="line">connected_slaves:2</span><br><span class="line">slave0:ip=::1,port=6380,state=online,offset=123023,lag=0</span><br><span class="line">slave1:ip=::1,port=6381,state=online,offset=123023,lag=0</span><br><span class="line">master_replid:37d7bc32b5aca031ba762585137da938c78a77dc</span><br><span class="line">master_replid2:0000000000000000000000000000000000000000</span><br><span class="line">master_repl_offset:123023</span><br><span class="line">second_repl_offset:-1</span><br><span class="line">repl_backlog_active:1</span><br><span class="line">repl_backlog_size:1048576</span><br><span class="line">repl_backlog_first_byte_offset:1</span><br><span class="line">repl_backlog_histlen:123023</span><br></pre></td></tr></table></figure>
+<p>从服务中查看信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Replication</span></span><br><span class="line">role:slave</span><br><span class="line">master_host:localhost</span><br><span class="line">master_port:6379</span><br><span class="line">master_link_status:up</span><br><span class="line">master_last_io_seconds_ago:8</span><br><span class="line">master_sync_in_progress:0</span><br><span class="line">slave_repl_offset:123205</span><br><span class="line">slave_priority:100</span><br><span class="line">slave_read_only:1</span><br><span class="line">connected_slaves:0</span><br><span class="line">master_replid:37d7bc32b5aca031ba762585137da938c78a77dc</span><br><span class="line">master_replid2:0000000000000000000000000000000000000000</span><br><span class="line">master_repl_offset:123205</span><br><span class="line">second_repl_offset:-1</span><br><span class="line">repl_backlog_active:1</span><br><span class="line">repl_backlog_size:1048576</span><br><span class="line">repl_backlog_first_byte_offset:1</span><br><span class="line">repl_backlog_histlen:123205</span><br></pre></td></tr></table></figure>
+<p>redis主服务中添加名为name的key，在从服务中查看是否实现同步复制，如下面所示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; <span class="built_in">set</span> name vic</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; </span><br><span class="line"></span><br><span class="line">127.0.0.1:6380&gt; get name</span><br><span class="line"><span class="string">"vic"</span></span><br><span class="line"></span><br><span class="line">127.0.0.1:6381&gt; get name</span><br><span class="line"><span class="string">"vic"</span></span><br></pre></td></tr></table></figure>
+<p>至此，主从复制配置完成。</p>
+<h2 id="主从复制模式配置遇到的坑"><a href="#主从复制模式配置遇到的坑" class="headerlink" title="主从复制模式配置遇到的坑"></a>主从复制模式配置遇到的坑</h2><p>按照之前的配置，我发现redis的主从配置没有生效，从服务并没有连接到主服务，显示如下。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">master_link_status:down</span><br></pre></td></tr></table></figure>
+<p>本以为是防火墙问题，6379的端口没有打开，但通过netstat -lntp命令查看端口是开着的，又想着是不是主服务配置了密码，然后从服务没有配置密码引起的，结果发现并不是。</p>
+<p>最后通过注释掉主服务的redis.conf文件里的bind 127.0.0.1就解决此问题了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#bind 127.0.0.1</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="哨兵模式"><a href="#哨兵模式" class="headerlink" title="哨兵模式"></a>哨兵模式</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>哨兵模式是一种特殊的模式，哨兵是一个独立的进程，通过发送命令，等待Redis服务器响应，从而监控多个Redis实例，如下图所示。当主从服务中，主服务挂掉后，可以自动实现故障切换，而不需要手动去操作，因此更为推荐这种模式。<br><img src="https://i.loli.net/2020/08/18/MxntH5dy17lVG2S.png" alt="sentinel.png"></p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><h3 id="哨兵的作用"><a href="#哨兵的作用" class="headerlink" title="哨兵的作用"></a>哨兵的作用</h3><ul>
+<li>通过发送命令，让Redis服务器返回监控其运行状态，包括主服务器和从服务器</li>
+<li>当哨兵监测到master宕机，会自动将slave切换成master，然后通过发布订阅模式通知其他的从服务器，修改配置文件，让它们切换主机。</li>
+</ul>
+<p>在Redis高可用架构中，Sentinel往往不是只有一个，而是有3个或者以上。目的是为了让其更加可靠，我们可以使用多个哨兵进行监控。各个哨兵之间还会进行监控，这样就形成了多哨兵模式</p>
+<h3 id="故障切换"><a href="#故障切换" class="headerlink" title="故障切换"></a>故障切换</h3><p>当检测到主节点宕机后，断开与宕机主节点连接的所有从节点，在从节点中选取一个作为主节点，然后将其他的从节点连接到这个最新主节点的上。并且告知客户端最新的服务器地址。</p>
+<h3 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h3><h4 id="主观下线"><a href="#主观下线" class="headerlink" title="主观下线"></a>主观下线</h4><p>SDOWN（subjectively down）,直接翻译的为主观下线,即当前sentinel实例认为某个redis服务为不可用状态.</p>
+<h4 id="客观下线"><a href="#客观下线" class="headerlink" title="客观下线"></a>客观下线</h4><p>ODOWN（objectively down）,直接翻译为客观下线,即多个sentinel实例都认为master处于SDOWN状态,那么此时master将处于ODOWN，ODOWN可以简单理解为master已经被集群确定为”不可用”，将会开启failover。</p>
+<h2 id="哨兵环境搭建"><a href="#哨兵环境搭建" class="headerlink" title="哨兵环境搭建"></a>哨兵环境搭建</h2><p>在原来的主从复制测试环境的基础上，再配置sentinel.conf，并启动哨兵进程。</p>
+<table>
+<thead>
+<tr>
+<th>服务类型</th>
+<th>主/从</th>
+<th>端口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Redis</td>
+<td>主</td>
+<td>6379</td>
+</tr>
+<tr>
+<td>Redis</td>
+<td>从</td>
+<td>6380</td>
+</tr>
+<tr>
+<td>Redis</td>
+<td>从</td>
+<td>6381</td>
+</tr>
+<tr>
+<td>Sentinel</td>
+<td>-</td>
+<td>26379</td>
+</tr>
+<tr>
+<td>Sentinel</td>
+<td>-</td>
+<td>26380</td>
+</tr>
+<tr>
+<td>Sentinel</td>
+<td>-</td>
+<td>26381</td>
+</tr>
+</tbody></table>
+<h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><p>sentinel.conf文件，复制三份，并进行修改，主要配置参数如下，三个文件区别主要是端口修改下，从26379~26381。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#当前Sentinel服务运行的端口</span></span><br><span class="line">port 26379  </span><br><span class="line"><span class="comment"># 第一行配置指示 Sentinel去监视一个名为 mymaster的主服务器，这个主服务器的IP地址为127.0.0.1，端口号为6379，而将这个主服务器判断为失效至少需要2个Sentinel同意 </span></span><br><span class="line">sentinel monitor mymaster 127.0.0.1 6379 2</span><br><span class="line"><span class="comment"># 10s内mymaster无响应，则认为mymaster宕机了</span></span><br><span class="line">sentinel down-after-milliseconds mymaster 10000</span><br><span class="line"><span class="comment">#如果20秒后,mysater仍没启动过来，则启动failover  </span></span><br><span class="line">sentinel failover-timeout mymaster 20000  </span><br><span class="line"><span class="comment"># 执行故障转移时， 最多有1个从服务器同时对新的主服务器进行同步</span></span><br><span class="line">sentinel parallel-syncs mymaster 1</span><br></pre></td></tr></table></figure>
+<h3 id="启动哨兵进程"><a href="#启动哨兵进程" class="headerlink" title="启动哨兵进程"></a>启动哨兵进程</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/bin/redis-sentinel sentinel.conf --sentinel &amp;</span><br><span class="line">/usr/<span class="built_in">local</span>/bin/redis-sentinel sentinel6380.conf --sentinel &amp;</span><br><span class="line">/usr/<span class="built_in">local</span>/bin/redis-sentinel sentinel6381.conf --sentinel &amp;</span><br></pre></td></tr></table></figure>
+<h3 id="测试验证"><a href="#测试验证" class="headerlink" title="测试验证"></a>测试验证</h3><p>哨兵集群启动后，将6379主服务shutdown，这时候哨兵集群就会认定6379已经宕机，从而在6380和6381两台从服务里选举一个服务升级为master，然后再通知另一个服务，并自动修改它的配置文件，让它指向新的master，比如6380变成master，则6381则会自动变成6380的replica，当然如果我们现在再将6379启动起来，同样6379也会变成6380的replica，从而实现redis的故障自动转移。</p>
+<h3 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">23617:X 19 Aug 2020 16:01:43.844 <span class="comment"># WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</span></span><br><span class="line">23617:X 19 Aug 2020 16:01:43.844 <span class="comment"># Sentinel ID is 6c4ad4b0df82b09a7d3078927182b59da3becb5f</span></span><br><span class="line">23617:X 19 Aug 2020 16:01:43.844 <span class="comment"># +monitor master mymaster 127.0.0.1 6379 quorum 1</span></span><br><span class="line">23617:X 19 Aug 2020 16:01:43.845 * +slave slave [::1]:6380 ::1 6380 @ mymaster 127.0.0.1 6379</span><br><span class="line">23617:X 19 Aug 2020 16:01:43.850 * +slave slave [::1]:6381 ::1 6381 @ mymaster 127.0.0.1 6379</span><br><span class="line">23617:X 19 Aug 2020 16:01:53.867 <span class="comment"># +sdown slave [::1]:6381 ::1 6381 @ mymaster 127.0.0.1 6379</span></span><br><span class="line">23617:X 19 Aug 2020 16:01:53.867 <span class="comment"># +sdown slave [::1]:6380 ::1 6380 @ mymaster 127.0.0.1 6379</span></span><br><span class="line">23617:X 19 Aug 2020 16:03:55.606 <span class="comment"># +sdown master mymaster 127.0.0.1 6379</span></span><br><span class="line">23617:X 19 Aug 2020 16:03:55.606 <span class="comment"># +odown master mymaster 127.0.0.1 6379 #quorum 1/1</span></span><br><span class="line">23617:X 19 Aug 2020 16:03:55.606 <span class="comment"># +new-epoch 1</span></span><br><span class="line">23617:X 19 Aug 2020 16:03:55.606 <span class="comment"># +try-failover master mymaster 127.0.0.1 6379</span></span><br><span class="line">23617:X 19 Aug 2020 16:03:55.610 <span class="comment"># +vote-for-leader 6c4ad4b0df82b09a7d3078927182b59da3becb5f 1</span></span><br><span class="line">23617:X 19 Aug 2020 16:03:55.610 <span class="comment"># +elected-leader master mymaster 127.0.0.1 6379</span></span><br><span class="line">23617:X 19 Aug 2020 16:03:55.610 <span class="comment"># +failover-state-select-slave master mymaster 127.0.0.1 6379</span></span><br><span class="line">23617:X 19 Aug 2020 16:03:55.669 <span class="comment"># -failover-abort-no-good-slave master mymaster 127.0.0.1 6379</span></span><br><span class="line">23617:X 19 Aug 2020 16:03:55.735 <span class="comment"># Next failover delay: I will not start a failover before Wed Aug 19 16:09:55 2020</span></span><br></pre></td></tr></table></figure>
+<h4 id="原因：脑裂"><a href="#原因：脑裂" class="headerlink" title="原因：脑裂"></a>原因：脑裂</h4><p>脑裂，也就是说，某个 master 所在机器突然脱离了正常的网络，跟其他 slave 机器不能连接，但是实际上 master 还运行着。此时哨兵可能就会认为 master 宕机了，然后开启选举，将其他 slave 切换成了 master。这个时候，集群里就会有两个 master ，也就是所谓的脑裂。</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">min-slaves-to-write 1</span><br><span class="line">min-slaves-max-lag 10</span><br></pre></td></tr></table></figure>
+<p>表示，要求至少有 1 个 slave，数据复制和同步的延迟不能超过 10 秒。<br>如果说一旦所有的 slave，数据复制和同步的延迟都超过了 10 秒钟，那么这个时候，master 就不会再接收任何请求了。</p>
+<h1 id="cluster模式"><a href="#cluster模式" class="headerlink" title="cluster模式"></a>cluster模式</h1><blockquote>
+<p>哨兵解决和主从不能自动故障恢复的问题，但是同时也存在难以扩容以及单机存储、读写能力受限的问题，并且集群之前都是一台redis都是全量的数据，当并发量很高的时候，会遇到内存、并发、存储等的瓶颈，因此需要真正的分布式架构来进行负载均衡。</p>
+</blockquote>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>cluster模式实现了Redis数据的分布式存储，实现数据的分片，每个redis节点存储不同的内容，并且解决了在线的节点收缩（下线）和扩容（上线）问题。</p>
+<p>redis cluster 主要基于 CRC16 算法对 key 进行 hash ，然后散列到不同散列槽。<br>redis cluster 总共提供 16384 个hash 槽(slot) ，理论上，集群的最大节点数量最大为 16384 个。不过 redis 官方给出的建议是不要超过 1000 的量级。每个 redis instance 会负责这个散列槽中的一部分。新增或删除节点，对于 redis cluster 而言就是对 slot 进行 reshard，redis cluster 保证 slot 平滑移动。<br><img src="https://i.loli.net/2020/09/01/3pm7G1RM4zDf9j2.jpg" alt="170137a6fdaf24fb.webp.jpg"></p>
+<ul>
+<li>优点：无中心节点（所有Redis节点都是对等的节点，同步数据使用的是Gossip协议），数据按照槽存储分布在多个 Redis 实例上，可以平滑的进行节点 扩容/缩容，当节点数量改变时，只需要动态更改节点负责的槽就行，这对于客户端来说是透明的。不需要依赖中间件，运维成本低。</li>
+<li>缺点：严重依赖 Redis-trib 工具，缺乏监控管理，Failover节点的检测过慢，Gossip协议传播消息到最终一致性有一定的延迟。</li>
+</ul>
+<h2 id="通信机制"><a href="#通信机制" class="headerlink" title="通信机制"></a>通信机制</h2><p>Redis cluster 节点间采用 gossip 协议进行通信。</p>
+<h3 id="gossip协议"><a href="#gossip协议" class="headerlink" title="gossip协议"></a>gossip协议</h3><p>gossip协议包含多种消息，包含 ping , pong , meet , fail 等等。</p>
+<ul>
+<li>meet：某个节点发送 meet给新加入的节点，让新节点加入集群中，然后新节点就会开始与其它节点进行通信。</li>
+<li>ping：每个节点都会频繁给其它节点发送ping，其中包含自己的状态还有自己维护的集群元数据，互相通过 ping 交换元数据。</li>
+<li>pong：返回 ping 和 meeet，包含自己的状态和其它信息，也用于信息广播和更新。</li>
+<li>fail：某个节点判断另一个节点 fail 之后，就发送 fail 给其它节点，通知其它节点说，某个节点宕机</li>
+</ul>
+<h2 id="分布式寻址算法"><a href="#分布式寻址算法" class="headerlink" title="分布式寻址算法"></a>分布式寻址算法</h2><ul>
+<li>hash算法</li>
+<li>一致性hash算法</li>
+<li>hash slot算法（redis cluster采用）</li>
+</ul>
+<p>Redis cluster 有固定的 16384 个 hash slot，对每个 key 计算 CRC16 值，然后对 16384 取模，可以获取 key 对应的 hash slot。</p>
+<p>Redis cluster 中每个 master 都会持有部分 slot，比如有 3 个 master，那么可能每个 master 持有 5000 多个 hash slot。hash slot 让 node 的增加和移除很简单，增加一个 master，就将其他 master 的 hash slot 移动部分过去，减少一个 master，就将它的 hash slot 移动到其他 master 上去。移动 hash slot 的成本是非常低的。客户端的 api，可以对指定的数据，让他们走同一个 hash slot，通过 hash tag 来实现。</p>
+<p>任何一台机器宕机，另外两个节点，不影响的。因为 key 找的是 hash slot，不是机器。</p>
+<h2 id="高可用与主备切换原理"><a href="#高可用与主备切换原理" class="headerlink" title="高可用与主备切换原理"></a>高可用与主备切换原理</h2><p>Redis cluster 的高可用的原理，几乎跟哨兵是类似的。</p>
+<ol>
+<li>判断节点宕机</li>
+<li>从节点过滤</li>
+<li>从节点选举</li>
+</ol>
+<p>相比哨兵模式，Redis cluster 功能强大，直接集成了 replication 和 sentinel 的功能。</p>
+<h2 id="cluster环境搭建"><a href="#cluster环境搭建" class="headerlink" title="cluster环境搭建"></a>cluster环境搭建</h2><blockquote>
+<p>redis 集群一般由多个节点组成，节点数量至少为6个，才能保证组成 完整高可用的集群。每个节点需要开启配置 cluster-enabled yes，让 redis 运行在集群模式下。</p>
+</blockquote>
+<p>因此搭建三主三从，主服务分别为7000,7001,7002，从服务分别为7003,7004,7005。如下图所示。<br><img src="https://i.loli.net/2020/09/01/SJ74Ri3nAINXqUQ.png" alt="cluster-env.png"></p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>编辑redis.conf文件，复制5份，将其中的7000进行替换修改，主要配置如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">port 7000</span><br><span class="line">daemonize yes</span><br><span class="line">pidfile /home/redis/tmp/scripts-redis/cluster/pid/pid_7000.pid</span><br><span class="line"><span class="built_in">bind</span> 127.0.0.1</span><br><span class="line"></span><br><span class="line">loglevel notice</span><br><span class="line">logfile /home/redis/tmp/scripts-redis/cluster/<span class="built_in">log</span>/log_7000.log</span><br><span class="line">dbfilename <span class="string">"dump.rdb"</span></span><br><span class="line">dir <span class="string">"/home/redis/tmp/scripts-redis/cluster/data/7000"</span></span><br><span class="line"></span><br><span class="line">cluster-enabled yes</span><br><span class="line">cluster-config-file <span class="string">"/home/redis/tmp/scripts-redis/cluster/config/nodes_7000.conf"</span></span><br><span class="line">cluster-node-timeout 5000</span><br></pre></td></tr></table></figure>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/bin/redis-server redis7000.conf </span><br><span class="line">/usr/<span class="built_in">local</span>/bin/redis-server redis7001.conf </span><br><span class="line">/usr/<span class="built_in">local</span>/bin/redis-server redis7002.conf </span><br><span class="line">/usr/<span class="built_in">local</span>/bin/redis-server redis7003.conf </span><br><span class="line">/usr/<span class="built_in">local</span>/bin/redis-server redis7004.conf </span><br><span class="line">/usr/<span class="built_in">local</span>/bin/redis-server redis7005.conf</span><br></pre></td></tr></table></figure>
+<p>启动命令后结果如下图所示。<br><img src="https://i.loli.net/2020/09/01/238SzwLXyKJ7E5A.png" alt="redis-cluster.png"></p>
+<h3 id="创建集群"><a href="#创建集群" class="headerlink" title="创建集群"></a>创建集群</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli --cluster create 127.0.0.1:7000 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 --cluster-replicas 1</span><br></pre></td></tr></table></figure>
+<p>执行命令后，输出如下图所示。<br><img src="https://i.loli.net/2020/09/01/n16wUAc5huNOXEo.png" alt="cluster-create.png"></p>
+<h3 id="集群验证"><a href="#集群验证" class="headerlink" title="集群验证"></a>集群验证</h3><p>以集群模式连接客户端，并设置key。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@VM_0_4_centos bin]<span class="comment"># redis-cli -c -p 7000</span></span><br><span class="line">127.0.0.1:7000&gt; <span class="built_in">set</span> a b</span><br><span class="line">-&gt; Redirected to slot [15495] located at 127.0.0.1:7002</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:7002&gt; <span class="built_in">set</span> short short</span><br><span class="line">-&gt; Redirected to slot [2103] located at 127.0.0.1:7000</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:7000&gt; get short</span><br><span class="line"><span class="string">"short"</span></span><br><span class="line">127.0.0.1:7000&gt;</span><br></pre></td></tr></table></figure>
+<p>将7000端口的主服务停掉，可以看到原来存储在7000里的key自动存储到7005上，同时cluster自动切换主服务到7005。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:7000&gt; shutdown</span><br><span class="line">not connected&gt; </span><br><span class="line">[root@VM_0_4_centos bin]<span class="comment"># redis-cli -c -p 7000</span></span><br><span class="line">Could not connect to Redis at 127.0.0.1:7000: Connection refused</span><br><span class="line">not connected&gt; <span class="built_in">set</span> a b [EX seconds|PX milliseconds] [NX|XX] [KEEPTTL]</span><br><span class="line">[root@VM_0_4_centos bin]<span class="comment"># redis-cli -c -p 7001</span></span><br><span class="line">127.0.0.1:7001&gt; get short</span><br><span class="line">-&gt; Redirected to slot [2103] located at 127.0.0.1:7005</span><br><span class="line"><span class="string">"short"</span></span><br><span class="line">127.0.0.1:7005&gt; get name</span><br><span class="line">-&gt; Redirected to slot [5798] located at 127.0.0.1:7001</span><br><span class="line"><span class="string">"hello"</span></span><br><span class="line">127.0.0.1:7001&gt;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:7005&gt; info replication</span><br><span class="line"><span class="comment"># Replication</span></span><br><span class="line">role:master</span><br><span class="line">connected_slaves:0</span><br><span class="line">master_replid:5b3a8ba01eb3c6afa931cb6143a72340f283e48c</span><br><span class="line">master_replid2:47821ec4918bb29baa1f4546f4111f57af88efaa</span><br><span class="line">master_repl_offset:1107</span><br><span class="line">second_repl_offset:1108</span><br><span class="line">repl_backlog_active:1</span><br><span class="line">repl_backlog_size:1048576</span><br><span class="line">repl_backlog_first_byte_offset:1</span><br><span class="line">repl_backlog_histlen:1107</span><br><span class="line">127.0.0.1:7005&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>Redis实现高可用，支持三种集群模式：主从模式、哨兵模式以及cluster模式。</p>
+<p>其中cluster模式是最好用的，推荐使用。</p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="vic 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="vic 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>vic
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://geekvic.top/post/d254c291.html" title="如何让Redis支持高可用">http://geekvic.top/post/d254c291.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Redis/" rel="tag"># Redis</a>
+              <a href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/" rel="tag"># 高可用</a>
+              <a href="/tags/cluster/" rel="tag"># cluster</a>
+              <a href="/tags/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/" rel="tag"># 主从复制</a>
+              <a href="/tags/%E5%93%A8%E5%85%B5/" rel="tag"># 哨兵</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/758625c3.html" rel="prev" title="Redis持久化怎么玩">
+      <i class="fa fa-chevron-left"></i> Redis持久化怎么玩
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主从模式"><span class="nav-number">1.</span> <span class="nav-text">主从模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用"><span class="nav-number">1.2.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主从复制的特点"><span class="nav-number">1.3.</span> <span class="nav-text">主从复制的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作机制"><span class="nav-number">1.4.</span> <span class="nav-text">工作机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主从复制搭建"><span class="nav-number">1.5.</span> <span class="nav-text">主从复制搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">1.5.1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">1.5.2.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#master配置"><span class="nav-number">1.5.2.1.</span> <span class="nav-text">master配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#replica配置"><span class="nav-number">1.5.2.2.</span> <span class="nav-text">replica配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试"><span class="nav-number">1.5.3.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主从复制模式配置遇到的坑"><span class="nav-number">1.6.</span> <span class="nav-text">主从复制模式配置遇到的坑</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#哨兵模式"><span class="nav-number">2.</span> <span class="nav-text">哨兵模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">2.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">2.2.</span> <span class="nav-text">原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#哨兵的作用"><span class="nav-number">2.2.1.</span> <span class="nav-text">哨兵的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#故障切换"><span class="nav-number">2.2.2.</span> <span class="nav-text">故障切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关概念"><span class="nav-number">2.2.3.</span> <span class="nav-text">相关概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主观下线"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">主观下线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#客观下线"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">客观下线</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#哨兵环境搭建"><span class="nav-number">2.3.</span> <span class="nav-text">哨兵环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-1"><span class="nav-number">2.3.1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动哨兵进程"><span class="nav-number">2.3.2.</span> <span class="nav-text">启动哨兵进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试验证"><span class="nav-number">2.3.3.</span> <span class="nav-text">测试验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的坑"><span class="nav-number">2.3.4.</span> <span class="nav-text">遇到的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原因：脑裂"><span class="nav-number">2.3.4.1.</span> <span class="nav-text">原因：脑裂</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-number">2.3.4.2.</span> <span class="nav-text">解决方法</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cluster模式"><span class="nav-number">3.</span> <span class="nav-text">cluster模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通信机制"><span class="nav-number">3.2.</span> <span class="nav-text">通信机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gossip协议"><span class="nav-number">3.2.1.</span> <span class="nav-text">gossip协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式寻址算法"><span class="nav-number">3.3.</span> <span class="nav-text">分布式寻址算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高可用与主备切换原理"><span class="nav-number">3.4.</span> <span class="nav-text">高可用与主备切换原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cluster环境搭建"><span class="nav-number">3.5.</span> <span class="nav-text">cluster环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件"><span class="nav-number">3.5.1.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务"><span class="nav-number">3.5.2.</span> <span class="nav-text">启动服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建集群"><span class="nav-number">3.5.3.</span> <span class="nav-text">创建集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群验证"><span class="nav-number">3.5.4.</span> <span class="nav-text">集群验证</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="vic"
+      src="/images/jin.png">
+  <p class="site-author-name" itemprop="name">vic</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/geekvic" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;geekvic" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhangviv@163.com" title="E-Mail → mailto:zhangviv@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.cnblogs.com/TechSnail" title="cnblogs → https:&#x2F;&#x2F;www.cnblogs.com&#x2F;TechSnail" rel="noopener" target="_blank"><i class="fa fa-rocket fa-fw"></i>cnblogs</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">苏ICP备20024282号 </a>
+      <img src="/images/beian.png" style="display: inline-block;"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002003038" rel="noopener" target="_blank">苏公网安备32059002003038号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">vic</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">66k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:01</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'iA7CatKLdJ54cpgGuQDEhqfV-gzGzoHsz',
+      appKey     : 'DwhnCywPeshPgH2O9XBdm2Ii',
+      placeholder: "看了这么多，不想说点什么嘛~",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
