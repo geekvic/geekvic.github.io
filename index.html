@@ -223,7 +223,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-01 10:18:00 / 修改时间：17:36:36" itemprop="dateCreated datePublished" datetime="2020-09-01T10:18:00+08:00">2020-09-01</time>
+              <time title="创建时间：2020-09-01 10:18:00 / 修改时间：17:39:52" itemprop="dateCreated datePublished" datetime="2020-09-01T10:18:00+08:00">2020-09-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1106,7 +1106,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/ced60fca.html">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/c795510d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -1120,7 +1120,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/post/ced60fca.html" class="post-title-link" itemprop="url">基于Prometheus+Grafana+AlertManager的监控系统</a>
+            <a href="/post/c795510d.html" class="post-title-link" itemprop="url">从零搭建基于Prometheus+Grafana+AlertManager的监控报警系统</a>
         </h2>
 
         <div class="post-meta">
@@ -1137,7 +1137,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
+                <time title="修改时间：2020-09-04 11:08:17" itemprop="dateModified" datetime="2020-09-04T11:08:17+08:00">2020-09-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1158,8 +1158,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/post/ced60fca.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/post/ced60fca.html" itemprop="commentCount"></span>
+    <a title="valine" href="/post/c795510d.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/c795510d.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1169,7 +1169,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.1k</span>
+              <span>3.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1188,20 +1188,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="一、Prometheus"><a href="#一、Prometheus" class="headerlink" title="一、Prometheus"></a>一、Prometheus</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><p>Prometheus是一套开源的监控&amp;报警&amp;时间序列数据库的组合，基于应用的metrics来进行监控的开源工具 。</p>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>业务中是否经常遇到服务器负载过高问题，或者经常碰到后台服务挂掉，却没有自动提醒功能，因此搭建一套监控报警系统势在必行。</p>
+<p>Prometheus目前在开源社区相当活跃，在GitHub上拥有两万多Star，是当前最流行的监控系统，相比Zabbix，定制灵活度更高，而且Prometheus在云环境、容器支持这块优势明显。</p>
+</blockquote>
+<h1 id="Prometheus"><a href="#Prometheus" class="headerlink" title="Prometheus"></a>Prometheus</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Prometheus是一套开源的监控&amp;报警&amp;时间序列数据库的组合，基于应用的metrics来进行监控的开源工具。</p>
 <p><img src="https://i.loli.net/2020/04/14/mtwk9IKuJXQDAb4.png" alt="prometheus.png"></p>
-<h3 id="1-2-下载-amp-安装"><a href="#1-2-下载-amp-安装" class="headerlink" title="1.2 下载&amp;安装"></a>1.2 下载&amp;安装</h3><ul>
-<li><p>下载地址：<a href="https://prometheus.io/download/" target="_blank" rel="noopener">https://prometheus.io/download/</a></p>
-</li>
-<li><p>解压：tar zxvf prometheus-2.12.0.linux-amd64.tar.gz</p>
-</li>
-<li><p>编辑： prometheus.yml，其中包括全局、alertmanager、告警规则、监控job配置，具体内容如下。</p>
-</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"># my global config</span><br><span class="line">global:</span><br><span class="line">  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.</span><br><span class="line">  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.</span><br><span class="line">  # scrape_timeout is set to the global default (10s).</span><br><span class="line"></span><br><span class="line"># Alertmanager configuration</span><br><span class="line">alerting:</span><br><span class="line">  alertmanagers:</span><br><span class="line">  - static_configs:</span><br><span class="line">    - targets:</span><br><span class="line">       - 192.168.88.69:9093</span><br><span class="line"></span><br><span class="line"># Load rules once and periodically evaluate them according to the global 'evaluation_interval'.</span><br><span class="line">rule_files:</span><br><span class="line">   - "test_rules.yml"</span><br><span class="line">  # - "second_rules.yml"</span><br><span class="line"></span><br><span class="line"># A scrape configuration containing exactly one endpoint to scrape:</span><br><span class="line"># Here it's Prometheus itself.</span><br><span class="line">scrape_configs:</span><br><span class="line">  # The job name is added as a label `job=<span class="tag">&lt;<span class="name">job_name</span>&gt;</span>` to any timeseries scraped from this config.</span><br><span class="line">  - job_name: 'prometheus'</span><br><span class="line"></span><br><span class="line">    # metrics_path defaults to '/metrics'</span><br><span class="line">    # scheme defaults to 'http'.</span><br><span class="line"></span><br><span class="line">    static_configs:</span><br><span class="line">    - targets: ['192.168.88.69:9090']</span><br><span class="line"></span><br><span class="line">  - job_name: 'monitor'</span><br><span class="line">    scrape_interval: 5s</span><br><span class="line">    metrics_path: '/actuator/prometheus'</span><br><span class="line">    static_configs:</span><br><span class="line">    - targets: ['192.168.88.69:8008']</span><br><span class="line"></span><br><span class="line">  - job_name: 'node-exporter'</span><br><span class="line">    static_configs:</span><br><span class="line">    - targets: ['192.168.88.69:9100']</span><br></pre></td></tr></table></figure>
+<h2 id="下载-amp-安装"><a href="#下载-amp-安装" class="headerlink" title="下载&amp;安装"></a>下载&amp;安装</h2>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/post/ced60fca.html#more" rel="contents">
+              <a class="btn" href="/post/c795510d.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

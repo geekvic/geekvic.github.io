@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekvic.top/"/>
-  <updated>2020-09-01T09:36:36.000Z</updated>
+  <updated>2020-09-01T09:39:52.747Z</updated>
   <id>http://geekvic.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://geekvic.top/post/d254c291.html"/>
     <id>http://geekvic.top/post/d254c291.html</id>
     <published>2020-09-01T02:18:00.000Z</published>
-    <updated>2020-09-01T09:36:36.000Z</updated>
+    <updated>2020-09-01T09:39:52.747Z</updated>
     
     <summary type="html">
     
@@ -347,25 +347,21 @@
   </entry>
   
   <entry>
-    <title>基于Prometheus+Grafana+AlertManager的监控系统</title>
-    <link href="http://geekvic.top/post/ced60fca.html"/>
-    <id>http://geekvic.top/post/ced60fca.html</id>
+    <title>从零搭建基于Prometheus+Grafana+AlertManager的监控报警系统</title>
+    <link href="http://geekvic.top/post/c795510d.html"/>
+    <id>http://geekvic.top/post/c795510d.html</id>
     <published>2019-12-10T08:42:00.000Z</published>
-    <updated>2020-05-22T06:12:48.250Z</updated>
+    <updated>2020-09-04T03:08:17.000Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;一、Prometheus&quot;&gt;&lt;a href=&quot;#一、Prometheus&quot; class=&quot;headerlink&quot; title=&quot;一、Prometheus&quot;&gt;&lt;/a&gt;一、Prometheus&lt;/h2&gt;&lt;h3 id=&quot;1-1-简介&quot;&gt;&lt;a href=&quot;#1-1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.1 简介&quot;&gt;&lt;/a&gt;1.1 简介&lt;/h3&gt;&lt;p&gt;Prometheus是一套开源的监控&amp;amp;报警&amp;amp;时间序列数据库的组合，基于应用的metrics来进行监控的开源工具 。&lt;/p&gt;
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;业务中是否经常遇到服务器负载过高问题，或者经常碰到后台服务挂掉，却没有自动提醒功能，因此搭建一套监控报警系统势在必行。&lt;/p&gt;
+&lt;p&gt;Prometheus目前在开源社区相当活跃，在GitHub上拥有两万多Star，是当前最流行的监控系统，相比Zabbix，定制灵活度更高，而且Prometheus在云环境、容器支持这块优势明显。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Prometheus&quot;&gt;&lt;a href=&quot;#Prometheus&quot; class=&quot;headerlink&quot; title=&quot;Prometheus&quot;&gt;&lt;/a&gt;Prometheus&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;Prometheus是一套开源的监控&amp;amp;报警&amp;amp;时间序列数据库的组合，基于应用的metrics来进行监控的开源工具。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/04/14/mtwk9IKuJXQDAb4.png&quot; alt=&quot;prometheus.png&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;1-2-下载-amp-安装&quot;&gt;&lt;a href=&quot;#1-2-下载-amp-安装&quot; class=&quot;headerlink&quot; title=&quot;1.2 下载&amp;amp;安装&quot;&gt;&lt;/a&gt;1.2 下载&amp;amp;安装&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;下载地址：&lt;a href=&quot;https://prometheus.io/download/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://prometheus.io/download/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;解压：tar zxvf prometheus-2.12.0.linux-amd64.tar.gz&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;编辑： prometheus.yml，其中包括全局、alertmanager、告警规则、监控job配置，具体内容如下。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# my global config&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;global:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  # scrape_timeout is set to the global default (10s).&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Alertmanager configuration&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;alerting:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  alertmanagers:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  - static_configs:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - targets:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       - 192.168.88.69:9093&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Load rules once and periodically evaluate them according to the global &#39;evaluation_interval&#39;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rule_files:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   - &quot;test_rules.yml&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  # - &quot;second_rules.yml&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# A scrape configuration containing exactly one endpoint to scrape:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Here it&#39;s Prometheus itself.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;scrape_configs:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  # The job name is added as a label `job=&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;job_name&lt;/span&gt;&amp;gt;&lt;/span&gt;` to any timeseries scraped from this config.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  - job_name: &#39;prometheus&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # metrics_path defaults to &#39;/metrics&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    # scheme defaults to &#39;http&#39;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    static_configs:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - targets: [&#39;192.168.88.69:9090&#39;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  - job_name: &#39;monitor&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    scrape_interval: 5s&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    metrics_path: &#39;/actuator/prometheus&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    static_configs:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - targets: [&#39;192.168.88.69:8008&#39;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  - job_name: &#39;node-exporter&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    static_configs:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - targets: [&#39;192.168.88.69:9100&#39;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;下载-amp-安装&quot;&gt;&lt;a href=&quot;#下载-amp-安装&quot; class=&quot;headerlink&quot; title=&quot;下载&amp;amp;安装&quot;&gt;&lt;/a&gt;下载&amp;amp;安装&lt;/h2&gt;
     
     </summary>
     
