@@ -1137,7 +1137,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-04 11:08:17" itemprop="dateModified" datetime="2020-09-04T11:08:17+08:00">2020-09-04</time>
+                <time title="修改时间：2020-09-04 11:12:23" itemprop="dateModified" datetime="2020-09-04T11:12:23+08:00">2020-09-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1221,7 +1221,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/41ab3baa.html">
+    <link itemprop="mainEntityOfPage" href="http://geekvic.top/post/5c1c8f0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jin.png">
@@ -1235,7 +1235,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/post/41ab3baa.html" class="post-title-link" itemprop="url">日志收集系统ELK搭建</a>
+            <a href="/post/5c1c8f0.html" class="post-title-link" itemprop="url">手把手教你如何搭建ELK日志收集系统</a>
         </h2>
 
         <div class="post-meta">
@@ -1252,7 +1252,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-22 14:12:48" itemprop="dateModified" datetime="2020-05-22T14:12:48+08:00">2020-05-22</time>
+                <time title="修改时间：2020-09-07 15:58:02" itemprop="dateModified" datetime="2020-09-07T15:58:02+08:00">2020-09-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1273,8 +1273,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/post/41ab3baa.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/post/41ab3baa.html" itemprop="commentCount"></span>
+    <a title="valine" href="/post/5c1c8f0.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/5c1c8f0.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1284,14 +1284,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.9k</span>
+              <span>3.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -1303,15 +1303,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="一、ELK简介"><a href="#一、ELK简介" class="headerlink" title="一、ELK简介"></a>一、ELK简介</h2><p>&nbsp; &nbsp; 在传统项目中，如果在生产环境中，有多台不同的服务器集群，如果生产环境需要通过日志定位项目的Bug的话，需要在每台节点上使用传统的命令方式查询，这样效率非常低下。因此我们需要集中化的管理日志，ELK则应运而生。ELK=ElasticSeach+Logstash+Kibana，日志收集原理如下所示。</p>
-<p>1、每台服务器集群节点安装Logstash日志收集系统插件</p>
-<p>2、每台服务器节点将日志输入到Logstash中</p>
-<p>3、Logstash将该日志格式化为json格式，根据每天创建不同的索引，输出到ElasticSearch中</p>
-<p>4、浏览器使用安装Kibana查询日志信息&nbsp;</p>
-<p><img src="https://i.loli.net/2020/04/15/JMNZRE4ovp8XgDc.png" alt="ELK.png"></p>
+          <h1 id="ELK简介"><a href="#ELK简介" class="headerlink" title="ELK简介"></a>ELK简介</h1><blockquote>
+<p>你还在为线上排查日志找不到节点服务器而犯愁吗？今天手把手教大家如何搭建一套日志收集系统，用来代替传统的人工登录服务器查看后台服务日志的方式。</p>
+</blockquote>
+<p>在传统项目中，如果在生产环境中，有多台不同的服务器集群，如果生产环境需要通过日志定位项目的Bug的话，需要在每台节点上使用传统的命令方式查询，这样效率非常低下。<br>因此我们需要集中化的管理日志，ELK则应运而生。ELK=ElasticSeach+Logstash+Kibana，日志收集原理如下所示。</p>
+<ol>
+<li><p>每台服务器集群节点安装Logstash日志收集系统插件</p>
+</li>
+<li><p>每台服务器节点将日志输入到Logstash中</p>
+</li>
+<li><p>Logstash将该日志格式化为json格式，根据每天创建不同的索引，输出到ElasticSearch中</p>
+</li>
+<li><p>浏览器使用安装Kibana查询日志信息&nbsp;</p>
+</li>
+</ol>
+<p><img src="https://i.loli.net/2020/09/07/KrXT6CMZ9Y5gIy3.png" alt="elk-.png"></p>
+<h1 id="Elastic-Search"><a href="#Elastic-Search" class="headerlink" title="Elastic Search"></a>Elastic Search</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/post/41ab3baa.html#more" rel="contents">
+              <a class="btn" href="/post/5c1c8f0.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1600,12 +1610,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">66k</span>
+    <span title="站点总字数">65k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:01</span>
+    <span title="站点阅读时长">59 分钟</span>
 </div>
 
         

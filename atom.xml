@@ -351,7 +351,7 @@
     <link href="http://geekvic.top/post/c795510d.html"/>
     <id>http://geekvic.top/post/c795510d.html</id>
     <published>2019-12-10T08:42:00.000Z</published>
-    <updated>2020-09-04T03:08:17.000Z</updated>
+    <updated>2020-09-04T03:12:23.406Z</updated>
     
     <summary type="html">
     
@@ -378,20 +378,30 @@
   </entry>
   
   <entry>
-    <title>日志收集系统ELK搭建</title>
-    <link href="http://geekvic.top/post/41ab3baa.html"/>
-    <id>http://geekvic.top/post/41ab3baa.html</id>
+    <title>手把手教你如何搭建ELK日志收集系统</title>
+    <link href="http://geekvic.top/post/5c1c8f0.html"/>
+    <id>http://geekvic.top/post/5c1c8f0.html</id>
     <published>2019-11-27T06:46:00.000Z</published>
-    <updated>2020-05-22T06:12:48.251Z</updated>
+    <updated>2020-09-07T07:58:02.000Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;一、ELK简介&quot;&gt;&lt;a href=&quot;#一、ELK简介&quot; class=&quot;headerlink&quot; title=&quot;一、ELK简介&quot;&gt;&lt;/a&gt;一、ELK简介&lt;/h2&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; 在传统项目中，如果在生产环境中，有多台不同的服务器集群，如果生产环境需要通过日志定位项目的Bug的话，需要在每台节点上使用传统的命令方式查询，这样效率非常低下。因此我们需要集中化的管理日志，ELK则应运而生。ELK=ElasticSeach+Logstash+Kibana，日志收集原理如下所示。&lt;/p&gt;
-&lt;p&gt;1、每台服务器集群节点安装Logstash日志收集系统插件&lt;/p&gt;
-&lt;p&gt;2、每台服务器节点将日志输入到Logstash中&lt;/p&gt;
-&lt;p&gt;3、Logstash将该日志格式化为json格式，根据每天创建不同的索引，输出到ElasticSearch中&lt;/p&gt;
-&lt;p&gt;4、浏览器使用安装Kibana查询日志信息&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/04/15/JMNZRE4ovp8XgDc.png&quot; alt=&quot;ELK.png&quot;&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;ELK简介&quot;&gt;&lt;a href=&quot;#ELK简介&quot; class=&quot;headerlink&quot; title=&quot;ELK简介&quot;&gt;&lt;/a&gt;ELK简介&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;你还在为线上排查日志找不到节点服务器而犯愁吗？今天手把手教大家如何搭建一套日志收集系统，用来代替传统的人工登录服务器查看后台服务日志的方式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在传统项目中，如果在生产环境中，有多台不同的服务器集群，如果生产环境需要通过日志定位项目的Bug的话，需要在每台节点上使用传统的命令方式查询，这样效率非常低下。&lt;br&gt;因此我们需要集中化的管理日志，ELK则应运而生。ELK=ElasticSeach+Logstash+Kibana，日志收集原理如下所示。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;每台服务器集群节点安装Logstash日志收集系统插件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;每台服务器节点将日志输入到Logstash中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Logstash将该日志格式化为json格式，根据每天创建不同的索引，输出到ElasticSearch中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;浏览器使用安装Kibana查询日志信息&amp;nbsp;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/09/07/KrXT6CMZ9Y5gIy3.png&quot; alt=&quot;elk-.png&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Elastic-Search&quot;&gt;&lt;a href=&quot;#Elastic-Search&quot; class=&quot;headerlink&quot; title=&quot;Elastic Search&quot;&gt;&lt;/a&gt;Elastic Search&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;
     
     </summary>
     
