@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekvic.top/"/>
-  <updated>2017-09-29T06:39:01.000Z</updated>
+  <updated>2020-09-01T09:39:52.000Z</updated>
   <id>http://geekvic.top/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://geekvic.top/post/d87f7e0c.html"/>
-    <id>http://geekvic.top/post/d87f7e0c.html</id>
-    <published>2020-11-13T09:09:05.718Z</published>
-    <updated>2017-09-29T06:39:01.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Spring-Boot-集成-MyBatis-分页插件-PageHelper-通用-Mapper&quot;&gt;&lt;a href=&quot;#Spring-Boot-集成-MyBatis-分页插件-PageHelper-通用-Mapper&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot 集成 MyBatis, 分页插件 PageHelper, 通用 Mapper&quot;&gt;&lt;/a&gt;Spring Boot 集成 MyBatis, 分页插件 PageHelper, 通用 Mapper&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/spring-projects/spring-boot&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Spring Boot 1.5.1.RELEASE&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/mybatis/spring-boot-starter&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;mybatis-spring-boot-starter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/abel533/mapper-boot-starter&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;mapper-spring-boot-starter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/pagehelper/pagehelper-spring-boot&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;pagehelper-spring-boot-starter&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;新书《MyBatis-从入门到精通》&quot;&gt;&lt;a href=&quot;#新书《MyBatis-从入门到精通》&quot; class=&quot;headerlink&quot; title=&quot;新书《MyBatis 从入门到精通》&quot;&gt;&lt;/a&gt;新书《MyBatis 从入门到精通》&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://github.com/mybatis-book/book/raw/master/book.png&quot; alt=&quot;MyBatis 从入门到精通&quot;&gt;&lt;/p&gt;
-&lt;p&gt;预售地址：&lt;a href=&quot;https://item.jd.com/12103309.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;京东&lt;/a&gt;，&lt;a href=&quot;http://product.dangdang.com/25098208.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;当当&lt;/a&gt;，&lt;a href=&quot;https://www.amazon.cn/MyBatis从入门到精通-刘增辉/dp/B072RC11DM/ref=sr_1_18?ie=UTF8&amp;qid=1498007125&amp;sr=8-18&amp;keywords=mybatis&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;亚马逊&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;CSDN博客：&lt;a href=&quot;http://blog.csdn.net/isea533/article/details/73555400&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://blog.csdn.net/isea533/article/details/73555400&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;GitHub项目：&lt;a href=&quot;https://github.com/mybatis-book/book&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/mybatis-book/book&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>如何让Redis支持高可用</title>
@@ -756,6 +730,31 @@
           &lt;h3 id=&quot;1-内存消耗太大&quot;&gt;&lt;a href=&quot;#1-内存消耗太大&quot; class=&quot;headerlink&quot;
         
       
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="http://geekvic.top/categories/Git/"/>
+    
+    
+      <category term="GitLab" scheme="http://geekvic.top/tags/GitLab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitLab服务器迁移</title>
+    <link href="http://geekvic.top/post/6b0e3bbc.html"/>
+    <id>http://geekvic.top/post/6b0e3bbc.html</id>
+    <published>2018-01-06T01:58:00.000Z</published>
+    <updated>2020-05-22T06:12:48.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、背景&quot;&gt;&lt;a href=&quot;#一、背景&quot; class=&quot;headerlink&quot; title=&quot;一、背景&quot;&gt;&lt;/a&gt;一、背景&lt;/h3&gt;&lt;p&gt;由于GitLab内存消耗很大，已经影响到A服务器上的其他服务，同时考虑到代码管理服务应该单独部署在一台服务器上，因此决定从服务器A迁移到服务器B上。两台服务器均是CentOS 7，gitlab版本是gitlab-ce-9.5.6-ce.0.el7.x86_64.rpm 。注意：高版本的Gitlab无法恢复低版本备份的数据,需要注意在B服务器部署和A服务器一样版本的gitlab,部署好环境后开始备份和数据迁移。&lt;/p&gt;
+&lt;h3 id=&quot;二、备份&quot;&gt;&lt;a href=&quot;#二、备份&quot; class=&quot;headerlink&quot; title=&quot;二、备份&quot;&gt;&lt;/a&gt;二、备份&lt;/h3&gt;&lt;p&gt;备份A服务器上的gitlab数据，执行命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;gitlab-rake gitlab:backup:create RAILS_ENV=production&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;PS: 备份后的文件一般是位于/var/opt/gitlab/backups下。&lt;/p&gt;
+&lt;h3 id=&quot;三、拷贝&quot;&gt;&lt;a href=&quot;#三、拷贝&quot; class=&quot;headerlink&quot; title=&quot;三、拷贝&quot;&gt;&lt;/a&gt;三、拷贝&lt;/h3&gt;
     
     </summary>
     
