@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekvic.top/"/>
-  <updated>2020-09-07T08:16:19.000Z</updated>
+  <updated>2017-09-29T06:39:01.000Z</updated>
   <id>http://geekvic.top/</id>
   
   <author>
@@ -17,23 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>模板</title>
-    <link href="http://geekvic.top/post/f6010553.html"/>
-    <id>http://geekvic.top/post/f6010553.html</id>
-    <published>2020-11-13T09:02:54.866Z</published>
-    <updated>2020-09-07T08:16:19.000Z</updated>
+    <title>test</title>
+    <link href="http://geekvic.top/post/d87f7e0c.html"/>
+    <id>http://geekvic.top/post/d87f7e0c.html</id>
+    <published>2020-11-13T09:09:05.718Z</published>
+    <updated>2017-09-29T06:39:01.000Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;如果觉得文章有用或写得好，还请在左边点个赞哦！&lt;/p&gt;
-&lt;p&gt;本文已收录到个人博客：&lt;a href=&quot;http://geekvic.top&quot;&gt;http://geekvic.top&lt;/a&gt;
-        
-      
+      &lt;h1 id=&quot;Spring-Boot-集成-MyBatis-分页插件-PageHelper-通用-Mapper&quot;&gt;&lt;a href=&quot;#Spring-Boot-集成-MyBatis-分页插件-PageHelper-通用-Mapper&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot 集成 MyBatis, 分页插件 PageHelper, 通用 Mapper&quot;&gt;&lt;/a&gt;Spring Boot 集成 MyBatis, 分页插件 PageHelper, 通用 Mapper&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/spring-projects/spring-boot&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Spring Boot 1.5.1.RELEASE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mybatis/spring-boot-starter&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;mybatis-spring-boot-starter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/abel533/mapper-boot-starter&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;mapper-spring-boot-starter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pagehelper/pagehelper-spring-boot&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;pagehelper-spring-boot-starter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;新书《MyBatis-从入门到精通》&quot;&gt;&lt;a href=&quot;#新书《MyBatis-从入门到精通》&quot; class=&quot;headerlink&quot; title=&quot;新书《MyBatis 从入门到精通》&quot;&gt;&lt;/a&gt;新书《MyBatis 从入门到精通》&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://github.com/mybatis-book/book/raw/master/book.png&quot; alt=&quot;MyBatis 从入门到精通&quot;&gt;&lt;/p&gt;
+&lt;p&gt;预售地址：&lt;a href=&quot;https://item.jd.com/12103309.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;京东&lt;/a&gt;，&lt;a href=&quot;http://product.dangdang.com/25098208.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;当当&lt;/a&gt;，&lt;a href=&quot;https://www.amazon.cn/MyBatis从入门到精通-刘增辉/dp/B072RC11DM/ref=sr_1_18?ie=UTF8&amp;qid=1498007125&amp;sr=8-18&amp;keywords=mybatis&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;亚马逊&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CSDN博客：&lt;a href=&quot;http://blog.csdn.net/isea533/article/details/73555400&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://blog.csdn.net/isea533/article/details/73555400&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub项目：&lt;a href=&quot;https://github.com/mybatis-book/book&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/mybatis-book/book&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
