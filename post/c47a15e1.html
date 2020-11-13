@@ -28,7 +28,7 @@
 <meta property="og:description" content="1.内存消耗太大　　（1）公司使用gitlab后，发现服务器内存居高不下，使用top命令查看内存消耗，发现服务器上git将近消耗一半内存资源。而且很奇怪的是竟然开启了32个进程。后经查资料，原来这跟gitlab的默认机制有关。在配置文件&#x2F;etc&#x2F;gitlab&#x2F;gitlab.rb里，unicorn[‘worker_processes’] &#x3D; 2，默认是被注释掉的，这就解释了为什么会开启32个进程，因">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-01-06T11:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-22T06:12:48.239Z">
+<meta property="article:modified_time" content="2020-05-22T06:12:48.000Z">
 <meta property="article:author" content="vic">
 <meta property="article:tag" content="GitLab">
 <meta name="twitter:card" content="summary">
