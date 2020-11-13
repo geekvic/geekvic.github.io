@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekvic.top/"/>
-  <updated>2020-09-01T09:39:52.000Z</updated>
+  <updated>2020-09-07T08:16:19.000Z</updated>
   <id>http://geekvic.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>模板</title>
+    <link href="http://geekvic.top/post/f6010553.html"/>
+    <id>http://geekvic.top/post/f6010553.html</id>
+    <published>2020-11-13T09:02:54.866Z</published>
+    <updated>2020-09-07T08:16:19.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;如果觉得文章有用或写得好，还请在左边点个赞哦！&lt;/p&gt;
+&lt;p&gt;本文已收录到个人博客：&lt;a href=&quot;http://geekvic.top&quot;&gt;http://geekvic.top&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>如何让Redis支持高可用</title>
@@ -730,31 +755,6 @@
           &lt;h3 id=&quot;1-内存消耗太大&quot;&gt;&lt;a href=&quot;#1-内存消耗太大&quot; class=&quot;headerlink&quot;
         
       
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="http://geekvic.top/categories/Git/"/>
-    
-    
-      <category term="GitLab" scheme="http://geekvic.top/tags/GitLab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitLab服务器迁移</title>
-    <link href="http://geekvic.top/post/6b0e3bbc.html"/>
-    <id>http://geekvic.top/post/6b0e3bbc.html</id>
-    <published>2018-01-06T01:58:00.000Z</published>
-    <updated>2020-05-22T06:12:48.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;一、背景&quot;&gt;&lt;a href=&quot;#一、背景&quot; class=&quot;headerlink&quot; title=&quot;一、背景&quot;&gt;&lt;/a&gt;一、背景&lt;/h3&gt;&lt;p&gt;由于GitLab内存消耗很大，已经影响到A服务器上的其他服务，同时考虑到代码管理服务应该单独部署在一台服务器上，因此决定从服务器A迁移到服务器B上。两台服务器均是CentOS 7，gitlab版本是gitlab-ce-9.5.6-ce.0.el7.x86_64.rpm 。注意：高版本的Gitlab无法恢复低版本备份的数据,需要注意在B服务器部署和A服务器一样版本的gitlab,部署好环境后开始备份和数据迁移。&lt;/p&gt;
-&lt;h3 id=&quot;二、备份&quot;&gt;&lt;a href=&quot;#二、备份&quot; class=&quot;headerlink&quot; title=&quot;二、备份&quot;&gt;&lt;/a&gt;二、备份&lt;/h3&gt;&lt;p&gt;备份A服务器上的gitlab数据，执行命令：&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;gitlab-rake gitlab:backup:create RAILS_ENV=production&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;PS: 备份后的文件一般是位于/var/opt/gitlab/backups下。&lt;/p&gt;
-&lt;h3 id=&quot;三、拷贝&quot;&gt;&lt;a href=&quot;#三、拷贝&quot; class=&quot;headerlink&quot; title=&quot;三、拷贝&quot;&gt;&lt;/a&gt;三、拷贝&lt;/h3&gt;
     
     </summary>
     
