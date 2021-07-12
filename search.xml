@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Apollo环境配置</title>
-    <url>/post/92932283.html</url>
-    <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>&nbsp; &nbsp; Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。</p>
-<h2 id="二、配置环境路径"><a href="#二、配置环境路径" class="headerlink" title="二、配置环境路径"></a>二、配置环境路径</h2><table>
-<thead>
-<tr>
-<th>操作系统</th>
-<th>server.properties</th>
-<th>hosts</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>windows</td>
-<td>C:\opt\settings\server.properties</td>
-<td>C:\Windows\System32\drivers\etc\hosts</td>
-</tr>
-<tr>
-<td>linux</td>
-<td>/opt/settings/server.properties</td>
-<td>/etc/hosts</td>
-</tr>
-</tbody></table>
-<h2 id="三、具体配置"><a href="#三、具体配置" class="headerlink" title="三、具体配置"></a>三、具体配置</h2><h4 id="3-1-nbsp-server-properties"><a href="#3-1-nbsp-server-properties" class="headerlink" title="3.1&nbsp;server.properties"></a>3.1&nbsp;server.properties</h4><p>env=DEV</p>
-<p>目前，env持以下几个值（大小写不敏感）：</p>
-<p>&nbsp; ● DEV</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Development environment</p>
-<p>&nbsp; ● FAT</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Feature Acceptance Test environment</p>
-<p>&nbsp; ● UAT</p>
-<p>&nbsp; &nbsp; &nbsp; ○ User Acceptance Test environment</p>
-<p>&nbsp; ● PRO</p>
-<p>&nbsp; &nbsp; &nbsp; ○ Production environment</p>
-<h4 id="3-2-hosts"><a href="#3-2-hosts" class="headerlink" title="3.2 hosts"></a>3.2 hosts</h4><p>192.168.1.153 dev.config.ynt.ai</p>
-<p>192.168.1.163 fat.config.ynt.ai</p>
-<p>192.168.1.173 uat.config.ynt.ai</p>
-<p>192.168.1.172 pro.config.ynt.ai</p>
-]]></content>
-      <categories>
-        <category>配置管理</category>
-      </categories>
-      <tags>
-        <tag>Apollo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker中安装mysql</title>
     <url>/post/6774ee31.html</url>
     <content><![CDATA[<h4 id="1-docker-中下载-mysql"><a href="#1-docker-中下载-mysql" class="headerlink" title="1.docker 中下载 mysql"></a>1.docker 中下载 mysql</h4><div class="cnblogs_code">
@@ -161,6 +116,51 @@ systemctl enable docker</span></pre>
       </tags>
   </entry>
   <entry>
+    <title>Apollo环境配置</title>
+    <url>/post/92932283.html</url>
+    <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>&nbsp; &nbsp; Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。</p>
+<h2 id="二、配置环境路径"><a href="#二、配置环境路径" class="headerlink" title="二、配置环境路径"></a>二、配置环境路径</h2><table>
+<thead>
+<tr>
+<th>操作系统</th>
+<th>server.properties</th>
+<th>hosts</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>windows</td>
+<td>C:\opt\settings\server.properties</td>
+<td>C:\Windows\System32\drivers\etc\hosts</td>
+</tr>
+<tr>
+<td>linux</td>
+<td>/opt/settings/server.properties</td>
+<td>/etc/hosts</td>
+</tr>
+</tbody></table>
+<h2 id="三、具体配置"><a href="#三、具体配置" class="headerlink" title="三、具体配置"></a>三、具体配置</h2><h4 id="3-1-nbsp-server-properties"><a href="#3-1-nbsp-server-properties" class="headerlink" title="3.1&nbsp;server.properties"></a>3.1&nbsp;server.properties</h4><p>env=DEV</p>
+<p>目前，env持以下几个值（大小写不敏感）：</p>
+<p>&nbsp; ● DEV</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Development environment</p>
+<p>&nbsp; ● FAT</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Feature Acceptance Test environment</p>
+<p>&nbsp; ● UAT</p>
+<p>&nbsp; &nbsp; &nbsp; ○ User Acceptance Test environment</p>
+<p>&nbsp; ● PRO</p>
+<p>&nbsp; &nbsp; &nbsp; ○ Production environment</p>
+<h4 id="3-2-hosts"><a href="#3-2-hosts" class="headerlink" title="3.2 hosts"></a>3.2 hosts</h4><p>192.168.1.153 dev.config.ynt.ai</p>
+<p>192.168.1.163 fat.config.ynt.ai</p>
+<p>192.168.1.173 uat.config.ynt.ai</p>
+<p>192.168.1.172 pro.config.ynt.ai</p>
+]]></content>
+      <categories>
+        <category>配置管理</category>
+      </categories>
+      <tags>
+        <tag>Apollo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Dubbo版本升级</title>
     <url>/post/1d29e395.html</url>
     <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>早期内部使用的是当当网fork的Dubbox，由于现在Dubbo又开始重新维护，而且阿里将其捐献给了Apache，并成为了Apache的顶级项目。因此dubbo版本升级到2.7.1势在必行。</p>
@@ -261,42 +261,17 @@ systemctl enable docker</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>GitLab服务器迁移</title>
-    <url>/post/6b0e3bbc.html</url>
-    <content><![CDATA[<h3 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h3><p>由于GitLab内存消耗很大，已经影响到A服务器上的其他服务，同时考虑到代码管理服务应该单独部署在一台服务器上，因此决定从服务器A迁移到服务器B上。两台服务器均是CentOS 7，gitlab版本是gitlab-ce-9.5.6-ce.0.el7.x86_64.rpm 。注意：高版本的Gitlab无法恢复低版本备份的数据,需要注意在B服务器部署和A服务器一样版本的gitlab,部署好环境后开始备份和数据迁移。</p>
-<h3 id="二、备份"><a href="#二、备份" class="headerlink" title="二、备份"></a>二、备份</h3><p>备份A服务器上的gitlab数据，执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:create RAILS_ENV=production</span><br></pre></td></tr></table></figure>
-<p>PS: 备份后的文件一般是位于/var/opt/gitlab/backups下。</p>
-<h3 id="三、拷贝"><a href="#三、拷贝" class="headerlink" title="三、拷贝"></a>三、拷贝</h3><p>从A服务上拷贝gitlab数据到B服务器上，执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp root@A_ip:/var/opt/gitlab/backups/1515132280_2018_01_05_9.5.6_gitlab_backup.tar /var/opt/gitlab/backups</span><br></pre></td></tr></table></figure>
+    <title>Java项目main方法启动的两种方式</title>
+    <url>/post/60af2b16.html</url>
+    <content><![CDATA[<h4 id="1-打包时指定了主类，可以直接用java-jar-xxx-jar"><a href="#1-打包时指定了主类，可以直接用java-jar-xxx-jar" class="headerlink" title="1.打包时指定了主类，可以直接用java -jar xxx.jar"></a>1.打包时指定了主类，可以直接用java -jar xxx.jar</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--main方法打包jar包插件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-assembly-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appendAssemblyId</span>&gt;</span>false<span class="tag">&lt;/<span class="name">appendAssemblyId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">descriptorRefs</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">descriptorRef</span>&gt;</span>jar-with-dependencies<span class="tag">&lt;/<span class="name">descriptorRef</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">descriptorRefs</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">archive</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">manifest</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>com.TestApplication<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">archive</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>make-assembly<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">phase</span>&gt;</span>package<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>assembly<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>其中A_ip是A服务器IP地址。</p>
-<h3 id="四、还原"><a href="#四、还原" class="headerlink" title="四、还原"></a>四、还原</h3><p>在B服务器的/var/opt/gitlab/backups的目录下还原gitlab数据，执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:restore RAILS_ENV=production BACKUP=1515132280_2018_01_05_9.5.6</span><br></pre></td></tr></table></figure>
-<p>PS：BACKUP的参数必须与原服务器备份后的文件名一致。</p>
-<h3 id="五、问题"><a href="#五、问题" class="headerlink" title="五、问题"></a>五、问题</h3><p>还原过程中报错，报错：无法 open:<br>权限不够，估计是拷贝过来的还原文件权限不够，执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 644 1515132280_2018_01_05_9.5.6_gitlab_backup.tar</span><br></pre></td></tr></table></figure>
-<p>再次执行还原命令即可成功。</p>
+<h4 id="2-打包时没有指定主类，可以用java-cp-xxx-jar-主类名称（绝对路径）"><a href="#2-打包时没有指定主类，可以用java-cp-xxx-jar-主类名称（绝对路径）" class="headerlink" title="2.打包时没有指定主类，可以用java -cp xxx.jar 主类名称（绝对路径）"></a>2.打包时没有指定主类，可以用java -cp xxx.jar 主类名称（绝对路径）</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -cp xxx.jar com.TestApplication</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Git</category>
+        <category>Java基础</category>
       </categories>
       <tags>
-        <tag>GitLab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitLab问题小结</title>
-    <url>/post/c47a15e1.html</url>
-    <content><![CDATA[<h3 id="1-内存消耗太大"><a href="#1-内存消耗太大" class="headerlink" title="1.内存消耗太大"></a>1.内存消耗太大</h3><p>　　（1）公司使用gitlab后，发现服务器内存居高不下，使用top命令查看内存消耗，发现服务器上git将近消耗一半内存资源。而且很奇怪的是竟然开启了32个进程。后经查资料，原来这跟gitlab的默认机制有关。在配置文件/etc/gitlab/gitlab.rb里，unicorn[‘worker_processes’] = 2，默认是被注释掉的，这就解释了为什么会开启32个进程，因为cpu有32核，如果服务器只用于GitLab的话，官方建议是CPU核心数加一，可以提高服务器的响应速度。不过如果内存只有4G，或者服务器同时承载其他服务，就不要改了，以免内存不足。另外，这个参数最小值是2，设为1，服务器可能会卡死。</p>
-<p>　　（2）解决方案：根据服务器使用情况，给unicorn[‘worker_processes’]设置一个合适的值，可解决内存占用过大问题。</p>
-<h3 id="2-时间不一致"><a href="#2-时间不一致" class="headerlink" title="2.时间不一致"></a>2.时间不一致</h3><p>　　gitlab的web页面上activity里显示的时间相差8小时，很有可能是时区设置问题，设置时区为：gitlab_rails[‘time_zone’] = ‘Asia/Shanghai’，还有种可能是服务器本身的时间有问题，服务器服务时间修改注意事项：写入clock -w &nbsp;,强制将时间写入COMS！这样重启后不会失效。&nbsp;</p>
-]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>GitLab</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -410,17 +385,42 @@ systemctl enable docker</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>Java项目main方法启动的两种方式</title>
-    <url>/post/60af2b16.html</url>
-    <content><![CDATA[<h4 id="1-打包时指定了主类，可以直接用java-jar-xxx-jar"><a href="#1-打包时指定了主类，可以直接用java-jar-xxx-jar" class="headerlink" title="1.打包时指定了主类，可以直接用java -jar xxx.jar"></a>1.打包时指定了主类，可以直接用java -jar xxx.jar</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--main方法打包jar包插件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-assembly-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appendAssemblyId</span>&gt;</span>false<span class="tag">&lt;/<span class="name">appendAssemblyId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">descriptorRefs</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">descriptorRef</span>&gt;</span>jar-with-dependencies<span class="tag">&lt;/<span class="name">descriptorRef</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">descriptorRefs</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">archive</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">manifest</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>com.TestApplication<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">archive</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>make-assembly<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">phase</span>&gt;</span>package<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>assembly<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="2-打包时没有指定主类，可以用java-cp-xxx-jar-主类名称（绝对路径）"><a href="#2-打包时没有指定主类，可以用java-cp-xxx-jar-主类名称（绝对路径）" class="headerlink" title="2.打包时没有指定主类，可以用java -cp xxx.jar 主类名称（绝对路径）"></a>2.打包时没有指定主类，可以用java -cp xxx.jar 主类名称（绝对路径）</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -cp xxx.jar com.TestApplication</span><br></pre></td></tr></table></figure>
+    <title>GitLab问题小结</title>
+    <url>/post/c47a15e1.html</url>
+    <content><![CDATA[<h3 id="1-内存消耗太大"><a href="#1-内存消耗太大" class="headerlink" title="1.内存消耗太大"></a>1.内存消耗太大</h3><p>　　（1）公司使用gitlab后，发现服务器内存居高不下，使用top命令查看内存消耗，发现服务器上git将近消耗一半内存资源。而且很奇怪的是竟然开启了32个进程。后经查资料，原来这跟gitlab的默认机制有关。在配置文件/etc/gitlab/gitlab.rb里，unicorn[‘worker_processes’] = 2，默认是被注释掉的，这就解释了为什么会开启32个进程，因为cpu有32核，如果服务器只用于GitLab的话，官方建议是CPU核心数加一，可以提高服务器的响应速度。不过如果内存只有4G，或者服务器同时承载其他服务，就不要改了，以免内存不足。另外，这个参数最小值是2，设为1，服务器可能会卡死。</p>
+<p>　　（2）解决方案：根据服务器使用情况，给unicorn[‘worker_processes’]设置一个合适的值，可解决内存占用过大问题。</p>
+<h3 id="2-时间不一致"><a href="#2-时间不一致" class="headerlink" title="2.时间不一致"></a>2.时间不一致</h3><p>　　gitlab的web页面上activity里显示的时间相差8小时，很有可能是时区设置问题，设置时区为：gitlab_rails[‘time_zone’] = ‘Asia/Shanghai’，还有种可能是服务器本身的时间有问题，服务器服务时间修改注意事项：写入clock -w &nbsp;,强制将时间写入COMS！这样重启后不会失效。&nbsp;</p>
 ]]></content>
       <categories>
-        <category>Java基础</category>
+        <category>Git</category>
       </categories>
       <tags>
-        <tag>Java</tag>
+        <tag>GitLab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitLab服务器迁移</title>
+    <url>/post/6b0e3bbc.html</url>
+    <content><![CDATA[<h3 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h3><p>由于GitLab内存消耗很大，已经影响到A服务器上的其他服务，同时考虑到代码管理服务应该单独部署在一台服务器上，因此决定从服务器A迁移到服务器B上。两台服务器均是CentOS 7，gitlab版本是gitlab-ce-9.5.6-ce.0.el7.x86_64.rpm 。注意：高版本的Gitlab无法恢复低版本备份的数据,需要注意在B服务器部署和A服务器一样版本的gitlab,部署好环境后开始备份和数据迁移。</p>
+<h3 id="二、备份"><a href="#二、备份" class="headerlink" title="二、备份"></a>二、备份</h3><p>备份A服务器上的gitlab数据，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:create RAILS_ENV=production</span><br></pre></td></tr></table></figure>
+<p>PS: 备份后的文件一般是位于/var/opt/gitlab/backups下。</p>
+<h3 id="三、拷贝"><a href="#三、拷贝" class="headerlink" title="三、拷贝"></a>三、拷贝</h3><p>从A服务上拷贝gitlab数据到B服务器上，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp root@A_ip:/var/opt/gitlab/backups/1515132280_2018_01_05_9.5.6_gitlab_backup.tar /var/opt/gitlab/backups</span><br></pre></td></tr></table></figure>
+
+<p>其中A_ip是A服务器IP地址。</p>
+<h3 id="四、还原"><a href="#四、还原" class="headerlink" title="四、还原"></a>四、还原</h3><p>在B服务器的/var/opt/gitlab/backups的目录下还原gitlab数据，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gitlab-rake gitlab:backup:restore RAILS_ENV=production BACKUP=1515132280_2018_01_05_9.5.6</span><br></pre></td></tr></table></figure>
+<p>PS：BACKUP的参数必须与原服务器备份后的文件名一致。</p>
+<h3 id="五、问题"><a href="#五、问题" class="headerlink" title="五、问题"></a>五、问题</h3><p>还原过程中报错，报错：无法 open:<br>权限不够，估计是拷贝过来的还原文件权限不够，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 644 1515132280_2018_01_05_9.5.6_gitlab_backup.tar</span><br></pre></td></tr></table></figure>
+<p>再次执行还原命令即可成功。</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>GitLab</tag>
       </tags>
   </entry>
   <entry>
@@ -492,102 +492,39 @@ systemctl enable docker</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>Linux的常用命令</title>
-    <url>/post/4ad0b8cc.html</url>
-    <content><![CDATA[<h3 id="1-常用指令"><a href="#1-常用指令" class="headerlink" title="1.常用指令"></a>1.常用指令</h3><p>（1）切换用户： su 用户名</p>
-<p>（2）默认切换到root用户： su</p>
-<p>（3）回到根目录：cd /</p>
-<p>（4）进入某个目录：cd /usr/</p>
-<p>（5）回到上级目录：cd ..</p>
-<p>（6）自动补齐目录文件名 Tab键</p>
-<p>（7）查看某个程序的进程号： ps -ef | grep tomcat</p>
-<p>（8）根据进程查看端口号：netstat -naop | grep 2020</p>
-<p>（9）根据端口号查看进程：lsof -i:8088</p>
-<p>（10）显示文件或目录： ls</p>
-<p>（11）列出文件或目录详细信息： ll</p>
-<p>（12）创建目录： mkdir</p>
-<p>（13）创建空文件：touch</p>
-<p>（14）查看文件内容：cat</p>
-<p>（15）拷贝：cp</p>
-<p>（16）移动或重命名：mv</p>
-<p>（17）删除：rm</p>
-<p>（18）递归删除：rm -r &nbsp;</p>
-<p>（19）强制删除：rm -f</p>
-<p>（20）在文件里搜索：find&nbsp;</p>
-<p>（21）统计文本中行数、字数、字符数：wc</p>
-<p>（22）在文本文件中查找某个字符串：grep</p>
-<p>（23）显示当前目录：pwd</p>
-<p>（24）从windows拷贝文件到Linux：rz</p>
-<p>（25）查看所有运行的程序 ps -ef</p>
-<p>（26）编辑文件 vim</p>
-<p>（27）用于字符串的输出 echo $CLASSPATH</p>
-<p>（28）pwdx pid用来查看正在运行的线程所在的目录</p>
-<p>（29）pwd 查看当前目录</p>
-<p>（30）ldconfig&nbsp;搜寻目录/lib和/usr/lib以及动态库配置文件/etc/ld.so.conf内所列的目录下的共享动态链接库</p>
-<p>（31）从Linux拷贝文件到windows：sz</p>
-<p>（32）查看防火墙开启状态&nbsp;firewall-cmd –state</p>
-<p>（33）查看文件的MD5值 md5sum</p>
-<p>（34）查找文件&nbsp;find / -name <em>文件名</em></p>
-<p>（35）返回到上次的目录，类似windows返回 &nbsp;cd -</p>
-<p>（36）回到用户主目录 cd ~ 或者cd</p>
-<p>&nbsp; (37) 查看服务器存储情况&nbsp; df -h</p>
-<p>（38）查看cpu信息&nbsp; cat /proc/cpuinfo</p>
-<p>（39）查看内存信息 cat /proc/meminfo</p>
-<p>（40）查看剩余内存&nbsp; free</p>
-<p>&nbsp; (41)&nbsp; 查看上一次重启、关机记录 last | grep reboot，last | grep shutdown</p>
-<p>（42）查看历史操作记录&nbsp; history 、history 10</p>
-<p>（43）查找文件&nbsp; find / -name test.txt</p>
-<p>&nbsp; (44)&nbsp; 查找文件通配符&nbsp; find /project -name ‘<em>test.txt</em>‘</p>
-<h3 id="2-系统管理命令"><a href="#2-系统管理命令" class="headerlink" title="2.系统管理命令"></a>2.系统管理命令</h3><p>（1）显示指定文件的详细信息，比ls更详细：stat /etc</p>
-<p>（2）显示在线登陆用户：who</p>
-<p>（3）显示当前操作用户：whoami</p>
-<p>（4）显示主机名：hostname</p>
-<p>（5）显示系统信息：uname</p>
-<p>（6）动态显示当前耗费资源最多进程信息：top</p>
-<p>（7）显示瞬间进程状态 ：ps -aux</p>
-<p>（8）查看磁盘大小：df</p>
-<p>（9）查看网络情况： ifconfig</p>
-<p>（10）测试网络连通：ping</p>
-<p>（11）&nbsp;显示网络状态信息：netstatus</p>
-<p>（12）清屏：clear</p>
-<p>（13）杀死进程：kill&nbsp;</p>
-<p>（14）强杀进程：kill -9</p>
-<p>（15）终止程序 ：Ctrl+C</p>
-<p>（16）挂起程序 ：Ctrl+V</p>
-<p>（17）查看某个进程的内存情况：top -p pid</p>
-<h3 id="3-关机重启系统"><a href="#3-关机重启系统" class="headerlink" title="3.关机重启系统"></a>3.关机重启系统</h3><p>（1）关机重启：shutdown -r</p>
-<p>（2）关机不重启： shutdown -h</p>
-<p>（3）立刻关机： shutdown now</p>
-<p>（4）关机： halt</p>
-<p>（5）重启： reboot</p>
-<h3 id="4-Vim工具"><a href="#4-Vim工具" class="headerlink" title="4.Vim工具"></a>4.Vim工具</h3><p>（1）退出：q</p>
-<p>（2）强制退出：q!</p>
-<p>（3）保存并退出：wq</p>
-<p>（4）切换命令模式与插入模式：ESC，i，o</p>
-<p>（5）删除一行：dd</p>
-<p>（6）到文件开头： gg</p>
-<p>（7）到文件结尾： shift+g</p>
-<h3 id="5-压缩工具"><a href="#5-压缩工具" class="headerlink" title="5.压缩工具"></a>5.压缩工具</h3><p>（1）tar.gz 和 .tgz &nbsp;</p>
-<p>&nbsp; 解压：tar zxvf FileName.tar.gz &nbsp;</p>
-<p>&nbsp; 压缩：tar zcvf FileName.tar.gz DirName</p>
-<p>（2）zip</p>
-<p>&nbsp;解压：unzip FileName.zip</p>
-<p>&nbsp;压缩：zip FileName.zip DirName</p>
-<p>（3）rar</p>
-<p>&nbsp;解压：rar x FileName.rar</p>
-<p>&nbsp;压缩：rar a FileName.rar DirName</p>
-<p>（4）tar<br>&nbsp;解包：tar xvf FileName.tar</p>
-<p>&nbsp;打包：tar cvf FileName.tar DirName</p>
-<p>（5）gz</p>
-<p>&nbsp;解压：gzip -d FileName.gz</p>
-<p>&nbsp;压缩：gzip FileName</p>
-<p>&nbsp;</p>
+    <title>Spring Boot项目搭建</title>
+    <url>/post/b9022a16.html</url>
+    <content><![CDATA[<h3 id="一、Spring-Boot概述"><a href="#一、Spring-Boot概述" class="headerlink" title="一、Spring Boot概述"></a>一、Spring Boot概述</h3><p>Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。总所周知，Spring平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理，而Spring Boot的出现就是用来简化操作的。相比传统的Spring，项目搭建更简单、方便、快速。</p>
+<h3 id="二、项目搭建"><a href="#二、项目搭建" class="headerlink" title="二、项目搭建"></a>二、项目搭建</h3><p>本文采用IDEA搭建Spring Boot，Demo结构图如下：</p>
+<p><img src="https://i.loli.net/2020/04/10/WFXazeDlgLsuZjo.png" alt="spring boot-1.png"></p>
+<p>通过IDEA生成Spring Boot项目很方便，具体步骤不再赘述，可以参考网上其他资料，如上图，主要生成：</p>
+<ul>
+<li>src/main/java  程序开发以及主程序入口</li>
+<li>src/main/resources 配置文件</li>
+<li>src/test/java  测试程序</li>
+</ul>
+<p>默认pom.xml生成jar包依赖项如下所示：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.snail<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>bootdemo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>bootdemo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Demo project for Spring Boot<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-configuration-processor<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="三、测试用例"><a href="#三、测试用例" class="headerlink" title="三、测试用例"></a>三、测试用例</h3><p>Demo并没有配置数据库，只是简单地测试一下Http 请求，并结合现实中的场景，我们的配置文件往往在线下环境、生产环境的配置是不一样的，可以通过配置来获取对应的文件，如下所示。</p>
+<h4 id="3-1-实体类"><a href="#3-1-实体类" class="headerlink" title="3.1 实体类"></a>3.1 实体类</h4><p>其中ConfigurationProperties注解的目的是用来映射配置文件的，会在配置文件yml文件里新建配置项application.yml、application-product.yml（生产环境）、application-test.yml（测试环境），通过前缀CustomerInfo可以获取配置文件里对应的映射。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 客户基本信息</span></span><br><span class="line"><span class="comment"> * Create by snailTech</span></span><br><span class="line"><span class="comment"> * 2017-07-24 16:31</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties</span>(prefix = <span class="string">"CustomerInfo"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomerInfo</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 姓名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 手机号码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String mobile;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 年龄</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getMobile</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mobile;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMobile</span><span class="params">(String mobile)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.mobile = mobile;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-2-application-yml"><a href="#3-2-application-yml" class="headerlink" title="3.2 application.yml"></a>3.2 application.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">product</span></span><br></pre></td></tr></table></figure>
+<p>通过这个配置active为product可以得知读取的是application-product.yml文件，其中port是Web容器（默认是Tomcat）的端口号，以及context-path是虚拟路径。</p>
+<h4 id="3-3-application-product-yml"><a href="#3-3-application-product-yml" class="headerlink" title="3.3 application-product.yml"></a>3.3 application-product.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/bootdemo</span></span><br><span class="line"><span class="attr">testUrl:</span> <span class="string">http://www.baidu.com</span></span><br><span class="line"><span class="attr">CustomerInfo:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">snail</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="number">18818718711</span><span class="string">（生产环境）</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-4-application-test-yml"><a href="#3-4-application-test-yml" class="headerlink" title="3.4 application-test.yml"></a>3.4 application-test.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/bootdemo</span></span><br><span class="line"><span class="attr">testUrl:</span> <span class="string">http://www.baidu.com</span></span><br><span class="line"><span class="attr">CustomerInfo:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">snail</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="number">18818718711</span><span class="string">（测试环境）</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-5-配置Controller层"><a href="#3-5-配置Controller层" class="headerlink" title="3.5 配置Controller层"></a>3.5 配置Controller层</h4><p>@RestController相当于@ResponseBody+@Controller，都是以json格式返回，@Value(“${testUrl}”)是用来获取配置文件里的testUrl配置项的，@RequestParam用来接收请求参数，其余的写法与SpringMvc的写法并没什么区别</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.snail;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.*;</span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Create by snailTech</span></span><br><span class="line"><span class="comment"> * 2017-07-24 16:10</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/test"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestController</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;testUrl&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> String testUrl;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> CustomerInfo customerInfo;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//@RequestMapping(value="/hello" ,method = RequestMethod.GET)</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(value = <span class="string">"/hello"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">(@RequestParam(<span class="string">"id"</span>)</span> Integer xx)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> customerInfo.getMobile()+xx;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-6-编译"><a href="#3-6-编译" class="headerlink" title="3.6 编译"></a>3.6 编译</h4><p>编译非常简单，内置Tomcat，无需像SSM项目里还需要手动配置Tomcat，只要运行程序就可以了。</p>
+<h4 id="3-7-运行"><a href="#3-7-运行" class="headerlink" title="3.7 运行"></a>3.7 运行</h4><p><img src="https://i.loli.net/2020/04/10/mJUCqlLAzoXhjbx.png" alt="springboot-2.png"></p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -681,39 +618,41 @@ systemctl enable docker</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot项目搭建</title>
-    <url>/post/b9022a16.html</url>
-    <content><![CDATA[<h3 id="一、Spring-Boot概述"><a href="#一、Spring-Boot概述" class="headerlink" title="一、Spring Boot概述"></a>一、Spring Boot概述</h3><p>Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。总所周知，Spring平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理，而Spring Boot的出现就是用来简化操作的。相比传统的Spring，项目搭建更简单、方便、快速。</p>
-<h3 id="二、项目搭建"><a href="#二、项目搭建" class="headerlink" title="二、项目搭建"></a>二、项目搭建</h3><p>本文采用IDEA搭建Spring Boot，Demo结构图如下：</p>
-<p><img src="https://i.loli.net/2020/04/10/WFXazeDlgLsuZjo.png" alt="spring boot-1.png"></p>
-<p>通过IDEA生成Spring Boot项目很方便，具体步骤不再赘述，可以参考网上其他资料，如上图，主要生成：</p>
+    <title>zookeeper安装</title>
+    <url>/post/bf5e4a43.html</url>
+    <content><![CDATA[<h3 id="1-下载zk软件"><a href="#1-下载zk软件" class="headerlink" title="1.下载zk软件"></a>1.下载zk软件</h3><p><a href="http://www.apache.org/dyn/closer.cgi/zookeeper/" target="_blank" rel="noopener">http://www.apache.org/dyn/closer.cgi/zookeeper/</a></p>
+<h3 id="2-解压压缩包"><a href="#2-解压压缩包" class="headerlink" title="2.解压压缩包"></a>2.解压压缩包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar zxvf zookeeper-3.4.13.tar.gz</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-创建zoo-cfg"><a href="#3-创建zoo-cfg" class="headerlink" title="3.创建zoo.cfg"></a>3.创建zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd zookeeper-3.4.13/conf</span></span><br><span class="line"><span class="comment"># cp zoo_sample.cfg zoo.cfg</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-获取zk的路径"><a href="#4-获取zk的路径" class="headerlink" title="4.获取zk的路径"></a>4.获取zk的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pwd</span></span><br></pre></td></tr></table></figure>
+<p>/home/software/zookeeper-3.4.13</p>
+<h3 id="5-修改zoo-cfg"><a href="#5-修改zoo-cfg" class="headerlink" title="5.修改zoo.cfg"></a>5.修改zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vim zoo.cfg</span></span><br></pre></td></tr></table></figure>
+
+<p>设置dataDir=/home/software/zookeeper-3.4.13/data</p>
+<h3 id="6-zk启动、关闭、查看状态"><a href="#6-zk启动、关闭、查看状态" class="headerlink" title="6.zk启动、关闭、查看状态"></a>6.zk启动、关闭、查看状态</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd bin</span></span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>src/main/java  程序开发以及主程序入口</li>
-<li>src/main/resources 配置文件</li>
-<li>src/test/java  测试程序</li>
+<li>启动</li>
 </ul>
-<p>默认pom.xml生成jar包依赖项如下所示：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.snail<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>bootdemo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>bootdemo<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Demo project for Spring Boot<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-configuration-processor<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="三、测试用例"><a href="#三、测试用例" class="headerlink" title="三、测试用例"></a>三、测试用例</h3><p>Demo并没有配置数据库，只是简单地测试一下Http 请求，并结合现实中的场景，我们的配置文件往往在线下环境、生产环境的配置是不一样的，可以通过配置来获取对应的文件，如下所示。</p>
-<h4 id="3-1-实体类"><a href="#3-1-实体类" class="headerlink" title="3.1 实体类"></a>3.1 实体类</h4><p>其中ConfigurationProperties注解的目的是用来映射配置文件的，会在配置文件yml文件里新建配置项application.yml、application-product.yml（生产环境）、application-test.yml（测试环境），通过前缀CustomerInfo可以获取配置文件里对应的映射。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 客户基本信息</span></span><br><span class="line"><span class="comment"> * Create by snailTech</span></span><br><span class="line"><span class="comment"> * 2017-07-24 16:31</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties</span>(prefix = <span class="string">"CustomerInfo"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomerInfo</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 姓名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 手机号码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String mobile;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 年龄</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getMobile</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mobile;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMobile</span><span class="params">(String mobile)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.mobile = mobile;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-2-application-yml"><a href="#3-2-application-yml" class="headerlink" title="3.2 application.yml"></a>3.2 application.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">product</span></span><br></pre></td></tr></table></figure>
-<p>通过这个配置active为product可以得知读取的是application-product.yml文件，其中port是Web容器（默认是Tomcat）的端口号，以及context-path是虚拟路径。</p>
-<h4 id="3-3-application-product-yml"><a href="#3-3-application-product-yml" class="headerlink" title="3.3 application-product.yml"></a>3.3 application-product.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/bootdemo</span></span><br><span class="line"><span class="attr">testUrl:</span> <span class="string">http://www.baidu.com</span></span><br><span class="line"><span class="attr">CustomerInfo:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">snail</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="number">18818718711</span><span class="string">（生产环境）</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh start</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="3-4-application-test-yml"><a href="#3-4-application-test-yml" class="headerlink" title="3.4 application-test.yml"></a>3.4 application-test.yml</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/bootdemo</span></span><br><span class="line"><span class="attr">testUrl:</span> <span class="string">http://www.baidu.com</span></span><br><span class="line"><span class="attr">CustomerInfo:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">snail</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="number">18818718711</span><span class="string">（测试环境）</span></span><br><span class="line">  <span class="attr">age:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>关闭</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh stop</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="3-5-配置Controller层"><a href="#3-5-配置Controller层" class="headerlink" title="3.5 配置Controller层"></a>3.5 配置Controller层</h4><p>@RestController相当于@ResponseBody+@Controller，都是以json格式返回，@Value(“${testUrl}”)是用来获取配置文件里的testUrl配置项的，@RequestParam用来接收请求参数，其余的写法与SpringMvc的写法并没什么区别</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.snail;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.*;</span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Create by snailTech</span></span><br><span class="line"><span class="comment"> * 2017-07-24 16:10</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/test"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestController</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;testUrl&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> String testUrl;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> CustomerInfo customerInfo;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//@RequestMapping(value="/hello" ,method = RequestMethod.GET)</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(value = <span class="string">"/hello"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">(@RequestParam(<span class="string">"id"</span>)</span> Integer xx)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> customerInfo.getMobile()+xx;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看状态</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh status</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="3-6-编译"><a href="#3-6-编译" class="headerlink" title="3.6 编译"></a>3.6 编译</h4><p>编译非常简单，内置Tomcat，无需像SSM项目里还需要手动配置Tomcat，只要运行程序就可以了。</p>
-<h4 id="3-7-运行"><a href="#3-7-运行" class="headerlink" title="3.7 运行"></a>3.7 运行</h4><p><img src="https://i.loli.net/2020/04/10/mJUCqlLAzoXhjbx.png" alt="springboot-2.png"></p>
+
 ]]></content>
       <categories>
-        <category>Spring Boot</category>
+        <category>zookeeper</category>
       </categories>
       <tags>
-        <tag>Spring Boot</tag>
+        <tag>zookeeper</tag>
       </tags>
   </entry>
   <entry>
@@ -774,44 +713,6 @@ systemctl enable docker</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>zookeeper安装</title>
-    <url>/post/bf5e4a43.html</url>
-    <content><![CDATA[<h3 id="1-下载zk软件"><a href="#1-下载zk软件" class="headerlink" title="1.下载zk软件"></a>1.下载zk软件</h3><p><a href="http://www.apache.org/dyn/closer.cgi/zookeeper/" target="_blank" rel="noopener">http://www.apache.org/dyn/closer.cgi/zookeeper/</a></p>
-<h3 id="2-解压压缩包"><a href="#2-解压压缩包" class="headerlink" title="2.解压压缩包"></a>2.解压压缩包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar zxvf zookeeper-3.4.13.tar.gz</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-创建zoo-cfg"><a href="#3-创建zoo-cfg" class="headerlink" title="3.创建zoo.cfg"></a>3.创建zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd zookeeper-3.4.13/conf</span></span><br><span class="line"><span class="comment"># cp zoo_sample.cfg zoo.cfg</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-获取zk的路径"><a href="#4-获取zk的路径" class="headerlink" title="4.获取zk的路径"></a>4.获取zk的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pwd</span></span><br></pre></td></tr></table></figure>
-<p>/home/software/zookeeper-3.4.13</p>
-<h3 id="5-修改zoo-cfg"><a href="#5-修改zoo-cfg" class="headerlink" title="5.修改zoo.cfg"></a>5.修改zoo.cfg</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># vim zoo.cfg</span></span><br></pre></td></tr></table></figure>
-
-<p>设置dataDir=/home/software/zookeeper-3.4.13/data</p>
-<h3 id="6-zk启动、关闭、查看状态"><a href="#6-zk启动、关闭、查看状态" class="headerlink" title="6.zk启动、关闭、查看状态"></a>6.zk启动、关闭、查看状态</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd bin</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启动</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh start</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>关闭</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh stop</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>查看状态</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./zkServer.sh status</span></span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>zookeeper</category>
-      </categories>
-      <tags>
-        <tag>zookeeper</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo如何快速搭建个人博客</title>
     <url>/post/e48abe66.html</url>
     <content><![CDATA[<h1 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo?"></a>什么是Hexo?</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
@@ -857,65 +758,6 @@ systemctl enable docker</span></pre>
         <tag>Hexo</tag>
         <tag>Git</tag>
         <tag>node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>idea使用Protobuf插件</title>
-    <url>/post/35fe24ef.html</url>
-    <content><![CDATA[<h3 id="1-protobuf简介"><a href="#1-protobuf简介" class="headerlink" title="1.protobuf简介"></a>1.protobuf简介</h3><p>　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的10分之一，xml格式的20分之一，是二进制序列化的10分之一。
-　　</p>
-<h3 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2.安装插件"></a>2.安装插件</h3><p>在idea里安装插件Protobuf Support</p>
-<h3 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-netty<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-protobuf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-stub<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.protobuf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>protobuf-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;protobuf.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">extensions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">extension</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>kr.motd.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>os-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.0.Final<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">extension</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">extensions</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--protobuf插件--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.xolstice.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>protobuf-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.5.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">protocArtifact</span>&gt;</span></span><br><span class="line">         com.google.protobuf:protoc:$&#123;protobuf.version&#125;:exe:$&#123;os.detected.classifier&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">protocArtifact</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pluginId</span>&gt;</span>grpc-java<span class="tag">&lt;/<span class="name">pluginId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pluginArtifact</span>&gt;</span></span><br><span class="line">         io.grpc:protoc-gen-grpc-java:$&#123;grpc.version&#125;:exe:$&#123;os.detected.classifier&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">pluginArtifact</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile-custom<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-创建proto文件"><a href="#4-创建proto文件" class="headerlink" title="4.创建proto文件"></a>4.创建proto文件</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">syntax = "proto3";</span><br><span class="line">option java_package = "com.ynt.ai.activemq.protobuf";</span><br><span class="line">option java_outer_classname = "PersonModel";</span><br><span class="line"></span><br><span class="line">message Person &#123;</span><br><span class="line">    int32 id = 1;</span><br><span class="line">    string name = 2;</span><br><span class="line">    string email = 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="5-生成java对象文件"><a href="#5-生成java对象文件" class="headerlink" title="5.生成java对象文件"></a>5.生成java对象文件</h3><p>　　通过Protobuf插件的compile命令，如下图所示，自动生成对象文件。</p>
-<p><img src="https://i.loli.net/2020/04/10/zpLDClJUFg2X7t3.png" alt="QQ截图20171106165834.png"></p>
-<h3 id="6-测试"><a href="#6-测试" class="headerlink" title="6.测试"></a>6.测试</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">PersonMsg.Person person = PersonMsg.Person.newBuilder().setId(<span class="number">2</span>).setName(<span class="string">"test"</span>)</span><br><span class="line">                .setEmail(<span class="string">"test@163.com"</span>).build();</span><br><span class="line"> <span class="keyword">byte</span>[] results = person.toByteArray();</span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">byte</span> b : results) &#123;</span><br><span class="line">   log.info(String.valueOf(b));</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>通信协议</category>
-      </categories>
-      <tags>
-        <tag>Protobuf</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux下安装新版本Redis遇到的坑</title>
-    <url>/post/755670ae.html</url>
-    <content><![CDATA[<h1 id="什么是Redis？"><a href="#什么是Redis？" class="headerlink" title="什么是Redis？"></a>什么是Redis？</h1><p>Remote Dictionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
-<p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。</p>
-<p>与传统数据库不同的是 Redis 的数据是存在内存中的，所以存写速度非常快，因此 Redis 被广泛应用于缓存方向。</p>
-<h1 id="数据类型有哪些？"><a href="#数据类型有哪些？" class="headerlink" title="数据类型有哪些？"></a>数据类型有哪些？</h1><p>它通常被称为数据结构服务器，因为值（value）可以是 字符串(String), 哈希(Hash), 列表(list), 集合(sets) 和 有序集合(sorted sets)等类型。</p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://redis.io/" target="_blank" rel="noopener">官网</a>下载最新版本，并解压到/usr/local，并将文件夹重命名为redis</p>
-<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><p>执行make命令时遇到的报错</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make[1]: *** [server.o] 错误 1</span><br><span class="line">make[1]: 离开目录“/usr/<span class="built_in">local</span>/redis/src”</span><br><span class="line">make: *** [all] 错误 2</span><br></pre></td></tr></table></figure>
-<p>解决方法，升级gcc版本</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc -v     </span><br><span class="line">yum -y install centos-release-scl</span><br><span class="line">yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils</span><br><span class="line">scl <span class="built_in">enable</span> devtoolset-9 bash</span><br></pre></td></tr></table></figure>
-<p>再次make，安装成功后，Hint: It’s a good idea to run ‘make test’</p>
-<p>查看安装目录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
-<ul>
-<li>redis-benchmark <strong>性能测试工具</strong></li>
-<li>redis-check-aof <strong>检查aof日志工具</strong></li>
-<li>redis-check-rdb <strong>检查rdb日志工具</strong></li>
-<li>redis-cli       <strong>redis客户端</strong></li>
-<li>redis-server    <strong>redis服务端</strong></li>
-<li>redis-sentinel  <strong>redis哨兵服务</strong></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Redis</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
@@ -1345,6 +1187,164 @@ systemctl enable docker</span></pre>
       </tags>
   </entry>
   <entry>
+    <title>Linux的常用命令</title>
+    <url>/post/4ad0b8cc.html</url>
+    <content><![CDATA[<h3 id="1-常用指令"><a href="#1-常用指令" class="headerlink" title="1.常用指令"></a>1.常用指令</h3><p>（1）切换用户： su 用户名</p>
+<p>（2）默认切换到root用户： su</p>
+<p>（3）回到根目录：cd /</p>
+<p>（4）进入某个目录：cd /usr/</p>
+<p>（5）回到上级目录：cd ..</p>
+<p>（6）自动补齐目录文件名 Tab键</p>
+<p>（7）查看某个程序的进程号： ps -ef | grep tomcat</p>
+<p>（8）根据进程查看端口号：netstat -naop | grep 2020</p>
+<p>（9）根据端口号查看进程：lsof -i:8088</p>
+<p>（10）显示文件或目录： ls</p>
+<p>（11）列出文件或目录详细信息： ll</p>
+<p>（12）创建目录： mkdir</p>
+<p>（13）创建空文件：touch</p>
+<p>（14）查看文件内容：cat</p>
+<p>（15）拷贝：cp</p>
+<p>（16）移动或重命名：mv</p>
+<p>（17）删除：rm</p>
+<p>（18）递归删除：rm -r &nbsp;</p>
+<p>（19）强制删除：rm -f</p>
+<p>（20）在文件里搜索：find&nbsp;</p>
+<p>（21）统计文本中行数、字数、字符数：wc</p>
+<p>（22）在文本文件中查找某个字符串：grep</p>
+<p>（23）显示当前目录：pwd</p>
+<p>（24）从windows拷贝文件到Linux：rz</p>
+<p>（25）查看所有运行的程序 ps -ef</p>
+<p>（26）编辑文件 vim</p>
+<p>（27）用于字符串的输出 echo $CLASSPATH</p>
+<p>（28）pwdx pid用来查看正在运行的线程所在的目录</p>
+<p>（29）pwd 查看当前目录</p>
+<p>（30）ldconfig&nbsp;搜寻目录/lib和/usr/lib以及动态库配置文件/etc/ld.so.conf内所列的目录下的共享动态链接库</p>
+<p>（31）从Linux拷贝文件到windows：sz</p>
+<p>（32）查看防火墙开启状态&nbsp;firewall-cmd –state</p>
+<p>（33）查看文件的MD5值 md5sum</p>
+<p>（34）查找文件&nbsp;find / -name <em>文件名</em></p>
+<p>（35）返回到上次的目录，类似windows返回 &nbsp;cd -</p>
+<p>（36）回到用户主目录 cd ~ 或者cd</p>
+<p>&nbsp; (37) 查看服务器存储情况&nbsp; df -h</p>
+<p>（38）查看cpu信息&nbsp; cat /proc/cpuinfo</p>
+<p>（39）查看内存信息 cat /proc/meminfo</p>
+<p>（40）查看剩余内存&nbsp; free</p>
+<p>&nbsp; (41)&nbsp; 查看上一次重启、关机记录 last | grep reboot，last | grep shutdown</p>
+<p>（42）查看历史操作记录&nbsp; history 、history 10</p>
+<p>（43）查找文件&nbsp; find / -name test.txt</p>
+<p>&nbsp; (44)&nbsp; 查找文件通配符&nbsp; find /project -name ‘<em>test.txt</em>‘</p>
+<h3 id="2-系统管理命令"><a href="#2-系统管理命令" class="headerlink" title="2.系统管理命令"></a>2.系统管理命令</h3><p>（1）显示指定文件的详细信息，比ls更详细：stat /etc</p>
+<p>（2）显示在线登陆用户：who</p>
+<p>（3）显示当前操作用户：whoami</p>
+<p>（4）显示主机名：hostname</p>
+<p>（5）显示系统信息：uname</p>
+<p>（6）动态显示当前耗费资源最多进程信息：top</p>
+<p>（7）显示瞬间进程状态 ：ps -aux</p>
+<p>（8）查看磁盘大小：df</p>
+<p>（9）查看网络情况： ifconfig</p>
+<p>（10）测试网络连通：ping</p>
+<p>（11）&nbsp;显示网络状态信息：netstatus</p>
+<p>（12）清屏：clear</p>
+<p>（13）杀死进程：kill&nbsp;</p>
+<p>（14）强杀进程：kill -9</p>
+<p>（15）终止程序 ：Ctrl+C</p>
+<p>（16）挂起程序 ：Ctrl+V</p>
+<p>（17）查看某个进程的内存情况：top -p pid</p>
+<h3 id="3-关机重启系统"><a href="#3-关机重启系统" class="headerlink" title="3.关机重启系统"></a>3.关机重启系统</h3><p>（1）关机重启：shutdown -r</p>
+<p>（2）关机不重启： shutdown -h</p>
+<p>（3）立刻关机： shutdown now</p>
+<p>（4）关机： halt</p>
+<p>（5）重启： reboot</p>
+<h3 id="4-Vim工具"><a href="#4-Vim工具" class="headerlink" title="4.Vim工具"></a>4.Vim工具</h3><p>（1）退出：q</p>
+<p>（2）强制退出：q!</p>
+<p>（3）保存并退出：wq</p>
+<p>（4）切换命令模式与插入模式：ESC，i，o</p>
+<p>（5）删除一行：dd</p>
+<p>（6）到文件开头： gg</p>
+<p>（7）到文件结尾： shift+g</p>
+<h3 id="5-压缩工具"><a href="#5-压缩工具" class="headerlink" title="5.压缩工具"></a>5.压缩工具</h3><p>（1）tar.gz 和 .tgz &nbsp;</p>
+<p>&nbsp; 解压：tar zxvf FileName.tar.gz &nbsp;</p>
+<p>&nbsp; 压缩：tar zcvf FileName.tar.gz DirName</p>
+<p>（2）zip</p>
+<p>&nbsp;解压：unzip FileName.zip</p>
+<p>&nbsp;压缩：zip FileName.zip DirName</p>
+<p>（3）rar</p>
+<p>&nbsp;解压：rar x FileName.rar</p>
+<p>&nbsp;压缩：rar a FileName.rar DirName</p>
+<p>（4）tar<br>&nbsp;解包：tar xvf FileName.tar</p>
+<p>&nbsp;打包：tar cvf FileName.tar DirName</p>
+<p>（5）gz</p>
+<p>&nbsp;解压：gzip -d FileName.gz</p>
+<p>&nbsp;压缩：gzip FileName</p>
+<p>&nbsp;</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea使用Protobuf插件</title>
+    <url>/post/35fe24ef.html</url>
+    <content><![CDATA[<h3 id="1-protobuf简介"><a href="#1-protobuf简介" class="headerlink" title="1.protobuf简介"></a>1.protobuf简介</h3><p>　　Protobuf是一个灵活的、高效的用于序列化数据的协议。相比较XML和JSON格式，protobuf更小、更快、更便捷。Protobuf是跨语言的，并且自带了一个编译器(protoc)，只需要用它进行编译，可以编译成Java、python、C++等代码，然后就可以直接使用，不需要再写其他代码，自带有解析的代码。一条消息数据，用protobuf序列化后的大小是json的10分之一，xml格式的20分之一，是二进制序列化的10分之一。
+　　</p>
+<h3 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2.安装插件"></a>2.安装插件</h3><p>在idea里安装插件Protobuf Support</p>
+<h3 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-netty<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-protobuf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.grpc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>grpc-stub<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;grpc.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.protobuf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>protobuf-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;protobuf.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">extensions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">extension</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>kr.motd.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>os-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.0.Final<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">extension</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">extensions</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--protobuf插件--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.xolstice.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>protobuf-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.5.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">protocArtifact</span>&gt;</span></span><br><span class="line">         com.google.protobuf:protoc:$&#123;protobuf.version&#125;:exe:$&#123;os.detected.classifier&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">protocArtifact</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pluginId</span>&gt;</span>grpc-java<span class="tag">&lt;/<span class="name">pluginId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pluginArtifact</span>&gt;</span></span><br><span class="line">         io.grpc:protoc-gen-grpc-java:$&#123;grpc.version&#125;:exe:$&#123;os.detected.classifier&#125;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">pluginArtifact</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile-custom<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-创建proto文件"><a href="#4-创建proto文件" class="headerlink" title="4.创建proto文件"></a>4.创建proto文件</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">syntax = "proto3";</span><br><span class="line">option java_package = "com.ynt.ai.activemq.protobuf";</span><br><span class="line">option java_outer_classname = "PersonModel";</span><br><span class="line"></span><br><span class="line">message Person &#123;</span><br><span class="line">    int32 id = 1;</span><br><span class="line">    string name = 2;</span><br><span class="line">    string email = 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="5-生成java对象文件"><a href="#5-生成java对象文件" class="headerlink" title="5.生成java对象文件"></a>5.生成java对象文件</h3><p>　　通过Protobuf插件的compile命令，如下图所示，自动生成对象文件。</p>
+<p><img src="https://i.loli.net/2020/04/10/zpLDClJUFg2X7t3.png" alt="QQ截图20171106165834.png"></p>
+<h3 id="6-测试"><a href="#6-测试" class="headerlink" title="6.测试"></a>6.测试</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">PersonMsg.Person person = PersonMsg.Person.newBuilder().setId(<span class="number">2</span>).setName(<span class="string">"test"</span>)</span><br><span class="line">                .setEmail(<span class="string">"test@163.com"</span>).build();</span><br><span class="line"> <span class="keyword">byte</span>[] results = person.toByteArray();</span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">byte</span> b : results) &#123;</span><br><span class="line">   log.info(String.valueOf(b));</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>通信协议</category>
+      </categories>
+      <tags>
+        <tag>Protobuf</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux下安装新版本Redis遇到的坑</title>
+    <url>/post/755670ae.html</url>
+    <content><![CDATA[<h1 id="什么是Redis？"><a href="#什么是Redis？" class="headerlink" title="什么是Redis？"></a>什么是Redis？</h1><p>Remote Dictionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
+<p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。</p>
+<p>与传统数据库不同的是 Redis 的数据是存在内存中的，所以存写速度非常快，因此 Redis 被广泛应用于缓存方向。</p>
+<h1 id="数据类型有哪些？"><a href="#数据类型有哪些？" class="headerlink" title="数据类型有哪些？"></a>数据类型有哪些？</h1><p>它通常被称为数据结构服务器，因为值（value）可以是 字符串(String), 哈希(Hash), 列表(list), 集合(sets) 和 有序集合(sorted sets)等类型。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://redis.io/" target="_blank" rel="noopener">官网</a>下载最新版本，并解压到/usr/local，并将文件夹重命名为redis</p>
+<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><p>执行make命令时遇到的报错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">make[1]: *** [server.o] 错误 1</span><br><span class="line">make[1]: 离开目录“/usr/<span class="built_in">local</span>/redis/src”</span><br><span class="line">make: *** [all] 错误 2</span><br></pre></td></tr></table></figure>
+<p>解决方法，升级gcc版本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc -v     </span><br><span class="line">yum -y install centos-release-scl</span><br><span class="line">yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils</span><br><span class="line">scl <span class="built_in">enable</span> devtoolset-9 bash</span><br></pre></td></tr></table></figure>
+<p>再次make，安装成功后，Hint: It’s a good idea to run ‘make test’</p>
+<p>查看安装目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
+<ul>
+<li>redis-benchmark <strong>性能测试工具</strong></li>
+<li>redis-check-aof <strong>检查aof日志工具</strong></li>
+<li>redis-check-rdb <strong>检查rdb日志工具</strong></li>
+<li>redis-cli       <strong>redis客户端</strong></li>
+<li>redis-server    <strong>redis服务端</strong></li>
+<li>redis-sentinel  <strong>redis哨兵服务</strong></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ubuntu修改apt-get源</title>
     <url>/post/ca00f598.html</url>
     <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>　　服务器上安装了最新的Ubuntu Server 17.04，代号为zesty。使用apt-get命令安装软件时，有时候速度比较慢，有时候会失败。因此考虑用国内的镜像源更换下apt-get的默认源。</p>
@@ -1513,41 +1513,6 @@ systemctl enable docker</span></pre>
       </tags>
   </entry>
   <entry>
-    <title>内网穿透反向代理工具frp的使用</title>
-    <url>/post/310667e0.html</url>
-    <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp, http, https 协议。场景：近期在研究微信公众号开发，发现需要暴露公网地址，并且是80端口的服务，正好手边有朋友买了腾讯云服务器，因此想通过腾讯云服务器作为frp的服务端，本地机器作为客户端，让公网可以直接访问内网本地机器发布的服务，实现内网穿透。</p>
-<h3 id="2-作用"><a href="#2-作用" class="headerlink" title="2.作用"></a>2.作用</h3><ol>
-<li><p>利用处于内网或防火墙后的机器，对外网环境提供 http 或 https 服务。</p>
-</li>
-<li><p>对于 http, https 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个80端口。</p>
-</li>
-<li><p>利用处于内网或防火墙后的机器，对外网环境提供 tcp 和 udp 服务，例如在家里通过 ssh 访问处于公司内网环境内的主机。</p>
-</li>
-</ol>
-<h3 id="3-具体实现"><a href="#3-具体实现" class="headerlink" title="3.具体实现"></a>3.具体实现</h3><p>通过tcp方式访问公司内网服务（当前公网服务器没有绑定域名的情况下）</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">#修改 frps.ini 文件，这里使用了最简化的配置：</span><br><span class="line"># frps.ini</span><br><span class="line">[common]</span><br><span class="line">bind_port = 7000</span><br><span class="line">启动 frps：</span><br><span class="line">./frps -c ./frps.ini</span><br><span class="line"></span><br><span class="line">#修改 frpc.ini 文件，假设 frps 所在服务器的公网 IP 为 x.x.x.x；</span><br><span class="line"># frpc.ini</span><br><span class="line">[common]</span><br><span class="line">server_addr = x.x.x.x</span><br><span class="line">server_port = 7000</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">type = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 8088</span><br><span class="line">remote_port = 80</span><br><span class="line">启动 frpc：</span><br><span class="line">./frpc -c ./frpc.ini</span><br></pre></td></tr></table></figure>
-
-<p>通过http的方式访问公司内网服务（当前公网服务器已经绑定域名的情况下）</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">#修改 frps.ini 文件</span><br><span class="line">[common]</span><br><span class="line"># frp服务监听client的端口</span><br><span class="line">bind_port = 7000</span><br><span class="line"># http形式的外网开放端口</span><br><span class="line">vhost_http_port = 7001</span><br><span class="line"># 子域名</span><br><span class="line">subdomain_host = vic.com</span><br><span class="line"></span><br><span class="line">#修改 frpc.ini 文件</span><br><span class="line">[http-8088]</span><br><span class="line"># http-8051 表示名字，随便起</span><br><span class="line"># type有http、tcp等多种类型，一般只用这两种</span><br><span class="line">type = http</span><br><span class="line"># 需要穿透内网服务的ip</span><br><span class="line">local_ip = 192.168.1.187</span><br><span class="line"># 内网服务的端口</span><br><span class="line">local_port = 8088</span><br><span class="line"># 子域名，因为ynt.ai开启了域名泛解析，二级域名只是作为每个服务的区分</span><br><span class="line"># 不可与其他服务的子域名重复</span><br><span class="line">subdomain = test</span><br><span class="line"># 比如这个服务只用访问 http://test.vic.com:7001就可以访问到</span><br></pre></td></tr></table></figure>
-
-
-
-
-<p>通过浏览器查看 frp 的状态以及代理统计信息展示。需要在 frps.ini 中指定 dashboard 服务使用的端口，即可开启此功能：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">dashboard_port = 7500</span><br><span class="line"># dashboard 用户名密码，默认都为 admin</span><br><span class="line">dashboard_user = admin</span><br><span class="line">dashboard_pwd = admin</span><br></pre></td></tr></table></figure>
-
-
-<p>打开浏览器通过&nbsp;<code>http://[server_addr]:7500</code>&nbsp;访问 dashboard 界面，用户名密码默认为&nbsp;<code>admin</code>。</p>
-<p><img src="https://i.loli.net/2020/04/14/dBmCWyTRUtehGfl.jpg" alt="QQ截图20180310205939.jpg"></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>frp</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于GitLab与Git Extensions搭建版本控制工具</title>
     <url>/post/a02754ce.html</url>
     <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>　　大家知道GitHub是现在非常流行的代码托管工具，但是如果有些项目不想开源的话，则需要付费，因此萌生了自己搭建一个Git的版本控制工具，供内网使用。GitLab则是个好的选择，但是GitLab只支持Linux版本，因此则需在Windows服务器上搭建个Linux的虚拟机，我选择了Ubuntu。此时服务器端选型成功，客户端需要安装什么呢，我选择了Git Extensions，用它是因为他直接集成了Git以及KDiff3工具，更方便的是这个工具自带Putty，可以很方便地生成SSH公钥和私钥。</p>
@@ -1585,6 +1550,41 @@ systemctl enable docker</span></pre>
       </categories>
       <tags>
         <tag>Gitlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>内网穿透反向代理工具frp的使用</title>
+    <url>/post/310667e0.html</url>
+    <content><![CDATA[<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp, http, https 协议。场景：近期在研究微信公众号开发，发现需要暴露公网地址，并且是80端口的服务，正好手边有朋友买了腾讯云服务器，因此想通过腾讯云服务器作为frp的服务端，本地机器作为客户端，让公网可以直接访问内网本地机器发布的服务，实现内网穿透。</p>
+<h3 id="2-作用"><a href="#2-作用" class="headerlink" title="2.作用"></a>2.作用</h3><ol>
+<li><p>利用处于内网或防火墙后的机器，对外网环境提供 http 或 https 服务。</p>
+</li>
+<li><p>对于 http, https 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个80端口。</p>
+</li>
+<li><p>利用处于内网或防火墙后的机器，对外网环境提供 tcp 和 udp 服务，例如在家里通过 ssh 访问处于公司内网环境内的主机。</p>
+</li>
+</ol>
+<h3 id="3-具体实现"><a href="#3-具体实现" class="headerlink" title="3.具体实现"></a>3.具体实现</h3><p>通过tcp方式访问公司内网服务（当前公网服务器没有绑定域名的情况下）</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">#修改 frps.ini 文件，这里使用了最简化的配置：</span><br><span class="line"># frps.ini</span><br><span class="line">[common]</span><br><span class="line">bind_port = 7000</span><br><span class="line">启动 frps：</span><br><span class="line">./frps -c ./frps.ini</span><br><span class="line"></span><br><span class="line">#修改 frpc.ini 文件，假设 frps 所在服务器的公网 IP 为 x.x.x.x；</span><br><span class="line"># frpc.ini</span><br><span class="line">[common]</span><br><span class="line">server_addr = x.x.x.x</span><br><span class="line">server_port = 7000</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">type = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 8088</span><br><span class="line">remote_port = 80</span><br><span class="line">启动 frpc：</span><br><span class="line">./frpc -c ./frpc.ini</span><br></pre></td></tr></table></figure>
+
+<p>通过http的方式访问公司内网服务（当前公网服务器已经绑定域名的情况下）</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">#修改 frps.ini 文件</span><br><span class="line">[common]</span><br><span class="line"># frp服务监听client的端口</span><br><span class="line">bind_port = 7000</span><br><span class="line"># http形式的外网开放端口</span><br><span class="line">vhost_http_port = 7001</span><br><span class="line"># 子域名</span><br><span class="line">subdomain_host = vic.com</span><br><span class="line"></span><br><span class="line">#修改 frpc.ini 文件</span><br><span class="line">[http-8088]</span><br><span class="line"># http-8051 表示名字，随便起</span><br><span class="line"># type有http、tcp等多种类型，一般只用这两种</span><br><span class="line">type = http</span><br><span class="line"># 需要穿透内网服务的ip</span><br><span class="line">local_ip = 192.168.1.187</span><br><span class="line"># 内网服务的端口</span><br><span class="line">local_port = 8088</span><br><span class="line"># 子域名，因为ynt.ai开启了域名泛解析，二级域名只是作为每个服务的区分</span><br><span class="line"># 不可与其他服务的子域名重复</span><br><span class="line">subdomain = test</span><br><span class="line"># 比如这个服务只用访问 http://test.vic.com:7001就可以访问到</span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>通过浏览器查看 frp 的状态以及代理统计信息展示。需要在 frps.ini 中指定 dashboard 服务使用的端口，即可开启此功能：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">dashboard_port = 7500</span><br><span class="line"># dashboard 用户名密码，默认都为 admin</span><br><span class="line">dashboard_user = admin</span><br><span class="line">dashboard_pwd = admin</span><br></pre></td></tr></table></figure>
+
+
+<p>打开浏览器通过&nbsp;<code>http://[server_addr]:7500</code>&nbsp;访问 dashboard 界面，用户名密码默认为&nbsp;<code>admin</code>。</p>
+<p><img src="https://i.loli.net/2020/04/14/dBmCWyTRUtehGfl.jpg" alt="QQ截图20180310205939.jpg"></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>frp</tag>
       </tags>
   </entry>
   <entry>
@@ -1684,6 +1684,58 @@ systemctl enable docker</span></pre>
       </categories>
       <tags>
         <tag>Spring Boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>认识浏览器缓存</title>
+    <url>/post/62fb758b.html</url>
+    <content><![CDATA[<p>浏览器缓存，也就是客户端缓存,既是网页性能优化里面静态资源相关优化的一大利器，也是无数web开发人员在工作过程不可避免的一大问题。浏览器缓存分为：强缓存和协商缓存</p>
+<h4 id="一、原理"><a href="#一、原理" class="headerlink" title="一、原理"></a>一、原理</h4><ol>
+<li><p>浏览器加载资源时，先根据这个资源的http header中的Cache-Control判断是否命中强缓存，如果命中，浏览器直接从缓存中读取资源，根本不会向服务器发送请求；</p>
+</li>
+<li><p>当强缓存没有命中的时候，浏览器则会发送一个请求到服务器，通过资源的http header中的 Last-Modified 和If-Modified-Since来判断资源是否命中协商缓存，如果命中，服务器将会将这个请求返回，但不会返回这个资源的数据，而是告诉客服端可以从缓存中加载这个资源；</p>
+</li>
+<li><p>如果资源也没有命中协商缓存的话，浏览器直接从服务器端加载资源数据</p>
+</li>
+</ol>
+<h4 id="二、共同点与区别"><a href="#二、共同点与区别" class="headerlink" title="二、共同点与区别"></a>二、共同点与区别</h4><ol>
+<li>共同点：如果命中，都从客户端缓存中加载这个资源，而不从服务器端加载；
+　　</li>
+<li>区别： 强缓存不发请求到服务器，协商缓存发请求到服务器；</li>
+</ol>
+<h4 id="三、强缓存原理"><a href="#三、强缓存原理" class="headerlink" title="三、强缓存原理"></a>三、强缓存原理</h4><p>命中强缓存，chrome里的network里面 status是200，且size会显示为from disk/memory cache,Cache Control :max-age:315360000 单位秒，也就是10年</p>
+<ol>
+<li><p>浏览器第一次跟服务器请求一个资源，服务器在返回这个资源的同时，在respone的header加上Cache-Control的header</p>
+</li>
+<li><p>浏览器接收到这个资源后，会把这个资源连同所有的resoponse Header缓存下来</p>
+</li>
+<li><p>浏览器再次请求这个资源时，会从缓存中寻找，找到后，根据它第一次请求时间和Cache Control设定的有效期，计算一个过期时间。再拿这个过期时间跟当前请求时间比较，如果当前请求时间在过期时间之前，就能命中缓存。否则，就不行。</p>
+</li>
+</ol>
+<h4 id="四、协商缓存原理"><a href="#四、协商缓存原理" class="headerlink" title="四、协商缓存原理"></a>四、协商缓存原理</h4><ol>
+<li><p>如果协商缓存命中，请求响应返回的http状态为304并且会显示一个Not Modified的字符串。协商缓存是利用的是【Last-Modified，If-Modified-Since】</p>
+</li>
+<li><p>浏览器第一次跟服务器请求一个资源，服务器在返回这个资源的同时，在respone的header加上Last-Modified的header，这个header表示这个资源在服务器上的最后修改时间<br>；<br>浏览器再次跟服务器请求这个资源时，在request的header上加上If-Modified-Since的header，这个header的值就是上一次请求时返回的Last-Modified的值；</p>
+</li>
+<li><p>服务器再次收到资源请求时，根据浏览器传过来If-Modified-Since和资源在服务器上的Last-Modified是否有变化，如果没有变化则返回304 Not Modified，但是不会返回资源内容；如果有变化，就正常返回资源内容。</p>
+</li>
+</ol>
+<h4 id="五、清除客户端缓存的方法"><a href="#五、清除客户端缓存的方法" class="headerlink" title="五、清除客户端缓存的方法"></a>五、清除客户端缓存的方法</h4><ol>
+<li><p>当ctrl+f5强制刷新网页时，直接从服务器加载，跳过强缓存和协商缓存；</p>
+</li>
+<li><p>当f5刷新网页时，跳过强缓存，但是会检查协商缓存；</p>
+</li>
+<li><p>如果用的是chrome，可以f12在network那里把缓存给禁掉 Disable cache</p>
+</li>
+<li><p>给资源加上一个动态的参数，css/index.css?v=2017032901</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>缓存</tag>
       </tags>
   </entry>
   <entry>
@@ -1955,58 +2007,6 @@ systemctl enable docker</span></pre>
         <tag>ES</tag>
         <tag>Logstash</tag>
         <tag>Kibana</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>认识浏览器缓存</title>
-    <url>/post/62fb758b.html</url>
-    <content><![CDATA[<p>浏览器缓存，也就是客户端缓存,既是网页性能优化里面静态资源相关优化的一大利器，也是无数web开发人员在工作过程不可避免的一大问题。浏览器缓存分为：强缓存和协商缓存</p>
-<h4 id="一、原理"><a href="#一、原理" class="headerlink" title="一、原理"></a>一、原理</h4><ol>
-<li><p>浏览器加载资源时，先根据这个资源的http header中的Cache-Control判断是否命中强缓存，如果命中，浏览器直接从缓存中读取资源，根本不会向服务器发送请求；</p>
-</li>
-<li><p>当强缓存没有命中的时候，浏览器则会发送一个请求到服务器，通过资源的http header中的 Last-Modified 和If-Modified-Since来判断资源是否命中协商缓存，如果命中，服务器将会将这个请求返回，但不会返回这个资源的数据，而是告诉客服端可以从缓存中加载这个资源；</p>
-</li>
-<li><p>如果资源也没有命中协商缓存的话，浏览器直接从服务器端加载资源数据</p>
-</li>
-</ol>
-<h4 id="二、共同点与区别"><a href="#二、共同点与区别" class="headerlink" title="二、共同点与区别"></a>二、共同点与区别</h4><ol>
-<li>共同点：如果命中，都从客户端缓存中加载这个资源，而不从服务器端加载；
-　　</li>
-<li>区别： 强缓存不发请求到服务器，协商缓存发请求到服务器；</li>
-</ol>
-<h4 id="三、强缓存原理"><a href="#三、强缓存原理" class="headerlink" title="三、强缓存原理"></a>三、强缓存原理</h4><p>命中强缓存，chrome里的network里面 status是200，且size会显示为from disk/memory cache,Cache Control :max-age:315360000 单位秒，也就是10年</p>
-<ol>
-<li><p>浏览器第一次跟服务器请求一个资源，服务器在返回这个资源的同时，在respone的header加上Cache-Control的header</p>
-</li>
-<li><p>浏览器接收到这个资源后，会把这个资源连同所有的resoponse Header缓存下来</p>
-</li>
-<li><p>浏览器再次请求这个资源时，会从缓存中寻找，找到后，根据它第一次请求时间和Cache Control设定的有效期，计算一个过期时间。再拿这个过期时间跟当前请求时间比较，如果当前请求时间在过期时间之前，就能命中缓存。否则，就不行。</p>
-</li>
-</ol>
-<h4 id="四、协商缓存原理"><a href="#四、协商缓存原理" class="headerlink" title="四、协商缓存原理"></a>四、协商缓存原理</h4><ol>
-<li><p>如果协商缓存命中，请求响应返回的http状态为304并且会显示一个Not Modified的字符串。协商缓存是利用的是【Last-Modified，If-Modified-Since】</p>
-</li>
-<li><p>浏览器第一次跟服务器请求一个资源，服务器在返回这个资源的同时，在respone的header加上Last-Modified的header，这个header表示这个资源在服务器上的最后修改时间<br>；<br>浏览器再次跟服务器请求这个资源时，在request的header上加上If-Modified-Since的header，这个header的值就是上一次请求时返回的Last-Modified的值；</p>
-</li>
-<li><p>服务器再次收到资源请求时，根据浏览器传过来If-Modified-Since和资源在服务器上的Last-Modified是否有变化，如果没有变化则返回304 Not Modified，但是不会返回资源内容；如果有变化，就正常返回资源内容。</p>
-</li>
-</ol>
-<h4 id="五、清除客户端缓存的方法"><a href="#五、清除客户端缓存的方法" class="headerlink" title="五、清除客户端缓存的方法"></a>五、清除客户端缓存的方法</h4><ol>
-<li><p>当ctrl+f5强制刷新网页时，直接从服务器加载，跳过强缓存和协商缓存；</p>
-</li>
-<li><p>当f5刷新网页时，跳过强缓存，但是会检查协商缓存；</p>
-</li>
-<li><p>如果用的是chrome，可以f12在network那里把缓存给禁掉 Disable cache</p>
-</li>
-<li><p>给资源加上一个动态的参数，css/index.css?v=2017032901</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>缓存</tag>
       </tags>
   </entry>
 </search>
